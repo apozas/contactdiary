@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Diario COVID</string>
+    <string name="action_settings">Ajustes</string>
+
+    <string name="new_contact">Nuevo contacto</string>
+    <string name="new_event">Nuevo evento</string>
+    <string name="event_name">Nombre del evento</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+    <string name="date">Fecha</string>
+    <string name="time">Hora</string>
+    <string name="place">Lugar</string>
+    <string name="companions">Acompañantes (opcional)</string>
+    <string name="close_event_question">¿Crees que mantuviste la distancia?</string>
+    <string name="name">Nombre</string>
+    <string name="known_contact">¿Es familiar o amigo cercano?</string>
+    <string name="distance_question">¿Crees que respetásteis la distancia?</string>
+    <string name="phone">Teléfono (opcional)</string>
+    <string name="unsure">No sé</string>
+    <string name="encounter_type">Tipo de encuentro</string>
+    <string name="indoors">Lugar cerrado</string>
+    <string name="outdoors">Al aire libre</string>
+    <string name="emptydiary">El diario está vacío</string>
+    <string name="contact_saved">Contacto guardado</string>
+    <string name="event_saved">Evento guardado</string>
+    <string name="time_optional">Hora (opcional)</string>
+    <string name="edit_event">Editar Evento</string>
+    <string name="edit_contact">Editar Contacto</string>
+    <string name="contact_deleted">Entrada eliminada</string>
+    <string name="settings">Configuración</string>
+    <string name="contact_developer_uri" translatable="false">mailto:alex@alexpozas.com</string>
+    <string name="contact_developer_summary">Dime qué te parece la app, o qué problemas has encontrado</string>
+    <string name="contact_developer">Escribe al desarrollador</string>
+    <string name="about_donate">Invítame a un café</string>
+    <string name="feedback_subject" translatable="false">Feedback about COVID Diary</string>
+    <string name="donate_url" translatable="false">https://www.paypal.me/apozasker</string>
+</resources>
