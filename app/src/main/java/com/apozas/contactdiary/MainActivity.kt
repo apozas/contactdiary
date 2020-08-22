@@ -1,12 +1,15 @@
 package com.apozas.contactdiary
 
+import android.app.*
+import android.content.Context
 import android.content.Intent
 import android.database.Cursor
+import android.os.Build
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.FilterQueryProvider
 import android.widget.SimpleCursorAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        createNotificationChannel()
+        createNotification()
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
@@ -60,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
         val onlyRisky = preferences.getBoolean("closecontactonly", false)
         viewData(onlyRisky)
+        createNotification()
     }
 
     override fun onBackPressed() {
@@ -112,15 +119,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 //  New button actions
-    fun addContact(v: View?): Unit {
+    fun addContact(v: View): Unit {
         startActivity(Intent(this@MainActivity, NewContactActivity::class.java))
     }
 
-    fun addEvent(v: View?): Unit {
+    fun addEvent(v: View): Unit {
         startActivity(Intent(this@MainActivity, NewEventActivity::class.java))
     }
 
-    fun openSettings(v: View?): Unit {
+    fun openSettings(v: View): Unit {
         startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
     }
 
@@ -152,4 +159,51 @@ class MainActivity : AppCompatActivity() {
         // Issue SQL statement.
         db.execSQL(selection)
     }
+//  Notification codes
+    fun createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "channel"
+            val descriptionText = "Notification channel"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel("473X", name, importance).apply {
+                description = descriptionText
+            }
+            // Register the channel with the system
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    fun createNotification() {
+        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val time = preferences.getString("reminder_time", "21:00") as String
+        val timeparts = time.split(':')
+
+        val cal = Calendar.getInstance()
+        cal.set(Calendar.HOUR_OF_DAY, timeparts[0].toInt())
+        cal.set(Calendar.MINUTE, timeparts[1].toInt() - 1)  // Weird 1-minute fix
+        if (cal.time.compareTo(Date()) < 0) cal.add(Calendar.DAY_OF_MONTH, 1)
+
+        val intent = Intent(applicationContext, NotificationReceiver::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(applicationContext,0,
+            intent, PendingIntent.FLAG_UPDATE_CURRENT)
+
+        val alarmManager =
+            getSystemService(Context.ALARM_SERVICE) as AlarmManager
+
+        val alarm_toggle = preferences.getBoolean("reminder_toggle", false)
+
+        if (alarm_toggle) {
+            alarmManager.setRepeating(
+                AlarmManager.RTC_WAKEUP, cal.timeInMillis,
+                AlarmManager.INTERVAL_DAY, pendingIntent
+            )
+        } else {
+            alarmManager.cancel(pendingIntent)
+        }
+    }
+
 }

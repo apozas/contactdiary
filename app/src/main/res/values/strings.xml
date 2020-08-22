@@ -34,4 +34,6 @@
     <string name="about_donate">Invítame a un café</string>
     <string name="feedback_subject" translatable="false">Feedback about COVID Diary</string>
     <string name="donate_url" translatable="false">https://www.paypal.me/apozasker</string>
+    <string name="notification_title">¿Con quién has estado hoy?</string>
+    <string name="notification_text">Añade tus contactos al diario</string>
 </resources>

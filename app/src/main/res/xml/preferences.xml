@@ -13,8 +13,7 @@
             android:layout_height="wrap_content"
             android:key="reminder_toggle"
             android:title="Recordatorio diario"
-            android:defaultValue="true"
-            android:persistent="false"/>
+            android:defaultValue="true"/>
 
         <EditTextPreference
             android:dependency="reminder_toggle"

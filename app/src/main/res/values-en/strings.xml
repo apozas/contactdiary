@@ -31,4 +31,6 @@
     <string name="contact_developer_summary">Tell me what you think about the app, or problems you have encountered</string>
     <string name="contact_developer">Contact the developer</string>
     <string name="about_donate">Buy me a coffee</string>
+    <string name="notification_title">Who have you been with today?</string>
+    <string name="notification_text">Add your contacts to the diary</string>
 </resources>
