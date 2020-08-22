@@ -24,8 +24,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
+        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val onlyRisky = preferences.getBoolean("closecontactonly", false)
+
         restrict15LastDays()
-        viewData()
+        viewData(onlyRisky)
 
         diarytable.setOnItemClickListener { adapterView, view, position, id ->
             val idx = diarytable.adapter.getItemId(position)
@@ -53,7 +57,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        viewData()
+        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val onlyRisky = preferences.getBoolean("closecontactonly", false)
+        viewData(onlyRisky)
     }
 
     override fun onBackPressed() {
@@ -121,8 +127,8 @@ class MainActivity : AppCompatActivity() {
 //    Database operation
     val dbHelper = FeedReaderDbHelper(this)
 
-    fun viewData() {
-        val cursor = dbHelper.viewData()
+    fun viewData(onlyRisky: Boolean) {
+        val cursor = dbHelper.viewData(onlyRisky)
 
         val adapter = SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
             cursor, arrayOf(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN),
