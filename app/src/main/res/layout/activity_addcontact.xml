@@ -132,10 +132,12 @@
 
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/known_question"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/known_contact" />
+                    android:text="@string/known_contact"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
 
                 <RadioGroup
                     android:id="@+id/known_group"
@@ -159,10 +161,12 @@
                 </RadioGroup>
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/encounter_question"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/encounter_type" />
+                    android:text="@string/encounter_type"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
 
                 <RadioGroup
                     android:id="@+id/contact_indoor_outdoor"
@@ -189,7 +193,9 @@
                     android:id="@+id/distance_question"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/distance_question" />
+                    android:text="@string/distance_question"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
 
                 <RadioGroup
                     android:id="@+id/distance_group"

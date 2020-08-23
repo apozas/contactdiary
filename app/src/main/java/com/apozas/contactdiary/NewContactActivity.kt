@@ -64,12 +64,18 @@ class NewContactActivity : AppCompatActivity() {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
 
+            var errorCount = 0
+
 //          Process RadioButtons
             val relativeId = known_group.checkedRadioButtonId
             var relativeChoice = -1
             if (relativeId != -1) {
                 val btn: View = known_group.findViewById(relativeId)
                 relativeChoice = known_group.indexOfChild(btn)
+            } else {
+                known_question.requestFocus()
+                known_question.error = getString(R.string.choose_option)
+                errorCount++
             }
 
             val contactIndoorOutdoorId = contact_indoor_outdoor.checkedRadioButtonId
@@ -77,6 +83,10 @@ class NewContactActivity : AppCompatActivity() {
             if (contactIndoorOutdoorId != -1) {
                 val btn: View = contact_indoor_outdoor.findViewById(contactIndoorOutdoorId)
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
+            } else {
+                encounter_question.requestFocus()
+                encounter_question.error = getString(R.string.choose_option)
+                errorCount++
             }
 
             val contactCloseContactId = distance_group.checkedRadioButtonId
@@ -84,6 +94,10 @@ class NewContactActivity : AppCompatActivity() {
             if (contactCloseContactId != -1) {
                 val btn: View = distance_group.findViewById(contactCloseContactId)
                 contactCloseContactChoice = distance_group.indexOfChild(btn)
+            } else {
+                distance_question.requestFocus()
+                distance_question.error = getString(R.string.choose_option)
+                errorCount++
             }
 
 //          Process timestamp
@@ -95,28 +109,51 @@ class NewContactActivity : AppCompatActivity() {
                 date_input.getText().toString() + " " + timeInput) as Date
             cal.setTime(datetime)
 
-//          Create a new map of values, where column names are the keys
-            val values = ContentValues().apply {
-                put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Contact")
-                put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, name_input.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, place_input.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
-                put(ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN, phone_input.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.RELATIVE_COLUMN, relativeChoice)
-                put(ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
-                put(ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
+//          Compulsory text fields
+            val contactName = name_input.getText().toString()
+            if (contactName.length == 0) {
+                name_input.error = getString(R.string.compulsory_field)
+                errorCount++
+            }
+            val contactPlace = place_input.getText().toString()
+            if (contactPlace.length == 0) {
+                place_input.error = getString(R.string.compulsory_field)
+                errorCount++
             }
 
-//          Insert the new row, returning the primary key value of the new row
-            db?.insert(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, null, values)
+//          Create a new map of values, where column names are the keys
+            if (errorCount == 0) {
+                val values = ContentValues().apply {
+                    put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Contact")
+                    put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, contactName)
+                    put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, contactPlace)
+                    put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN,
+                        phone_input.getText().toString()
+                    )
+                    put(ContactDatabase.ContactDatabase.FeedEntry.RELATIVE_COLUMN, relativeChoice)
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN,
+                        contactCloseContactChoice
+                    )
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN,
+                        contactIndoorOutdoorChoice
+                    )
+                }
 
-            Toast.makeText(
-                applicationContext,
-                applicationContext.getResources().getString(R.string.contact_saved),
-                Toast.LENGTH_LONG).show()
+//              Insert the new row, returning the primary key value of the new row
+                db?.insert(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, null, values)
 
-            finish()
- //            TODO("Perform checks of required information")
+                Toast.makeText(
+                    applicationContext,
+                    applicationContext.getResources().getString(R.string.contact_saved),
+                    Toast.LENGTH_LONG
+                ).show()
+
+                finish()
+            }
         }
     }
 }

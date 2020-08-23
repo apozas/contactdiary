@@ -146,34 +146,59 @@ class EditContactActivity : AppCompatActivity() {
             date_edit.getText().toString() + " " + timeInput) as Date
             cal.setTime(datetime)
 
-//          Create new row
-            val values = ContentValues().apply {
-                put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Contact")
-                put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, name_edit.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, place_edit.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
-                put(ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN, phone_edit.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.RELATIVE_COLUMN, relativeChoice)
-                put(ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
-                put(ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
+//          Compulsory text fields
+            var errorCount = 0
+            val contactName = name_edit.getText().toString()
+            if (contactName.length == 0) {
+                name_edit.error = getString(R.string.compulsory_field)
+                errorCount++
+            }
+            val contactPlace = place_edit.getText().toString()
+            if (contactPlace.length == 0) {
+                place_edit.error = getString(R.string.compulsory_field)
+                errorCount++
             }
 
-//          Update the database
-            val selection = "_id LIKE ?"
-            val selectionArgs = arrayOf(info.toString())
-            val count = db.update(
-                ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs)
+//          Create new row
+            if (errorCount == 0) {
+                val values = ContentValues().apply {
+                    put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Contact")
+                    put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, contactName)
+                    put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, contactPlace)
+                    put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN,
+                        phone_edit.getText().toString()
+                    )
+                    put(ContactDatabase.ContactDatabase.FeedEntry.RELATIVE_COLUMN, relativeChoice)
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN,
+                        contactCloseContactChoice
+                    )
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN,
+                        contactIndoorOutdoorChoice
+                    )
+                }
 
-            Toast.makeText(
-                applicationContext,
-                applicationContext.getResources().getString(R.string.contact_saved),
-                Toast.LENGTH_LONG).show()
+//              Update the database
+                val selection = "_id LIKE ?"
+                val selectionArgs = arrayOf(info.toString())
+                val count = db.update(
+                    ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
+                    values,
+                    selection,
+                    selectionArgs
+                )
 
-            finish()
-//            TODO("Perform checks of required information")
+                Toast.makeText(
+                    applicationContext,
+                    applicationContext.getResources().getString(R.string.contact_saved),
+                    Toast.LENGTH_LONG
+                ).show()
+
+                finish()
+            }
         }
     }
 

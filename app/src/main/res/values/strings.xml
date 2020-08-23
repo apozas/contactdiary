@@ -36,4 +36,6 @@
     <string name="donate_url" translatable="false">https://www.paypal.me/apozasker</string>
     <string name="notification_title">¿Con quién has estado hoy?</string>
     <string name="notification_text">Añade tus contactos al diario</string>
+    <string name="choose_option">Por favor, escoge una opción</string>
+    <string name="compulsory_field">Campo obligatorio</string>
 </resources>

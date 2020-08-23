@@ -33,4 +33,6 @@
     <string name="about_donate">Buy me a coffee</string>
     <string name="notification_title">Who have you been with today?</string>
     <string name="notification_text">Add your contacts to the diary</string>
+    <string name="choose_option">Please, choose an option</string>
+    <string name="compulsory_field">Compulsory field</string>
 </resources>

@@ -66,12 +66,18 @@ class NewEventActivity : AppCompatActivity() {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
 
+            var errorCount = 0
+
 //          Process RadioButtons
             val eventIndoorOutdoorId = event_indoor_outdoor.checkedRadioButtonId
             var eventIndoorOutdoorChoice = -1
             if (eventIndoorOutdoorId != -1) {
                 val btn: View = event_indoor_outdoor.findViewById(eventIndoorOutdoorId)
                 eventIndoorOutdoorChoice = event_indoor_outdoor.indexOfChild(btn)
+            } else {
+                event_encounter_question.requestFocus()
+                event_encounter_question.error = getString(R.string.choose_option)
+                errorCount++
             }
 
             val eventCloseContactId = eventclosecontact.checkedRadioButtonId
@@ -79,6 +85,10 @@ class NewEventActivity : AppCompatActivity() {
             if (eventCloseContactId != -1) {
                 val btn: View = eventclosecontact.findViewById(eventCloseContactId)
                 eventCloseContactChoice = eventclosecontact.indexOfChild(btn)
+            } else {
+                closecontact_question.requestFocus()
+                closecontact_question.error = getString(R.string.choose_option)
+                errorCount++
             }
 //          Process time
             var timeInput = eventtime_input.getText().toString()
@@ -86,32 +96,59 @@ class NewEventActivity : AppCompatActivity() {
                 timeInput = "0:00"
             }
             val datetime = SimpleDateFormat("dd MMMM yyyy HH:mm").parse(
-                eventdate_input.getText().toString() + " " + timeInput) as Date
+                eventdate_input.getText().toString() + " " + timeInput
+            ) as Date
             cal.setTime(datetime)
 
-//          Create a new map of values, where column names are the keys
-            val values = ContentValues().apply {
-                put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Event")
-                put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, eventname_input.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, eventplace_input.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
-                put(ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN, eventphone_input.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.COMPANIONS_COLUMN, eventpeople_input.getText().toString())
-                put(ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)
-                put(ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN, eventCloseContactChoice)
+//          Compulsory text fields
+            val eventName = eventname_input.getText().toString()
+            if (eventName.length == 0) {
+                eventname_input.error = getString(R.string.compulsory_field)
+                errorCount++
             }
+            val eventPlace = eventplace_input.getText().toString()
+            if (eventPlace.length == 0) {
+                eventplace_input.error = getString(R.string.compulsory_field)
+                errorCount++
+            }
+//          Create a new map of values, where column names are the keys
+            if (errorCount == 0) {
+                val values = ContentValues().apply {
+                    put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Event")
+                    put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, eventName)
+                    put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, eventPlace)
+                    put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN,
+                        eventphone_input.getText().toString()
+                    )
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.COMPANIONS_COLUMN,
+                        eventpeople_input.getText().toString()
+                    )
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN,
+                        eventIndoorOutdoorChoice
+                    )
+                    put(
+                        ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN,
+                        eventCloseContactChoice
+                    )
+                }
 
-//          Insert the new row, returning the primary key value of the new row
-            val newRowId = db?.insert(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, null, values)
+//              Insert the new row, returning the primary key value of the new row
+                val newRowId =
+                    db?.insert(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, null, values)
 
-            Toast.makeText(
-                applicationContext,
-                applicationContext.getResources().getString(R.string.event_saved),
-                Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    applicationContext,
+                    applicationContext.getResources().getString(R.string.event_saved),
+                    Toast.LENGTH_LONG
+                ).show()
 
 //            dbHelper.viewData()
-            finish()
-//            TODO("Perform checks of required information")
+                finish()
+            }
         }
     }
 }
