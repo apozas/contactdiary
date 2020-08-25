@@ -8,17 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_addevent.*
-import kotlinx.android.synthetic.main.activity_editcontact.*
 import kotlinx.android.synthetic.main.activity_editevent.*
-import kotlinx.android.synthetic.main.activity_editevent.closeevent_maybe
-import kotlinx.android.synthetic.main.activity_editevent.closeevent_no
-import kotlinx.android.synthetic.main.activity_editevent.closeevent_yes
-import kotlinx.android.synthetic.main.activity_editevent.event_indoor_outdoor
-import kotlinx.android.synthetic.main.activity_editevent.event_indoors
-import kotlinx.android.synthetic.main.activity_editevent.event_outdoors
-import kotlinx.android.synthetic.main.activity_editevent.eventclosecontact
-import kotlinx.android.synthetic.main.activity_editevent.okButton_AddEvent
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -39,8 +29,10 @@ class EditEventActivity : AppCompatActivity() {
 
         val db = dbHelper.writableDatabase
 
-        val cursor: Cursor = db.rawQuery("SELECT * FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME}" +
-                " WHERE _id=" + info, null)
+        val cursor: Cursor = db.rawQuery(
+            "SELECT * FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME}" +
+                    " WHERE _id=" + info, null
+        )
         cursor.moveToFirst()
 
         eventname_edit.setText(cursor.getString(cursor.getColumnIndex("Name")))
@@ -87,10 +79,12 @@ class EditEventActivity : AppCompatActivity() {
         }
 
         eventdate_edit.setOnClickListener {
-            DatePickerDialog(this@EditEventActivity, dateSetListener,
+            DatePickerDialog(
+                this@EditEventActivity, dateSetListener,
                 cal.get(Calendar.YEAR),
                 cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)).show()
+                cal.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
 
         val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
@@ -102,10 +96,12 @@ class EditEventActivity : AppCompatActivity() {
         }
 
         eventtime_edit.setOnClickListener {
-            TimePickerDialog(this@EditEventActivity, timeSetListener,
+            TimePickerDialog(
+                this@EditEventActivity, timeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true).show()
+                true
+            ).show()
         }
 
         okButton_AddEvent.setOnClickListener {
@@ -126,15 +122,6 @@ class EditEventActivity : AppCompatActivity() {
                 val btn: View = eventclosecontact.findViewById(contactCloseContactId)
                 contactCloseContactChoice = eventclosecontact.indexOfChild(btn)
             }
-
-//          Process timestamp
-            var timeInput = eventtime_edit.getText().toString()
-            if (timeInput == "") {
-                timeInput = "0:00"
-            }
-            val datetime = SimpleDateFormat("dd MMMM yyyy HH:mm").parse(
-                eventdate_edit.getText().toString() + " " + timeInput) as Date
-            cal.setTime(datetime)
 
 //          Compulsory text fields
             var errorCount = 0
@@ -197,12 +184,16 @@ class EditEventActivity : AppCompatActivity() {
     fun deleteEvent(view: View) {
         val db = dbHelper.writableDatabase
         val info = getIntent().getExtras()?.getString("entry")
-        db.delete(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, "_id LIKE ?", arrayOf(info))
+        db.delete(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
+            "_id LIKE ?",
+            arrayOf(info)
+        )
 
         Toast.makeText(
             applicationContext,
             applicationContext.getResources().getString(R.string.contact_deleted),
-            Toast.LENGTH_LONG).show()
+            Toast.LENGTH_LONG
+        ).show()
 
         finish()
     }

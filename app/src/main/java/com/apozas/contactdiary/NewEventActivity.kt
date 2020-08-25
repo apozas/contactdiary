@@ -47,7 +47,7 @@ class NewEventActivity : AppCompatActivity() {
         val eventtimeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
 //            cal.set(Calendar.HOUR_OF_DAY, hour)
 //            cal.set(Calendar.MINUTE, minute)
-
+//
 //            eventtime_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
 
         }
@@ -90,15 +90,6 @@ class NewEventActivity : AppCompatActivity() {
                 closecontact_question.error = getString(R.string.choose_option)
                 errorCount++
             }
-//          Process time
-            var timeInput = eventtime_input.getText().toString()
-            if (timeInput == "") {
-                timeInput = "0:00"
-            }
-            val datetime = SimpleDateFormat("dd MMMM yyyy HH:mm").parse(
-                eventdate_input.getText().toString() + " " + timeInput
-            ) as Date
-            cal.setTime(datetime)
 
 //          Compulsory text fields
             val eventName = eventname_input.getText().toString()
@@ -146,7 +137,6 @@ class NewEventActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
 
-//            dbHelper.viewData()
                 finish()
             }
         }

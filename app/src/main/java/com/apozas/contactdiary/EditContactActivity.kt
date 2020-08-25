@@ -137,15 +137,6 @@ class EditContactActivity : AppCompatActivity() {
                 contactCloseContactChoice = distance_group.indexOfChild(btn)
             }
 
-//          Process timestamp
-            var timeInput = time_edit.getText().toString()
-            if (timeInput == "") {
-                timeInput = "0:00"
-            }
-            val datetime = SimpleDateFormat("dd MMMM yyyy HH:mm").parse(
-            date_edit.getText().toString() + " " + timeInput) as Date
-            cal.setTime(datetime)
-
 //          Compulsory text fields
             var errorCount = 0
             val contactName = name_edit.getText().toString()
@@ -205,12 +196,16 @@ class EditContactActivity : AppCompatActivity() {
     fun deleteContact(view: View) {
         val db = dbHelper.writableDatabase
         val info = getIntent().getExtras()?.getString("entry")
-        db.delete(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, "_id LIKE ?", arrayOf(info))
+        db.delete(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
+            "_id LIKE ?",
+            arrayOf(info)
+        )
 
         Toast.makeText(
             applicationContext,
             applicationContext.getResources().getString(R.string.contact_deleted),
-            Toast.LENGTH_LONG).show()
+            Toast.LENGTH_LONG
+        ).show()
 
         finish()
     }

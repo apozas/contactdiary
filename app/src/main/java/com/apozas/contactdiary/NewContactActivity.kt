@@ -100,15 +100,6 @@ class NewContactActivity : AppCompatActivity() {
                 errorCount++
             }
 
-//          Process timestamp
-            var timeInput = time_input.getText().toString()
-            if (timeInput == "") {
-                timeInput = "0:00"
-            }
-            val datetime = SimpleDateFormat("dd MMMM yyyy HH:mm").parse(
-                date_input.getText().toString() + " " + timeInput) as Date
-            cal.setTime(datetime)
-
 //          Compulsory text fields
             val contactName = name_input.getText().toString()
             if (contactName.length == 0) {
