@@ -45,10 +45,10 @@ class NewEventActivity : AppCompatActivity() {
         }
 
         val eventtimeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
-//            cal.set(Calendar.HOUR_OF_DAY, hour)
-//            cal.set(Calendar.MINUTE, minute)
-//
-//            eventtime_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
+            cal.set(Calendar.HOUR_OF_DAY, hour)
+            cal.set(Calendar.MINUTE, minute)
+
+            eventtime_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
 
         }
 
