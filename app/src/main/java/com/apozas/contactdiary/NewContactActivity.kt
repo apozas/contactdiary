@@ -3,15 +3,12 @@ package com.apozas.contactdiary
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_addcontact.*
-import kotlinx.android.synthetic.main.activity_addevent.*
 import java.text.DateFormat
-import java.text.SimpleDateFormat
 import java.util.*
 
 class NewContactActivity : AppCompatActivity() {
@@ -24,7 +21,6 @@ class NewContactActivity : AppCompatActivity() {
 
         // Set current values
         date_input.setText(DateFormat.getDateInstance().format(cal.time))
-        time_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
 
         // Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
@@ -110,6 +106,14 @@ class NewContactActivity : AppCompatActivity() {
             if (contactPlace.length == 0) {
                 place_input.error = getString(R.string.compulsory_field)
                 errorCount++
+            }
+
+//          Handle time field
+            if (time_input.text.toString() == "") {
+                cal.set(Calendar.HOUR_OF_DAY, 0)
+                cal.set(Calendar.MINUTE, 0)
+                cal.set(Calendar.SECOND, 0)
+                cal.set(Calendar.MILLISECOND, 0)
             }
 
 //          Create a new map of values, where column names are the keys

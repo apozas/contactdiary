@@ -3,16 +3,12 @@ package com.apozas.contactdiary
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_addcontact.*
 import kotlinx.android.synthetic.main.activity_addevent.*
-import kotlinx.android.synthetic.main.activity_editcontact.*
 import java.text.DateFormat
-import java.text.SimpleDateFormat
 import java.util.*
 
 class NewEventActivity : AppCompatActivity() {
@@ -25,7 +21,6 @@ class NewEventActivity : AppCompatActivity() {
 
         // Set current values
         eventdate_input.setText(DateFormat.getDateInstance().format(cal.time))
-        eventtime_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
 
         // Listen to new values
         val eventdateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
@@ -38,10 +33,12 @@ class NewEventActivity : AppCompatActivity() {
         }
 
         eventdate_input.setOnClickListener {
-            DatePickerDialog(this@NewEventActivity, eventdateSetListener,
+            DatePickerDialog(
+                this@NewEventActivity, eventdateSetListener,
                 cal.get(Calendar.YEAR),
                 cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)).show()
+                cal.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
 
         val eventtimeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
@@ -53,10 +50,12 @@ class NewEventActivity : AppCompatActivity() {
         }
 
         eventtime_input.setOnClickListener {
-            TimePickerDialog(this@NewEventActivity, eventtimeSetListener,
+            TimePickerDialog(
+                this@NewEventActivity, eventtimeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true).show()
+                true
+            ).show()
         }
 
 //      Database operation
@@ -102,6 +101,15 @@ class NewEventActivity : AppCompatActivity() {
                 eventplace_input.error = getString(R.string.compulsory_field)
                 errorCount++
             }
+
+//          Handle time field
+            if (eventtime_input.text.toString() == "") {
+                cal.set(Calendar.HOUR_OF_DAY, 0)
+                cal.set(Calendar.MINUTE, 0)
+                cal.set(Calendar.SECOND, 0)
+                cal.set(Calendar.MILLISECOND, 0)
+            }
+
 //          Create a new map of values, where column names are the keys
             if (errorCount == 0) {
                 val values = ContentValues().apply {
