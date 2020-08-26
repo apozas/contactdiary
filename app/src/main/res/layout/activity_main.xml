@@ -45,9 +45,8 @@
                 android:id="@+id/diarytable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@color/colorPrimaryDark"
-                android:dividerHeight="1px"
-                android:paddingHorizontal="12dp"/>
+                android:dividerHeight="0px"
+                android:divider="@null"/>
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

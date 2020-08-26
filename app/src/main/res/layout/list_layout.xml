@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <View
+        android:id="@+id/list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:contextClickable="false" />
+
     <!-- list Separator TextView Style - the list separator Header-->
     <TextView
         style="?android:attr/listSeparatorTextViewStyle"
@@ -14,6 +23,7 @@
         android:background="@color/colorPrimary"
         android:visibility="gone"
         android:contextClickable="false"
+        android:padding="6dp"
         />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

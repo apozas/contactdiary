@@ -40,9 +40,10 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         }
 //      Set the data for the row
         cursor.moveToPosition(position)
-        val list_item_header = convertView?.findViewById<TextView>(R.id.list_item_header) as TextView
-        val list_item = convertView?.findViewById<TextView>(R.id.list_item) as TextView
-        list_item.text = cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
+        val listItemHeader = convertView?.findViewById<TextView>(R.id.list_item_header) as TextView
+        val listItem = convertView?.findViewById<TextView>(R.id.list_item) as TextView
+        val listDivider = convertView?.findViewById<View>(R.id.list_divider) as View
+        listItem.text = cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
 
         if (position - 1 >= 0) {
 //          If there is a previous position see if it has the same date
@@ -51,16 +52,19 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
             val previousDate = formatter.format(Date(cursor.getLong(mDateColumnIndex)))
             if (currentDate.equals(previousDate, ignoreCase = true)) {
 //              The dates are the same so abort everything as we already set the header before
-                list_item_header.visibility = View.GONE
+                listItemHeader.visibility = View.GONE
+                listDivider.visibility = View.VISIBLE
             } else {
 //              This is the first occurrence of this date so show the header
-                list_item_header.visibility = View.VISIBLE
-                list_item_header.text = currentDate
+                listItemHeader.visibility = View.VISIBLE
+                listItemHeader.text = currentDate
+                listDivider.visibility = View.GONE
             }
         } else {
 //          This is position 0 and we need a header here
-            list_item_header.visibility = View.VISIBLE
-            list_item_header.text = formatter.format(Date(cursor.getLong(mDateColumnIndex)))
+            listItemHeader.visibility = View.VISIBLE
+            listItemHeader.text = formatter.format(Date(cursor.getLong(mDateColumnIndex)))
+            listDivider.visibility = View.GONE
         }
         return convertView
     }
