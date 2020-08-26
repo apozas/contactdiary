@@ -6,7 +6,6 @@ import android.content.Intent
 import android.database.Cursor
 import android.os.Build
 import android.os.Bundle
-import android.os.SystemClock
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -137,9 +136,7 @@ class MainActivity : AppCompatActivity() {
     fun viewData(onlyRisky: Boolean) {
         val cursor = dbHelper.viewData(onlyRisky)
 
-        val adapter = SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
-            cursor, arrayOf(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN),
-            intArrayOf(android.R.id.text1), 0)
+        val adapter = DataCursorAdapter(this, cursor)
 
         diarytable.adapter = adapter
     }
