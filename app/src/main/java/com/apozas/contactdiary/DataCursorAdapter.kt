@@ -7,13 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cursoradapter.widget.CursorAdapter
-import java.text.SimpleDateFormat
+import java.text.DateFormat
 import java.util.*
 
 class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, c, 0) {
     private var mDateColumnIndex = cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN)
-    private var mCurrentView = 0 //if 0 - then with header
-    val formatter = SimpleDateFormat("dd/MM/yyyy")
+    val formatter = DateFormat.getDateInstance(DateFormat.MEDIUM)
     val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun newView(context: Context?, cursor: Cursor?, parent: ViewGroup?): View {
