@@ -32,7 +32,7 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
 
         if (onlyRisky) {
             query = "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
-                    " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + ">=1"
+                    " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + ">=1" +
                     " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC"
         } else {
             query = "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
