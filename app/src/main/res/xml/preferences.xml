@@ -6,19 +6,19 @@
     android:layout_height="match_parent" >
 
     <PreferenceCategory
-        android:title="Ajustes">
+        android:title="@string/settings">
 
         <SwitchPreference
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:key="reminder_toggle"
-            android:title="Recordatorio diario"
+            android:title="@string/daily_reminder"
             android:defaultValue="true"/>
 
         <EditTextPreference
             android:dependency="reminder_toggle"
             android:key="reminder_time"
-            android:title="Seleccionar hora"
+            android:title="@string/choose_time"
             android:dialogLayout="@layout/preference_edit_text"
             android:defaultValue="21:00"
             app:useSimpleSummaryProvider="true"/>
@@ -27,11 +27,11 @@
             android:key="closecontactonly"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:title="Mostrar solo contactos de riesgo" />
+            android:title="@string/show_close_contacts" />
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Más" >
+        android:title="@string/more" >
 
         <Preference
             android:key="about"

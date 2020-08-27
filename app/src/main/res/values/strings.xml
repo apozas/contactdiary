@@ -1,41 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Diario COVID</string>
-    <string name="action_settings">Ajustes</string>
-
-    <string name="new_contact">Nuevo contacto</string>
-    <string name="new_event">Nuevo evento</string>
-    <string name="event_name">Nombre del evento</string>
+    <string name="app_name">COVID Diary</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_contact">New contact</string>
+    <string name="new_event">New event</string>
+    <string name="event_name">Event name</string>
     <string name="no">No</string>
-    <string name="yes">Sí</string>
-    <string name="date">Fecha</string>
-    <string name="time">Hora</string>
-    <string name="place">Lugar</string>
-    <string name="companions">Acompañantes (opcional)</string>
-    <string name="close_event_question">¿Crees que mantuviste la distancia?</string>
-    <string name="name">Nombre</string>
-    <string name="known_contact">¿Es familiar o amigo cercano?</string>
-    <string name="distance_question">¿Crees que respetásteis la distancia?</string>
-    <string name="phone">Teléfono (opcional)</string>
-    <string name="unsure">No sé</string>
-    <string name="encounter_type">Tipo de encuentro</string>
-    <string name="indoors">Lugar cerrado</string>
-    <string name="outdoors">Al aire libre</string>
-    <string name="emptydiary">El diario está vacío</string>
-    <string name="contact_saved">Contacto guardado</string>
-    <string name="event_saved">Evento guardado</string>
-    <string name="time_optional">Hora (opcional)</string>
-    <string name="edit_event">Editar Evento</string>
-    <string name="edit_contact">Editar Contacto</string>
-    <string name="contact_deleted">Entrada eliminada</string>
-    <string name="settings">Configuración</string>
+    <string name="yes">Yes</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="place">Place</string>
+    <string name="companions">Companions (optional)</string>
+    <string name="close_event_question">Do you think you kept the distance?</string>
+    <string name="name">Name</string>
+    <string name="known_contact">Relative or close friend?</string>
+    <string name="distance_question">Do you think you kept the distance?</string>
+    <string name="phone">Phone (optional)</string>
+    <string name="unsure">Not sure</string>
+    <string name="encounter_type">Encounter type</string>
+    <string name="indoors">Indoors</string>
+    <string name="outdoors">Outdoors</string>
+    <string name="emptydiary">The diary is empty</string>
+    <string name="contact_saved">Contact saved</string>
+    <string name="event_saved">Event saved</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="time_optional">Time (optional)</string>
+    <string name="options">Options</string>
+    <string name="contact_deleted">Entry deleted</string>
+    <string name="contact_developer_summary">Tell me what you think about the app, or problems you have encountered</string>
+    <string name="contact_developer">Contact the developer</string>
+    <string name="about_donate">Buy me a coffee</string>
+    <string name="notification_title">Who have you been with today?</string>
+    <string name="notification_text">Add your contacts to the diary</string>
+    <string name="choose_option">Please, choose an option</string>
+    <string name="compulsory_field">Compulsory field</string>
     <string name="contact_developer_uri" translatable="false">mailto:alex@alexpozas.com</string>
-    <string name="contact_developer_summary">Dime qué te parece la app, o qué problemas has encontrado</string>
-    <string name="contact_developer">Escribe al desarrollador</string>
-    <string name="about_donate">Invítame a un café</string>
     <string name="feedback_subject" translatable="false">Feedback about COVID Diary</string>
     <string name="donate_url" translatable="false">https://www.paypal.me/apozasker</string>
-    <string name="notification_title">¿Con quién has estado hoy?</string>
-    <string name="notification_text">Añade tus contactos al diario</string>
-    <string name="choose_option">Por favor, escoge una opción</string>
-    <string name="compulsory_field">Campo obligatorio</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="alarm_modified">Alarm modified</string>
+    <string name="incorrect_alarm_time">Please, insert a correct time</string>
+    <string name="daily_reminder">Daily reminder</string>
+    <string name="choose_time">Choose time</string>
+    <string name="show_close_contacts">Show close contacts only</string>
+    <string name="more">More</string>
+    <string name="settings">Settings</string>
 </resources>
