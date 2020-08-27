@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Diario COVID</string>
+    <string name="action_settings">Ajustes</string>
+
+    <string name="new_contact">Nuevo contacto</string>
+    <string name="new_event">Nuevo evento</string>
+    <string name="event_name">Nombre del evento</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+    <string name="date">Fecha</string>
+    <string name="time">Hora</string>
+    <string name="place">Lugar</string>
+    <string name="companions">Acompañantes (opcional)</string>
+    <string name="close_event_question">¿Crees que mantuviste la distancia?</string>
+    <string name="name">Nombre</string>
+    <string name="known_contact">¿Es familiar o amigo cercano?</string>
+    <string name="distance_question">¿Crees que respetásteis la distancia?</string>
+    <string name="phone">Teléfono (opcional)</string>
+    <string name="unsure">No sé</string>
+    <string name="encounter_type">Tipo de encuentro</string>
+    <string name="indoors">Lugar cerrado</string>
+    <string name="outdoors">Al aire libre</string>
+    <string name="emptydiary">El diario está vacío</string>
+    <string name="contact_saved">Contacto guardado</string>
+    <string name="event_saved">Evento guardado</string>
+    <string name="time_optional">Hora (opcional)</string>
+    <string name="edit_event">Editar Evento</string>
+    <string name="edit_contact">Editar Contacto</string>
+    <string name="contact_deleted">Entrada eliminada</string>
+    <string name="options">Configuración</string>
+    <string name="contact_developer_summary">Dime qué te parece la app, o qué problemas has encontrado</string>
+    <string name="contact_developer">Escribe al desarrollador</string>
+    <string name="about_donate">Invítame a un café</string>
+    <string name="notification_title">¿Con quién has estado hoy?</string>
+    <string name="notification_text">Añade tus contactos al diario</string>
+    <string name="choose_option">Por favor, escoge una opción</string>
+    <string name="compulsory_field">Campo obligatorio</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="alarm_modified">Alarma modificada</string>
+    <string name="incorrect_alarm_time">Por favor, introduce una hora correcta</string>
+    <string name="daily_reminder">Recordatorio diario</string>
+    <string name="choose_time">Seleccionar hora</string>
+    <string name="show_close_contacts">Mostrar solo contactos de riesgo</string>
+    <string name="settings">Ajustes</string>
+    <string name="more">Más</string>
+</resources>
