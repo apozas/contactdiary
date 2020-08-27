@@ -75,6 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/new_contact"
+            android:background="@drawable/rounded_corner"
             android:visibility="invisible"
             android:layout_marginTop="16dp"
             android:onClick="addContact"/>
@@ -111,6 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/new_event"
+            android:background="@drawable/rounded_corner"
             android:visibility="invisible"
             android:layout_marginTop="16dp"
             android:onClick="addEvent"/>
