@@ -12,12 +12,12 @@ class NotificationReceiver : BroadcastReceiver() {
     }
 
     private fun setNotification(context: Context) {
-        val alarmHandler = NotificationHandler()
-        alarmHandler.scheduleAlarms(context)
+        val notificationHandler = NotificationHandler()
+        notificationHandler.scheduleNotification(context)
     }
 
     private fun handleNotification(context: Context) {
-        val alarmHandler = NotificationHandler()
-        alarmHandler.showAlarmNotification(context)
+        val notificationHandler = NotificationHandler()
+        notificationHandler.showNotification(context)
     }
 }

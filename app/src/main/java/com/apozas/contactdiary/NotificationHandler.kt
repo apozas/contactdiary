@@ -14,21 +14,13 @@ import java.util.*
 
 
 class NotificationHandler {
-    fun scheduleAlarms(context: Context) {
-        disableAllAlarms(context)
-        enableAlarms(context)
+    fun scheduleNotification(context: Context) {
+        disableNotification(context)
+        setRepeatingNotification(context)
     }
 
-    private fun enableAlarms(context: Context) {
-        enableAlarm(context)
-    }
-
-    private fun enableAlarm(context: Context) {
-        setRepeatingAlarm(context)
-    }
-
-    private fun setRepeatingAlarm(context: Context) {
-        val alarmPendingIntent = getPendingAlarmIntent(context)
+    private fun setRepeatingNotification(context: Context) {
+        val alarmPendingIntent = getPendingNotificationIntent(context)
         val alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
 
@@ -46,22 +38,7 @@ class NotificationHandler {
         )
     }
 
-    private fun getWeekdaysPendingAlarmIntent(context: Context): List<PendingIntent> {
-        val dayOfWeeks = intArrayOf(
-            Calendar.MONDAY,
-            Calendar.TUESDAY,
-            Calendar.WEDNESDAY,
-            Calendar.THURSDAY,
-            Calendar.FRIDAY,
-            Calendar.SATURDAY,
-            Calendar.SUNDAY
-        )
-        val pendingIntents: MutableList<PendingIntent> = LinkedList()
-        for (dayOfWeek in dayOfWeeks) pendingIntents.add(getPendingAlarmIntent(context))
-        return pendingIntents
-    }
-
-    private fun getPendingAlarmIntent(context: Context): PendingIntent {
+    private fun getPendingNotificationIntent(context: Context): PendingIntent {
         val alarmIntent = Intent(context, NotificationReceiver::class.java)
         alarmIntent.putExtra(INTENT_EXTRA_NOTIFICATION, true)
         return PendingIntent.getBroadcast(
@@ -72,13 +49,13 @@ class NotificationHandler {
         )
     }
 
-    fun disableAllAlarms(context: Context) {
+    fun disableNotification(context: Context) {
         val alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val pendingIntents = getWeekdaysPendingAlarmIntent(context)
-        for (pendingIntent in pendingIntents) alarmMgr.cancel(pendingIntent)
+        val pendingIntent = getPendingNotificationIntent(context)
+        alarmMgr.cancel(pendingIntent)
     }
 
-    fun showAlarmNotification(context: Context) {
+    fun showNotification(context: Context) {
         val notifyIntent = Intent(context, MainActivity::class.java)
         val notifyPendingIntent =
             PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)

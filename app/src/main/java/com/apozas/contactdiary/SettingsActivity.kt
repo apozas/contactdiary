@@ -1,7 +1,6 @@
 package com.apozas.contactdiary
 
 import android.content.ComponentName
-import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
@@ -74,13 +73,13 @@ class SettingsActivity : AppCompatActivity() {
             val pm = requireActivity().applicationContext.packageManager
             val notificationHandler = NotificationHandler()
             if (on) {
-                notificationHandler.scheduleAlarms(requireActivity().applicationContext)
+                notificationHandler.scheduleNotification(requireActivity().applicationContext)
                 pm.setComponentEnabledSetting(
                     receiver, PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                     PackageManager.DONT_KILL_APP
                 )
             } else {
-                notificationHandler.disableAllAlarms(requireActivity().applicationContext)
+                notificationHandler.disableNotification(requireActivity().applicationContext)
                 pm.setComponentEnabledSetting(
                     receiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                     PackageManager.DONT_KILL_APP

@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        val alarmHandler = NotificationHandler()
-        alarmHandler.scheduleAlarms(this)
+        val notificationHandler = NotificationHandler()
+        notificationHandler.scheduleNotification(this)
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
