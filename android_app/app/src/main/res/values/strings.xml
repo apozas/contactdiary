@@ -35,7 +35,7 @@
     <string name="notification_text">Add your contacts to the diary</string>
     <string name="choose_option">Please, choose an option</string>
     <string name="compulsory_field">Compulsory field</string>
-    <string name="contact_developer_uri" translatable="false">mailto:alex@alexpozas.com</string>
+    <string name="contact_developer_uri" translatable="false">mailto:contactdiary@alexpozas.com</string>
     <string name="feedback_subject" translatable="false">Feedback about COVID Diary</string>
     <string name="donate_url" translatable="false">https://www.paypal.me/apozasker</string>
     <string name="edit">Edit</string>
