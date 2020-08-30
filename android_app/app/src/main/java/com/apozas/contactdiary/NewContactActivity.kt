@@ -69,7 +69,6 @@ class NewContactActivity : AppCompatActivity() {
                 val btn: View = known_group.findViewById(relativeId)
                 relativeChoice = known_group.indexOfChild(btn)
             } else {
-                known_question.requestFocus()
                 known_question.error = getString(R.string.choose_option)
                 errorCount++
             }
@@ -80,7 +79,6 @@ class NewContactActivity : AppCompatActivity() {
                 val btn: View = contact_indoor_outdoor.findViewById(contactIndoorOutdoorId)
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
             } else {
-                encounter_question.requestFocus()
                 encounter_question.error = getString(R.string.choose_option)
                 errorCount++
             }
@@ -91,7 +89,6 @@ class NewContactActivity : AppCompatActivity() {
                 val btn: View = distance_group.findViewById(contactCloseContactId)
                 contactCloseContactChoice = distance_group.indexOfChild(btn)
             } else {
-                distance_question.requestFocus()
                 distance_question.error = getString(R.string.choose_option)
                 errorCount++
             }

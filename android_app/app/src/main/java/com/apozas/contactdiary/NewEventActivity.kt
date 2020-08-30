@@ -74,7 +74,6 @@ class NewEventActivity : AppCompatActivity() {
                 val btn: View = event_indoor_outdoor.findViewById(eventIndoorOutdoorId)
                 eventIndoorOutdoorChoice = event_indoor_outdoor.indexOfChild(btn)
             } else {
-                event_encounter_question.requestFocus()
                 event_encounter_question.error = getString(R.string.choose_option)
                 errorCount++
             }
@@ -85,7 +84,6 @@ class NewEventActivity : AppCompatActivity() {
                 val btn: View = eventclosecontact.findViewById(eventCloseContactId)
                 eventCloseContactChoice = eventclosecontact.indexOfChild(btn)
             } else {
-                closecontact_question.requestFocus()
                 closecontact_question.error = getString(R.string.choose_option)
                 errorCount++
             }
