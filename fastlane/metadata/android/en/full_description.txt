@@ -1,0 +1,24 @@
+COVID Diary is a simple app that allows you to keep a record of the people you have met and the events you have attended to recently. In the undesired event that you test positive for COVID-19, COVID Diary is a place where to quickly find who you must warn about the situation.
+
+<h2><b>How it works</b></h2>
+Every day COVID Diary will prompt you to insert the events you have attended and the people you have been with during the day. Through some simple forms you will be able to store the essential information about your contacts, in case you need to retrieve it. Just that. Simple, right? ;)
+
+<h2><b>Features</b></h2>
+- Configurable notification time, so the prompt does not interfere with your daily workflow.
+- Show only potentially risky contacts.
+- Automatic removal of entries older than 15 days.
+- JUST ONE PERMISSION, that needed for the app being able to notify you after device restarts. Nothing else.
+- In particular, NO INTERNET permission. The information entered is yours, and it never leaves your device.
+
+<h2><b>FAQ</b></h2>
+- Is this app BETTER than Governments' contact tracing apps?
+No. Governments' contact tracing apps may account for contacts that you may not be aware of, like the person sitting in a neighboring table at a restaurant, or that other person using the same bus to go to work. COVID Diary IS NOT A REPLACEMENT TO GOVERNMENTS' CONTACT TRACING APPS.
+
+- Is this app WORSE than Governments' contact tracing apps?
+No. Government's contact tracing apps crucially rely on all persons interacting to have the app in order to do proper notifications. With COVID Diary, you just need yourself to keep track, and you can easily notify people (or places) that do not use conventional contact tracing apps.
+
+- Will this app share the information I input?
+NO. The app has no permissions, so there is no way that it can connect to the internet. The information you insert will never leave your device. Even more, entries in the diary are automatically eliminated when they become older than 15 days.
+
+<h2><b>Support</b></h2>
+If you find a bug, have an idea on how to improve COVID Diary or have a question, please visit the COVID Diary project page on GitHub: https://github.com/apozas/contactdiary
