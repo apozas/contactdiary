@@ -55,20 +55,20 @@ If you found a bug, have an idea how to improve the COVID Diary app or have a qu
 <table>
   <tr>
     <th>
-        <a href="fastlane/android/metadata/android/en/images/phoneScreenshots/1.jpg" target="_blank">
-        <img src='fastlane/android/metadata/android/en/images/phoneScreenshots/1.jpg' width='200px' alt='image missing' /> </a>
+        <a href="fastlane/metadata/android/en/images/phoneScreenshots/1.jpg" target="_blank">
+        <img src='fastlane/metadata/android/en/images/phoneScreenshots/1.jpg' width='200px' alt='image missing' /> </a>
     </th>
     <th>
-        <a href="fastlane/android/metadata/android/en/images/phoneScreenshots/2.jpg" target="_blank">
-        <img src='fastlane/android/metadata/android/en/images/phoneScreenshots/2.jpg' width='200px' alt='image missing' /> </a>
+        <a href="fastlane/metadata/android/en/images/phoneScreenshots/2.jpg" target="_blank">
+        <img src='fastlane/metadata/android/en/images/phoneScreenshots/2.jpg' width='200px' alt='image missing' /> </a>
     </th>
     <th>
-        <a href="fastlane/android/metadata/android/en/images/phoneScreenshots/3.jpg" target="_blank">
-        <img src='fastlane/android/metadata/android/en/images/phoneScreenshots/3.jpg' width='200px' alt='image missing' /> </a>
+        <a href="fastlane/metadata/android/en/images/phoneScreenshots/3.jpg" target="_blank">
+        <img src='fastlane/metadata/android/en/images/phoneScreenshots/3.jpg' width='200px' alt='image missing' /> </a>
     </th>
     <th>
-        <a href="fastlane/android/metadata/android/en/images/phoneScreenshots/4.jpg" target="_blank">
-        <img src='fastlane/android/metadata/android/en/images/phoneScreenshots/4.jpg' width='200px' alt='image missing' /> </a>
+        <a href="fastlane/metadata/android/en/images/phoneScreenshots/4.jpg" target="_blank">
+        <img src='fastlane/metadata/android/en/images/phoneScreenshots/4.jpg' width='200px' alt='image missing' /> </a>
     </th>
   </tr>
 </table>
