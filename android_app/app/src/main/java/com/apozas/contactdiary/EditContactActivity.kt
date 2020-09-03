@@ -35,8 +35,8 @@ import java.util.*
 class EditContactActivity : AppCompatActivity() {
 
 
-    val dbHelper = FeedReaderDbHelper(this)
-    val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+    private val dbHelper = FeedReaderDbHelper(this)
+    private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +47,7 @@ class EditContactActivity : AppCompatActivity() {
 
         // Get info from MainActivity
         val db = dbHelper.writableDatabase
-        val info = getIntent().getExtras()?.getString("entry")
+        val info = intent.extras?.getString("entry")
 
         val cursor: Cursor = db.rawQuery(
             "SELECT * FROM ${feedEntry.TABLE_NAME}" +
@@ -59,8 +59,8 @@ class EditContactActivity : AppCompatActivity() {
         place_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
 
         val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
-        var cal = Calendar.getInstance()
-        cal.setTimeInMillis(timestamp)
+        val cal = Calendar.getInstance()
+        cal.timeInMillis = timestamp
 
         date_edit.setText(DateFormat.getDateInstance(DateFormat.MEDIUM).format(cal.time))
         time_edit.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
@@ -69,33 +69,43 @@ class EditContactActivity : AppCompatActivity() {
             phone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        var relativeBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
-        var encounterBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        var closeContactBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        val relativeBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+        val encounterBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val closeContactBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
 
-        if (relativeBtn == 0) {
-            known_yes.setChecked(true)
-        } else if (relativeBtn == 1) {
-            known_no.setChecked(true)
+        when (relativeBtn) {
+            0 -> {
+                known_yes.isChecked = true
+            }
+            1 -> {
+                known_no.isChecked = true
+            }
         }
 
-        if (encounterBtn == 0) {
-            indoors.setChecked(true)
-        } else if (encounterBtn == 1) {
-            outdoors.setChecked(true)
+        when (encounterBtn) {
+            0 -> {
+                indoors.isChecked = true
+            }
+            1 -> {
+                outdoors.isChecked = true
+            }
         }
 
-        if (closeContactBtn == 0) {
-            closecontact.setChecked(true)
-        } else if (closeContactBtn == 1) {
-            noclosecontact.setChecked(true)
-        } else if (closeContactBtn == 2) {
-            unknowncontact.setChecked(true)
+        when (closeContactBtn) {
+            0 -> {
+                closecontact.isChecked = true
+            }
+            1 -> {
+                noclosecontact.isChecked = true
+            }
+            2 -> {
+                unknowncontact.isChecked = true
+            }
         }
 
         // Listen to new values
 
-        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, monthOfYear)
             cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -113,7 +123,7 @@ class EditContactActivity : AppCompatActivity() {
             ).show()
         }
 
-        val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
 
@@ -132,7 +142,7 @@ class EditContactActivity : AppCompatActivity() {
 
         okButton_AddContact.setOnClickListener {
 //          Gets the data repository in write mode
-            val db = dbHelper.writableDatabase
+//            val db = dbHelper.writableDatabase
 
 //          Process RadioButtons
             val relativeId = known_group.checkedRadioButtonId
@@ -158,13 +168,13 @@ class EditContactActivity : AppCompatActivity() {
 
 //          Compulsory text fields
             var errorCount = 0
-            val contactName = name_edit.getText().toString()
-            if (contactName.length == 0) {
+            val contactName = name_edit.text.toString()
+            if (contactName.isEmpty()) {
                 name_edit.error = getString(R.string.compulsory_field)
                 errorCount++
             }
-            val contactPlace = place_edit.getText().toString()
-            if (contactPlace.length == 0) {
+            val contactPlace = place_edit.text.toString()
+            if (contactPlace.isEmpty()) {
                 place_edit.error = getString(R.string.compulsory_field)
                 errorCount++
             }
@@ -176,7 +186,7 @@ class EditContactActivity : AppCompatActivity() {
                     put(feedEntry.NAME_COLUMN, contactName)
                     put(feedEntry.PLACE_COLUMN, contactPlace)
                     put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
-                    put(feedEntry.PHONE_COLUMN, phone_edit.getText().toString())
+                    put(feedEntry.PHONE_COLUMN, phone_edit.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
@@ -200,22 +210,22 @@ class EditContactActivity : AppCompatActivity() {
 
     fun deleteContact(view: View) {
         val db = dbHelper.writableDatabase
-        val info = getIntent().getExtras()?.getString("entry")
+        val info = intent.extras?.getString("entry")
         db.delete(feedEntry.TABLE_NAME, "_id LIKE ?", arrayOf(info))
 
         Toast.makeText(
             applicationContext,
-            applicationContext.getResources().getString(R.string.contact_deleted),
+            applicationContext.resources.getString(R.string.contact_deleted),
             Toast.LENGTH_LONG
         ).show()
 
         finish()
     }
 
-    fun setupUI(view: View) {
+    private fun setupUI(view: View) {
         //Set up touch listener for non-text box views to hide keyboard.
         if (view !is EditText) {
-            view.setOnTouchListener { v, event ->
+            view.setOnTouchListener { v, _ ->
                 v.clearFocus()
                 hideSoftKeyboard()
                 false
@@ -231,10 +241,10 @@ class EditContactActivity : AppCompatActivity() {
         }
     }
 
-    fun hideSoftKeyboard() {
+    private fun hideSoftKeyboard() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(currentFocus?.getWindowToken(), 0)
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
     }
 
 }

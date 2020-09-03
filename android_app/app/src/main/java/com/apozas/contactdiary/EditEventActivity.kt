@@ -29,7 +29,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editevent.*
 import java.text.DateFormat
-import java.text.SimpleDateFormat
 import java.util.*
 
 class EditEventActivity : AppCompatActivity() {
@@ -45,8 +44,7 @@ class EditEventActivity : AppCompatActivity() {
         setupUI(findViewById(R.id.editeventlayout))
 
         // Get info from MainActivity
-        val info = getIntent().getExtras()?.getString("entry")
-//        Toast.makeText(this, "Index is " + info, Toast.LENGTH_LONG).show()
+        val info = intent.extras?.getString("entry")
 
         val db = dbHelper.writableDatabase
 
@@ -76,21 +74,25 @@ class EditEventActivity : AppCompatActivity() {
         val closeContactBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
 
         if (encounterBtn == 0) {
-            event_indoors.setChecked(true)
+            event_indoors.isChecked = true
         } else if (encounterBtn == 1) {
-            event_outdoors.setChecked(true)
+            event_outdoors.isChecked = true
         }
 
-        if (closeContactBtn == 0) {
-            closeevent_yes.setChecked(true)
-        } else if (closeContactBtn == 1) {
-            closeevent_no.setChecked(true)
-        } else if (closeContactBtn == 2) {
-            closeevent_maybe.setChecked(true)
+        when (closeContactBtn) {
+            0 -> {
+                closeevent_yes.isChecked = true
+            }
+            1 -> {
+                closeevent_no.isChecked = true
+            }
+            2 -> {
+                closeevent_maybe.isChecked = true
+            }
         }
 
         // Listen to new values
-        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, monthOfYear)
             cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -108,7 +110,7 @@ class EditEventActivity : AppCompatActivity() {
             ).show()
         }
 
-        val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
 
@@ -126,9 +128,6 @@ class EditEventActivity : AppCompatActivity() {
         }
 
         okButton_AddEvent.setOnClickListener {
-//          Gets the data repository in write mode
-            val db = dbHelper.writableDatabase
-
 //          Process RadioButtons
             val contactIndoorOutdoorId = event_indoor_outdoor.checkedRadioButtonId
             var contactIndoorOutdoorChoice = -1
@@ -146,13 +145,13 @@ class EditEventActivity : AppCompatActivity() {
 
 //          Compulsory text fields
             var errorCount = 0
-            val eventName = eventname_edit.getText().toString()
-            if (eventName.length == 0) {
+            val eventName = eventname_edit.text.toString()
+            if (eventName.isEmpty()) {
                 eventname_edit.error = getString(R.string.compulsory_field)
                 errorCount++
             }
-            val eventPlace = eventplace_edit.getText().toString()
-            if (eventPlace.length == 0) {
+            val eventPlace = eventplace_edit.text.toString()
+            if (eventPlace.isEmpty()) {
                 eventplace_edit.error = getString(R.string.compulsory_field)
                 errorCount++
             }
@@ -176,7 +175,7 @@ class EditEventActivity : AppCompatActivity() {
 
                 Toast.makeText(
                     applicationContext,
-                    applicationContext.getResources().getString(R.string.contact_saved),
+                    applicationContext.resources.getString(R.string.contact_saved),
                     Toast.LENGTH_LONG
                 ).show()
 
@@ -187,7 +186,7 @@ class EditEventActivity : AppCompatActivity() {
 
     fun deleteEvent(view: View) {
         val db = dbHelper.writableDatabase
-        val info = getIntent().getExtras()?.getString("entry")
+        val info = intent.extras?.getString("entry")
         db.delete(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
             "_id LIKE ?",
             arrayOf(info)
@@ -195,17 +194,17 @@ class EditEventActivity : AppCompatActivity() {
 
         Toast.makeText(
             applicationContext,
-            applicationContext.getResources().getString(R.string.contact_deleted),
+            applicationContext.resources.getString(R.string.contact_deleted),
             Toast.LENGTH_LONG
         ).show()
 
         finish()
     }
 
-    fun setupUI(view: View) {
+    private fun setupUI(view: View) {
         //Set up touch listener for non-text box views to hide keyboard.
         if (view !is EditText) {
-            view.setOnTouchListener { v, event ->
+            view.setOnTouchListener { v, _ ->
                 v.clearFocus()
                 hideSoftKeyboard()
                 false
@@ -221,9 +220,9 @@ class EditEventActivity : AppCompatActivity() {
         }
     }
 
-    fun hideSoftKeyboard() {
+    private fun hideSoftKeyboard() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(currentFocus?.getWindowToken(), 0)
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
     }
 }

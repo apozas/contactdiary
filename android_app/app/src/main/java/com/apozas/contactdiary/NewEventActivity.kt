@@ -40,13 +40,13 @@ class NewEventActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         setupUI(findViewById(R.id.neweventlayout))
 
-        var cal = Calendar.getInstance()
+        val cal = Calendar.getInstance()
 
         // Set current values
         eventdate_input.setText(DateFormat.getDateInstance().format(cal.time))
 
         // Listen to new values
-        val eventdateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        val eventdateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, monthOfYear)
             cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -64,7 +64,7 @@ class NewEventActivity : AppCompatActivity() {
             ).show()
         }
 
-        val eventtimeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
+        val eventtimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
 
@@ -112,13 +112,13 @@ class NewEventActivity : AppCompatActivity() {
             }
 
 //          Compulsory text fields
-            val eventName = eventname_input.getText().toString()
-            if (eventName.length == 0) {
+            val eventName = eventname_input.text.toString()
+            if (eventName.isEmpty()) {
                 eventname_input.error = getString(R.string.compulsory_field)
                 errorCount++
             }
-            val eventPlace = eventplace_input.getText().toString()
-            if (eventPlace.length == 0) {
+            val eventPlace = eventplace_input.text.toString()
+            if (eventPlace.isEmpty()) {
                 eventplace_input.error = getString(R.string.compulsory_field)
                 errorCount++
             }
@@ -149,7 +149,7 @@ class NewEventActivity : AppCompatActivity() {
 
                 Toast.makeText(
                     applicationContext,
-                    applicationContext.getResources().getString(R.string.event_saved),
+                    applicationContext.resources.getString(R.string.event_saved),
                     Toast.LENGTH_LONG
                 ).show()
 
@@ -158,10 +158,10 @@ class NewEventActivity : AppCompatActivity() {
         }
     }
 
-    fun setupUI(view: View) {
+    private fun setupUI(view: View) {
         //Set up touch listener for non-text box views to hide keyboard.
         if (view !is EditText) {
-            view.setOnTouchListener { v, event ->
+            view.setOnTouchListener { v, _ ->
                 v.clearFocus()
                 hideSoftKeyboard()
                 false
@@ -177,9 +177,9 @@ class NewEventActivity : AppCompatActivity() {
         }
     }
 
-    fun hideSoftKeyboard() {
+    private fun hideSoftKeyboard() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(currentFocus?.getWindowToken(), 0)
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
     }
 }

@@ -35,16 +35,16 @@ class SettingsActivity : AppCompatActivity() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.preferences, rootKey)
 
-            val preferences = preferenceManager.getSharedPreferences()
+            val preferences = preferenceManager.sharedPreferences
             val prefsedit = preferences.edit()
 
             val oldTime = preferences.getString("reminder_time", "21:00").toString()
             val reminderTime = findPreference<EditTextPreference>("reminder_time")
             val reminderToggle = findPreference<SwitchPreference>("reminder_toggle") as SwitchPreference
 
-            reminderTime?.setOnPreferenceChangeListener { preference, newValue ->
+            reminderTime?.setOnPreferenceChangeListener { _, newValue ->
                 var isTimeGood = true
-                var newTime = newValue as String
+                val newTime = newValue as String
                 if (newTime.split(":").size == 2) {
                     val timeparts = newValue.split(":")
                     if ((timeparts[0].toInt() > 23) || (timeparts[1].toInt() > 59)) {
@@ -64,7 +64,7 @@ class SettingsActivity : AppCompatActivity() {
                     isTimeGood = false
                 }
                 if ((newValue.toString() != oldTime) && isTimeGood) {
-                    prefsedit.putString("reminder_time", newValue as String)
+                    prefsedit.putString("reminder_time", newValue)
                     prefsedit.apply()
                     Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_LONG).show()
                     updateNotificationPreferences(reminderToggle.isEnabled)
@@ -74,7 +74,7 @@ class SettingsActivity : AppCompatActivity() {
                     prefsedit.apply()
                     false }
             }
-            reminderToggle?.setOnPreferenceChangeListener { preference, newValue ->
+            reminderToggle.setOnPreferenceChangeListener { _, newValue ->
                 updateNotificationPreferences(newValue as Boolean)
                 true
             }

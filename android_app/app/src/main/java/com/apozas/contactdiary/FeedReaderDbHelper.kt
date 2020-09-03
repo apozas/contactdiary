@@ -43,20 +43,17 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
 
     fun viewData(onlyRisky: Boolean): Cursor {
         val db = this.readableDatabase
-        val query: String
 
-        if (onlyRisky) {
-            query = "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
+        val query = if (onlyRisky) {
+            "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
                     " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + ">=1" +
                     " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC"
         } else {
-            query = "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
+            "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
                     " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC"
         }
 
-        val cursor = db.rawQuery(query, null)
-
-        return cursor
+        return db.rawQuery(query, null)
     }
 
 }

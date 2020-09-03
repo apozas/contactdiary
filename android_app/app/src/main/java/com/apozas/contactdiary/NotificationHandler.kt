@@ -45,7 +45,7 @@ class NotificationHandler {
         cal.set(Calendar.HOUR_OF_DAY, reminderTime[0].toInt())
         cal.set(Calendar.MINUTE, reminderTime[1].toInt())
         cal.set(Calendar.SECOND, 0)
-        if (cal.time.compareTo(Date()) < 0) cal.add(Calendar.DAY_OF_MONTH, 1)
+        if (cal.time < Date()) cal.add(Calendar.DAY_OF_MONTH, 1)
         alarmMgr.setInexactRepeating(
             AlarmManager.RTC_WAKEUP, cal.timeInMillis,
             AlarmManager.INTERVAL_DAY,

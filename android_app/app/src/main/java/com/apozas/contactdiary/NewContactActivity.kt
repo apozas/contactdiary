@@ -41,13 +41,13 @@ class NewContactActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.newcontactlayout))
 
-        var cal = Calendar.getInstance()
+        val cal = Calendar.getInstance()
 
         // Set current values
         date_input.setText(DateFormat.getDateInstance().format(cal.time))
 
         // Listen to new values
-        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, monthOfYear)
             cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -63,7 +63,7 @@ class NewContactActivity : AppCompatActivity() {
                 cal.get(Calendar.DAY_OF_MONTH)).show()
         }
 
-        val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
 
@@ -118,13 +118,13 @@ class NewContactActivity : AppCompatActivity() {
             }
 
 //          Compulsory text fields
-            val contactName = name_input.getText().toString()
-            if (contactName.length == 0) {
+            val contactName = name_input.text.toString()
+            if (contactName.isEmpty()) {
                 name_input.error = getString(R.string.compulsory_field)
                 errorCount++
             }
-            val contactPlace = place_input.getText().toString()
-            if (contactPlace.length == 0) {
+            val contactPlace = place_input.text.toString()
+            if (contactPlace.isEmpty()) {
                 place_input.error = getString(R.string.compulsory_field)
                 errorCount++
             }
@@ -155,7 +155,7 @@ class NewContactActivity : AppCompatActivity() {
 
                 Toast.makeText(
                     applicationContext,
-                    applicationContext.getResources().getString(R.string.contact_saved),
+                    applicationContext.resources.getString(R.string.contact_saved),
                     Toast.LENGTH_LONG
                 ).show()
 
@@ -164,10 +164,10 @@ class NewContactActivity : AppCompatActivity() {
         }
     }
 
-    fun setupUI(view: View) {
+    private fun setupUI(view: View) {
         //Set up touch listener for non-text box views to hide keyboard.
         if (view !is EditText) {
-            view.setOnTouchListener { v, event ->
+            view.setOnTouchListener { v, _ ->
                 v.clearFocus()
                 hideSoftKeyboard()
                 false
@@ -183,9 +183,9 @@ class NewContactActivity : AppCompatActivity() {
         }
     }
 
-    fun hideSoftKeyboard() {
+    private fun hideSoftKeyboard() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(currentFocus?.getWindowToken(), 0)
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
     }
 }

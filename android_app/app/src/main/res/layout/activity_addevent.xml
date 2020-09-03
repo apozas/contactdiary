@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <com.google.android.material.appbar.AppBarLayout
@@ -105,7 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="00:00"
+                        android:hint="@string/emptytime"
                         android:inputType="time"
                         android:clickable="true"
                         android:focusable="false"
@@ -166,7 +166,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="80dp"
-                        android:text="@string/outdoors" />
+                        android:text="@string/outdoors"
+                        android:layout_marginStart="80dp" />
                 </RadioGroup>
 
                 <TextView
@@ -193,14 +194,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="80dp"
-                        android:text="@string/no" />
+                        android:text="@string/no"
+                        android:layout_marginStart="80dp" />
 
                     <RadioButton
                         android:id="@+id/closeevent_maybe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="80dp"
-                        android:text="@string/unsure" />
+                        android:text="@string/unsure"
+                        android:layout_marginStart="80dp" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -226,6 +229,7 @@
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/ic_ok"
-        tools:ignore="VectorDrawableCompat" />
+        tools:ignore="VectorDrawableCompat"
+        android:layout_marginEnd="@dimen/fab_margin" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

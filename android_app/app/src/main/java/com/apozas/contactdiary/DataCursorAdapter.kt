@@ -27,22 +27,22 @@ import java.util.*
 
 class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, c, 0) {
     private var mDateColumnIndex = cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN)
-    val formatter = DateFormat.getDateInstance(DateFormat.MEDIUM)
-    val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private val formatter: DateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM)
+    private val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun newView(context: Context?, cursor: Cursor?, parent: ViewGroup?): View {
         return inflater.inflate(R.layout.list_layout, parent, false)
     }
 
     override fun bindView(view: View?, context: Context?, cursor: Cursor?) {
-        var contact : String = ""
+        var contact = ""
         if (cursor != null) {
             contact = cursor.getString(
                 cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
         }
 
-        val list_item = view?.findViewById<TextView>(R.id.list_item) as TextView
-        list_item.text = contact
+        val listItem = view?.findViewById(R.id.list_item) as TextView
+        listItem.text = contact
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
@@ -54,9 +54,9 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         }
 //      Set the data for the row
         cursor.moveToPosition(position)
-        val listItemHeader = convertView?.findViewById<TextView>(R.id.list_item_header) as TextView
-        val listItem = convertView?.findViewById<TextView>(R.id.list_item) as TextView
-        val listDivider = convertView?.findViewById<View>(R.id.list_divider) as View
+        val listItemHeader = convertView?.findViewById(R.id.list_item_header) as TextView
+        val listItem = convertView?.findViewById(R.id.list_item) as TextView
+        val listDivider = convertView?.findViewById(R.id.list_divider) as View
         listItem.text = cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
 
         if (position - 1 >= 0) {

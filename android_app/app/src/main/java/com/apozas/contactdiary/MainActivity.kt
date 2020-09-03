@@ -30,7 +30,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    var isFabOpen = false
+    private var isFabOpen = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,22 +47,24 @@ class MainActivity : AppCompatActivity() {
         restrict15LastDays()
         viewData(onlyRisky)
 
-        diarytable.setOnItemClickListener { adapterView, view, position, id ->
+        diarytable.setOnItemClickListener { _, _, position, _ ->
             val idx = diarytable.adapter.getItemId(position)
             val entry = diarytable.adapter.getItem(position) as Cursor
 
-            val contactType = entry.getString(entry.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))
-
-            if (contactType == "Contact") {
-                val intent = Intent(this@MainActivity, EditContactActivity::class.java)
-                intent.putExtra("entry", idx.toString())
-                startActivity(intent)
-            } else if (contactType == "Event") {
-                val intent = Intent(this@MainActivity, EditEventActivity::class.java)
-                intent.putExtra("entry", idx.toString())
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "Something very wrong has happened", Toast.LENGTH_LONG).show()
+            when (entry.getString(entry.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))) {
+                "Contact" -> {
+                    val intent = Intent(this@MainActivity, EditContactActivity::class.java)
+                    intent.putExtra("entry", idx.toString())
+                    startActivity(intent)
+                }
+                "Event" -> {
+                    val intent = Intent(this@MainActivity, EditEventActivity::class.java)
+                    intent.putExtra("entry", idx.toString())
+                    startActivity(intent)
+                }
+                else -> {
+                    Toast.makeText(this, "Something very wrong has happened", Toast.LENGTH_LONG).show()
+                }
             }
         }
 
@@ -87,31 +89,31 @@ class MainActivity : AppCompatActivity() {
     }
 
 //  FAB animations
-    fun expandFAB() {
-        val fab_open = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_open)
-        val rotate_forward = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate_forward)
+private fun expandFAB() {
+        val fabOpen = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_open)
+        val rotateForward = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate_forward)
 
-        fab.startAnimation(rotate_forward)
+        fab.startAnimation(rotateForward)
 //      fab1.animate().translationY(0.toFloat());
 //      fab2.animate().translationY(0.toFloat());
-        fab1.startAnimation(fab_open)
-        fabText1.startAnimation(fab_open)
-        fab2.startAnimation(fab_open)
-        fabText2.startAnimation(fab_open)
+        fab1.startAnimation(fabOpen)
+        fabText1.startAnimation(fabOpen)
+        fab2.startAnimation(fabOpen)
+        fabText2.startAnimation(fabOpen)
         fab1.isClickable = true
         fab2.isClickable = true
         isFabOpen = true
     }
 
-    fun collapseFAB() {
-        val fab_close: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_close)
-        val rotate_backward: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate_backward)
+    private fun collapseFAB() {
+        val fabClose: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_close)
+        val rotateBackward: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate_backward)
 
-        fab.startAnimation(rotate_backward)
-        fab1.startAnimation(fab_close)
-        fabText1.startAnimation(fab_close)
-        fab2.startAnimation(fab_close)
-        fabText2.startAnimation(fab_close)
+        fab.startAnimation(rotateBackward)
+        fab1.startAnimation(fabClose)
+        fabText1.startAnimation(fabClose)
+        fab2.startAnimation(fabClose)
+        fabText2.startAnimation(fabClose)
 //      fab1.animate().translationY(-resources.getDimension(R.dimen.standard_55));
 //      fab2.animate().translationY(-resources.getDimension(R.dimen.standard_105));
         fab1.isClickable = false
@@ -119,7 +121,7 @@ class MainActivity : AppCompatActivity() {
         isFabOpen = false
     }
 
-    fun animateFAB() {
+    private fun animateFAB() {
         if (isFabOpen) {
             collapseFAB()
         } else {
@@ -140,10 +142,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
     }
 
-//    Database operation
-    val dbHelper = FeedReaderDbHelper(this)
+//  Database operation
+    private val dbHelper = FeedReaderDbHelper(this)
 
-    fun viewData(onlyRisky: Boolean) {
+    private fun viewData(onlyRisky: Boolean) {
         val cursor = dbHelper.viewData(onlyRisky)
 
         val adapter = DataCursorAdapter(this, cursor)
@@ -151,7 +153,7 @@ class MainActivity : AppCompatActivity() {
         diarytable.adapter = adapter
     }
 
-    fun restrict15LastDays() {
+    private fun restrict15LastDays() {
         val db = dbHelper.writableDatabase
 //      Create Calendar set to 15 days ago
         val cal = Calendar.getInstance()
