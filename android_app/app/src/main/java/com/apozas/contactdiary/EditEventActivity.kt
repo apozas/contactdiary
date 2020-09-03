@@ -175,8 +175,8 @@ class EditEventActivity : AppCompatActivity() {
 
                 Toast.makeText(
                     applicationContext,
-                    applicationContext.resources.getString(R.string.contact_saved),
-                    Toast.LENGTH_LONG
+                    applicationContext.resources.getString(R.string.event_saved),
+                    Toast.LENGTH_SHORT
                 ).show()
 
                 finish()
