@@ -31,6 +31,9 @@ import java.text.DateFormat
 import java.util.*
 
 class NewEventActivity : AppCompatActivity() {
+
+    private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addevent)
@@ -131,31 +134,18 @@ class NewEventActivity : AppCompatActivity() {
 //          Create a new map of values, where column names are the keys
             if (errorCount == 0) {
                 val values = ContentValues().apply {
-                    put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Event")
-                    put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, eventName)
-                    put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, eventPlace)
-                    put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN,
-                        eventphone_input.getText().toString()
-                    )
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.COMPANIONS_COLUMN,
-                        eventpeople_input.getText().toString()
-                    )
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN,
-                        eventIndoorOutdoorChoice
-                    )
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN,
-                        eventCloseContactChoice
-                    )
+                    put(feedEntry.TYPE_COLUMN, "Event")
+                    put(feedEntry.NAME_COLUMN, eventName)
+                    put(feedEntry.PLACE_COLUMN, eventPlace)
+                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.PHONE_COLUMN, eventphone_input.text.toString())
+                    put(feedEntry.COMPANIONS_COLUMN, eventpeople_input.text.toString())
+                    put(feedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)
+                    put(feedEntry.CLOSECONTACT_COLUMN, eventCloseContactChoice)
                 }
 
 //              Insert the new row, returning the primary key value of the new row
-                val newRowId =
-                    db?.insert(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, null, values)
+                db?.insert(feedEntry.TABLE_NAME, null, values)
 
                 Toast.makeText(
                     applicationContext,

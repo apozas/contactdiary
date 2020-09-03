@@ -31,6 +31,9 @@ import java.text.DateFormat
 import java.util.*
 
 class NewContactActivity : AppCompatActivity() {
+
+    private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addcontact)
@@ -137,27 +140,18 @@ class NewContactActivity : AppCompatActivity() {
 //          Create a new map of values, where column names are the keys
             if (errorCount == 0) {
                 val values = ContentValues().apply {
-                    put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Contact")
-                    put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, contactName)
-                    put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, contactPlace)
-                    put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN,
-                        phone_input.getText().toString()
-                    )
-                    put(ContactDatabase.ContactDatabase.FeedEntry.RELATIVE_COLUMN, relativeChoice)
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN,
-                        contactCloseContactChoice
-                    )
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN,
-                        contactIndoorOutdoorChoice
-                    )
+                    put(feedEntry.TYPE_COLUMN, "Contact")
+                    put(feedEntry.NAME_COLUMN, contactName)
+                    put(feedEntry.PLACE_COLUMN, contactPlace)
+                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.PHONE_COLUMN, phone_input.text.toString())
+                    put(feedEntry.RELATIVE_COLUMN, relativeChoice)
+                    put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
+                    put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
                 }
 
 //              Insert the new row, returning the primary key value of the new row
-                db?.insert(ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME, null, values)
+                db?.insert(feedEntry.TABLE_NAME, null, values)
 
                 Toast.makeText(
                     applicationContext,

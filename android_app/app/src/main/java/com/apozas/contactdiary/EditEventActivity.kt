@@ -34,7 +34,8 @@ import java.util.*
 
 class EditEventActivity : AppCompatActivity() {
 
-    val dbHelper = FeedReaderDbHelper(this)
+    private val dbHelper = FeedReaderDbHelper(this)
+    private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,29 +51,29 @@ class EditEventActivity : AppCompatActivity() {
         val db = dbHelper.writableDatabase
 
         val cursor: Cursor = db.rawQuery(
-            "SELECT * FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME}" +
+            "SELECT * FROM ${feedEntry.TABLE_NAME}" +
                     " WHERE _id=" + info, null
         )
         cursor.moveToFirst()
 
-        eventname_edit.setText(cursor.getString(cursor.getColumnIndex("Name")))
-        eventplace_edit.setText(cursor.getString(cursor.getColumnIndex("Place")))
+        eventname_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
+        eventplace_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex("Timestamp"))
-        var cal = Calendar.getInstance()
-        cal.setTimeInMillis(timestamp)
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val cal = Calendar.getInstance()
+        cal.timeInMillis = timestamp
 
         eventdate_edit.setText(DateFormat.getDateInstance(DateFormat.MEDIUM).format(cal.time))
         eventtime_edit.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
-        if (cursor.getString(cursor.getColumnIndex("Companions")) != ""){
-            eventpeople_edit.setText(cursor.getString(cursor.getColumnIndex("Companions")))
+        if (cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)) != ""){
+            eventpeople_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
         }
-        if (cursor.getString(cursor.getColumnIndex("Phone")) != ""){
-            eventphone_edit.setText(cursor.getString(cursor.getColumnIndex("Phone")))
+        if (cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)) != ""){
+            eventphone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        var encounterBtn = cursor.getInt(cursor.getColumnIndex("EncounterType"))
-        var closeContactBtn = cursor.getInt(cursor.getColumnIndex("CloseContact"))
+        val encounterBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val closeContactBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
 
         if (encounterBtn == 0) {
             event_indoors.setChecked(true)
@@ -158,37 +159,20 @@ class EditEventActivity : AppCompatActivity() {
 //          Create new row
             if (errorCount == 0) {
                 val values = ContentValues().apply {
-                    put(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN, "Event")
-                    put(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN, eventName)
-                    put(ContactDatabase.ContactDatabase.FeedEntry.PLACE_COLUMN, eventPlace)
-                    put(ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN, cal.timeInMillis)
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.PHONE_COLUMN,
-                        eventphone_edit.getText().toString()
-                    )
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.COMPANIONS_COLUMN,
-                        eventpeople_edit.getText().toString()
-                    )
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN,
-                        contactCloseContactChoice
-                    )
-                    put(
-                        ContactDatabase.ContactDatabase.FeedEntry.ENCOUNTER_COLUMN,
-                        contactIndoorOutdoorChoice
-                    )
+                    put(feedEntry.TYPE_COLUMN, "Event")
+                    put(feedEntry.NAME_COLUMN, eventName)
+                    put(feedEntry.PLACE_COLUMN, eventPlace)
+                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.PHONE_COLUMN, eventphone_edit.text.toString())
+                    put(feedEntry.COMPANIONS_COLUMN, eventpeople_edit.text.toString())
+                    put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
+                    put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
                 }
 
 //          Update the database
                 val selection = "_id LIKE ?"
                 val selectionArgs = arrayOf(info.toString())
-                val count = db.update(
-                    ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
-                    values,
-                    selection,
-                    selectionArgs
-                )
+                db.update(feedEntry.TABLE_NAME, values, selection, selectionArgs)
 
                 Toast.makeText(
                     applicationContext,
