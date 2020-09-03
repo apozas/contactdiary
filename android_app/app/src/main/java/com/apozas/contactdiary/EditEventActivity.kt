@@ -18,9 +18,13 @@ package com.apozas.contactdiary
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
+import android.content.Context
 import android.database.Cursor
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editevent.*
@@ -30,13 +34,14 @@ import java.util.*
 
 class EditEventActivity : AppCompatActivity() {
 
-
     val dbHelper = FeedReaderDbHelper(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editevent)
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        setupUI(findViewById(R.id.editeventlayout))
 
         // Get info from MainActivity
         val info = getIntent().getExtras()?.getString("entry")
@@ -211,5 +216,30 @@ class EditEventActivity : AppCompatActivity() {
         ).show()
 
         finish()
+    }
+
+    fun setupUI(view: View) {
+        //Set up touch listener for non-text box views to hide keyboard.
+        if (view !is EditText) {
+            view.setOnTouchListener { v, event ->
+                v.clearFocus()
+                hideSoftKeyboard()
+                false
+            }
+        }
+
+        //If a layout container, iterate over children and seed recursion.
+        if (view is ViewGroup) {
+            for (i in 0 until view.childCount) {
+                val innerView = view.getChildAt(i)
+                setupUI(innerView)
+            }
+        }
+    }
+
+    fun hideSoftKeyboard() {
+        val inputMethodManager: InputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.getWindowToken(), 0)
     }
 }

@@ -18,21 +18,17 @@ package com.apozas.contactdiary
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
+import android.content.Context
 import android.database.Cursor
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_addcontact.*
 import kotlinx.android.synthetic.main.activity_editcontact.*
-import kotlinx.android.synthetic.main.activity_editcontact.contact_indoor_outdoor
-import kotlinx.android.synthetic.main.activity_editcontact.distance_group
-import kotlinx.android.synthetic.main.activity_editcontact.known_group
-import kotlinx.android.synthetic.main.activity_editcontact.known_no
-import kotlinx.android.synthetic.main.activity_editcontact.known_yes
-import kotlinx.android.synthetic.main.activity_editcontact.okButton_AddContact
 import java.text.DateFormat
-import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -47,12 +43,16 @@ class EditContactActivity : AppCompatActivity() {
         setContentView(R.layout.activity_editcontact)
         setSupportActionBar(findViewById(R.id.toolbar))
 
+        setupUI(findViewById(R.id.editcontactlayout))
+
         // Get info from MainActivity
         val db = dbHelper.writableDatabase
         val info = getIntent().getExtras()?.getString("entry")
 
-        val cursor: Cursor = db.rawQuery("SELECT * FROM ${feedEntry.TABLE_NAME}" +
-                " WHERE _id=" + info, null)
+        val cursor: Cursor = db.rawQuery(
+            "SELECT * FROM ${feedEntry.TABLE_NAME}" +
+                    " WHERE _id=" + info, null
+        )
         cursor.moveToFirst()
 
         name_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
@@ -105,10 +105,12 @@ class EditContactActivity : AppCompatActivity() {
         }
 
         date_edit.setOnClickListener {
-            DatePickerDialog(this@EditContactActivity, dateSetListener,
+            DatePickerDialog(
+                this@EditContactActivity, dateSetListener,
                 cal.get(Calendar.YEAR),
                 cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)).show()
+                cal.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
 
         val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
@@ -120,10 +122,12 @@ class EditContactActivity : AppCompatActivity() {
         }
 
         time_edit.setOnClickListener {
-            TimePickerDialog(this@EditContactActivity, timeSetListener,
+            TimePickerDialog(
+                this@EditContactActivity, timeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true).show()
+                true
+            ).show()
         }
 
         okButton_AddContact.setOnClickListener {
@@ -206,6 +210,31 @@ class EditContactActivity : AppCompatActivity() {
         ).show()
 
         finish()
+    }
+
+    fun setupUI(view: View) {
+        //Set up touch listener for non-text box views to hide keyboard.
+        if (view !is EditText) {
+            view.setOnTouchListener { v, event ->
+                v.clearFocus()
+                hideSoftKeyboard()
+                false
+            }
+        }
+
+        //If a layout container, iterate over children and seed recursion.
+        if (view is ViewGroup) {
+            for (i in 0 until view.childCount) {
+                val innerView = view.getChildAt(i)
+                setupUI(innerView)
+            }
+        }
+    }
+
+    fun hideSoftKeyboard() {
+        val inputMethodManager: InputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(currentFocus?.getWindowToken(), 0)
     }
 
 }
