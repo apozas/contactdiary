@@ -1,0 +1,3 @@
+- Actualización de texto, eliminando menciones explícitas a COVID-19 en el título
+- El teclado ahora se oculta cuando pinchas en otro lugar de la pantalla
+- Limpieza de código

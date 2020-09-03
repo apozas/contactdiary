@@ -1,0 +1,3 @@
+- Update strings, removing explicit mentions to COVID-19 in title
+- Keyboard is now hidden when you click elsewhere in the screen
+- Code cleanup
