@@ -156,7 +156,7 @@ class NewContactActivity : AppCompatActivity() {
                 Toast.makeText(
                     applicationContext,
                     applicationContext.resources.getString(R.string.contact_saved),
-                    Toast.LENGTH_LONG
+                    Toast.LENGTH_SHORT
                 ).show()
 
                 finish()

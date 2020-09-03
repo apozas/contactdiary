@@ -66,7 +66,7 @@ class SettingsActivity : AppCompatActivity() {
                 if ((newValue.toString() != oldTime) && isTimeGood) {
                     prefsedit.putString("reminder_time", newValue)
                     prefsedit.apply()
-                    Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_SHORT).show()
                     updateNotificationPreferences(reminderToggle.isEnabled)
                     true
                 } else {
