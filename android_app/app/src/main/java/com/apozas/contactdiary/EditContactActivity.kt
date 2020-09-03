@@ -50,7 +50,6 @@ class EditContactActivity : AppCompatActivity() {
         // Get info from MainActivity
         val db = dbHelper.writableDatabase
         val info = getIntent().getExtras()?.getString("entry")
-//        Toast.makeText(this, "Index is " + info, Toast.LENGTH_LONG).show()
 
         val cursor: Cursor = db.rawQuery("SELECT * FROM ${feedEntry.TABLE_NAME}" +
                 " WHERE _id=" + info, null)
