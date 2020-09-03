@@ -1,17 +1,17 @@
 package com.apozas.contactdiary
 
 /*
-    This file is part of COVID Diary.
-    COVID Diary is free software: you can redistribute it and/or modify
+    This file is part of Contact Diary.
+    Contact Diary is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    COVID Diary is distributed in the hope that it will be useful,
+    Contact Diary is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
     You should have received a copy of the GNU General Public License
-    along with COVID Diary. If not, see <http://www.gnu.org/licenses/>.
+    along with Contact Diary. If not, see <http://www.gnu.org/licenses/>.
     Copyright 2020 by Alex Pozas-Kerstjens (apozas)
 */
 
@@ -74,13 +74,13 @@ class NotificationHandler {
         val notifyIntent = Intent(context, MainActivity::class.java)
         val notifyPendingIntent =
             PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
-        val mBuilder = NotificationCompat.Builder(context, "covidDiary_notify")
+        val mBuilder = NotificationCompat.Builder(context, "contactDiary_notify")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val notificationManager =
                 context.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
             val channel = NotificationChannel(
-                "covidDiary_notify",
-                "COVID Diary notification channel",
+                "contactDiary_notify",
+                "Contact Diary notification channel",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
             notificationManager.createNotificationChannel(channel)

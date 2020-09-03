@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Diario COVID</string>
+    <string name="app_name">Diario de Contactos</string>
     <string name="action_settings">Ajustes</string>
 
     <string name="new_contact">Nuevo contacto</string>
@@ -24,8 +24,8 @@
     <string name="contact_saved">Contacto guardado</string>
     <string name="event_saved">Evento guardado</string>
     <string name="time_optional">Hora (opcional)</string>
-    <string name="edit_event">Editar Evento</string>
-    <string name="edit_contact">Editar Contacto</string>
+    <string name="edit_event">Editar evento</string>
+    <string name="edit_contact">Editar contacto</string>
     <string name="contact_deleted">Entrada eliminada</string>
     <string name="options">Configuración</string>
     <string name="contact_developer_summary">Dime qué te parece la app, o qué problemas has encontrado</string>

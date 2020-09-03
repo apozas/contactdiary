@@ -1,9 +1,7 @@
-Diario COVID es una app sencilla que te permite tener un registro de la gente que has visto y los eventos a los que has acudido recientemente. En el indeseado evento de que testearas positivo por COVID-19, Diario COVID es un lugar donde rápidamente encontrar a quién debes avisar de la situación.
-
-COVID Diary is a simple app that allows you to keep a record of the people you have met and the events you have attended to recently. In the undesired event that you test positive for COVID-19, COVID Diary is a place where to quickly find who you must warn about the situation.
+Diario de Contactos es una app sencilla que te permite tener un registro de la gente que has visto y los eventos a los que has acudido recientemente. En el indeseado evento de que testearas positivo por COVID-19, Diario de Contactos es un lugar donde rápidamente encontrar a quién debes avisar de la situación.
 
 <b>Cómo funciona</b>
-Cada día, Diario COVID mostrará una notificación invitándote a introducir los eventos que has atendido y la gente con la que has estado durante el día. A través de unos simples formularios podrás guardar la información esencial acerca de tus contactos, en caso de que necesites recuperarlos. Y ya está. Simple, ¿cierto? ;)
+Cada día, Diario de Contactos mostrará una notificación invitándote a introducir los eventos que has atendido y la gente con la que has estado durante el día. A través de unos simples formularios podrás guardar la información esencial acerca de tus contactos, en caso de que necesites recuperarlos. Y ya está. Simple, ¿cierto? ;)
 
 <b>Características</b>
 <ul>
@@ -11,18 +9,18 @@ Cada día, Diario COVID mostrará una notificación invitándote a introducir lo
 <li> Opción para mostrar solo los contactos potencialmente de riesgo.</li>
 <li> Eliminación automática de las entradas más antiguas de 15 días.</li>
 <li> SOLO UN PERMISO, el necesario para que la app te notifique tras reinicios del dispositivo. Nada más.</li>
-<li> En particular, SIN PERMISO DE INTERNET. La información que introduzcas a Diario COVID es tuya, y nunca abandona tu dispositivo.</li>
+<li> En particular, SIN PERMISO DE INTERNET. La información que introduzcas a Diario de Contactos es tuya, y nunca abandona tu dispositivo.</li>
 </ul>
 
 <b>FAQ</b>
 - ¿Esta app es MEJOR que las aplicaciones de rastreo de contactos gubernamentales?
-No. Las aplicaciones de rastreo de contactos gubernamentales pueden detectar contactos de los cuales no seas consciente, como la persona que se sienta en la mesa de al lado en el restaurante, o aquella que toma tu mismo bus para ir al trabajo. Diario COVID NO ES UN SUSTITUTO DE LAS APLICACIONES DE RASTREO DE CONTACTO GUBERNAMENTALES.
+No. Las aplicaciones de rastreo de contactos gubernamentales pueden detectar contactos de los cuales no seas consciente, como la persona que se sienta en la mesa de al lado en el restaurante, o aquella que toma tu mismo bus para ir al trabajo. Diario de Contactos NO ES UN SUSTITUTO DE LAS APLICACIONES DE RASTREO DE CONTACTO GUBERNAMENTALES.
 
 - ¿Esta app es PEOR que las aplicaciones de rastreo de contactos gubernamentales?
-No. Las aplicaciones de rastreo de contactos gubernamentales requieren obligatoriamente que todas las personas interactuando tengan la app activa para poder hacer las notificaciones necesarias. Con Diario COVID, solamente tú necesitas la app para llevar el registro, de tal manera que puedes notificar a personas (o luagares) que no utilicen las aplicaciones de rastreo de contacto convencionales.
+No. Las aplicaciones de rastreo de contactos gubernamentales requieren obligatoriamente que todas las personas interactuando tengan la app activa para poder hacer las notificaciones necesarias. Con Diario de Contactos, solamente tú necesitas la app para llevar el registro, de tal manera que puedes notificar a personas (o luagares) que no utilicen las aplicaciones de rastreo de contacto convencionales.
 
 - ¿Esta aplicación comparte la información que introduzco?
 NO. La app no tiene permisos, de modo que no hay manera que conecte con internet. La información que introduzcas jamás abandonará tu dispositivo. Y más aún, las entradas en el diario son eliminadas automáticamente a los 15 días del contacto.
 
 <b>Soporte</b>
-Si encuentras un fallo, tienes una idea de cómo mejorar Diario COVID, o tienes alguna pregunta, por favor visita la página del proyecto en GitHub: https://github.com/apozas/contactdiary
+Si encuentras un fallo, tienes una idea de cómo mejorar Diario de Contactos, o tienes alguna pregunta, por favor visita la página del proyecto en GitHub: https://github.com/apozas/contactdiary

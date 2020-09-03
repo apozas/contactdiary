@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">COVID Diary</string>
+    <string name="app_name">Contact Diary</string>
     <string name="action_settings">Settings</string>
     <string name="new_contact">New contact</string>
     <string name="new_event">New event</string>
@@ -23,8 +23,8 @@
     <string name="emptydiary">The diary is empty</string>
     <string name="contact_saved">Contact saved</string>
     <string name="event_saved">Event saved</string>
-    <string name="edit_event">Edit Event</string>
-    <string name="edit_contact">Edit Contact</string>
+    <string name="edit_event">Edit event</string>
+    <string name="edit_contact">Edit contact</string>
     <string name="time_optional">Time (optional)</string>
     <string name="options">Options</string>
     <string name="contact_deleted">Entry deleted</string>
@@ -36,7 +36,7 @@
     <string name="choose_option">Please, choose an option</string>
     <string name="compulsory_field">Compulsory field</string>
     <string name="contact_developer_uri" translatable="false">mailto:contactdiary@alexpozas.com</string>
-    <string name="feedback_subject" translatable="false">Feedback about COVID Diary</string>
+    <string name="feedback_subject" translatable="false">Feedback about Contact Diary</string>
     <string name="donate_url" translatable="false">https://www.paypal.me/apozasker</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>

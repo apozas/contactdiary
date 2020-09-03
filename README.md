@@ -1,4 +1,4 @@
-&nbsp; <img src="https://github.com/apozas/contactdiary/blob/master/fastlane/metadata/android/en-US/images/icon.png" alt="COVID Diary logo" height="60"/> &nbsp;COVID Diary
+&nbsp; <img src="https://github.com/apozas/contactdiary/blob/master/fastlane/metadata/android/en-US/images/icon.png" alt="Contact Diary logo" height="60"/> &nbsp;Contact Diary
 =========
 
 Open-source app to keep track of the people you have recently been with
@@ -6,14 +6,14 @@ Open-source app to keep track of the people you have recently been with
 <a href="https://play.google.com/store/apps/details?id=com.apozas.contactdiary" target="_blank">
 <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
 
-Be aware that this version, while it matches that on Google Play, doesn support automatic updates.
+Be aware that this version, while it matches that on Google Play, doesn't support automatic updates.
 
 # Summary :clipboard:
 
-COVID Diary is a simple app that allows you to keep a record of the people you have met and the events you have attended to recently. In the undesired event that you test positive for COVID-19, COVID Diary is a place where to quickly find who you must warn about the situation.
+Contact Diary is a simple app that allows you to keep a record of the people you have met and the events you have attended to recently. In the undesired event that you test positive for COVID-19, Contact Diary is a place where to quickly find who you must warn about the situation.
 
 # How it works :hammer:
-Every day COVID Diary will prompt you to insert the events you have attended and the people you have been with during the day. Through some simple forms you will be able to store the essential information about your contacts, in case you need to retrieve it. Just that. Simple, right? ;)
+Every day Contact Diary will prompt you to insert the events you have attended and the people you have been with during the day. Through some simple forms you will be able to store the essential information about your contacts, in case you need to retrieve it. Just that. Simple, right? ;)
 
 # Features :zap:
 - Configurable notification time, so the prompt does not interfere with your daily workflow.
@@ -25,15 +25,15 @@ Every day COVID Diary will prompt you to insert the events you have attended and
 # Privacy :lock:
 This app has no ads and requests no unnecessary permissions.
 
-COVID Diary doesn't send any data to a cloud and not having permission to access the internet is a strong guarantee of that.
+Contact Diary doesn't send any data to a cloud and not having permission to access the internet is a strong guarantee of that.
 
 # Questions & Issues :thinking:
 
 - Is this app BETTER than Governments' contact tracing apps?
-No. Governments' contact tracing apps may account for contacts that you may not be aware of, like the person sitting in a neighboring table at a restaurant, or that other person using the same bus to go to work. COVID Diary IS NOT A REPLACEMENT TO GOVERNMENTS' CONTACT TRACING APPS.
+No. Governments' contact tracing apps may account for contacts that you may not be aware of, like the person sitting in a neighboring table at a restaurant, or that other person using the same bus to go to work. Contact Diary IS NOT A REPLACEMENT TO GOVERNMENTS' CONTACT TRACING APPS.
 
 - Is this app WORSE than Governments' contact tracing apps?
-No. Government's contact tracing apps crucially rely on all persons interacting to have the app in order to do proper notifications. With COVID Diary, you just need yourself to keep track, and you can easily notify people (or places) that do not use conventional contact tracing apps.
+No. Government's contact tracing apps crucially rely on all persons interacting to have the app in order to do proper notifications. With Contact Diary, you just need yourself to keep track, and you can easily notify people (or places) that do not use conventional contact tracing apps.
 
 - Will this app share the information I input?
 NO. The app has no permissions other than that necessary for the notification system. In particular, there is no way that it can connect to the internet. The information you insert will never leave your device. Even more, entries in the diary are automatically eliminated when they become older than 15 days.
@@ -48,7 +48,7 @@ If you would like to support this project's further development, the creator of 
 
 # Contributing :+1:
 
-If you found a bug, have an idea how to improve the COVID Diary app or have a question, please create new issue or comment existing one. If you would like to contribute code, fork the repository and send a pull request.
+If you found a bug, have an idea how to improve the Contact Diary app or have a question, please create new issue or comment existing one. If you would like to contribute code, fork the repository and send a pull request.
 
 # Screenshots :eyes:
 
@@ -75,7 +75,7 @@ If you found a bug, have an idea how to improve the COVID Diary app or have a qu
 
 # License :page_facing_up:
 
-COVID Diary is licensed under the GPL v3, see LICENSE file for full notice.
+Contact Diary is licensed under the GPL v3, see LICENSE file for full notice.
 
     Copyright (C) 2020  Alex Pozas-Kerstjens <alex@alexpozas.com>
     
