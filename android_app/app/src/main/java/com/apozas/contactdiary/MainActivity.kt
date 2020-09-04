@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         restrict15LastDays()
         viewData(onlyRisky)
 
+//      Edit entry on click
         diarytable.setOnItemClickListener { _, _, position, _ ->
             val idx = diarytable.adapter.getItemId(position)
             val entry = diarytable.adapter.getItem(position) as Cursor
