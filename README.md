@@ -94,4 +94,4 @@ Contact Diary is licensed under the GPL v3, see LICENSE file for full notice.
 
 # Thanks :thumbsup:
 
-Incredible thanks to [openScale](https://github.com/oliexdev/openScale), [FairEmail](https://github.com/M66B/FairEmail/), [pildorasinformaticas](https://www.youtube.com/channel/UCdulIs-x_xrRd1ezwJZR9ww) and [StackOverflow](https://www.stackoverflow.com). Without them, this project would have never been realized.	
+Incredible thanks to [openScale](https://github.com/oliexdev/openScale), [FairEmail](https://github.com/M66B/FairEmail/), [pildorasinformaticas](https://www.youtube.com/channel/UCdulIs-x_xrRd1ezwJZR9ww), [Prabeesh R K](https://www.youtube.com/channel/UCfQkNueQenRQQ1NnCBe6eQQ) and, of course, the [StackOverflow community](https://www.stackoverflow.com). Without them, this project would have never been realized.	
