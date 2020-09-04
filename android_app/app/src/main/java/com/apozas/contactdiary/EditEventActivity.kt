@@ -194,7 +194,7 @@ class EditEventActivity : AppCompatActivity() {
 
         Toast.makeText(
             applicationContext,
-            applicationContext.resources.getString(R.string.contact_deleted),
+            applicationContext.resources.getString(R.string.entry_deleted),
             Toast.LENGTH_SHORT
         ).show()
 
