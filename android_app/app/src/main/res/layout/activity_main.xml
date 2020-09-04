@@ -80,7 +80,8 @@
             android:background="@drawable/rounded_corner"
             android:visibility="invisible"
             android:layout_marginTop="16dp"
-            android:onClick="addContact"/>
+            android:onClick="addContact"
+            android:textStyle="bold"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab1"
@@ -118,7 +119,8 @@
             android:background="@drawable/rounded_corner"
             android:visibility="invisible"
             android:layout_marginTop="16dp"
-            android:onClick="addEvent"/>
+            android:onClick="addEvent"
+            android:textStyle="bold"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab2"
