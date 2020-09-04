@@ -41,7 +41,8 @@
             android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
             android:gravity="center_vertical"
             android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
-            android:paddingRight="?android:attr/listPreferredItemPaddingRight">
+            android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+            android:background="@drawable/selector">
         </TextView>
 
     </LinearLayout>

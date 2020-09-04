@@ -48,7 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:dividerHeight="0px"
-                android:divider="@null"/>
+                android:divider="@null"
+                android:choiceMode="multipleChoiceModal"/>
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

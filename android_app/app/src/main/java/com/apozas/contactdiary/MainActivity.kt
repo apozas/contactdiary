@@ -18,11 +18,15 @@ package com.apozas.contactdiary
 import android.content.Intent
 import android.database.Cursor
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.AbsListView.MultiChoiceModeListener
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.view.ActionMode
 import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -68,6 +72,69 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+//      Select to delete on long press
+        val itemList: MutableList<Long> = ArrayList()
+        diarytable.setMultiChoiceModeListener(object : MultiChoiceModeListener {
+            override fun onCreateActionMode(actionMode: ActionMode, menu: Menu): Boolean {
+                actionMode.menuInflater.inflate(R.menu.context_menu, menu)
+                return true
+            }
+
+            override fun onPrepareActionMode(p0: ActionMode?, p1: Menu?): Boolean {
+                return false
+            }
+
+            override fun onActionItemClicked(actionMode: ActionMode, menuItem: MenuItem): Boolean {
+                when (menuItem.itemId) {
+                    R.id.context_delete -> {
+                        val db = dbHelper.writableDatabase
+                        for (item: Long in itemList) {
+                            db.delete(
+                                ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
+                                "_id LIKE ?",
+                                arrayOf(item.toString())
+                            )
+                        }
+                        Toast.makeText(
+                            applicationContext,
+                            getString(if (itemList.size > 1) R.string.entries_deleted
+                            else R.string.entry_deleted
+                            ),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        itemList.clear()
+                        actionMode.finish()
+                        viewData(onlyRisky)
+                        return true
+                    }
+                    else -> {
+                        return false
+                    }
+                }
+            }
+
+            override fun onDestroyActionMode(actionMode: ActionMode) {
+                itemList.clear()
+                false
+            }
+
+            override fun onItemCheckedStateChanged(
+                actionMode: ActionMode,
+                i: Int,
+                position: Long,
+                checked: Boolean
+            ) {
+                if (checked) {
+                    itemList.add(position)
+                    actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                } else {
+                    itemList.remove(position)
+                    actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                }
+            }
+        })
+
+//      FAB operation
         fab.setOnClickListener {
             animateFAB()
         }

@@ -26,7 +26,7 @@
     <string name="time_optional">Hora (opcional)</string>
     <string name="edit_event">Editar evento</string>
     <string name="edit_contact">Editar contacto</string>
-    <string name="contact_deleted">Entrada eliminada</string>
+    <string name="entry_deleted">Entrada eliminada</string>
     <string name="options">Configuración</string>
     <string name="contact_developer_summary">Dime qué te parece la app, o qué problemas has encontrado</string>
     <string name="contact_developer">Escribe al desarrollador</string>
@@ -44,4 +44,6 @@
     <string name="show_close_contacts">Mostrar solo contactos de riesgo</string>
     <string name="settings">Ajustes</string>
     <string name="more">Más</string>
+    <string name="entries_deleted">Entradas eliminadas</string>
+    <string name="entries_selected">" entradas seleccionadas"</string>
 </resources>
