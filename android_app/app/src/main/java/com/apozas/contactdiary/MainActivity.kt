@@ -89,14 +89,18 @@ class MainActivity : AppCompatActivity() {
     }
 
 //  FAB animations
-private fun expandFAB() {
+    private fun expandFAB() {
         val fabOpen = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_open)
-        val fabTextOpen = AnimationUtils.loadAnimation(applicationContext, R.anim.fabtext_open)
-        val rotateForward = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate_forward)
+        val fabTextOpen = AnimationUtils.loadAnimation(
+            applicationContext,
+            R.anim.fab_open
+        )
+        val rotateForward = AnimationUtils.loadAnimation(
+            applicationContext,
+            R.anim.rotate_forward
+        )
 
         fab.startAnimation(rotateForward)
-//      fab1.animate().translationY(0.toFloat());
-//      fab2.animate().translationY(0.toFloat());
         fab1.startAnimation(fabOpen)
         fabText1.startAnimation(fabTextOpen)
         fab2.startAnimation(fabOpen)
@@ -108,16 +112,20 @@ private fun expandFAB() {
 
     private fun collapseFAB() {
         val fabClose: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_close)
-        val fabTextClose: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fabtext_close)
-        val rotateBackward: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.rotate_backward)
+        val fabTextClose: Animation = AnimationUtils.loadAnimation(
+            applicationContext,
+            R.anim.fab_close
+        )
+        val rotateBackward: Animation = AnimationUtils.loadAnimation(
+            applicationContext,
+            R.anim.rotate_backward
+        )
 
         fab.startAnimation(rotateBackward)
         fab1.startAnimation(fabClose)
         fabText1.startAnimation(fabTextClose)
         fab2.startAnimation(fabClose)
         fabText2.startAnimation(fabTextClose)
-//      fab1.animate().translationY(-resources.getDimension(R.dimen.standard_55));
-//      fab2.animate().translationY(-resources.getDimension(R.dimen.standard_105));
         fab1.isClickable = false
         fab2.isClickable = false
         isFabOpen = false
