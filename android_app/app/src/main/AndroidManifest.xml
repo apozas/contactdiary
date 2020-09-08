@@ -58,6 +58,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
+        <activity android:name=".PrivacyActivity"
+            android:label="@string/privacy_title">
+            <intent-filter>
+                <action android:name="com.apozas.contactdiary.PrivacyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <receiver
             android:name=".NotificationReceiver"
             android:enabled="true" >

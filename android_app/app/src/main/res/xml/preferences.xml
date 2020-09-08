@@ -56,5 +56,12 @@
 
         </Preference>
 
+        <Preference
+            android:key="privacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/privacy_title" >
+            <intent android:action="com.apozas.contactdiary.PrivacyActivity"/>
+        </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

@@ -50,4 +50,16 @@
     <string name="emptytime" translatable="false">00:00</string>
     <string name="entries_deleted">Entries deleted</string>
     <string name="entries_selected">" entries selected"</string>
+    <string name="privacy_title">Privacy policy</string>
+    <string name="privacy_intro">Contact Diary is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use Contact Diary.  In short, and since Contact Diary cannot connect to the internet, no Personal Information will be stored nor copied outside the user\'s device.  If you choose to use Contact Diary, then you agree to the collection (none) and use of information in relation to this policy. The Personal Information that Contact Diary collects is used for providing its service. As made explicit above, I cannot and thus will not use nor share your information with anyone.</string>
+    <string name="privacy_icu">The use of Contact Diary requires that you input certain personally identifiable information, namely Names, Places and (optionally) Phone numbers. The information that Contact Diary requests will be retained on your device and is not collected by me in any way.</string>
+    <string name="privacy_cookies">Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device\'s internal memory.\n\nContact Diary does not use any cookies, neither first-party nor third-party.\n\nIn the same way, no service is delegated to third parties. The information you input into Contact Diary never leaves your device.</string>
+    <string name="privacy_security">Again, no information you input to Contact Diary ever leaves your device. This fact can be always evaluated by inspecting Contact Diary\'s source code, which is available at <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Thus, its security and integrity is linked to the physical security and integrity of your device, of which I take no responsibility.</string>
+    <string name="privacy_changes">I may update this Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.\n\nThis policy is effective as of 2020-09-08</string>
+    <string name="privacy_contact">If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact me at <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a></string>
+    <string name="privacy_changes_title">Changes to this privacy policy</string>
+    <string name="privacy_icu_title">Information collection and use</string>
+    <string name="privacy_cookies_title">Cookies and service providers</string>
+    <string name="privacy_security_title">Security</string>
+    <string name="privacy_contact_title">Contact me</string>
 </resources>
