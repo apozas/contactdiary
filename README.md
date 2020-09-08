@@ -29,6 +29,9 @@ Contact Diary doesn't send any data to a cloud and not having permission to acce
 
 # Questions & Issues :thinking:
 
+- Wait, isn't this what Governments' contact tracing apps are doing?
+No. The goals of Governments' contact tracing apps and of Contact Diary are inherently different. Governments' contact tracing apps _notify you_ when you have been at risk, and Contact Diary serves to remember who _you must notify_ if you test positive.
+
 - Is this app BETTER than Governments' contact tracing apps?
 No. Governments' contact tracing apps may account for contacts that you may not be aware of, like the person sitting in a neighboring table at a restaurant, or that other person using the same bus to go to work. Contact Diary IS NOT A REPLACEMENT TO GOVERNMENTS' CONTACT TRACING APPS.
 
