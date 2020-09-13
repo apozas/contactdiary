@@ -62,4 +62,5 @@
     <string name="privacy_cookies_title">Cookies and service providers</string>
     <string name="privacy_security_title">Security</string>
     <string name="privacy_contact_title">Contact me</string>
+    <string name="empty_table">Press (+) to begin adding contacts</string>
 </resources>

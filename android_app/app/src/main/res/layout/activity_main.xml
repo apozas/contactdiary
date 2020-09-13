@@ -51,6 +51,13 @@
                 android:dividerHeight="0px"
                 android:divider="@null"
                 android:choiceMode="multipleChoiceModal"/>
+
+        <TextView
+            android:id="@+id/emptyList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/empty_table" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

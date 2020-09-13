@@ -135,6 +135,9 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+//      Show message on empty list
+        diarytable.emptyView = findViewById(R.id.emptyList)
+
 //      FAB operation
         fab.setOnClickListener {
             animateFAB()
