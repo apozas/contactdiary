@@ -141,9 +141,6 @@ class EditContactActivity : AppCompatActivity() {
         }
 
         okButton_AddContact.setOnClickListener {
-//          Gets the data repository in write mode
-//            val db = dbHelper.writableDatabase
-
 //          Process RadioButtons
             val relativeId = known_group.checkedRadioButtonId
             var relativeChoice = -1
