@@ -47,7 +47,7 @@
                         android:id="@+id/name_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textCapSentences"
+                        android:inputType="textCapWords"
                         android:imeOptions="actionNext" />
 
                 </com.google.android.material.textfield.TextInputLayout>
