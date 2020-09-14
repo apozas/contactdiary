@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Diario de Contactos</string>
     <string name="action_settings">Ajustes</string>
-
     <string name="new_contact">Nuevo contacto</string>
     <string name="new_event">Nuevo evento</string>
     <string name="event_name">Nombre del evento</string>
@@ -59,4 +58,5 @@
     <string name="privacy_security_title">Seguridad</string>
     <string name="privacy_contact_title">Contáctame</string>
     <string name="empty_table">Pulsa (+) para comenzar a añadir contactos</string>
+    <string name="app_version_title">Versión de la app</string>
 </resources>
