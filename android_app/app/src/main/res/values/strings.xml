@@ -64,4 +64,5 @@
     <string name="privacy_contact_title">Contact me</string>
     <string name="empty_table">Press (+) to begin adding contacts</string>
     <string name="app_version_title">App version</string>
+    <string name="about_donate_summary" />
 </resources>

@@ -59,4 +59,5 @@
     <string name="privacy_contact_title">Contáctame</string>
     <string name="empty_table">Pulsa (+) para comenzar a añadir contactos</string>
     <string name="app_version_title">Versión de la app</string>
+    <string name="about_donate_summary" />
 </resources>
