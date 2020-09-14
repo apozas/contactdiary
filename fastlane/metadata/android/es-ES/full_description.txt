@@ -13,6 +13,9 @@ Cada día, Diario de Contactos mostrará una notificación invitándote a introd
 </ul>
 
 <b>FAQ</b>
+- Un momento, ¿no es esto lo mismo que hacen las aplicaciones de rastreo de contactos gubernamentales?
+No. Los objetivos de las aplicaciones de rastreo de contactos gubernamentales y de Diario de Contacctos son inherentemente diferentes. Las aplicaciones de rastreo de contactos gubernamentales <em>te notifican a tí</em> cuando has estado en una situación de riesgo, y Diario de Contactos sirve para recordarte a quién <em>debes notificar tú</em> si resultas positivo.
+
 - ¿Esta app es MEJOR que las aplicaciones de rastreo de contactos gubernamentales?
 No. Las aplicaciones de rastreo de contactos gubernamentales pueden detectar contactos de los cuales no seas consciente, como la persona que se sienta en la mesa de al lado en el restaurante, o aquella que toma tu mismo bus para ir al trabajo. Diario de Contactos NO ES UN SUSTITUTO DE LAS APLICACIONES DE RASTREO DE CONTACTO GUBERNAMENTALES.
 
