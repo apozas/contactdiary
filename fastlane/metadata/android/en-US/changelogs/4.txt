@@ -1,0 +1,5 @@
+This version makes the first contact with the app a bit smoother, and fixes a few visuals.
+
+- Added initial guidelines
+- Input in Name fields capitalize every first letter
+- Version info added in Options

@@ -1,0 +1,5 @@
+Esta versión hace que el primer contacto con la app sea más sencillo y arregla un par de visuales.
+
+- Instrucciones iniciales añadidas
+- La entrada en campos de Nombre tienen los inicios de todas las palabras en mayúscula
+- Añadida la información de la versión en Opciones
