@@ -51,7 +51,7 @@ If you would like to support this project's further development, the creator of 
 
 # Contributing :+1:
 
-If you found a bug, have an idea how to improve the Contact Diary app or have a question, please create new issue or comment existing one. If you would like to contribute code, fork the repository and send a pull request.
+If you found a bug, have an idea how to improve the Contact Diary app or have a question, please create a [new issue](https://github.com/apozas/contactdiary/issues/new/choose) or comment an existing one. If you would like to contribute code, fork the repository and send a pull request.
 
 # Screenshots :eyes:
 
