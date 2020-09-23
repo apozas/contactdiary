@@ -27,14 +27,15 @@
                     android:layout_height="?attr/actionBarSize"
                     android:background="?attr/colorPrimary"
                     app:popupTheme="@style/AppTheme.PopupOverlay" />
-
             </com.google.android.material.appbar.AppBarLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -85,7 +86,6 @@
                         android:clickable="true"
                         android:focusable="false"
                         android:cursorVisible="false" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -111,7 +111,6 @@
                         android:focusable="false"
                         android:gravity="center"
                         android:cursorVisible="false" />
-
                 </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -205,16 +204,13 @@
                         android:text="@string/unsure"
                         android:layout_marginStart="80dp" />
                 </RadioGroup>
-
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />
-
         </LinearLayout>
-
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -231,5 +227,4 @@
         app:srcCompat="@drawable/ic_ok"
         tools:ignore="VectorDrawableCompat"
         android:layout_marginEnd="@dimen/fab_margin" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
