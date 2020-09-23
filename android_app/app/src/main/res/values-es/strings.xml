@@ -60,4 +60,6 @@
     <string name="empty_table">Pulsa (+) para comenzar a añadir contactos</string>
     <string name="app_version_title">Versión de la app</string>
     <string name="about_donate_summary" />
+    <string name="about_rate">Valora la app</string>
+    <string name="about_rate_summary">Si te gustó la app, por favor deja una valoración y una reseña para que llegue a más gente</string>
 </resources>
