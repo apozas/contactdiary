@@ -2,6 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/popup_select"
+        android:title="@string/select" />
+    <item
         android:id="@+id/popup_duplicate"
         android:title="@string/duplicate"/>
     <item

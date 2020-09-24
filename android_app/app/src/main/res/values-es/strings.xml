@@ -65,5 +65,6 @@
     <string name="entry_duplicated">Entrada duplicada</string>
     <string name="entries_duplicated">Entradas duplicadas</string>
     <string name="duplicate">Hacer copia hoy</string>
+    <string name="select">Seleccionar</string>
     <string name="notes_optional">Notas (opcional)</string>
 </resources>

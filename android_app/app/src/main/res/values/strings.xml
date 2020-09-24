@@ -71,5 +71,6 @@
     <string name="entry_duplicated">Entry duplicated</string>
     <string name="entries_duplicated">Entries duplicated</string>
     <string name="duplicate">Make a copy today</string>
+    <string name="select">Select</string>
     <string name="notes_optional">Notes (optional)</string>
 </resources>

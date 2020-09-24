@@ -111,6 +111,79 @@ class MainActivity : AppCompatActivity() {
     override fun onContextItemSelected(item: MenuItem): Boolean {
         val info: AdapterView.AdapterContextMenuInfo = item.menuInfo as AdapterView.AdapterContextMenuInfo
         return when (item.itemId) {
+            R.id.popup_select -> {
+//              Launch multiChoiceMode
+                diarytable.choiceMode = ListView.CHOICE_MODE_MULTIPLE_MODAL
+                val itemList: MutableList<Long> = ArrayList()
+                diarytable.setMultiChoiceModeListener(object : AbsListView.MultiChoiceModeListener {
+                    override fun onCreateActionMode(actionMode: ActionMode, menu: Menu): Boolean {
+                        actionMode.menuInflater.inflate(R.menu.context_menu, menu)
+                        return true
+                    }
+
+                    override fun onPrepareActionMode(p0: ActionMode?, p1: Menu?): Boolean {
+                        return false
+                    }
+
+                    override fun onActionItemClicked(actionMode: ActionMode, menuItem: MenuItem): Boolean {
+                        when (menuItem.itemId) {
+                            R.id.context_delete -> {
+                                for (item: Long in itemList) { deleteEntry(item) }
+                                Toast.makeText(
+                                    applicationContext,
+                                    getString(if (itemList.size > 1) R.string.entries_deleted
+                                    else R.string.entry_deleted
+                                    ),
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                itemList.clear()
+                                actionMode.finish()
+                                viewData(onlyRisky)
+                                return true
+                            }
+                            R.id.context_duplicate -> {
+                                for (item: Long in itemList) { duplicateEntry(item) }
+                                Toast.makeText(
+                                    applicationContext,
+                                    getString(if (itemList.size > 1) R.string.entries_duplicated
+                                    else R.string.entry_duplicated
+                                    ),
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                itemList.clear()
+                                actionMode.finish()
+                                viewData(onlyRisky)
+                                return true
+                            }
+                            else -> {
+                                return false
+                            }
+                        }
+                    }
+
+                    override fun onDestroyActionMode(actionMode: ActionMode) {
+                        itemList.clear()
+                        diarytable.choiceMode = ListView.CHOICE_MODE_SINGLE
+                    }
+
+                    override fun onItemCheckedStateChanged(
+                        actionMode: ActionMode,
+                        i: Int,
+                        position: Long,
+                        checked: Boolean
+                    ) {
+                        if (checked) {
+                            itemList.add(position)
+                            actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                        } else {
+                            itemList.remove(position)
+                            actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                        }
+                    }
+                })
+                diarytable.setItemChecked(info.position, true)
+                true
+            }
             R.id.popup_duplicate -> {
                 duplicateEntry(info.id)
                 viewData(onlyRisky)
