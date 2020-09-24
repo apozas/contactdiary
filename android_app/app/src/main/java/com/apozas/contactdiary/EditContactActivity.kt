@@ -103,6 +103,8 @@ class EditContactActivity : AppCompatActivity() {
             }
         }
 
+        notes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+
         // Listen to new values
 
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
@@ -187,6 +189,7 @@ class EditContactActivity : AppCompatActivity() {
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
+                    put(feedEntry.NOTES_COLUMN, notes_edit.text.toString())
                 }
 
 //              Update the database

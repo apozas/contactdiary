@@ -25,17 +25,14 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         db.execSQL(ContactDatabase.SQL_CREATE_ENTRIES)
     }
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        // This database is only a cache for online data, so its upgrade policy is
-        // to simply to discard the data and start over
-        db.execSQL(ContactDatabase.SQL_DELETE_ENTRIES)
-        onCreate(db)
+        if (oldVersion < 2) { db.execSQL(ContactDatabase.SQL_UPDATE_2) }
     }
     override fun onDowngrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         onUpgrade(db, oldVersion, newVersion)
     }
     companion object {
         // If you change the database schema, you must increment the database version.
-        const val DATABASE_VERSION = 1
+        const val DATABASE_VERSION = 2
         const val DATABASE_NAME = "ContactDiary.db"
 
 

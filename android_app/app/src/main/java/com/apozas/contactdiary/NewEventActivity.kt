@@ -142,6 +142,7 @@ class NewEventActivity : AppCompatActivity() {
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_input.text.toString())
                     put(feedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, eventCloseContactChoice)
+                    put(feedEntry.NOTES_COLUMN, eventnotes_input.text.toString())
                 }
 
 //              Insert the new row, returning the primary key value of the new row

@@ -91,6 +91,8 @@ class EditEventActivity : AppCompatActivity() {
             }
         }
 
+        eventnotes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+
         // Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
@@ -166,6 +168,7 @@ class EditEventActivity : AppCompatActivity() {
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_edit.text.toString())
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
+                    put(feedEntry.NOTES_COLUMN, eventnotes_edit.text.toString())
                 }
 
 //          Update the database

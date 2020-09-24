@@ -31,6 +31,7 @@ class ContactDatabase {
             const val COMPANIONS_COLUMN = "Companions"
             const val CLOSECONTACT_COLUMN = "CloseContact"
             const val ENCOUNTER_COLUMN = "EncounterType"
+            const val NOTES_COLUMN = "Notes"
         }
     }
 
@@ -46,8 +47,11 @@ class ContactDatabase {
                     "${ContactDatabase.FeedEntry.RELATIVE_COLUMN} TINYINT," +
                     "${ContactDatabase.FeedEntry.COMPANIONS_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.ENCOUNTER_COLUMN} TINYINT," +
-                    "${ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN} TINYINT)"
+                    "${ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN} TINYINT," +
+                    "${ContactDatabase.FeedEntry.NOTES_COLUMN} TEXT)"
         const val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS ${ContactDatabase.FeedEntry.TABLE_NAME}"
+        const val SQL_UPDATE_2 = "ALTER TABLE ${ContactDatabase.FeedEntry.TABLE_NAME} ADD COLUMN " +
+                "${ContactDatabase.FeedEntry.NOTES_COLUMN} TEXT"
     }
 
 }

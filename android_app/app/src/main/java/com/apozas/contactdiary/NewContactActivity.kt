@@ -148,6 +148,7 @@ class NewContactActivity : AppCompatActivity() {
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
+                    put(feedEntry.NOTES_COLUMN, notes_input.text.toString())
                 }
 
 //              Insert the new row, returning the primary key value of the new row
