@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
         restrict15LastDays()
         viewData(onlyRisky)
 
+        registerForContextMenu(findViewById(R.id.diarytable))
+
 //      Edit entry on click
         diarytable.setOnItemClickListener { _, _, position, _ ->
             val idx = diarytable.adapter.getItemId(position)
@@ -159,6 +161,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.popup_menu, menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        val info: AdapterView.AdapterContextMenuInfo = item.menuInfo as AdapterView.AdapterContextMenuInfo
+        return when (item.itemId) {
+            R.id.popup_delete -> {
+                deleteEntry(info.id)
+                Toast.makeText(this, R.string.entry_deleted, Toast.LENGTH_SHORT).show()
+                viewData(onlyRisky)
+                true
+            }
+            else -> super.onContextItemSelected(item)
+        }
+    }
+
 //  FAB animations
     private fun expandFAB() {
         val fabOpen = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_open)
@@ -248,5 +272,10 @@ class MainActivity : AppCompatActivity() {
                 "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN} <= " + fifteenDaysAgo.toString()
         // Issue SQL statement.
         db.execSQL(selection)
+    }
+
+    private fun deleteEntry(id: Long) {
+        val db = dbHelper.writableDatabase
+        db.delete(feedEntry.TABLE_NAME, "_id LIKE ?", arrayOf(id.toString()))
     }
 }
