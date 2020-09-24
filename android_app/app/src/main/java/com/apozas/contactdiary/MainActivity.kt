@@ -35,6 +35,9 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private var isFabOpen = false
+    private var onlyRisky = false
+    private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+    private val dbHelper = FeedReaderDbHelper(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
-        val onlyRisky = preferences.getBoolean("closecontactonly", false)
+        onlyRisky = preferences.getBoolean("closecontactonly", false)
 
         restrict15LastDays()
         viewData(onlyRisky)
@@ -248,8 +251,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 //  Database operation
-    private val dbHelper = FeedReaderDbHelper(this)
-
     private fun viewData(onlyRisky: Boolean) {
         val cursor = dbHelper.viewData(onlyRisky)
 
