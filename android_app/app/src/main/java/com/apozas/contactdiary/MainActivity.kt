@@ -268,10 +268,10 @@ class MainActivity : AppCompatActivity() {
         cal.set(Calendar.HOUR, 0)
         val fifteenDaysAgo = cal.timeInMillis
 
-        // Define 'where' part of query.
+//      Define 'where' part of query.
         val selection = "DELETE FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME} " +
                 "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN} <= " + fifteenDaysAgo.toString()
-        // Issue SQL statement.
+//      Issue SQL statement.
         db.execSQL(selection)
     }
 

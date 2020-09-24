@@ -34,8 +34,6 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         // If you change the database schema, you must increment the database version.
         const val DATABASE_VERSION = 2
         const val DATABASE_NAME = "ContactDiary.db"
-
-
     }
 
     fun viewData(onlyRisky: Boolean): Cursor {

@@ -106,7 +106,6 @@ class EditContactActivity : AppCompatActivity() {
         notes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
 
         // Listen to new values
-
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, monthOfYear)
@@ -224,12 +223,10 @@ class EditContactActivity : AppCompatActivity() {
 
     private fun setupUI(view: View) {
         //Set up touch listener for non-text box views to hide keyboard.
-        if (view !is EditText) {
-            view.setOnTouchListener { v, _ ->
-                v.clearFocus()
-                hideSoftKeyboard()
-                false
-            }
+        if (view !is EditText) view.setOnTouchListener { v, _ ->
+            v.clearFocus()
+            hideSoftKeyboard()
+            false
         }
 
         //If a layout container, iterate over children and seed recursion.

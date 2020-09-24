@@ -53,5 +53,4 @@ class ContactDatabase {
         const val SQL_UPDATE_2 = "ALTER TABLE ${ContactDatabase.FeedEntry.TABLE_NAME} ADD COLUMN " +
                 "${ContactDatabase.FeedEntry.NOTES_COLUMN} TEXT"
     }
-
 }
