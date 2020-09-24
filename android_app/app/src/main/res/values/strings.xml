@@ -68,5 +68,8 @@
     <string name="about_rate">Rate the app</string>
     <string name="about_rate_summary">If you like the app, please rate and review it so it can reach more people that may find it useful</string>
     <string name="rate_url" translatable="false">https://play.google.com/store/apps/details?id=com.apozas.contactdiary</string>
+    <string name="entry_duplicated">Entry duplicated</string>
+    <string name="entries_duplicated">Entries duplicated</string>
+    <string name="duplicate">Make a copy today</string>
     <string name="notes_optional">Notes (optional)</string>
 </resources>

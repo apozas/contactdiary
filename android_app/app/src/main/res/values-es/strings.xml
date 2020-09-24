@@ -62,5 +62,8 @@
     <string name="about_donate_summary" />
     <string name="about_rate">Valora la app</string>
     <string name="about_rate_summary">Si te gusta la app, por favor deja una valoración y una reseña para que llegue a más gente</string>
+    <string name="entry_duplicated">Entrada duplicada</string>
+    <string name="entries_duplicated">Entradas duplicadas</string>
+    <string name="duplicate">Hacer copia hoy</string>
     <string name="notes_optional">Notas (opcional)</string>
 </resources>

@@ -15,18 +15,15 @@ package com.apozas.contactdiary
     Copyright 2020 by Alex Pozas-Kerstjens (apozas)
 */
 
+import android.content.ContentValues
 import android.content.Intent
 import android.database.Cursor
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.AbsListView.MultiChoiceModeListener
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import android.view.ActionMode
 import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -78,68 +75,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-//      Select to delete on long press
-        val itemList: MutableList<Long> = ArrayList()
-        diarytable.setMultiChoiceModeListener(object : MultiChoiceModeListener {
-            override fun onCreateActionMode(actionMode: ActionMode, menu: Menu): Boolean {
-                actionMode.menuInflater.inflate(R.menu.context_menu, menu)
-                return true
-            }
-
-            override fun onPrepareActionMode(p0: ActionMode?, p1: Menu?): Boolean {
-                return false
-            }
-
-            override fun onActionItemClicked(actionMode: ActionMode, menuItem: MenuItem): Boolean {
-                when (menuItem.itemId) {
-                    R.id.context_delete -> {
-                        val db = dbHelper.writableDatabase
-                        for (item: Long in itemList) {
-                            db.delete(
-                                ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME,
-                                "_id LIKE ?",
-                                arrayOf(item.toString())
-                            )
-                        }
-                        Toast.makeText(
-                            applicationContext,
-                            getString(if (itemList.size > 1) R.string.entries_deleted
-                            else R.string.entry_deleted
-                            ),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        itemList.clear()
-                        actionMode.finish()
-                        viewData(onlyRisky)
-                        return true
-                    }
-                    else -> {
-                        return false
-                    }
-                }
-            }
-
-            override fun onDestroyActionMode(actionMode: ActionMode) {
-                itemList.clear()
-                false
-            }
-
-            override fun onItemCheckedStateChanged(
-                actionMode: ActionMode,
-                i: Int,
-                position: Long,
-                checked: Boolean
-            ) {
-                if (checked) {
-                    itemList.add(position)
-                    actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
-                } else {
-                    itemList.remove(position)
-                    actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
-                }
-            }
-        })
-
 //      Show message on empty list
         diarytable.emptyView = findViewById(R.id.emptyList)
 
@@ -176,6 +111,11 @@ class MainActivity : AppCompatActivity() {
     override fun onContextItemSelected(item: MenuItem): Boolean {
         val info: AdapterView.AdapterContextMenuInfo = item.menuInfo as AdapterView.AdapterContextMenuInfo
         return when (item.itemId) {
+            R.id.popup_duplicate -> {
+                duplicateEntry(info.id)
+                viewData(onlyRisky)
+                true
+            }
             R.id.popup_delete -> {
                 deleteEntry(info.id)
                 Toast.makeText(this, R.string.entry_deleted, Toast.LENGTH_SHORT).show()
@@ -278,5 +218,36 @@ class MainActivity : AppCompatActivity() {
     private fun deleteEntry(id: Long) {
         val db = dbHelper.writableDatabase
         db.delete(feedEntry.TABLE_NAME, "_id LIKE ?", arrayOf(id.toString()))
+    }
+
+    private fun duplicateEntry(id: Long) {
+        val db = dbHelper.writableDatabase
+        val cursor: Cursor = db.rawQuery(
+            "SELECT * FROM ${feedEntry.TABLE_NAME}" +
+                    " WHERE _id=" + id, null
+        )
+        cursor.moveToFirst()
+
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val cal = Calendar.getInstance()
+        cal.timeInMillis = timestamp
+        cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+
+        val values = ContentValues().apply {
+            put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
+            put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
+            put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
+            put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+            put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
+            put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
+            put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
+            put(feedEntry.CLOSECONTACT_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN)))
+            put(feedEntry.ENCOUNTER_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN)))
+            put(feedEntry.NOTES_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+        }
+
+//      Insert the new row
+        db?.insert(feedEntry.TABLE_NAME, null, values)
+        cursor.close()
     }
 }
