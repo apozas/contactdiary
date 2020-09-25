@@ -86,8 +86,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
-        val onlyRisky = preferences.getBoolean("closecontactonly", false)
+        restrict15LastDays()
         viewData(onlyRisky)
     }
 
