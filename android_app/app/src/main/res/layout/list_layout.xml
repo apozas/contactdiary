@@ -25,8 +25,7 @@
         android:visibility="gone"
         android:contextClickable="false"
         android:padding="6dp"
-        android:clickable="false"
-        />
+        android:clickable="false" />
 
     <!-- List entries -->
     <LinearLayout

@@ -204,6 +204,7 @@
                         android:text="@string/unsure"
                         android:layout_marginStart="80dp" />
                 </RadioGroup>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
