@@ -221,6 +221,45 @@ class EditContactActivity : AppCompatActivity() {
         finish()
     }
 
+    fun duplicateContact(view: View) {
+        val db = dbHelper.writableDatabase
+        val info = intent.extras?.getString("entry")
+        val cursor: Cursor = db.rawQuery(
+            "SELECT * FROM ${feedEntry.TABLE_NAME}" +
+                    " WHERE _id=" + info, null
+        )
+        cursor.moveToFirst()
+
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val cal = Calendar.getInstance()
+        cal.timeInMillis = timestamp
+        cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+
+        val values = ContentValues().apply {
+            put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
+            put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
+            put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
+            put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+            put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
+            put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
+            put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
+            put(feedEntry.CLOSECONTACT_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN)))
+            put(feedEntry.ENCOUNTER_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN)))
+            put(feedEntry.NOTES_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+        }
+
+        db?.insert(feedEntry.TABLE_NAME, null, values)
+        cursor.close()
+
+        Toast.makeText(
+            applicationContext,
+            applicationContext.resources.getString(R.string.entry_duplicated),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        finish()
+    }
+
     private fun setupUI(view: View) {
         //Set up touch listener for non-text box views to hide keyboard.
         if (view !is EditText) view.setOnTouchListener { v, _ ->
