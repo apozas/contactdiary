@@ -1,0 +1,6 @@
+This update brings two major improvements in usability:
+
+- A Notes field has been added to the forms, so you can insert additional information that may think relevant.
+- Now you can make a copy of an older entry in today's list with the new Make a Copy Today option.
+
+In addition, there are a few less bugs, and there is a new link to rate the app in the Options menu.

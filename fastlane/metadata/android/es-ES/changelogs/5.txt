@@ -1,0 +1,6 @@
+Esta actualización trae dos grandes mejoras de uso:
+
+- Los formularios tienen un nuevo campo, llamado Notas. Ahora, puedes insertar información adicional que pienses que puede ser relevante.
+- Ahora puedes hacer una copia completa en el día de hoy de una entrada anterior con la opción Hacer una Copia Hoy.
+
+Además, hay un par menos de errores, y un nuevo enlace para valorar la app en el menú de opciones.
