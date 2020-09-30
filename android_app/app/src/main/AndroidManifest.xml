@@ -60,7 +60,7 @@
         <activity android:name=".PrivacyActivity"
             android:label="@string/privacy_title">
             <intent-filter>
-                <action android:name="com.apozas.contactdiary.PrivacyActivity" />
+                <action android:name="${applicationId}.PrivacyActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
