@@ -1,0 +1,1 @@
+Esta actualización hace que los formularios se vean mejor en pantallas pequeñas
