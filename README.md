@@ -1,5 +1,6 @@
 &nbsp; <img src="https://github.com/apozas/contactdiary/blob/master/fastlane/metadata/android/en-US/images/icon.png" alt="Contact Diary logo" height="60"/> &nbsp;Contact Diary
 =========
+[![Crowdin](https://badges.crowdin.net/contactdiary/localized.svg)](https://crowdin.com/project/contactdiary)
 
 Open-source app to keep track of the people you have recently been with
 
@@ -52,6 +53,11 @@ If you would like to support this project's further development, the creator of 
 # Contributing :+1:
 
 If you found a bug, have an idea how to improve the Contact Diary app or have a question, please create a [new issue](https://github.com/apozas/contactdiary/issues/new/choose) or comment an existing one. If you would like to contribute code, fork the repository and send a pull request.
+
+_Translations:_
+
+You can translate the in-app texts of Contact Diary on [Crowdin](https://crwd.in/contactdiary). If your language is not listed, please please create a [new issue](https://github.com/apozas/contactdiary/issues/new/choose) on GitHub, or [send me an email](mailto:contactdiary@alexpozas.com).
+
 
 # Screenshots :eyes:
 
