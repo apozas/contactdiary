@@ -65,22 +65,22 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/date_text"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:layout_weight="1"
                         android:text="@string/date" />
 
                     <EditText
                         android:id="@+id/date_input"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:layout_weight="1"
                         android:hint="@string/date"
                         android:inputType="date"
                         android:clickable="true"
@@ -90,23 +90,23 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/time_text"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:layout_weight="1"
                         android:text="@string/time_optional"
                         android:focusable="false" />
 
                     <EditText
                         android:id="@+id/time_input"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:layout_weight="1"
                         android:hint="@string/emptytime"
                         android:inputType="time"
                         android:clickable="true"
@@ -144,19 +144,34 @@
                     android:orientation="horizontal"
                     android:gravity="center">
 
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
                     <RadioButton
                         android:id="@+id/known_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="@string/yes" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
 
                     <RadioButton
                         android:id="@+id/known_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:text="@string/no"
-                        android:layout_marginStart="80dp" />
+                        android:layout_weight="1"
+                        android:text="@string/no" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
                 </RadioGroup>
 
                 <TextView
@@ -174,19 +189,34 @@
                     android:orientation="horizontal"
                     android:gravity="center">
 
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
                     <RadioButton
                         android:id="@+id/contact_indoors"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="@string/indoors" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
 
                     <RadioButton
                         android:id="@+id/contact_outdoors"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:text="@string/outdoors"
-                        android:layout_marginStart="80dp" />
+                        android:layout_weight="1"
+                        android:text="@string/outdoors" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
                 </RadioGroup>
 
                 <TextView
@@ -204,27 +234,46 @@
                     android:orientation="horizontal"
                     android:gravity="center">
 
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
                     <RadioButton
                         android:id="@+id/distance_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="@string/yes" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
 
                     <RadioButton
                         android:id="@+id/distance_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:text="@string/no"
-                        android:layout_marginStart="80dp" />
+                        android:layout_weight="1"
+                        android:text="@string/no" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
 
                     <RadioButton
                         android:id="@+id/distance_maybe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="80dp"
-                        android:text="@string/unsure"
-                        android:layout_marginStart="80dp" />
+                        android:layout_weight="1"
+                        android:text="@string/unsure" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
                 </RadioGroup>
 
                 <com.google.android.material.textfield.TextInputLayout
