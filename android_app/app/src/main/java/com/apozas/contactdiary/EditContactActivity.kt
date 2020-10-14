@@ -21,6 +21,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -31,9 +32,7 @@ import kotlinx.android.synthetic.main.activity_editcontact.*
 import java.text.DateFormat
 import java.util.*
 
-
 class EditContactActivity : AppCompatActivity() {
-
 
     private val dbHelper = FeedReaderDbHelper(this)
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
@@ -132,12 +131,13 @@ class EditContactActivity : AppCompatActivity() {
 
         }
 
+        val is24Hour = is24HourFormat(applicationContext)
         time_edit.setOnClickListener {
             TimePickerDialog(
                 this@EditContactActivity, timeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true
+                is24Hour
             ).show()
         }
 

@@ -21,6 +21,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -120,12 +121,13 @@ class EditEventActivity : AppCompatActivity() {
 
         }
 
+        val is24Hour = is24HourFormat(applicationContext)
         eventtime_edit.setOnClickListener {
             TimePickerDialog(
                 this@EditEventActivity, timeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true
+                is24Hour
             ).show()
         }
 
