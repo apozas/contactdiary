@@ -4,8 +4,7 @@
 
 Open-source app to keep track of the people you have recently been with
 
-<a href="https://play.google.com/store/apps/details?id=com.apozas.contactdiary" target="_blank">
-<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
+<a href="https://f-droid.org/repository/browse/?fdid=com.apozas.contactdiary" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a> <a href="https://play.google.com/store/apps/details?id=com.apozas.contactdiary" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80"/></a>
 
 Be aware that this version, while it matches that on Google Play, doesn't support automatic updates.
 
