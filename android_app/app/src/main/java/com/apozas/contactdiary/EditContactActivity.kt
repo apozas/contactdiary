@@ -26,6 +26,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editcontact.*
@@ -44,7 +45,7 @@ class EditContactActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.editcontactlayout))
 
-        // Get info from MainActivity
+//      Get info from MainActivity
         val db = dbHelper.writableDatabase
         val info = intent.extras?.getString("entry")
 
@@ -68,39 +69,17 @@ class EditContactActivity : AppCompatActivity() {
             phone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        val relativeBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
-        val encounterBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        val closeContactBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        val relative = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+        val relativeBtn = known_group.getChildAt(relative) as RadioButton
+        relativeBtn.isChecked = true
 
-        when (relativeBtn) {
-            0 -> {
-                known_yes.isChecked = true
-            }
-            1 -> {
-                known_no.isChecked = true
-            }
-        }
+        val encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val encounterBtn = contact_indoor_outdoor.getChildAt(encounter) as RadioButton
+        encounterBtn.isChecked = true
 
-        when (encounterBtn) {
-            0 -> {
-                indoors.isChecked = true
-            }
-            1 -> {
-                outdoors.isChecked = true
-            }
-        }
-
-        when (closeContactBtn) {
-            0 -> {
-                closecontact.isChecked = true
-            }
-            1 -> {
-                noclosecontact.isChecked = true
-            }
-            2 -> {
-                unknowncontact.isChecked = true
-            }
-        }
+        val closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        val closeContactBtn = distance_group.getChildAt(closeContact) as RadioButton
+        closeContactBtn.isChecked = true
 
         notes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
 
@@ -201,7 +180,6 @@ class EditContactActivity : AppCompatActivity() {
                     applicationContext.getResources().getString(R.string.contact_saved),
                     Toast.LENGTH_SHORT
                 ).show()
-
                 finish()
             }
         }
@@ -256,7 +234,6 @@ class EditContactActivity : AppCompatActivity() {
             applicationContext.resources.getString(R.string.entry_duplicated),
             Toast.LENGTH_SHORT
         ).show()
-
         finish()
     }
 
