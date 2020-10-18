@@ -69,15 +69,18 @@ class EditContactActivity : AppCompatActivity() {
             phone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        val relative = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+        var relative = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+        if (relative%2==0) {relative = 1}    // Migration from 1.0.4 fix
         val relativeBtn = known_group.getChildAt(relative) as RadioButton
         relativeBtn.isChecked = true
 
-        val encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        if (encounter%2==0) {encounter = 1}    // Migration from 1.0.4 fix
         val encounterBtn = contact_indoor_outdoor.getChildAt(encounter) as RadioButton
         encounterBtn.isChecked = true
 
-        val closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        if (closeContact%2==0) {closeContact = 1}    // Migration from 1.0.4 fix
         val closeContactBtn = distance_group.getChildAt(closeContact) as RadioButton
         closeContactBtn.isChecked = true
 
