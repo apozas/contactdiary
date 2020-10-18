@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="new_contact"
+        android:enabled="true"
+        android:icon="@drawable/ic_contact_shortcut"
+        android:shortcutShortLabel="@string/new_contact"
+        android:shortcutLongLabel="@string/new_contact">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.apozas.contactdiary"
+            android:targetClass="com.apozas.contactdiary.NewContactActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="new_event"
+        android:enabled="true"
+        android:icon="@drawable/ic_event_shortcut"
+        android:shortcutShortLabel="@string/new_event"
+        android:shortcutLongLabel="@string/new_event">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.apozas.contactdiary"
+            android:targetClass="com.apozas.contactdiary.NewEventActivity" />
+    </shortcut>
+
+
+</shortcuts>
