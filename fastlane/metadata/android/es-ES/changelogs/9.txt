@@ -1,0 +1,7 @@
+Primeros bugs cazados! Esta versión arregla dos problemas encontrados:
+
+- Un error que hacía que las preguntas de elección no fueran salvadas correctamente. Gracias a los cazadores diesendungmitdermaus, mziehm, igor-cali y hoschi-it.
+
+- Ahora, los selectores de tiempo coinciden con el formato del dispositivo.
+
+Algunas entradas antiguas pueden no mostrarse como se pretendía que fueran salvadas. Si elegiste una segunda opción (No/Al aire libre) en las preguntas de elección, cuando abras el contacto la primera opción (Sí/Lugar cerrado) aparecerá seleccionada en su lugar. La única manera de arreglar este problema por el momento es manualmente (una sola vez), de modo que tómate tu tiempo en corregir los formularios tras actualizar la app.
