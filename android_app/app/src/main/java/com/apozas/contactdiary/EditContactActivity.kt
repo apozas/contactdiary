@@ -70,17 +70,20 @@ class EditContactActivity : AppCompatActivity() {
         }
 
         var relative = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
-        if (relative%2==0) {relative = 1}    // Migration from 1.0.4 fix
+        val relativeChildren = known_group.childCount
+        if (relativeChildren<5) {relative = 2*relative+1}    // Migration from 1.0.4 fix
         val relativeBtn = known_group.getChildAt(relative) as RadioButton
         relativeBtn.isChecked = true
 
         var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        if (encounter%2==0) {encounter = 1}    // Migration from 1.0.4 fix
+        val encounterChildren = contact_indoor_outdoor.childCount
+        if (encounterChildren<5) {encounter = 2*encounter+1}    // Migration from 1.0.4 fix
         val encounterBtn = contact_indoor_outdoor.getChildAt(encounter) as RadioButton
         encounterBtn.isChecked = true
 
         var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
-        if (closeContact%2==0) {closeContact = 1}    // Migration from 1.0.4 fix
+        val closeChildren = distance_group.childCount
+        if (closeChildren<5) {closeContact = 2*closeContact+1}    // Migration from 1.0.4 fix
         val closeContactBtn = distance_group.getChildAt(closeContact) as RadioButton
         closeContactBtn.isChecked = true
 
