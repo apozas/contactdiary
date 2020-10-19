@@ -20,6 +20,7 @@ import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.content.Context
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -70,11 +71,13 @@ class NewContactActivity : AppCompatActivity() {
             time_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
         }
 
+        val is24Hour = is24HourFormat(applicationContext)
         time_input.setOnClickListener {
             TimePickerDialog(this@NewContactActivity, timeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true).show()
+                is24Hour
+            ).show()
         }
 
 //      Database operation

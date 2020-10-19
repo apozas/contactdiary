@@ -21,10 +21,12 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editevent.*
@@ -43,7 +45,7 @@ class EditEventActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.editeventlayout))
 
-        // Get info from MainActivity
+//      Get info from MainActivity
         val info = intent.extras?.getString("entry")
 
         val db = dbHelper.writableDatabase
@@ -70,26 +72,17 @@ class EditEventActivity : AppCompatActivity() {
             eventphone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        val encounterBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        val closeContactBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val encounterChildren = event_indoor_outdoor.childCount
+        if (encounterChildren<5) {encounter = 2*encounter+1}    // Migration from 1.0.4 fix
+        val encounterBtn = event_indoor_outdoor.getChildAt(encounter) as RadioButton
+        encounterBtn.isChecked = true
 
-        if (encounterBtn == 0) {
-            event_indoors.isChecked = true
-        } else if (encounterBtn == 1) {
-            event_outdoors.isChecked = true
-        }
-
-        when (closeContactBtn) {
-            0 -> {
-                closeevent_yes.isChecked = true
-            }
-            1 -> {
-                closeevent_no.isChecked = true
-            }
-            2 -> {
-                closeevent_maybe.isChecked = true
-            }
-        }
+        var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        val closeChildren = eventclosecontact.childCount
+        if (closeChildren<5) {closeContact = 2*closeContact+1}    // Migration from 1.0.4 fix
+        val closeContactBtn = eventclosecontact.getChildAt(closeContact) as RadioButton
+        closeContactBtn.isChecked = true
 
         eventnotes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
 
@@ -120,12 +113,13 @@ class EditEventActivity : AppCompatActivity() {
 
         }
 
+        val is24Hour = is24HourFormat(applicationContext)
         eventtime_edit.setOnClickListener {
             TimePickerDialog(
                 this@EditEventActivity, timeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true
+                is24Hour
             ).show()
         }
 
@@ -181,7 +175,6 @@ class EditEventActivity : AppCompatActivity() {
                     applicationContext.resources.getString(R.string.event_saved),
                     Toast.LENGTH_SHORT
                 ).show()
-
                 finish()
             }
         }
@@ -200,7 +193,6 @@ class EditEventActivity : AppCompatActivity() {
             applicationContext.resources.getString(R.string.entry_deleted),
             Toast.LENGTH_SHORT
         ).show()
-
         finish()
     }
 

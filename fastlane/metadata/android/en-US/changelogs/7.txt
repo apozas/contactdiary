@@ -1,0 +1,7 @@
+THIS UPDATE WILL ERASE THE INFORMATION IN THE CHOICE QUESTIONS. SAVE THIS INFORMATION BEFORE UPDATING.
+
+First bugs hunted! This version fixes two problems found:
+
+- One of the bugs made the choice questions not being properly saved. Thanks to the hunters diesendungmitdermaus, mziehm, igor-cali and hoschi-it.
+
+- Now, the time choosers have the same format as the default device's locale.

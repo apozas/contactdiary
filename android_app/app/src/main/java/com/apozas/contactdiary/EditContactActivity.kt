@@ -21,19 +21,19 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editcontact.*
 import java.text.DateFormat
 import java.util.*
 
-
 class EditContactActivity : AppCompatActivity() {
-
 
     private val dbHelper = FeedReaderDbHelper(this)
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
@@ -45,7 +45,7 @@ class EditContactActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.editcontactlayout))
 
-        // Get info from MainActivity
+//      Get info from MainActivity
         val db = dbHelper.writableDatabase
         val info = intent.extras?.getString("entry")
 
@@ -69,39 +69,23 @@ class EditContactActivity : AppCompatActivity() {
             phone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        val relativeBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
-        val encounterBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        val closeContactBtn = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        var relative = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+        val relativeChildren = known_group.childCount
+        if (relativeChildren<5) {relative = 2*relative+1}    // Migration from 1.0.4 fix
+        val relativeBtn = known_group.getChildAt(relative) as RadioButton
+        relativeBtn.isChecked = true
 
-        when (relativeBtn) {
-            0 -> {
-                known_yes.isChecked = true
-            }
-            1 -> {
-                known_no.isChecked = true
-            }
-        }
+        var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val encounterChildren = contact_indoor_outdoor.childCount
+        if (encounterChildren<5) {encounter = 2*encounter+1}    // Migration from 1.0.4 fix
+        val encounterBtn = contact_indoor_outdoor.getChildAt(encounter) as RadioButton
+        encounterBtn.isChecked = true
 
-        when (encounterBtn) {
-            0 -> {
-                indoors.isChecked = true
-            }
-            1 -> {
-                outdoors.isChecked = true
-            }
-        }
-
-        when (closeContactBtn) {
-            0 -> {
-                closecontact.isChecked = true
-            }
-            1 -> {
-                noclosecontact.isChecked = true
-            }
-            2 -> {
-                unknowncontact.isChecked = true
-            }
-        }
+        var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        val closeChildren = distance_group.childCount
+        if (closeChildren<5) {closeContact = 2*closeContact+1}    // Migration from 1.0.4 fix
+        val closeContactBtn = distance_group.getChildAt(closeContact) as RadioButton
+        closeContactBtn.isChecked = true
 
         notes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
 
@@ -132,12 +116,13 @@ class EditContactActivity : AppCompatActivity() {
 
         }
 
+        val is24Hour = is24HourFormat(applicationContext)
         time_edit.setOnClickListener {
             TimePickerDialog(
                 this@EditContactActivity, timeSetListener,
                 cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE),
-                true
+                is24Hour
             ).show()
         }
 
@@ -201,7 +186,6 @@ class EditContactActivity : AppCompatActivity() {
                     applicationContext.getResources().getString(R.string.contact_saved),
                     Toast.LENGTH_SHORT
                 ).show()
-
                 finish()
             }
         }
@@ -256,7 +240,6 @@ class EditContactActivity : AppCompatActivity() {
             applicationContext.resources.getString(R.string.entry_duplicated),
             Toast.LENGTH_SHORT
         ).show()
-
         finish()
     }
 
