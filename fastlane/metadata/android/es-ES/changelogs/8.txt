@@ -1,0 +1,7 @@
+Primeros bugs cazados! Esta versión arregla dos problemas encontrados:
+
+- Un error que hacía que las preguntas de elección no fueran salvadas correctamente. Gracias a los cazadores diesendungmitdermaus, mziehm, igor-cali y hoschi-it.
+
+- Ahora, los selectores de tiempo coinciden con el formato del dispositivo.
+
+Esta actualización no borra ninguna información, en contraste con la versión v1.1.1
