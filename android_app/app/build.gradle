@@ -10,8 +10,8 @@ android {
         applicationId "com.apozas.contactdiary"
         minSdkVersion 14
         targetSdkVersion 30
-        versionCode 7
-        versionName "1.1.1"
+        versionCode 8
+        versionName "1.1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
