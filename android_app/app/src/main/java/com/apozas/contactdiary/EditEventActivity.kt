@@ -73,14 +73,12 @@ class EditEventActivity : AppCompatActivity() {
         }
 
         var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        val encounterChildren = event_indoor_outdoor.childCount
-        if (encounterChildren<5) {encounter = 2*encounter+1}    // Migration from 1.0.4 fix
+        if (encounter%2==0) {encounter = 2*encounter+1}    // Migration from 1.0.4 fix
         val encounterBtn = event_indoor_outdoor.getChildAt(encounter) as RadioButton
         encounterBtn.isChecked = true
 
         var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
-        val closeChildren = eventclosecontact.childCount
-        if (closeChildren<5) {closeContact = 2*closeContact+1}    // Migration from 1.0.4 fix
+        if (closeContact%2==0) {closeContact = 2*closeContact+1}    // Migration from 1.0.4 fix
         val closeContactBtn = eventclosecontact.getChildAt(closeContact) as RadioButton
         closeContactBtn.isChecked = true
 
