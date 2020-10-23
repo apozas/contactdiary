@@ -45,7 +45,7 @@
     <string name="more">Mehr</string>
     <string name="settings">Einstellungen</string>
     <string name="entries_deleted">Einträge gelöscht</string>
-    <string name="entries_selected">"Einträge ausgewählt"</string>
+    <string name="entries_selected">" einträge ausgewählt"</string>
     <string name="privacy_title">Datenschutzrichtlinien</string>
     <string name="privacy_intro">Kontakttagebuch wird in der Hoffnung entwickelt, dass es nützlich ist, jedoch OHNE JEGLICHE GARANTIE; ebenso ohne jegliche Gewährleistung von MÄNGELFREIHEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Diese Seite wird verwendet, um Besucher über meine Richtlinien bezüglich der Sammlung, Verwendung und Veröffentlichung von persönlichen Daten im Zusammenhang, mit der Nutzung von Kontakttagebuch zu informieren. Kurz gesagt: da sich Kontakttagebuch nicht mit dem Internet verbinden kann, werden keine persönlichen Informationen außerhalb des Gerätes des Benutzers gespeichert. Wenn du dich für die Nutzung von Kontakttagebuch entscheidest, stimmst du der Sammlung (keine) und der Nutzung von Informationen im Rahmen dieser Richtlinie zu. Die persönlichen Informationen, die Kontakttagebuch sammelt, werden für die Bereitstellung der Dienstleistungen der App verwendet. Wie bereits ausdrücklich dargelegt, kann und werde ich keine deiner Daten an Dritte weitergeben.</string>
     <string name="privacy_icu">Die Verwendung von Kontakttagebuch erfordert die Eingabe bestimmter persönlich identifizierenden Daten, wie Namen, Orte und (optional) Telefonnummern. Die Informationen, die Kontakttagebuch anfordert, werden auf deinem Gerät gespeichert und werden von mir in keiner Weise gesammelt.</string>
