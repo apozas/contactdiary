@@ -1,0 +1,8 @@
+The first translations of the app are available. Now you can have Contact Diary in:
+- German, thanks to GenosseFlosse, FloEdelmann, jensMF, Leso_KN and mkamp
+- Dutch, thanks to Tonyinspace 
+- Italian, thanks to igor-cali and lrt84
+- Swedish, thanks to nlssn
+- Catalan, Spanish, and English
+
+If you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary

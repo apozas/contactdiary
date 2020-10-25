@@ -1,0 +1,8 @@
+Las primeras acutalizaciones de la app ya están aquí. Ya puedes tener Diario de Contactos en:
+- Alemán, gracias a GenosseFlosse, FloEdelmann, jensMF, Leso_KN y mkamp
+- Holandés, gracias a Tonyinspace 
+- Italiano, gracias a igor-cali y lrt84
+- Sueco, gracias a nlssn
+- Catalán, Español, e Inglés
+
+Si quieres ayudar a traducir Diario de Contactos a tu idioma, por favor visita http://www.crowdin.com/project/contactdiary

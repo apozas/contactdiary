@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diari de Contactes</string>
+    <string name="action_settings">Configuració</string>
+    <string name="new_contact">Nou contacte</string>
+    <string name="new_event">Nou esdeveniment</string>
+    <string name="event_name">Nom de l\'esdeveniment</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+    <string name="date">Data</string>
+    <string name="time">Hora</string>
+    <string name="place">Lloc</string>
+    <string name="companions">Acompanyants (opcional)</string>
+    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Creus que vas mantenir la distància?</string>
+    <string name="name">Nom</string>
+    <string name="known_contact">Familiar o amic proper?</string>
+    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Creus que vau mantenir la distància?</string>
+    <string name="phone">Telèfon (opcional)</string>
+    <string name="unsure">No estic segur</string>
+    <string name="encounter_type">Tipus de trobada</string>
+    <string name="indoors">A l\'interior</string>
+    <string name="outdoors">A l\'aire lliure</string>
+    <string name="emptydiary">El diari està buit</string>
+    <string name="contact_saved">Contacte guardat</string>
+    <string name="event_saved">Esdeveniment guardat</string>
+    <string name="edit_event">Editar esdeveniment</string>
+    <string name="edit_contact">Editar contacte</string>
+    <string name="time_optional">Hora (opcional)</string>
+    <string name="options">Opcions</string>
+    <string name="entry_deleted">Entrada eliminada</string>
+    <string name="contact_developer_summary">Digues-me què en penses de l\'app, o problemes que has trobat</string>
+    <string name="contact_developer">Contacta amb el desenvolupador</string>
+    <string name="about_donate">Invita\'m a un café</string>
+    <string name="notification_title" comment="notification_title. &quot;You&quot; should be singular">Amb qui has estat avui?</string>
+    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Afegeix els teus contactes al diari</string>
+    <string name="choose_option">Si us plau, tria una opció</string>
+    <string name="compulsory_field">Camp obligatori</string>
+    <string name="edit" comment="edit. Conjugation should be infinitive">Editar</string>
+    <string name="delete" comment="delete. Conjugation should be infinitive">Eliminar</string>
+    <string name="alarm_modified">Alarma modificada</string>
+    <string name="incorrect_alarm_time">Introdueix una hora correcta, si us plau</string>
+    <string name="daily_reminder">Recordatori diari</string>
+    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Tria l\'hora</string>
+    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Mostrar només contactes estrets</string>
+    <string name="more">Més</string>
+    <string name="settings">Configuració</string>
+    <string name="entries_deleted">Entrades eliminades</string>
+    <string name="entries_selected">" entrades seleccionades"</string>
+    <string name="privacy_title">Política de privacitat</string>
+    <string name="privacy_intro">Diari de Contactes es distribueix amb l\'esperança que sigui útil, però SENSE CAP GARANTIA; ni tan sols amb la garantia implícita de COMERCIALITZACIÓ o d\'IDONEITAT PER A UN PROPÒSIT PARTICULAR. Aquesta pàgina s’utilitza per informar els visitants sobre les meves polítiques sobre la recopilació, l’ús i la divulgació d’Informació Personal si algú decideix utilitzar Diari de Contactes. En resum, i com que Diari de Contactes no pot connectar-se a l\'internet, cap Informació Personal mai s’emmagatzemarà ni copiarà fora del dispositiu de l’usuari. Si decideixes utilitzar Diari de Contactes, acceptes la recopilació (cap) i l’ús d\'informació en relació amb aquesta política. La Informació Personal que Diari de Contactes recull s’utilitza per proporcionar el seu servei. Com s\'ha explicitat anteriorment, jo no puc i per tant no faré servir ni compartiré la teva informació amb ningú.</string>
+    <string name="privacy_icu">L\'ús de Diari de Contactes requereix que introdueixis certa informació identificativa, com Noms, Llocs i (opcionalment) números de Teléfon. La informació que Diari de Contactes sol·licita es mantindrá al teu dispositiu i no la recopilaré de cap manera.</string>
+    <string name="privacy_cookies">Les Cookies són fitxers amb una petita quantitat de dades que s’utilitzen habitualment com a identificadors únics anònims. Les Cookies s’envien al navegador des dels llocs web que visites i s’emmagatzemen a la memòria interna del dispositiu.\n\nDiari de Contactes no utilitza cap Cookies, ni pròpies ni de tercers.\n\nIgualment, cap servei és delegat a tercers. La informació que introdueixes a Diari de Contactes no surt mai del teu dispositiu.</string>
+    <string name="privacy_security">Una vegada més, cap informació que introdueixes a Diari de Contactes no surt mai del teu dispositiu. Aquest fet es pot avaluar sempre inspeccionant el codi font de Diari de Contactes, que està disponible a <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Per tant, la seva seguretat i integritat està relacionada amb la seguretat física i la integritat del teu dispositiu, de la qual no assumeixo cap responsabilitat.</string>
+    <string name="privacy_changes">És possible que actualitzi aquesta Política de Privacitat de tant en tant. Per tant, et recomano que revisis aquesta pàgina periòdicament per si hi ha canvis. Jo notificaré qualsevol canvi publicant la nova Política de Privacitat en aquesta pàgina.\n\nAquesta política és efectiva a partir del 08-09-2020</string>
+    <string name="privacy_contact">Si tens qualsevol pregunta o suggeriment sobre aquesta Política de Privacitat, no tinguis cap dubte en contactar-me a <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a>.</string>
+    <string name="privacy_changes_title">Canvis d\'aquesta política de privacitat</string>
+    <string name="privacy_icu_title">Recollida i ús d\'informació</string>
+    <string name="privacy_cookies_title">Cookies i proveïdors de serveis</string>
+    <string name="privacy_security_title">Seguretat</string>
+    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Contacta\'m</string>
+    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Prem (+) per començar a afegir contactes</string>
+    <string name="app_version_title">Versió de l\'aplicació</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Valora l\'aplicació</string>
+    <string name="about_rate_summary">Si t\'agrada l\'app, si us plau valora-la i escriu una ressenya així que pugui arribar a més gent que la trobi útil</string>
+    <string name="entry_duplicated">Entrada duplicada</string>
+    <string name="entries_duplicated">Entrades duplicades</string>
+    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Fes-ne una còpia avui</string>
+    <string name="select" comment="select. Conjugation should be infinitive">Seleccionar</string>
+    <string name="notes_optional">Notes (opcional)</string>
+</resources>

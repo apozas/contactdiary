@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kontakttagebuch</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="new_contact">Neue Begegnung</string>
+    <string name="new_event">Neue Gruppenbegegnung</string>
+    <string name="event_name">Name der Gruppenbegegnung</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="date">Datum</string>
+    <string name="time">Uhrzeit</string>
+    <string name="place">Ort</string>
+    <string name="companions">Begleitpersonen (optional)</string>
+    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Glaubst du, du hast genug Abstand eingehalten?</string>
+    <string name="name">Name</string>
+    <string name="known_contact">Verwandte*r oder enge*r Freund*in?</string>
+    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Glaubst du, du hast genug Abstand eingehalten?</string>
+    <string name="phone">Telefonnummer (optional)</string>
+    <string name="unsure">Nicht sicher</string>
+    <string name="encounter_type">Art der Begegnung</string>
+    <string name="indoors">Drinnen</string>
+    <string name="outdoors">Im Freien</string>
+    <string name="emptydiary">Das Tagebuch ist leer</string>
+    <string name="contact_saved">Begegnung gespeichert</string>
+    <string name="event_saved">Gruppenbegegnung gespeichert</string>
+    <string name="edit_event">Gruppenbegegnung bearbeiten</string>
+    <string name="edit_contact">Begegnung bearbeiten</string>
+    <string name="time_optional">Uhrzeit (optional)</string>
+    <string name="options">Optionen</string>
+    <string name="entry_deleted">Eintrag gelöscht</string>
+    <string name="contact_developer_summary">Erzähl mir, was du von der App hältst oder melde Probleme, die dir auffallen</string>
+    <string name="contact_developer">Entwickler kontaktieren</string>
+    <string name="about_donate">Spendiere mir einen Kaffee</string>
+    <string name="notification_title" comment="notification_title. &quot;You&quot; should be singular">Wen hast du heute getroffen?</string>
+    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Füge Begegnungen zum Kontakttagebuch hinzu</string>
+    <string name="choose_option">Bitte wähle eine Option</string>
+    <string name="compulsory_field">Pflichtfeld</string>
+    <string name="edit" comment="edit. Conjugation should be infinitive">Bearbeiten</string>
+    <string name="delete" comment="delete. Conjugation should be infinitive">Löschen</string>
+    <string name="alarm_modified">Alarm geändert</string>
+    <string name="incorrect_alarm_time">Bitte gib eine gültige Zeit an</string>
+    <string name="daily_reminder">Tägliche Erinnerung</string>
+    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Uhrzeit wählen</string>
+    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Nur nahe Begegnungen anzeigen</string>
+    <string name="more">Mehr</string>
+    <string name="settings">Einstellungen</string>
+    <string name="entries_deleted">Einträge gelöscht</string>
+    <string name="entries_selected">" einträge ausgewählt"</string>
+    <string name="privacy_title">Datenschutzrichtlinien</string>
+    <string name="privacy_intro">Kontakttagebuch wird in der Hoffnung entwickelt, dass es nützlich ist, jedoch OHNE JEGLICHE GARANTIE; ebenso ohne jegliche Gewährleistung von MÄNGELFREIHEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Diese Seite wird verwendet, um Besucher über meine Richtlinien bezüglich der Sammlung, Verwendung und Veröffentlichung von persönlichen Daten im Zusammenhang, mit der Nutzung von Kontakttagebuch zu informieren. Kurz gesagt: da sich Kontakttagebuch nicht mit dem Internet verbinden kann, werden keine persönlichen Informationen außerhalb des Gerätes des Benutzers gespeichert. Wenn du dich für die Nutzung von Kontakttagebuch entscheidest, stimmst du der Sammlung (keine) und der Nutzung von Informationen im Rahmen dieser Richtlinie zu. Die persönlichen Informationen, die Kontakttagebuch sammelt, werden für die Bereitstellung der Dienstleistungen der App verwendet. Wie bereits ausdrücklich dargelegt, kann und werde ich keine deiner Daten an Dritte weitergeben.</string>
+    <string name="privacy_icu">Die Verwendung von Kontakttagebuch erfordert die Eingabe bestimmter persönlich identifizierenden Daten, wie Namen, Orte und (optional) Telefonnummern. Die Informationen, die Kontakttagebuch anfordert, werden auf deinem Gerät gespeichert und werden von mir in keiner Weise gesammelt.</string>
+    <string name="privacy_cookies">Cookies sind Dateien mit wenig Inhalt, die häufig als anonyme, eindeutige Identifikatoren verwendet werden. Diese werden von den Webseiten, die du besuchst, an deinen Browser gesendet und auf dem internen Speicher deines Geräts gespeichert.\n\nKontakttagebuch verwendet keine Cookies, weder eigene noch von Drittanbietern.\n\nAußerdem wird auch keine Dienstleistung an Drittanbieter ausgelagert. Die Informationen, die du in Kontakttagebuch eingibst, verlassen niemals dein Gerät.</string>
+    <string name="privacy_security">Nochmals, keine Information, die du in Kontakttagebuch eingibst, verlässt jemals dein Gerät. Diese Tatsache kann immer überprüft werden, indem der Quellcode der App inspiziert wird, der hier zu finden ist: <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. So ist die Sicherheit und Integrität der App von der physischen Sicherheit und Integrität deines Geräts abhängig, für die ich keine Verantwortung übernehme.</string>
+    <string name="privacy_changes">Ich kann diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, daher wird empfohlen, diese Seite regelmäßig auf Änderungen zu überprüfen. Ich werde dich über alle Änderungen informieren, indem ich die neue Datenschutzrichtlinie auf dieser Seite veröffentliche.\n\nDiese Richtlinie gilt ab 2020-09-08</string>
+    <string name="privacy_contact">Wenn du Fragen oder Anregungen zu dieser Datenschutzrichtlinie hast, zögere nicht, mich unter <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> zu kontaktieren (am besten auf Englisch).</string>
+    <string name="privacy_changes_title">Änderungen dieser Datenschutzrichtlinien</string>
+    <string name="privacy_icu_title">Datenerhebung und -verwendung</string>
+    <string name="privacy_cookies_title">Cookies und Dienstanbieter</string>
+    <string name="privacy_security_title">Sicherheit</string>
+    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Kontaktiere mich</string>
+    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Drücke (+), um Begegnungen hinzuzufügen</string>
+    <string name="app_version_title">App-Version</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">App bewerten</string>
+    <string name="about_rate_summary">Wenn dir die App gefällt, hinterlasse bitte eine Bewertung, damit sie mehr Leute erreichen kann, die sie für nützlich halten</string>
+    <string name="entry_duplicated">Eintrag verdoppelt</string>
+    <string name="entries_duplicated">Einträge verdoppelt</string>
+    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Eintrag für heute kopieren</string>
+    <string name="select" comment="select. Conjugation should be infinitive">Auswählen</string>
+    <string name="notes_optional">Notizen (optional)</string>
+</resources>

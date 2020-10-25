@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Diario dei contatti</string>
+    <string name="app_name">Diario dei Contatti</string>
     <string name="empty_table">Premi (+) per iniziare ad aggiungere i contatti</string>
     <string name="options">Opzioni</string>
     <string name="action_settings">Impostazioni</string>
@@ -31,11 +31,11 @@
     <string name="distance_question">Pensi di aver mantenuto la distanza?</string>
     <string name="no">No</string>
     <string name="yes">Sì</string>
-    <string name="unsure">Non ne sono sicuro</string>
+    <string name="unsure">Non sicuro</string>
     <string name="notes_optional">Note (facoltative)</string>
     <string name="name">Nome</string>
     <string name="known_contact">Familiare o amico intimo?</string>
-    <string name="select">Seleziona</string>
+    <string name="select">Selezionare</string>
     <string name="entries_selected">" voci selezionate"</string>
     <string name="duplicate">Crea una copia oggi</string>
     <string name="delete">Elimina</string>
@@ -43,26 +43,26 @@
     <string name="close_event_question">Pensi di aver mantenuto la distanza?</string>
     <string name="contact_saved">Contatto salvato</string>
     <string name="event_saved">Evento salvato</string>
-    <string name="edit_event">Modifica evento</string>
-    <string name="edit_contact">Modifica contatto</string>
+    <string name="edit_event">Modifica l\'evento</string>
+    <string name="edit_contact">Modifica il contatto</string>
     <string name="notification_title">Con chi sei stato, oggi?</string>
     <string name="notification_text">Aggiungi i tuoi contatti al diario</string>
     <string name="alarm_modified">Promemoria modificato</string>
-    <string name="incorrect_alarm_time">Inserire un\'ora corretta</string>
-    <string name="choose_option">Scegliere un\'opzione</string>
+    <string name="incorrect_alarm_time">Inserisci un\'ora corretta</string>
+    <string name="choose_option">Scegli un\'opzione</string>
     <string name="compulsory_field">Campo obbligatorio</string>
     <string name="entries_deleted">Voci cancellate</string>
-    <string name="privacy_intro">Diario dei contatti è distribuito nella speranza che sia utile, ma SENZA ALCUNA GARANZIA; senza nemmeno garanzia implicita di COMMERCIABILITÀ o ADEGUATEZZA AD UNO FINE SPECIFICO. Questa pagina è utilizzata per informare i visitatori delle mie politiche di raccolta, uso e condivisione delle Informazioni Personali se qualcuno decide di utilizzare Diario dei contatti. In breve, e poiché Diario dei contatti non può connettersi ad internet, nessuna Informazione Personale verrà memorizzata o copiata al di fuori del dispositivo dell\'utente. Se decidi di utilizzare Diario dei contatti, acconsenti alla raccolta (nessuna) ed all\'uso delle informazioni in accordo a questa informativa. Le Informazioni Personali raccolte da Diario dei contatti vengono utilizzate per fornire il servizio. Come esplicitato sopra, non posso e quindi non userò né condividerò le tue informazioni con nessuno.</string>
+    <string name="privacy_intro">Diario dei Contatti è distribuito nella speranza che sia utile, ma SENZA ALCUNA GARANZIA; senza nemmeno garanzia implicita di COMMERCIABILITÀ o ADEGUATEZZA AD UNO FINE SPECIFICO. Questa pagina è utilizzata per informare i visitatori delle mie politiche di raccolta, uso e condivisione delle Informazioni Personali se qualcuno decide di utilizzare Diario dei Contatti. In breve, e poiché Diario dei Contatti non può connettersi ad internet, nessuna Informazione Personale verrà memorizzata o copiata al di fuori del dispositivo dell\'utente. Se decidi di utilizzare Diario dei Contatti, acconsenti alla raccolta (nessuna) ed all\'uso delle informazioni in accordo a questa informativa. Le Informazioni Personali raccolte da Diario dei Contatti vengono utilizzate per fornire il servizio. Come esplicitato sopra, non posso e quindi non userò né condividerò le tue informazioni con nessuno.</string>
     <string name="privacy_icu_title">Raccolta ed uso delle informazioni</string>
-    <string name="privacy_icu">L\'uso di Diario dei contatti richiede l\'inserimento di alcune informazioni identificabili, ossia Nomi, Luoghie (opzionalmente) Numeri di telefono. Le informazioni richieste da Diario dei contatti rimarranno nel tuo dispositivoe non sono raccolte da me in alcun modo.</string>
-    <string name="privacy_cookies_title">Cooky e fornitori di servizi</string>
-    <string name="privacy_cookies">I Cooky sono file con una piccola quantità di dati che sono comunemente usati come identificativi univoci anonimi. Essi sono trasmessi al tuo browser dai siti che visiti e memorizzati nella memoria interna del tuo dispositivo.\n\nDiario dei contatti non usa alcun cooky, né proprietario né di terza parti.\n\nAllo stesso modo, nessun servizio è delegato a terze parti. Le informazioni che inserisci in Diario dei contatti non lasciano mai il tuo dispositivo.</string>
+    <string name="privacy_icu">L\'uso di Diario dei Contatti richiede l\'inserimento di alcune informazioni identificabili, ossia Nomi, Luoghie (opzionalmente) Numeri di telefono. Le informazioni richieste da Diario dei Contatti rimarranno nel tuo dispositivoe non sono raccolte da me in alcun modo.</string>
+    <string name="privacy_cookies_title">Cookies e fornitori di servizi</string>
+    <string name="privacy_cookies">I Cookie sono file con una piccola quantità di dati che sono comunemente usati come identificativi univoci anonimi. Essi sono trasmessi al tuo browser dai siti che visiti e memorizzati nella memoria interna del tuo dispositivo.\n\nDiario dei Contatti non usa alcun cookie, né proprietario né di terza parti.\n\nAllo stesso modo, nessun servizio è delegato a terze parti. Le informazioni che inserisci in Diario dei Contatti non lasciano mai il tuo dispositivo.</string>
     <string name="privacy_security_title">Sicurezza</string>
-    <string name="privacy_security">Di nuovo, nessuna informazione che inserisci in Diario dei contatti lascia mai il tuo dispositivo. Questo può sempre essere valutato ispezionando il codice sorgente di Diario dei contatti, disponibile su <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Perciò, la sua sicurezza ed integrità è collegata alla sicurezza fisica ed all\'integrità del tuo dispositivo, delle quali non mi assumo alcuna responsabilità.</string>
+    <string name="privacy_security">Di nuovo, nessuna informazione che inserisci in Diario dei Contatti lascia mai il tuo dispositivo. Questo può sempre essere valutato ispezionando il codice sorgente di Diario dei Contatti, disponibile su <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Perciò, la sua sicurezza ed integrità è collegata alla sicurezza fisica ed all\'integrità del tuo dispositivo, delle quali non mi assumo alcuna responsabilità.</string>
     <string name="privacy_changes_title">Modifiche a questa informativa sulla privacy</string>
     <string name="privacy_changes">Potrei aggiornare questa Informativa sulla Privacy di tanto in tanto. Perciò, si raccomanda di rivedere questa pagina periodicamente per qualsiasi modifica. Ti informerò di qualsiasi modifica pubblicando la nuova Informativa sulla Privacy in questa pagina.\n\nQuesta Informativa è in essere al 2020-09-08.</string>
     <string name="privacy_contact_title">Contattami</string>
-    <string name="privacy_contact">Se hai qualsiasi domanda o suggerimento circa questa Informativa sulla Privacy, non esitare a contattarmi a <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a>.</string>
+    <string name="privacy_contact">Se hai qualsiasi domanda o suggerimento circa questa Informativa sulla Privacy, non esitare a contattarmi a <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (preferibilmente in inglese).</string>
     <string name="emptydiary">Il diario è vuoto</string>
     <string name="edit">Modifica</string>
     <string name="entry_duplicated">Voce duplicata</string>

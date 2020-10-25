@@ -1,0 +1,7 @@
+First bugs hunted! This version fixes two problems found:
+
+- One of the bugs made the choice questions not being properly saved. Thanks to the hunters diesendungmitdermaus, mziehm, igor-cali and hoschi-it.
+
+- Now, the time choosers have the same format as the default device's locale.
+
+Some old entries may not be displayed as intended to be saved. If you chose a second option in the forms (No/Outdoors), when you open the contact the first option (Yes/Indoors) will be selected instead. The only way of fixing this at the moment is manually (just once), so please take your time doing so right after updating the app.
