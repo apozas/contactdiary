@@ -1,4 +1,4 @@
-Diario dei contatti è una semplice app che ti permette di tenere un registro delle persone che hai incontrato e degli eventi a cui hai partecipato recentemente. Nell'evento indesiderato che risultassi positivo al COVID-19, Diario dei contatti è un luogo dove trovare velocemente chi avvertire circa la situazione.
+Diario dei Contatti è una semplice app che ti permette di tenere un registro delle persone che hai incontrato e degli eventi a cui hai partecipato recentemente. Nell'evento indesiderato che risultassi positivo al COVID-19, Diario dei Contatti è un luogo dove trovare velocemente chi avvertire circa la situazione.
 
 <b>Come funziona</b>
 Ogni giorno la app ti chiederà di inserire gli eventi a cui hai partecipato e le persone con cui sei stato durante la giornata. Mediante alcuni semplici moduli, potrai memorizzare le informazioni essenziali circa i tuoi contatti, nel caso ti servisse recuperarli. Tutto qui. Semplice, vero? ;)
@@ -14,16 +14,16 @@ Ogni giorno la app ti chiederà di inserire gli eventi a cui hai partecipato e l
 
 <b>FAQ</b>
 - Aspetta, non è ciò che fanno le app governative di tracciamento dei contatti?
-No. L'obiettivo delle app governative di tracciamento contatti e quello di Diario dei contatti sono sostanzialmente differenti. Le app governative di tracciamento dei contatti <em>ti informano</em> se tu sei stato esposto al rischio, mentre Diario dei contatti è utile a ricordare chi <em>tu debba informare</em> nel caso risultassi positivo.
+No. L'obiettivo delle app governative di tracciamento contatti e quello di Diario dei Contatti sono sostanzialmente differenti. Le app governative di tracciamento dei contatti <em>ti informano</em> se tu sei stato esposto al rischio, mentre Diario dei Contatti è utile a ricordare chi <em>tu debba informare</em> nel caso risultassi positivo.
 
 - Questa app è MIGLIORE delle app governative di tracciamento dei contatti?
-No. Le app governative di tracciamento dei contatti possono tenere conto di contatti di cui non sei consapevole, come la persona seduta al tavolo vicino al ristorante, o le altre persone che usano le stesso autobus per andare al lavoro. Diario dei contatti NON È UN SOSTITUTO DELLE APP GOVERNATIVE DI TRACCIAMENTO DEI CONTATTI.
+No. Le app governative di tracciamento dei contatti possono tenere conto di contatti di cui non sei consapevole, come la persona seduta al tavolo vicino al ristorante, o le altre persone che usano le stesso autobus per andare al lavoro. Diario dei Contatti NON È UN SOSTITUTO DELLE APP GOVERNATIVE DI TRACCIAMENTO DEI CONTATTI.
 
 - Questa app è PEGGIORE delle app governative di tracciamento dei contatti?
-No. Le app governative di tracciamento dei contatti si basano sull'utilizzo da parte di tutte le persone interessate per dare notifiche appropriate. Con Diario dei contatti, hai bisogno solo di te stesso per tener traccia dei tuoi contatti, così da informare facilmente le persone (o i luoghi) che non utilizzano app convenzionali di tracciamento dei contatti.
+No. Le app governative di tracciamento dei contatti si basano sull'utilizzo da parte di tutte le persone interessate per dare notifiche appropriate. Con Diario dei Contatti, hai bisogno solo di te stesso per tener traccia dei tuoi contatti, così da informare facilmente le persone (o i luoghi) che non utilizzano app convenzionali di tracciamento dei contatti.
 
 - Questa app condividerà le informazioni che inserisco?
 NO. La app non ha permessi, quindi non c'è maniera che essa possa connettersi ad internet. Le informazioni che inserisci non lasceranno mai il tuo dispositivo. In più, le voci nel registro sono eliminate automaticamente quando diventano più vecchi di 15 giorni.
 
 <b>Supporto</b>
-Se rilevi un problema, hai un'idea su come migliorare Diario dei contatti p hai domande, visita la pagina del progetto Diario dei contatti su GitHub: https://github.com/apozas/contactdiary
+Se rilevi un problema, hai un'idea su come migliorare Diario dei Contatti p hai domande, visita la pagina del progetto Diario dei Contatti su GitHub: https://github.com/apozas/contactdiary
