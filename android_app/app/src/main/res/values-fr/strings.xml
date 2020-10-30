@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Journal des Contacts</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="new_contact">Nouveau contact</string>
+    <string name="new_event">Nouvel événement</string>
+    <string name="event_name">Nom de l\'évènement</string>
+    <string name="no">Non</string>
+    <string name="yes">Oui</string>
+    <string name="date">Date</string>
+    <string name="time">Heure</string>
+    <string name="place">Lieu</string>
+    <string name="companions">Personnes présentes (optionnel)</string>
+    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Pensez-vous avoir maintenu la distance?</string>
+    <string name="name">Nom</string>
+    <string name="known_contact">Famille ou ami proche?</string>
+    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Pensez-vous avoir respecté la distance entre vous?</string>
+    <string name="phone">Téléphone (optionnel)</string>
+    <string name="unsure">Pas sûr</string>
+    <string name="encounter_type">Type de rencontre</string>
+    <string name="indoors">À l\'intérieur</string>
+    <string name="outdoors">À l\'extérieur</string>
+    <string name="emptydiary">Le journal est vide</string>
+    <string name="contact_saved">Contact enregistré</string>
+    <string name="event_saved">Événement enregistré</string>
+    <string name="edit_event">Modifier l\'événement</string>
+    <string name="edit_contact">Modifier le contact</string>
+    <string name="time_optional">Heure (optionnel)</string>
+    <string name="options">Options</string>
+    <string name="entry_deleted">Entrée supprimée</string>
+    <string name="contact_developer_summary">Dîtes-moi ce que vous pensez de l\'application, ou les problèmes que vous avez rencontrés</string>
+    <string name="contact_developer">Contacter le développeur</string>
+    <string name="about_donate">Offrez-moi un café</string>
+    <string name="notification_title" comment="notification_title. &quot;You&quot; should be singular">Avec qui avez-vous été aujourd\'hui?</string>
+    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Ajoutez vos contacts au journal</string>
+    <string name="choose_option">Veuillez sélectionner une option</string>
+    <string name="compulsory_field">Champ obligatoire</string>
+    <string name="edit" comment="edit. Conjugation should be infinitive">Modifier</string>
+    <string name="delete" comment="delete. Conjugation should be infinitive">Effacer</string>
+    <string name="alarm_modified">Alarme modifiée</string>
+    <string name="incorrect_alarm_time">Veuillez saisir une heure valide</string>
+    <string name="daily_reminder">Rappel quotidien</string>
+    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Définir l\'heure</string>
+    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Afficher seulement les contacts proches</string>
+    <string name="more">Plus</string>
+    <string name="settings">Paramètres</string>
+    <string name="entries_deleted">Entrées supprimées</string>
+    <string name="entries_selected">" entrées sélectionnées"</string>
+    <string name="privacy_title">Charte de confidentialité</string>
+    <string name="privacy_intro">Journal des Contacts est distribué dans l\'espoir qu\'il sera utile, MAIS SANS AUCUNE GARANTIE; sans même la garantie implicite de COMMERCIALITÉ ou d\'ADAPTATION À UN USAGE PARTICULIER. Ce message a pour but d\'informer les visiteurs à propos de mes politiques de collecte, d\'utilisation et de partage d\'informations personnelles des personnes ayant décidées d\'utiliser Journal des Contacts.
+Pour faire court, sachant que Journal des Contacts ne peut pas se connecter à Internet, aucune information personnelle ne sera stockée ou copiée en dehors de l\'appareil de l\'utilisateur. Si vous choisissez d\'utiliser Journal des Contacts, alors vous devez accepter la collecte (aucune) et l\'utilisation d\'informations au regard de cette politique. Les informations personnelles que Journal des Contacts collecte sont utilisées afin de fournir son service. Comme explicité ci-dessus, je ne peux pas et n\'utiliserais ou ne partagerais pas vos informations à quiconque.</string>
+    <string name="privacy_icu">L\'utilisation de Journal des Contacts exige que vous saisissiez certaines informations personnelles identifiables, à savoir les Noms, Lieux et (optionnellement) les Numéros de téléphone. Les informations que Journal des Contacts demande seront conservées sur votre appareil et ne seront en aucun cas collectées par moi.</string>
+    <string name="privacy_cookies">Les cookies sont des fichiers contenant une petite quantité de données qui sont couramment utilisés comme identificateurs uniques anonymes. Ceux-ci sont envoyés à votre navigateur à partir des sites Web que vous visitez et sont stockés dans la mémoire interne de votre appareil.\n\nJournal des Contacts n\'utilise aucun cookie, ni propriétaires ni de tiers\n\nDe la même manière, aucun service n\'est délégué à des tiers. Les informations que vous entrez dans Journal des Contacts ne quittent jamais votre appareil.</string>
+    <string name="privacy_security">Encore une fois, aucune des informations que vous entrez dans Journal des Contacts ne quitte votre appareil. Vous pouvez toujours le vérifier en inspectant le code source de Journal des Contacts, disponible sur <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Dès lors, leur sécurité et leur intégrité sont liées à la sécurité physique et à l\'intégrité de votre appareil, dont je ne suis en aucun cas responsable.</string>
+    <string name="privacy_changes">Il se peut que je mette à jour cette Charte de Confidentialité de temps à autre. Ainsi, je vous conseille de consulter cette page régulièrement pour surveiller toute modification. Je vous informerai de tout changement en affichant la nouvelle Charte de Confidentialité sur cette page.\n\nCette charte est en vigueur à partir du 08/09/2020</string>
+    <string name="privacy_contact">Si vous avez des questions ou des suggestions au sujet de cette Charte de Confidentialité, n\'hésitez pas à me contacter à <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (de préférence en anglais).</string>
+    <string name="privacy_changes_title">Modifications apportées à cette Charte de Confidentialité</string>
+    <string name="privacy_icu_title">Collecte et utilisation des informations</string>
+    <string name="privacy_cookies_title">Cookies et fournisseurs de services</string>
+    <string name="privacy_security_title">Sécurité</string>
+    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Contactez-moi</string>
+    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Touchez (+) pour commencer à ajouter des contacts</string>
+    <string name="app_version_title">Version de l’application</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Évaluez l\'application</string>
+    <string name="about_rate_summary">Si vous aimez l\'application, veuillez l\'évaluer et la commenter pour qu\'elle puisse être découverte par plus de personnes qui pourraient la trouver utile</string>
+    <string name="entry_duplicated">Entrée dupliquée</string>
+    <string name="entries_duplicated">Entrées dupliquées</string>
+    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Faire une copie aujourd\'hui</string>
+    <string name="select" comment="select. Conjugation should be infinitive">Sélectionner</string>
+    <string name="notes_optional">Notes (optionnel)</string>
+</resources>

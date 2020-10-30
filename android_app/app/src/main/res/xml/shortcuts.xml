@@ -3,7 +3,7 @@
     <shortcut
         android:shortcutId="new_contact"
         android:enabled="true"
-        android:icon="@drawable/ic_contact_shortcut"
+        android:icon="@drawable/ic_contact"
         android:shortcutShortLabel="@string/new_contact"
         android:shortcutLongLabel="@string/new_contact">
         <intent
@@ -15,7 +15,7 @@
     <shortcut
         android:shortcutId="new_event"
         android:enabled="true"
-        android:icon="@drawable/ic_event_shortcut"
+        android:icon="@drawable/ic_event"
         android:shortcutShortLabel="@string/new_event"
         android:shortcutLongLabel="@string/new_event">
         <intent
@@ -23,6 +23,4 @@
             android:targetPackage="com.apozas.contactdiary"
             android:targetClass="com.apozas.contactdiary.NewEventActivity" />
     </shortcut>
-
-
 </shortcuts>
