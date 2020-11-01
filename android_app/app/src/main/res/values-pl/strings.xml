@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dziennik Kontaktów</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="new_contact">Nowy kontakt</string>
+    <string name="new_event">Nowe wydarzenie</string>
+    <string name="event_name">Nazwa wydarzenia</string>
+    <string name="no">Nie</string>
+    <string name="yes">Tak</string>
+    <string name="date">Data</string>
+    <string name="time">Godzina</string>
+    <string name="place">Miejsce</string>
+    <string name="companions">Towarzyszący (opcjonalnie)</string>
+    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Myślisz, że zachowaliście dystans?</string>
+    <string name="name">Imię</string>
+    <string name="known_contact">Krewny lub bliski znajomy?</string>
+    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Myślisz, że zachowaliście dystans?</string>
+    <string name="phone">Telefon (opcjonalnie)</string>
+    <string name="unsure">Nie wiem</string>
+    <string name="encounter_type">Warunki spotkania</string>
+    <string name="indoors">W pomieszczeniu</string>
+    <string name="outdoors">Na zewnątrz</string>
+    <string name="emptydiary">Dziennik jest pusty</string>
+    <string name="contact_saved">Spotkanie zapisane</string>
+    <string name="event_saved">Wydarzenie zapisane</string>
+    <string name="edit_event">Edytuj wydarzenie</string>
+    <string name="edit_contact">Edytuj spotkanie</string>
+    <string name="time_optional">Godzina (opcjonalnie)</string>
+    <string name="options">Opcje</string>
+    <string name="entry_deleted">Wpis usunięty</string>
+    <string name="contact_developer_summary">Daj znać, co sądzisz o programie albo poinformuj o napotkanych błędach</string>
+    <string name="contact_developer">Kontakt z programistą</string>
+    <string name="about_donate">Kup mi kawę</string>
+    <string name="notification_title" comment="notification_title. &quot;You&quot; should be singular">Z kim się dziś spotkałeś?</string>
+    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Dodaj swoje spotkania do dziennika</string>
+    <string name="choose_option">Proszę wybrać opcję</string>
+    <string name="compulsory_field">Pole obowiązkowe</string>
+    <string name="edit" comment="edit. Conjugation should be infinitive">Edytuj</string>
+    <string name="delete" comment="delete. Conjugation should be infinitive">Usuń</string>
+    <string name="alarm_modified">Alarm zmieniony</string>
+    <string name="incorrect_alarm_time">Wpisz poprawną datę</string>
+    <string name="daily_reminder">Codzienne przypomnienie</string>
+    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Wybierz godzinę</string>
+    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Pokaż tylko bliskie kontakty</string>
+    <string name="more">Więcej</string>
+    <string name="settings">Ustawienia</string>
+    <string name="entries_deleted">Wpisy usunięte</string>
+    <string name="entries_selected">" wybranych wpisów"</string>
+    <string name="privacy_title">Polityka prywatności</string>
+    <string name="privacy_intro">Dziennik Kontaktów jest rozprowadzany w nadziei, że będzie pomocny, ale BEZ JAKICHKOLWIEK GWARANCJI, nawet bez gwarancji ZBYWALNOŚCI lub DOPASOWANIA DO KONKRETNYCH CELÓW. Ta strona służy udzieleniu użytkownikom informacji na temat polityki zbierania i udostępniania danych osobowych, jeśli zdecydują się oni na użycie Dziennika Kontaktów. Ponieważ Dziennik Kontaktów nie może łączyć się z internetem, żadne dane nie będą przesłane ani przechowane poza urządzeniem. Jeśli decydujesz się używać Dziennika Kontaktów, zgadzasz się na to, że dane nie będą zbierane ani wykorzystane. Informacje, które zbierze Dziennik Kontaktów, są wykorzystane tylko wewnątrz aplikacji. Jak zostało jasno podkreślone powyżej, nie mogę i nie będę dzielił się informacjami z innymi podmiotami.</string>
+    <string name="privacy_icu">Korzystanie z Dziennika Kontaktów wymaga wprowadzenia pewnych informacji, a mianowicie Nazw, Miejsc i (nieobowiązkowo) numerów Telefonów. Informacje, które Dziennik Kontaktów zbierze, zostaną zachowane na Twoim urządzeniu i nie będą w żaden sposób gromadzone poza nim.</string>
+    <string name="privacy_cookies">Pliki cookie to pliki z niewielką ilością danych, które są powszechnie używane jako anonimowe niepowtarzalne identyfikatory. Są one wysyłane do Twojej przeglądarki z witryn, które odwiedzasz i są przechowywane w wewnętrznej pamięci urządzenia.\n\nDziennik Kontaktów nie używa żadnych plików cookie, ani własnych, ani stron trzecich.\n\nW ten sam sposób żadne informacje nie są przekazywane osobom trzecim. Informacje, które wprowadzasz do Dziennika Kontaktów, nigdy nie opuszczają Twojego urządzenia.</string>
+    <string name="privacy_security">Jeszcze raz: żadne informacje, które wprowadzisz w Dzienniku Kontaktów, nie opuszczą Twojego urządzenia. Możesz się o tym przekonać, weryfikując kod źródłowy Dziennika Kontaktów na <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. W związku z tym bezpieczeństwo i integralność danych całkowicie zależą od fizycznego zabezpieczenia Twojego urządzenia, za co nie odpowiadam.</string>
+    <string name="privacy_changes">Mogę aktualizować niniejszą Politykę Prywatności od czasu do czasu. Dlatego też zalecam okresowo przeglądać tę strony w celu śledzenia zmian. Powiadomię Cię o wszelkich zmianach, publikując nową Politykę prywatności na tej stronie.\n\nTa polityka wchodzi w życie 2020-09-08</string>
+    <string name="privacy_contact">Jeśli masz jakieś pytania lub sugestie dotyczące niniejszej Polityki Prywatności, nie wahaj się skontaktować ze mną pod adresem <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (najlepiej w języku angielskim).</string>
+    <string name="privacy_changes_title">Zmiany w tej polityce prywatności</string>
+    <string name="privacy_icu_title">Gromadzenie i wykorzystywanie informacji</string>
+    <string name="privacy_cookies_title">Pliki cookie i dostawcy usług</string>
+    <string name="privacy_security_title">Bezpieczeństwo</string>
+    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Skontaktuj się ze mną</string>
+    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Naciśnij (+), aby rozpocząć dodawanie spotkań</string>
+    <string name="app_version_title">Wersja aplikacji</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Oceń aplikację</string>
+    <string name="about_rate_summary">Jeśli podoba Ci się aplikacja, oceń ją i zrecenzuj, aby dotarła do większej liczby osób, którym może okazać się przydatna</string>
+    <string name="entry_duplicated">Wpis powielony</string>
+    <string name="entries_duplicated">Wpisy powielone</string>
+    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Utworzyć dziś kopię</string>
+    <string name="select" comment="select. Conjugation should be infinitive">Wybierz</string>
+    <string name="notes_optional">Notatki (opcjonalnie)</string>
+</resources>
