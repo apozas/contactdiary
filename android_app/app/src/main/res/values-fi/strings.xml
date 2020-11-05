@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yhteystietopäiväkirja</string>
+    <string name="action_settings">Asetukset</string>
+    <string name="new_contact">Uusi yhteystieto</string>
+    <string name="new_event">Uusi tapahtuma</string>
+    <string name="event_name">Tapahtuman nimi</string>
+    <string name="no">Ei</string>
+    <string name="yes">Kyllä</string>
+    <string name="date">Päivämäärä</string>
+    <string name="time">Aika</string>
+    <string name="place">Paikka</string>
+    <string name="companions">Seuralaiset (vapaaehtoinen)</string>
+    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Luuletko, että pidit etäisyyden?</string>
+    <string name="name">Nimi</string>
+    <string name="known_contact">Sukulainen vai läheinen ystävä?</string>
+    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Luuletko, että pidit etäisyyden?</string>
+    <string name="phone">Puhelinnumero (vapaaehtoinen)</string>
+    <string name="unsure">Epävarma</string>
+    <string name="encounter_type">Kohtaamisen tyyppi</string>
+    <string name="indoors">Sisätiloissa</string>
+    <string name="outdoors">Ulkona</string>
+    <string name="emptydiary">Päiväkirja on tyhjä</string>
+    <string name="contact_saved">Yhteystieto tallennettu</string>
+    <string name="event_saved">Tapahtuma tallennettu</string>
+    <string name="edit_event">Muokkaa tapahtumaa</string>
+    <string name="edit_contact">Muokkaa yhteystietoa</string>
+    <string name="time_optional">Aika (vapaaehtoinen)</string>
+    <string name="options">Vaihtoehdot</string>
+    <string name="entry_deleted">Merkintä poistettu</string>
+    <string name="contact_developer_summary">Kerro minulle mitä mieltä olet sovelluksesta tai ongelmista, joita olet kohdannut</string>
+    <string name="contact_developer">Ota yhteyttä kehittäjään</string>
+    <string name="about_donate">Tarjoa minulle kahvit</string>
+    <string name="notification_title" comment="notification_title. &quot;You&quot; should be singular">Kenen kanssa olet ollut tänään?</string>
+    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Lisää yhteystietosi päiväkirjaan</string>
+    <string name="choose_option">Valitse vaihtoehto</string>
+    <string name="compulsory_field">Pakollinen kenttä</string>
+    <string name="edit" comment="edit. Conjugation should be infinitive">Muokkaa</string>
+    <string name="delete" comment="delete. Conjugation should be infinitive">Poista</string>
+    <string name="alarm_modified">Hälytystä muokattu</string>
+    <string name="incorrect_alarm_time">Aseta oikea aika</string>
+    <string name="daily_reminder">Päivittäinen muistutus</string>
+    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Valitse aika</string>
+    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Näytä vain läheiset yhteystiedot</string>
+    <string name="more">Lisää</string>
+    <string name="settings">Asetukset</string>
+    <string name="entries_deleted">Merkinnät poistettu</string>
+    <string name="entries_selected">" merkinnät valittu"</string>
+    <string name="privacy_title">Tietosuojakäytäntö</string>
+    <string name="privacy_intro">Yhteystietopäiväkirja jaetaan siinä toivossa, että se olisi hyödyllinen, mutta ILMAN MITÄÄN TAKUUTA; ilman edes epäsuoraa takuuta KAUPALLISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Tätä sivua käytetään tiedottamaan kävijöille minun käytännöistäni henkilökohtaisten tietojen keruun, käytön, ja paljastumisen suhteen, jos joku päättää käyttää Yhteystietopäiväkirjaa. Lyhyesti sanottuna, ja koska Yhteystietopäiväkirja ei voi muodostaa yhteyttä Internetiin, mitään henkilötietoja ei tallenneta eikä kopioida käyttäjän laitteen ulkopuolelle. Jos päätät käyttää Yhteystietopäiväkirjaa, niin suostut tietojen keruuseen (ei mitään) ja käyttöön tähän käytäntöön liittyen. Henkilökohtaisia tietoja, joita Yhteystietopäiväkirja kerää, käytetään sen palvelun tarjoamiseen. Kuten edellä on todettu, en voi ja enkä näin ollen käytä tai jaa tietojasi kenenkään kanssa.</string>
+    <string name="privacy_icu">Yhteystietopäiväkirjan käyttö edellyttää, että syötät tiettyjä henkilökohtaisesti tunnistettavissa olevia tietoja, eli nimiä, paikkoja ja (vapaaehtoisesti) puhelinnumeroita. Tiedot, joita Yhteystieto Päiväkirja pyytää, säilytetään laitteellasi ja minä en kerää niitä millään tavalla.</string>
+    <string name="privacy_cookies">Evästeet ovat tiedostoja, joissa on pieni määrä tietoja, joita käytetään yleisesti nimettöminä yksilöllisinä tunnisteina. Nämä lähetetään selaimeesi sivustoilta, joilla käyt ja jotka tallennetaan laitteesi sisäiseen muistiin.\n\nYhteystiedot Päiväkirja ei käytä mitään evästeitä, ei ensimmäisen osapuolen eikä kolmannen osapuolen.\n\nSamalla tavalla mitään palvelua ei ole delegoitu kolmansille osapuolille. Yhteystiedot Päiväkirjalle antamasi tiedot eivät koskaan poistu laitteestasi.</string>
+    <string name="privacy_security">Edelleen, mitään Yhteystietopäiväkirjaan syöttämiäsi tietoja ei koskaan lähde laitteeltasi. Tämä seikka voidaan aina arvioida tarkastamalla Yhteystietopäiväkirjan lähdekoodia, joka on saatavilla osoitteessa <a href="https://www.github.com/apozas/contactdiary">www. ithub.com/apozas/contactdiary</a>. Näin ollen sovelluksen turvallisuus ja eheys liittyvät laitteesi fyysiseen turvallisuuteen ja eheyteen, joista en ota vastuuta.</string>
+    <string name="privacy_changes">Saatan päivittää tätä tietosuojakäytäntöä ajoittain. Täten sinua kehotetaan tarkastelemaan tätä sivua säännöllisin väliajoin muutosten varalta. Ilmoitan sinulle kaikista muutoksista julkaisemalla uuden tietosuojakäytännön tälle sivulle.\n\nTämä politiikka on voimassa 2020-09-08 alkaen</string>
+    <string name="privacy_contact">Jos sinulla on kysyttävää tai ehdotuksia tästä tietosuojakäytännöstä, älä epäröi ottaa yhteyttä minuun <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (mieluiten englanniksi).</string>
+    <string name="privacy_changes_title">Muutokset tähän tietosuojakäytäntöön</string>
+    <string name="privacy_icu_title">Tietojen keruu ja käyttö</string>
+    <string name="privacy_cookies_title">Evästeet ja palveluntarjoajat</string>
+    <string name="privacy_security_title">Turvallisuus</string>
+    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Ota yhteyttä minuun</string>
+    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Paina (+) aloittaaksesi yhteystietojen lisäämisen</string>
+    <string name="app_version_title">Sovellusversio</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Arvostele sovellus</string>
+    <string name="about_rate_summary">Jos pidät sovelluksesta, arvostele se, jotta se voi tavoittaa enemmän ihmisiä, jotka saattavat pitää sitä hyödyllisenä</string>
+    <string name="entry_duplicated">Merkintä kopioitu</string>
+    <string name="entries_duplicated">Merkinnät kopioitu</string>
+    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Tee kopio tänään</string>
+    <string name="select" comment="select. Conjugation should be infinitive">Valitse</string>
+    <string name="notes_optional">Huomautukset (vapaaehtoinen)</string>
+</resources>
