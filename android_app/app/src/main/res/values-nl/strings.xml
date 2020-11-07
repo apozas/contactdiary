@@ -68,4 +68,6 @@
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Maak vandaag een kopie</string>
     <string name="select" comment="select. Conjugation should be infinitive">Selecteeren</string>
     <string name="notes_optional">Notities (optioneel)</string>
+    <string name="acknowledgments">Bedankt</string>
+    <string name="about">Over</string>
 </resources>

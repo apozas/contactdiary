@@ -68,4 +68,6 @@
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Tee kopio tänään</string>
     <string name="select" comment="select. Conjugation should be infinitive">Valitse</string>
     <string name="notes_optional">Huomautukset (vapaaehtoinen)</string>
+    <string name="acknowledgments">Kiitos</string>
+    <string name="about">Noin</string>
 </resources>

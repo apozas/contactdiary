@@ -68,4 +68,6 @@
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Buat salinan hari ini</string>
     <string name="select" comment="select. Conjugation should be infinitive">Pilih</string>
     <string name="notes_optional">Catatan (opsional)</string>
+    <string name="acknowledgments">Terima kasih</string>
+    <string name="about">Tentang</string>
 </resources>

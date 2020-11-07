@@ -68,4 +68,6 @@
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Fes-ne una còpia avui</string>
     <string name="select" comment="select. Conjugation should be infinitive">Seleccionar</string>
     <string name="notes_optional">Notes (opcional)</string>
+    <string name="acknowledgments">Gràcies</string>
+    <string name="about">Sobre</string>
 </resources>

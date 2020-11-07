@@ -61,10 +61,22 @@
             android:summary="@string/contact_developer_summary">
             <intent android:action="android.intent.action.VIEW"
                 android:data="@string/contact_developer_uri">
+
                 <extra android:name="android.intent.extra.SUBJECT"
                     android:value="@string/feedback_subject" />
             </intent>
+        </Preference>
+    </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/about">
+
+        <Preference
+            android:key="acknowledgments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/acknowledgments" >
+            <intent android:action="com.apozas.contactdiary.ThanksActivity"/>
         </Preference>
 
         <Preference

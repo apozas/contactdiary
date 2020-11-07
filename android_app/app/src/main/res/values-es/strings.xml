@@ -67,4 +67,6 @@
     <string name="duplicate">Hacer copia hoy</string>
     <string name="select">Seleccionar</string>
     <string name="notes_optional">Notas (opcional)</string>
+    <string name="acknowledgments">Gracias</string>
+    <string name="about">Acerca de</string>
 </resources>

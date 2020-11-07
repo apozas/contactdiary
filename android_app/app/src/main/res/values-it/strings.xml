@@ -67,4 +67,6 @@
     <string name="edit">Modifica</string>
     <string name="entry_duplicated">Voce duplicata</string>
     <string name="entries_duplicated">Voci duplicate</string>
+    <string name="acknowledgments">Grazie</string>
+    <string name="about">Di</string>
 </resources>

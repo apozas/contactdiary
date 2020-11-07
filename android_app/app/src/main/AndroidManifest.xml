@@ -66,6 +66,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ThanksActivity"
+            android:label="@string/acknowledgments"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="${applicationId}.ThanksActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <receiver
             android:name=".NotificationReceiver"
             android:enabled="true" >

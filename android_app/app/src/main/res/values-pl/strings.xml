@@ -68,4 +68,6 @@
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Utworzyć dziś kopię</string>
     <string name="select" comment="select. Conjugation should be infinitive">Wybierz</string>
     <string name="notes_optional">Notatki (opcjonalnie)</string>
+    <string name="acknowledgments">Dzięki</string>
+    <string name="about">O</string>
 </resources>
