@@ -139,6 +139,12 @@ class EditEventActivity : AppCompatActivity() {
                 contactCloseContactChoice = eventclosecontact.indexOfChild(btn)
             }
 
+//          Handle time field
+            cal.set(Calendar.HOUR_OF_DAY, 0)
+            cal.set(Calendar.MINUTE, 0)
+            cal.set(Calendar.SECOND, 0)
+            cal.set(Calendar.MILLISECOND, 0)
+
 //          Compulsory text fields
             var errorCount = 0
             val eventName = eventname_edit.text.toString()

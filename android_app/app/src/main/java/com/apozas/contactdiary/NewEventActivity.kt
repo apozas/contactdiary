@@ -126,12 +126,10 @@ class NewEventActivity : AppCompatActivity() {
             }
 
 //          Handle time field
-            if (eventtime_input.text.toString() == "") {
-                cal.set(Calendar.HOUR_OF_DAY, 0)
-                cal.set(Calendar.MINUTE, 0)
-                cal.set(Calendar.SECOND, 0)
-                cal.set(Calendar.MILLISECOND, 0)
-            }
+            cal.set(Calendar.HOUR_OF_DAY, 0)
+            cal.set(Calendar.MINUTE, 0)
+            cal.set(Calendar.SECOND, 0)
+            cal.set(Calendar.MILLISECOND, 0)
 
 //          Create a new map of values, where column names are the keys
             if (errorCount == 0) {
