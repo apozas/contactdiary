@@ -26,13 +26,17 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
     }
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion < 2) { db.execSQL(ContactDatabase.SQL_UPDATE_2) }
+        if (oldVersion < 3) {
+           db.execSQL(ContactDatabase.SQL_UPDATE_3)
+            MigrationTools().migrateTo3(db)
+        }
     }
     override fun onDowngrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        onUpgrade(db, oldVersion, newVersion)
+//        onUpgrade(db, oldVersion, newVersion)
     }
     companion object {
         // If you change the database schema, you must increment the database version.
-        const val DATABASE_VERSION = 2
+        const val DATABASE_VERSION = 3
         const val DATABASE_NAME = "ContactDiary.db"
     }
 

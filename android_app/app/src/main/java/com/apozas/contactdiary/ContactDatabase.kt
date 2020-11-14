@@ -26,6 +26,7 @@ class ContactDatabase {
             const val NAME_COLUMN = "Name"
             const val PLACE_COLUMN = "Place"
             const val DATETIME_COLUMN = "Timestamp"
+            const val DURATION_COLUMN = "Duration"
             const val PHONE_COLUMN = "Phone"
             const val RELATIVE_COLUMN = "Relative"
             const val COMPANIONS_COLUMN = "Companions"
@@ -43,6 +44,7 @@ class ContactDatabase {
                     "${ContactDatabase.FeedEntry.NAME_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.PLACE_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.DATETIME_COLUMN} INT," +
+                    "${ContactDatabase.FeedEntry.DURATION_COLUMN} INT," +
                     "${ContactDatabase.FeedEntry.PHONE_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.RELATIVE_COLUMN} TINYINT," +
                     "${ContactDatabase.FeedEntry.COMPANIONS_COLUMN} TEXT," +
@@ -52,5 +54,7 @@ class ContactDatabase {
         const val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS ${ContactDatabase.FeedEntry.TABLE_NAME}"
         const val SQL_UPDATE_2 = "ALTER TABLE ${ContactDatabase.FeedEntry.TABLE_NAME} ADD COLUMN " +
                 "${ContactDatabase.FeedEntry.NOTES_COLUMN} TEXT"
+        const val SQL_UPDATE_3 = "ALTER TABLE ${ContactDatabase.FeedEntry.TABLE_NAME} ADD COLUMN " +
+                "${ContactDatabase.FeedEntry.DURATION_COLUMN} INT"
     }
 }
