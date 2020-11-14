@@ -25,7 +25,7 @@ class ContactDatabase {
             const val TYPE_COLUMN = "Type"
             const val NAME_COLUMN = "Name"
             const val PLACE_COLUMN = "Place"
-            const val DATETIME_COLUMN = "Timestamp"
+            const val TIMESTAMP_COLUMN = "Timestamp"
             const val DURATION_COLUMN = "Duration"
             const val PHONE_COLUMN = "Phone"
             const val RELATIVE_COLUMN = "Relative"
@@ -43,7 +43,7 @@ class ContactDatabase {
                     "${ContactDatabase.FeedEntry.TYPE_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.NAME_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.PLACE_COLUMN} TEXT," +
-                    "${ContactDatabase.FeedEntry.DATETIME_COLUMN} INT," +
+                    "${ContactDatabase.FeedEntry.TIMESTAMP_COLUMN} INT," +
                     "${ContactDatabase.FeedEntry.DURATION_COLUMN} INT," +
                     "${ContactDatabase.FeedEntry.PHONE_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.RELATIVE_COLUMN} TINYINT," +

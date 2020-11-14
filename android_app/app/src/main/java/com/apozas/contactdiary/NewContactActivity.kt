@@ -144,7 +144,7 @@ class NewContactActivity : AppCompatActivity() {
                     put(feedEntry.TYPE_COLUMN, "Contact")
                     put(feedEntry.NAME_COLUMN, contactName)
                     put(feedEntry.PLACE_COLUMN, contactPlace)
-                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_input.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)

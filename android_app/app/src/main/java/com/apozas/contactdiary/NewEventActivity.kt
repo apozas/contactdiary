@@ -137,7 +137,7 @@ class NewEventActivity : AppCompatActivity() {
                     put(feedEntry.TYPE_COLUMN, "Event")
                     put(feedEntry.NAME_COLUMN, eventName)
                     put(feedEntry.PLACE_COLUMN, eventPlace)
-                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, eventphone_input.text.toString())
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_input.text.toString())
                     put(feedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)

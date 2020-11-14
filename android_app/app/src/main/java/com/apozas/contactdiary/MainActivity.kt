@@ -282,7 +282,7 @@ class MainActivity : AppCompatActivity() {
 
 //      Define 'where' part of query.
         val selection = "DELETE FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME} " +
-                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN} <= " + fifteenDaysAgo.toString()
+                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.TIMESTAMP_COLUMN} <= " + fifteenDaysAgo.toString()
 //      Issue SQL statement.
         db.execSQL(selection)
     }
@@ -300,7 +300,7 @@ class MainActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
         val cal = Calendar.getInstance()
         cal.timeInMillis = timestamp
         cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
@@ -309,7 +309,7 @@ class MainActivity : AppCompatActivity() {
             put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
             put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
             put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
-            put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+            put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
             put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
             put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
             put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))

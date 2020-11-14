@@ -59,7 +59,7 @@ class EditEventActivity : AppCompatActivity() {
         eventname_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
         eventplace_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
         val cal = Calendar.getInstance()
         cal.timeInMillis = timestamp
 
@@ -163,7 +163,7 @@ class EditEventActivity : AppCompatActivity() {
                     put(feedEntry.TYPE_COLUMN, "Event")
                     put(feedEntry.NAME_COLUMN, eventName)
                     put(feedEntry.PLACE_COLUMN, eventPlace)
-                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, eventphone_edit.text.toString())
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_edit.text.toString())
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
@@ -171,7 +171,7 @@ class EditEventActivity : AppCompatActivity() {
                     put(feedEntry.NOTES_COLUMN, eventnotes_edit.text.toString())
                 }
 
-//          Update the database
+//              Update the database
                 val selection = "_id LIKE ?"
                 val selectionArgs = arrayOf(info.toString())
                 db.update(feedEntry.TABLE_NAME, values, selection, selectionArgs)
@@ -211,7 +211,7 @@ class EditEventActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
         val cal = Calendar.getInstance()
         cal.timeInMillis = timestamp
         cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
@@ -220,7 +220,7 @@ class EditEventActivity : AppCompatActivity() {
             put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
             put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
             put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
-            put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+            put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
             put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
             put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
             put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))

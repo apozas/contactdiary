@@ -58,7 +58,7 @@ class EditContactActivity : AppCompatActivity() {
         name_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
         place_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
         val cal = Calendar.getInstance()
         cal.timeInMillis = timestamp
 
@@ -174,7 +174,7 @@ class EditContactActivity : AppCompatActivity() {
                     put(feedEntry.TYPE_COLUMN, "Contact")
                     put(feedEntry.NAME_COLUMN, contactName)
                     put(feedEntry.PLACE_COLUMN, contactPlace)
-                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_edit.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
@@ -220,7 +220,7 @@ class EditContactActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
         val cal = Calendar.getInstance()
         cal.timeInMillis = timestamp
         cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
@@ -229,7 +229,7 @@ class EditContactActivity : AppCompatActivity() {
             put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
             put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
             put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
-            put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+            put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
             put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
             put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
             put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))

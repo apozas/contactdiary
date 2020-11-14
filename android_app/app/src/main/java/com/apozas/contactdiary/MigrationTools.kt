@@ -15,7 +15,7 @@ class MigrationTools {
         cursor.use { cursor ->
             while (cursor.moveToNext()) {
                 val id = cursor.getInt(cursor.getColumnIndex("_id"))
-                val time = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
+                val time = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
                 cal.timeInMillis = time
                 cal.set(Calendar.HOUR, 0)
                 cal.set(Calendar.MINUTE, 0)
@@ -23,7 +23,7 @@ class MigrationTools {
                 cal.set(Calendar.MILLISECOND, 0)
 
                 val values = ContentValues().apply {
-                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
                 }
 //              Update the database
                 val selection = "_id LIKE ?"
