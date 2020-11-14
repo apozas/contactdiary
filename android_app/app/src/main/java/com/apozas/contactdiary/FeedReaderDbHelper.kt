@@ -42,10 +42,12 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         val query = if (onlyRisky) {
             "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
                     " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + ">1" +
-                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC"
+                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC," +
+                    " " + ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN + " ASC"
         } else {
             "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
-                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC"
+                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC," +
+                    " " + ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN + " ASC"
         }
 
         return db.rawQuery(query, null)
