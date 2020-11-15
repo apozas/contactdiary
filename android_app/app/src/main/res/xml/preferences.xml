@@ -44,16 +44,6 @@
         </Preference>
 
         <Preference
-            android:key="rate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:title="@string/about_rate"
-            android:summary="@string/about_rate_summary">
-            <intent android:action="android.intent.action.VIEW"
-                android:data="@string/rate_url"/>
-        </Preference>
-
-        <Preference
             android:key="contactDev"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
