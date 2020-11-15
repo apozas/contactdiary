@@ -70,4 +70,14 @@
     <string name="notes_optional">Notes (opcional)</string>
     <string name="acknowledgments">Gràcies</string>
     <string name="about">Sobre</string>
+    <string name="thanks_text">Encara que Diari de Contactes va començar com un projecte en solitari, es va beneficiar d\'inestimables aportacions altruistes de moltes persones. El meu sincer agraïment a tothom en aquesta pàgina.</string>
+    <string name="thanks_homescreen"><b>Dreceres de pantalla d\'inici - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Traducció a l\'holandès - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_finnish"><b>Traducció al finlandès - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Traducció al francès- </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Traducció a l\'alemany - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> and <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Traducció a l\'italià - </b><a href="https://github.com/igor-cali">igor-cali</a> and <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Traducció a l\'indonesi - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Traducció al polonès - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_swedish"><b>Traducció al suec - </b><a href="https://github.com/nlssn">nlssn</a></string>
 </resources>

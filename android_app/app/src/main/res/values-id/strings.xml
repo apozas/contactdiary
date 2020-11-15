@@ -70,4 +70,14 @@
     <string name="notes_optional">Catatan (opsional)</string>
     <string name="acknowledgments">Terima kasih</string>
     <string name="about">Tentang</string>
+    <string name="thanks_text">Meskipun Catatan Kontak dimulai sebagai proyek solo, ia memperoleh manfaat dari kontribusi altruistik yang tak ternilai dari banyak orang. Terima kasih yang tulus kepada semua orang di halaman ini.</string>
+    <string name="thanks_homescreen"><b>Pintasan layar beranda - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Terjemahan bahasa Belanda - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_finnish"><b>Terjemahan bahasa Finlandia - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Terjemahan bahasa Perancis - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Terjemahan bahasa Jerman - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> dan <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Terjemahan bahasa Italia - </b><a href="https://github.com/igor-cali">igor-cali</a> dan <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Terjemahan bahasa Indonesia - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Terjemahan bahasa Polandia - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_swedish"><b>Terjemahan bahasa Swedia - </b><a href="https://github.com/nlssn">nlssn</a></string>
 </resources>
