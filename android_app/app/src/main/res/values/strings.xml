@@ -25,7 +25,7 @@
     <string name="event_saved">Event saved</string>
     <string name="edit_event">Edit event</string>
     <string name="edit_contact">Edit contact</string>
-    <string name="time_optional">Time (optional)</string>
+    <string name="duration">Duration</string>
     <string name="options">Options</string>
     <string name="entry_deleted">Entry deleted</string>
     <string name="contact_developer_summary">Tell me what you think about the app, or problems you have encountered</string>
@@ -47,7 +47,7 @@
     <string name="show_close_contacts">Show close contacts only</string>
     <string name="more">More</string>
     <string name="settings">Settings</string>
-    <string name="emptytime" translatable="false">00:00</string>
+    <string name="emptytime" translatable="false">0h0m</string>
     <string name="entries_deleted">Entries deleted</string>
     <string name="entries_selected">" entries selected"</string>
     <string name="privacy_title">Privacy policy</string>
@@ -85,4 +85,7 @@
     <string name="thanks_indonesian"><b>Indonesian translation - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Polish translation - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_swedish"><b>Swedish translation - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="duration_instructions">Insert minutes or hh:mm</string>
+    <string name="contact_duration_title">Contact duration</string>
+    <string name="event_duration_title">Event duration</string>
 </resources>

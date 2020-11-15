@@ -25,7 +25,7 @@
     <string name="event_saved">Gebeurtenis opgeslagen</string>
     <string name="edit_event">Bewerk gebeurtenis</string>
     <string name="edit_contact">Contact bewerken</string>
-    <string name="time_optional">Tijd (optioneel)</string>
+    <string name="duration">Duur</string>
     <string name="options">Opties</string>
     <string name="entry_deleted">Vermelding verwijderd</string>
     <string name="contact_developer_summary">Vertel me wat je vindt van de app, of wat voor problemen ben je tegen gekomen</string>
@@ -70,4 +70,7 @@
     <string name="notes_optional">Notities (optioneel)</string>
     <string name="acknowledgments">Bedankt</string>
     <string name="about">Over</string>
+    <string name="contact_duration_title">Contact duur</string>
+    <string name="event_duration_title">Gebeurtenis duur</string>
+    <string name="duration_instructions">Invoegen minuten of uu:mm</string>
 </resources>

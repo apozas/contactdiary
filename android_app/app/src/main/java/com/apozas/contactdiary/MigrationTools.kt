@@ -39,6 +39,7 @@ class MigrationTools {
 
                 val values = ContentValues().apply {
                     put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
+                    put(feedEntry.DURATION_COLUMN, 60)
                 }
 //              Update the database
                 val selection = "_id LIKE ?"

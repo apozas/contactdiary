@@ -310,6 +310,7 @@ class MainActivity : AppCompatActivity() {
             put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
             put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
             put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
+            put(feedEntry.DURATION_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN)))
             put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
             put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
             put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))

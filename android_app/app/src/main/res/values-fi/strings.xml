@@ -25,7 +25,7 @@
     <string name="event_saved">Tapahtuma tallennettu</string>
     <string name="edit_event">Muokkaa tapahtumaa</string>
     <string name="edit_contact">Muokkaa yhteystietoa</string>
-    <string name="time_optional">Aika (vapaaehtoinen)</string>
+    <string name="duration">Kesto</string>
     <string name="options">Vaihtoehdot</string>
     <string name="entry_deleted">Merkintä poistettu</string>
     <string name="contact_developer_summary">Kerro minulle mitä mieltä olet sovelluksesta tai ongelmista, joita olet kohdannut</string>
@@ -70,4 +70,7 @@
     <string name="notes_optional">Huomautukset (vapaaehtoinen)</string>
     <string name="acknowledgments">Kiitos</string>
     <string name="about">Noin</string>
+    <string name="event_duration_title">Tapahtuman kesto</string>
+    <string name="contact_duration_title">Yhteystieto kesto</string>
+    <string name="duration_instructions">Lisää minuutit tai tt:mm</string>
 </resources>

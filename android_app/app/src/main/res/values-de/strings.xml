@@ -25,7 +25,7 @@
     <string name="event_saved">Gruppenbegegnung gespeichert</string>
     <string name="edit_event">Gruppenbegegnung bearbeiten</string>
     <string name="edit_contact">Begegnung bearbeiten</string>
-    <string name="time_optional">Uhrzeit (optional)</string>
+    <string name="duration">Dauer</string>
     <string name="options">Optionen</string>
     <string name="entry_deleted">Eintrag gelöscht</string>
     <string name="contact_developer_summary">Erzähl mir, was du von der App hältst oder melde Probleme, die dir auffallen</string>
@@ -80,4 +80,7 @@
     <string name="thanks_indonesian"><b>Indonesische Übersetzung - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Polnische Übersetzung - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_swedish"><b>Schwedische Übersetzung - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="event_duration_title">Gruppenbegegnungdauer</string>
+    <string name="contact_duration_title">Begegnungdauer</string>
+    <string name="duration_instructions">Minuten einfügen oder ss:mm</string>
 </resources>

@@ -25,7 +25,7 @@
     <string name="event_saved">Événement enregistré</string>
     <string name="edit_event">Modifier l\'événement</string>
     <string name="edit_contact">Modifier le contact</string>
-    <string name="time_optional">Heure (optionnel)</string>
+    <string name="duration">Durée</string>
     <string name="options">Options</string>
     <string name="entry_deleted">Entrée supprimée</string>
     <string name="contact_developer_summary">Dîtes-moi ce que vous pensez de l\'application, ou les problèmes que vous avez rencontrés</string>
@@ -70,4 +70,7 @@
     <string name="notes_optional">Notes (optionnel)</string>
     <string name="acknowledgments">Merci</string>
     <string name="about">À propos</string>
+    <string name="contact_duration_title">Durée du contact</string>
+    <string name="event_duration_title">Durée de l\'événement</string>
+    <string name="duration_instructions">Insérez minutes ou hh:mm</string>
 </resources>

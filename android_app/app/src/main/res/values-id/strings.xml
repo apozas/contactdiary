@@ -25,7 +25,7 @@
     <string name="event_saved">Acara disimpan</string>
     <string name="edit_event">Edit acara</string>
     <string name="edit_contact">Edit kontak</string>
-    <string name="time_optional">Waktu (opsional)</string>
+    <string name="duration">Durasi</string>
     <string name="options">Pilihan</string>
     <string name="entry_deleted">Entri dihapus</string>
     <string name="contact_developer_summary">Beri tahu saya pendapat Anda tentang aplikasi, atau masalah yang Anda temui</string>
@@ -80,4 +80,7 @@
     <string name="thanks_indonesian"><b>Terjemahan bahasa Indonesia - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Terjemahan bahasa Polandia - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_swedish"><b>Terjemahan bahasa Swedia - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="event_duration_title">Durasi acara</string>
+    <string name="contact_duration_title">Durasi kontak</string>
+    <string name="duration_instructions">Masukkan menit atau jj:mm</string>
 </resources>

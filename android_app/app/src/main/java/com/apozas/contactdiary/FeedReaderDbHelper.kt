@@ -27,7 +27,7 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion < 2) { db.execSQL(ContactDatabase.SQL_UPDATE_2) }
         if (oldVersion < 3) {
-           db.execSQL(ContactDatabase.SQL_UPDATE_3)
+            db.execSQL(ContactDatabase.SQL_UPDATE_3)
             MigrationTools().migrateTo3(db)
         }
     }

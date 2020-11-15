@@ -19,15 +19,17 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.content.Context
+import android.content.DialogInterface
 import android.database.Cursor
 import android.os.Bundle
-import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editevent.*
 import java.text.DateFormat
@@ -64,7 +66,8 @@ class EditEventActivity : AppCompatActivity() {
         cal.timeInMillis = timestamp
 
         eventdate_edit.setText(DateFormat.getDateInstance(DateFormat.MEDIUM).format(cal.time))
-        eventtime_edit.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
+        eventtime_edit.setText(minutesToText(cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN))))
+
         if (cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)) != ""){
             eventpeople_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
         }
@@ -105,22 +108,28 @@ class EditEventActivity : AppCompatActivity() {
             ).show()
         }
 
-        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
-            cal.set(Calendar.HOUR_OF_DAY, hour)
-            cal.set(Calendar.MINUTE, minute)
-
-            eventtime_edit.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
-
-        }
-
-        val is24Hour = is24HourFormat(applicationContext)
         eventtime_edit.setOnClickListener {
-            TimePickerDialog(
-                this@EditEventActivity, timeSetListener,
-                cal.get(Calendar.HOUR_OF_DAY),
-                cal.get(Calendar.MINUTE),
-                is24Hour
-            ).show()
+            val builder = AlertDialog.Builder(this)
+            val dialogView = layoutInflater.inflate(R.layout.duration_dialog, null)
+            val durationText = dialogView.findViewById<EditText>(R.id.duration)
+            builder.setView(dialogView)
+            builder.setTitle(getString(R.string.event_duration_title))
+            durationText.hint = getString(R.string.duration_instructions)
+            builder.setPositiveButton("OK", DialogInterface.OnClickListener { _, _ ->
+                val durationText = durationStringToText(durationText.text.toString())
+                if (durationText.isEmpty()) {
+                    Toast.makeText(this,
+                        R.string.incorrect_alarm_time,
+                        Toast.LENGTH_LONG).show()
+                } else { eventtime_edit.setText(durationText) }
+            })
+            builder.setNegativeButton("cancel", DialogInterface.OnClickListener { dialog, _ ->
+                dialog.dismiss()
+            })
+            val dialog = builder.create()
+            dialog.window?.setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+            dialog.show()
         }
 
         okButton_AddEvent.setOnClickListener {
@@ -157,6 +166,16 @@ class EditEventActivity : AppCompatActivity() {
                 eventplace_edit.error = getString(R.string.compulsory_field)
                 errorCount++
             }
+            val durationText = eventtime_edit.text.toString()
+            var eventDuration = 0
+            if (durationText.isEmpty()) {
+                eventtime_edit.error = getString(R.string.compulsory_field)
+                errorCount++
+            } else {
+                val durationParts = durationText.split('h')
+                eventDuration = durationParts[0].toInt() * 60 + durationParts[1].dropLast(1).toInt()
+            }
+            
 //          Create new row
             if (errorCount == 0) {
                 val values = ContentValues().apply {
@@ -164,6 +183,7 @@ class EditEventActivity : AppCompatActivity() {
                     put(feedEntry.NAME_COLUMN, eventName)
                     put(feedEntry.PLACE_COLUMN, eventPlace)
                     put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
+                    put(feedEntry.DURATION_COLUMN, eventDuration)
                     put(feedEntry.PHONE_COLUMN, eventphone_edit.text.toString())
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_edit.text.toString())
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
@@ -221,6 +241,7 @@ class EditEventActivity : AppCompatActivity() {
             put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
             put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
             put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
+            put(feedEntry.DURATION_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN)))
             put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
             put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
             put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
@@ -264,5 +285,27 @@ class EditEventActivity : AppCompatActivity() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+    }
+    
+    private fun durationStringToText(durationString: String): String {
+        var durationText = ""
+        val durationSplit = durationString.split(":")
+        if (durationSplit.size == 2) {
+            if (durationSplit[1].toInt() < 60) {
+                durationText = durationSplit[0].toInt().toString() + "h" +
+                        durationSplit[1].toInt().toString() + "m"
+            }
+        } else if (durationSplit.size == 1) {
+            val hours = durationString.toInt() / 60
+            val minutes = durationString.toInt() % 60
+            durationText = hours.toString() + "h" + minutes.toString() + "m"
+        }
+        return durationText
+    }
+
+    private fun minutesToText(duration: Int): String {
+        val hours = duration / 60
+        val minutes = duration % 60
+        return hours.toString() + "h" + minutes.toString() + "m"
     }
 }
