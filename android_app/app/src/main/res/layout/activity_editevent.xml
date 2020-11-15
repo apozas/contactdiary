@@ -125,7 +125,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/time_optional"/>
+                        android:text="@string/duration" />
 
                     <EditText
                         android:id="@+id/eventtime_edit"
@@ -290,11 +290,11 @@
         android:layout_gravity="end|bottom"
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
         android:clickable="true"
         android:focusable="true"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/ic_ok"
-        tools:ignore="VectorDrawableCompat"
-        android:layout_marginEnd="@dimen/fab_margin" />
+        tools:ignore="VectorDrawableCompat" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
