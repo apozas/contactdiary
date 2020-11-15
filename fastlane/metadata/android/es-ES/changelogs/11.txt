@@ -1,0 +1,11 @@
+Esta versión trae unas cuantas características nuevas, dos de las cuales son importantes.
+
+- Ya no se pide la hora del contacto, porque era irrelevante. En su lugar, ahora los formularios solicitarán la duración del contacto.
+- Accesos directos (gracias a GenosseFlosse). Al hacer una pulsación larga en el icono de la app, se mostrará un menú con accesos directos a añadir contactos y eventos, sin entrar a la app. También se pueden crear iconos en el menú con estos atajos.
+
+- Dado que es de buen nacido ser agradecido, se ha añadido una sección de agradecimientos en la app.
+- Se han arreglado unos cuantos errores, incluyendo la visualización de solo contactos de riesgo.
+- Se han añadido nuevas traducciones: Polaco (gracias a wasikr7), Finlandés (gracias a Mikko95) e Indonesio (gracias a hexatester).
+- Se han arreglado pequeños detalles en el resto de traducciones.
+
+Si quieres ayudar traduciendo Diario de Contactos a tu idioma, por favor visita http://www.crowdin.com/project/contactdiary
