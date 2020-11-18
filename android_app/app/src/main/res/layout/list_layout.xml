@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/colorDivider"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginLeft="@dimen/margin_divider"
+        android:layout_marginRight="@dimen/margin_divider"
         android:contextClickable="false" />
 
     <!-- Date separator: the header with the date -->
