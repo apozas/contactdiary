@@ -57,6 +57,7 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         val listItemHeader = convertView?.findViewById(R.id.list_item_header) as TextView
         val listItem = convertView?.findViewById(R.id.list_item) as TextView
         val listDivider = convertView?.findViewById(R.id.list_divider) as View
+        val headerDivider = convertView?.findViewById(R.id.header_divider) as View
         listItem.text = cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
 
         if (position - 1 >= 0) {
@@ -67,19 +68,52 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
             if (currentDate.equals(previousDate, ignoreCase = true)) {
 //              The dates are the same so abort everything as we already set the header before
                 listItemHeader.visibility = View.GONE
-                listDivider.visibility = View.VISIBLE
+                if (isNightModeActive(convertView)) {
+                    listDivider.visibility = View.GONE
+                    listDivider.layoutParams.height = 3
+                } else { listDivider.visibility = View.VISIBLE }
             } else {
 //              This is the first occurrence of this date so show the header
                 listItemHeader.visibility = View.VISIBLE
                 listItemHeader.text = currentDate
-                listDivider.visibility = View.GONE
+                if (isNightModeActive(convertView)) {
+                    listDivider.visibility = View.VISIBLE
+                    headerDivider.visibility = View.VISIBLE
+                    listDivider.layoutParams.height = 3
+                    headerDivider.layoutParams.height = 3
+                } else { listDivider.visibility = View.GONE }
             }
         } else {
 //          This is position 0 and we need a header here
             listItemHeader.visibility = View.VISIBLE
             listItemHeader.text = formatter.format(Date(cursor.getLong(mDateColumnIndex)))
-            listDivider.visibility = View.GONE
+            if (isNightModeActive(convertView)) {
+                listDivider.visibility = View.VISIBLE
+                listDivider.layoutParams.height = 3
+                headerDivider.visibility = View.VISIBLE
+            } else {
+                listDivider.visibility = View.GONE
+                headerDivider.visibility = View.GONE
+            }
         }
         return convertView
+    }
+
+    private fun isNightModeActive(context: View?): Boolean {
+        val defaultNightMode = AppCompatDelegate.getDefaultNightMode()
+        if (defaultNightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            return true
+        }
+        if (defaultNightMode == AppCompatDelegate.MODE_NIGHT_NO) {
+            return false
+        }
+        val currentNightMode = (context!!.resources.configuration.uiMode
+                and Configuration.UI_MODE_NIGHT_MASK)
+        when (currentNightMode) {
+            Configuration.UI_MODE_NIGHT_NO -> return false
+            Configuration.UI_MODE_NIGHT_YES -> return true
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> return false
+        }
+        return false
     }
 }
