@@ -14,6 +14,7 @@ android {
         versionName "1.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     applicationVariants.all { variant ->
@@ -53,6 +54,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
     implementation 'androidx.preference:preference-ktx:1.1.1'
+    implementation 'com.opencsv:opencsv:5.3'
+    implementation 'com.android.support:multidex:1.0.3'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

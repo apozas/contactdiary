@@ -16,15 +16,20 @@ package com.apozas.contactdiary
 */
 
 import android.content.ComponentName
+import android.content.Context
 import android.content.pm.PackageManager
+import android.database.Cursor
+import android.database.Cursor.*
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.preference.EditTextPreference
-import androidx.preference.ListPreference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.SwitchPreference
+import androidx.preference.*
+import com.opencsv.CSVWriter
+import java.io.File
+import java.io.FileWriter
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -92,6 +97,13 @@ class SettingsActivity : AppCompatActivity() {
                 }
                 true
             }
+
+            val export = findPreference<Preference>("export")
+            export!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                exportDB(requireContext())
+                true
+            }
+
         }
 
         private fun updateNotificationPreferences(on: Boolean) {
@@ -112,6 +124,44 @@ class SettingsActivity : AppCompatActivity() {
                     receiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                     PackageManager.DONT_KILL_APP
                 )
+            }
+        }
+
+        private fun exportDB(context: Context) {
+            val dbHelper = FeedReaderDbHelper(context)
+            val exportDir = File(context.getExternalFilesDir(null), "")
+            if (!exportDir.exists()) {
+                exportDir.mkdirs()
+            }
+            val file = File(exportDir, "ContactDiary_database.csv")
+            try {
+                file.createNewFile()
+                val csvWrite = CSVWriter(FileWriter(file))
+                val db: SQLiteDatabase = dbHelper.readableDatabase
+                val cursor: Cursor = db.rawQuery(
+                    "SELECT * FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME}",
+                    null
+                )
+                csvWrite.writeNext(cursor.columnNames)
+                while (cursor.moveToNext()) {
+                    //Which column you want to export
+                    val columns = cursor.columnCount
+                    val arrStr = mutableListOf<String>()
+                    for (i in 1 until columns) {    // We don't care of the _id column
+                        when (cursor.getType(i)) {
+                            FIELD_TYPE_STRING -> arrStr.add(cursor.getString(i))
+                            FIELD_TYPE_INTEGER -> arrStr.add(cursor.getLong(i).toString())
+                            FIELD_TYPE_NULL -> arrStr.add("")
+//                          TODO(Make the database human-readable. Timestamp to date, RadioButtons to responses)
+                        }
+                    }
+                    csvWrite.writeNext(arrStr.toList().toTypedArray())
+                }
+                csvWrite.close()
+                cursor.close()
+                Toast.makeText(context,"Exported to " + exportDir,Toast.LENGTH_LONG).show()
+            } catch (sqlEx: Exception) {
+                Log.e("Export", sqlEx.message, sqlEx)
             }
         }
     }
