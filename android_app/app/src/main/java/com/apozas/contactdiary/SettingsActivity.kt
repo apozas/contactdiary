@@ -145,7 +145,7 @@ class SettingsActivity : AppCompatActivity() {
                     "SELECT * FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME}",
                     null
                 )
-                csvWrite.writeNext(cursor.columnNames)
+                csvWrite.writeNext(cursor.columnNames.drop(1).toTypedArray())    // We don't care of the _id column
                 while (cursor.moveToNext()) {
                     //Which column you want to export
                     val columns = cursor.columnCount
