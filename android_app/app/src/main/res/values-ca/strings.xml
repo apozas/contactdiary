@@ -80,7 +80,7 @@
     <string name="thanks_indonesian"><b>Traducció a l\'indonesi - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Traducció al polonès - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_swedish"><b>Traducció al suec - </b><a href="https://github.com/nlssn">nlssn</a></string>
-    <string name="contact_duration_title">Duració del contacte</string>
-    <string name="event_duration_title">Duració de l\'esdeveniment</string>
+    <string name="contact_duration_title">Durada del contacte</string>
+    <string name="event_duration_title">Durada de l\'esdeveniment</string>
     <string name="duration_instructions">Inseriu minuts o hh:mm</string>
 </resources>
