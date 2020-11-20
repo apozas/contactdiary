@@ -33,7 +33,7 @@
             android:key="theme"
             android:title="@string/theme"
             app:useSimpleSummaryProvider="true"
-            android:defaultValue="Light"
+            android:defaultValue="System"
             android:entries="@array/theme_entries"
             android:entryValues="@array/theme_values" />
     </PreferenceCategory>
