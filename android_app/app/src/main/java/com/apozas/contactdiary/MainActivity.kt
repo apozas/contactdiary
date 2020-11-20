@@ -22,7 +22,10 @@ import android.os.Bundle
 import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.*
+import android.widget.AbsListView
+import android.widget.AdapterView
+import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
@@ -130,14 +133,20 @@ class MainActivity : AppCompatActivity() {
                         return false
                     }
 
-                    override fun onActionItemClicked(actionMode: ActionMode, menuItem: MenuItem): Boolean {
+                    override fun onActionItemClicked(
+                        actionMode: ActionMode,
+                        menuItem: MenuItem
+                    ): Boolean {
                         when (menuItem.itemId) {
                             R.id.context_delete -> {
-                                for (item: Long in itemList) { deleteEntry(item) }
+                                for (item: Long in itemList) {
+                                    deleteEntry(item)
+                                }
                                 Toast.makeText(
                                     applicationContext,
-                                    getString(if (itemList.size > 1) R.string.entries_deleted
-                                    else R.string.entry_deleted
+                                    getString(
+                                        if (itemList.size > 1) R.string.entries_deleted
+                                        else R.string.entry_deleted
                                     ),
                                     Toast.LENGTH_SHORT
                                 ).show()
@@ -147,11 +156,14 @@ class MainActivity : AppCompatActivity() {
                                 return true
                             }
                             R.id.context_duplicate -> {
-                                for (item: Long in itemList) { duplicateEntry(item) }
+                                for (item: Long in itemList) {
+                                    duplicateEntry(item)
+                                }
                                 Toast.makeText(
                                     applicationContext,
-                                    getString(if (itemList.size > 1) R.string.entries_duplicated
-                                    else R.string.entry_duplicated
+                                    getString(
+                                        if (itemList.size > 1) R.string.entries_duplicated
+                                        else R.string.entry_duplicated
                                     ),
                                     Toast.LENGTH_SHORT
                                 ).show()
@@ -179,10 +191,12 @@ class MainActivity : AppCompatActivity() {
                     ) {
                         if (checked) {
                             itemList.add(position)
-                            actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                            actionMode.title =
+                                itemList.size.toString() + getString(R.string.entries_selected)
                         } else {
                             itemList.remove(position)
-                            actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                            actionMode.title =
+                                itemList.size.toString() + getString(R.string.entries_selected)
                         }
                     }
                 })
@@ -312,17 +326,47 @@ class MainActivity : AppCompatActivity() {
         cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
 
         val values = ContentValues().apply {
-            put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
-            put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
-            put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
+            put(
+                feedEntry.TYPE_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN))
+            )
+            put(
+                feedEntry.NAME_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN))
+            )
+            put(
+                feedEntry.PLACE_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN))
+            )
             put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
-            put(feedEntry.DURATION_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN)))
-            put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
-            put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
-            put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
-            put(feedEntry.CLOSECONTACT_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN)))
-            put(feedEntry.ENCOUNTER_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN)))
-            put(feedEntry.NOTES_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+            put(
+                feedEntry.DURATION_COLUMN,
+                cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN))
+            )
+            put(
+                feedEntry.PHONE_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN))
+            )
+            put(
+                feedEntry.RELATIVE_COLUMN,
+                cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+            )
+            put(
+                feedEntry.COMPANIONS_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN))
+            )
+            put(
+                feedEntry.CLOSECONTACT_COLUMN,
+                cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+            )
+            put(
+                feedEntry.ENCOUNTER_COLUMN,
+                cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+            )
+            put(
+                feedEntry.NOTES_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN))
+            )
         }
 
 //      Insert the new row

@@ -40,7 +40,8 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         var contact = ""
         if (cursor != null) {
             contact = cursor.getString(
-                cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
+                cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN)
+            )
         }
 
         val listItem = view?.findViewById(R.id.list_item) as TextView
@@ -54,6 +55,7 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
                 R.layout.list_layout, parent, false
             )
         }
+
 //      Set the data for the row
         cursor.moveToPosition(position)
         val listItemHeader = convertView?.findViewById(R.id.list_item_header) as TextView
