@@ -24,6 +24,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -37,6 +38,14 @@ class MainActivity : AppCompatActivity() {
     private val dbHelper = FeedReaderDbHelper(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
+        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val prefTheme = preferences.getString("theme", "Light")
+
+        if (prefTheme == "Dark") {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
@@ -44,10 +53,7 @@ class MainActivity : AppCompatActivity() {
         val notificationHandler = NotificationHandler()
         notificationHandler.scheduleNotification(this)
 
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
-        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
         onlyRisky = preferences.getBoolean("closecontactonly", false)
-
         restrict15LastDays()
         viewData(onlyRisky)
 

@@ -20,7 +20,11 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.preference.*
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.preference.EditTextPreference
+import androidx.preference.ListPreference
+import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.SwitchPreference
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -78,10 +82,19 @@ class SettingsActivity : AppCompatActivity() {
                 updateNotificationPreferences(newValue as Boolean)
                 true
             }
+
+            val prefTheme = findPreference<ListPreference>("theme")
+            prefTheme!!.setOnPreferenceChangeListener { _, newValue ->
+                when (newValue) {
+                    "Light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    "Dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    "System" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                }
+                true
+            }
         }
 
         private fun updateNotificationPreferences(on: Boolean) {
-
             val receiver = ComponentName(
                 requireActivity().applicationContext, NotificationReceiver::class.java
             )

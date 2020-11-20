@@ -88,4 +88,8 @@
     <string name="duration_instructions">Insert minutes or hh:mm</string>
     <string name="contact_duration_title">Contact duration</string>
     <string name="event_duration_title">Event duration</string>
+    <string name="theme">Theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System</string>
 </resources>
