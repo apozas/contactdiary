@@ -16,11 +16,13 @@ package com.apozas.contactdiary
 */
 
 import android.content.Context
+import android.content.res.Configuration
 import android.database.Cursor
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.cursoradapter.widget.CursorAdapter
 import java.text.DateFormat
 import java.util.*
