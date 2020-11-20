@@ -285,7 +285,6 @@ class MainActivity : AppCompatActivity() {
 //  Database operation
     private fun viewData(onlyRisky: Boolean) {
         val cursor = dbHelper.viewData(onlyRisky)
-
         val adapter = DataCursorAdapter(this, cursor)
 
         diarytable.adapter = adapter

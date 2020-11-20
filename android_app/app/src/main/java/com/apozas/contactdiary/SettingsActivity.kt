@@ -49,7 +49,8 @@ class SettingsActivity : AppCompatActivity() {
 
             val oldTime = preferences.getString("reminder_time", "21:00").toString()
             val reminderTime = findPreference<EditTextPreference>("reminder_time")
-            val reminderToggle = findPreference<SwitchPreference>("reminder_toggle") as SwitchPreference
+            val reminderToggle =
+                findPreference<SwitchPreference>("reminder_toggle") as SwitchPreference
 
             reminderTime?.setOnPreferenceChangeListener { _, newValue ->
                 var isTimeGood = true
@@ -75,13 +76,15 @@ class SettingsActivity : AppCompatActivity() {
                 if ((newValue.toString() != oldTime) && isTimeGood) {
                     prefsedit.putString("reminder_time", newValue)
                     prefsedit.apply()
-                    Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_SHORT)
+                        .show()
                     updateNotificationPreferences(reminderToggle.isEnabled)
                     true
                 } else {
                     prefsedit.putString("reminder_time", oldTime)
                     prefsedit.apply()
-                    false }
+                    false
+                }
             }
             reminderToggle.setOnPreferenceChangeListener { _, newValue ->
                 updateNotificationPreferences(newValue as Boolean)
