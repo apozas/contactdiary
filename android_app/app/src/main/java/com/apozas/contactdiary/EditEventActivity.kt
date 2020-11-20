@@ -89,6 +89,9 @@ class EditEventActivity : AppCompatActivity() {
 
         eventnotes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
 
+//      Close the cursor after reading it
+        cursor.close()
+
         // Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             cal.set(Calendar.YEAR, year)
