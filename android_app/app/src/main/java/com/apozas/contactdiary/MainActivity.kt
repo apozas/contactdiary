@@ -319,10 +319,15 @@ class MainActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
-        val cal = Calendar.getInstance()
-        cal.timeInMillis = timestamp
-        cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+        val beginTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+        val initCal = Calendar.getInstance()
+        initCal.timeInMillis = beginTimestamp
+        initCal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+
+        val endTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
+        val endCal = Calendar.getInstance()
+        endCal.timeInMillis = endTimestamp
+        endCal.set(Calendar.DAY_OF_YEAR, initCal.get(Calendar.DAY_OF_YEAR))
 
         val values = ContentValues().apply {
             put(
@@ -337,11 +342,8 @@ class MainActivity : AppCompatActivity() {
                 feedEntry.PLACE_COLUMN,
                 cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN))
             )
-            put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
-            put(
-                feedEntry.DURATION_COLUMN,
-                cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN))
-            )
+            put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
+            put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
             put(
                 feedEntry.PHONE_COLUMN,
                 cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN))

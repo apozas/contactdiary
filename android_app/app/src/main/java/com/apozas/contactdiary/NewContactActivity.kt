@@ -16,20 +16,20 @@ package com.apozas.contactdiary
 */
 
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.content.Context
-import android.content.DialogInterface
 import android.os.Bundle
+import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_addcontact_inside.*
 import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class NewContactActivity : AppCompatActivity() {
@@ -43,52 +43,88 @@ class NewContactActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.newcontactlayout))
 
-        val cal = Calendar.getInstance()
+        val initCal = Calendar.getInstance()
+        initCal.set(Calendar.HOUR_OF_DAY, 0)
+        initCal.set(Calendar.MINUTE, 0)
+        initCal.set(Calendar.SECOND, 0)
+        initCal.set(Calendar.MILLISECOND, 0)
+
+        val endCal = Calendar.getInstance()
+        endCal.set(Calendar.HOUR_OF_DAY, 0)
+        endCal.set(Calendar.MINUTE, 0)
+        endCal.set(Calendar.SECOND, 0)
+        endCal.set(Calendar.MILLISECOND, 0)
 
         // Set current values
-        date_input.setText(DateFormat.getDateInstance().format(cal.time))
+        date_input.setText(DateFormat.getDateInstance().format(initCal.time))
+
+        val timeFormat = SimpleDateFormat("H:mm")
 
         // Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-            cal.set(Calendar.YEAR, year)
-            cal.set(Calendar.MONTH, monthOfYear)
-            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            initCal.set(Calendar.YEAR, year)
+            initCal.set(Calendar.MONTH, monthOfYear)
+            initCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            date_input.setText(DateFormat.getDateInstance().format(cal.time))
+            endCal.set(Calendar.YEAR, year)
+            endCal.set(Calendar.MONTH, monthOfYear)
+            endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
+            date_input.setText(DateFormat.getDateInstance().format(initCal.time))
         }
 
         date_input.setOnClickListener {
             DatePickerDialog(
                 this@NewContactActivity, dateSetListener,
-                cal.get(Calendar.YEAR),
-                cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)
+                initCal.get(Calendar.YEAR),
+                initCal.get(Calendar.MONTH),
+                initCal.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
 
-        time_input.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            val dialogView = layoutInflater.inflate(R.layout.duration_dialog, null)
-            val durationText = dialogView.findViewById<EditText>(R.id.duration)
-            builder.setView(dialogView)
-            builder.setTitle(getString(R.string.contact_duration_title))
-            durationText.hint = getString(R.string.duration_instructions)
-            builder.setPositiveButton("OK", DialogInterface.OnClickListener { _, _ ->
-                val durationText = durationStringToText(durationText.text.toString())
-                if (durationText.isEmpty()) {
-                    Toast.makeText(this,
-                        R.string.incorrect_alarm_time,
-                        Toast.LENGTH_LONG).show()
-                } else { time_input.setText(durationText) }
-            })
-            builder.setNegativeButton("cancel", DialogInterface.OnClickListener { dialog, _ ->
-                dialog.dismiss()
-            })
-            val dialog = builder.create()
-            dialog.window?.setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-            dialog.show()
+        val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            initCal.set(Calendar.HOUR_OF_DAY, hour)
+            initCal.set(Calendar.MINUTE, minute)
+
+            inittime_input.setText(timeFormat.format(initCal.time))
+            if (endtime_input.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
+                endCal.timeInMillis = initCal.timeInMillis
+                endCal.add(Calendar.MINUTE, 30)
+                endtime_input.setText(timeFormat.format(endCal.time))
+            }
+        }
+
+        val is24Hour = is24HourFormat(applicationContext)
+
+        inittime_input.setOnClickListener {
+            TimePickerDialog(
+                this@NewContactActivity, initTimeSetListener,
+                initCal.get(Calendar.HOUR_OF_DAY),
+                initCal.get(Calendar.MINUTE),
+                is24Hour
+            ).show()
+        }
+
+        val endTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            endCal.set(Calendar.HOUR_OF_DAY, hour)
+            endCal.set(Calendar.MINUTE, minute)
+
+            if (endCal.timeInMillis < initCal.timeInMillis) {
+                Toast.makeText(
+                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
+                ).show()
+            } else {
+                endtime_input.setText(timeFormat.format(endCal.time))
+            }
+        }
+
+        endtime_input.setOnClickListener {
+            TimePickerDialog(
+                this@NewContactActivity, endTimeSetListener,
+                endCal.get(Calendar.HOUR_OF_DAY),
+                endCal.get(Calendar.MINUTE),
+                is24Hour
+            ).show()
         }
 
 //      Database operation
@@ -133,9 +169,9 @@ class NewContactActivity : AppCompatActivity() {
                 val values = ContentValues().apply {
                     put(feedEntry.TYPE_COLUMN, "Contact")
                     put(feedEntry.NAME_COLUMN, contactName)
-                    put(feedEntry.PLACE_COLUMN, contactPlace)
-                    put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
-                    put(feedEntry.DURATION_COLUMN, contactDuration)
+                    put(feedEntry.PLACE_COLUMN, place_input.text.toString())
+                    put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
+                    put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_input.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
@@ -180,21 +216,5 @@ class NewContactActivity : AppCompatActivity() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
-    }
-
-    private fun durationStringToText(durationString: String): String {
-        var durationText = ""
-        val durationSplit = durationString.split(":")
-        if (durationSplit.size == 2) {
-            if (durationSplit[1].toInt() < 60) {
-                durationText = durationSplit[0].toInt().toString() + "h" +
-                               durationSplit[1].toInt().toString() + "m"
-            }
-        } else if (durationSplit.size == 1) {
-            val hours = durationString.toInt() / 60
-            val minutes = durationString.toInt() % 60
-            durationText = hours.toString() + "h" + minutes.toString() + "m"
-        }
-        return durationText
     }
 }

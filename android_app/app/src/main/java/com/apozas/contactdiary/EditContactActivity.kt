@@ -16,22 +16,21 @@ package com.apozas.contactdiary
 */
 
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.content.Context
-import android.content.DialogInterface
 import android.database.Cursor
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editcontact_inside.*
 import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class EditContactActivity : AppCompatActivity() {
@@ -59,12 +58,28 @@ class EditContactActivity : AppCompatActivity() {
         name_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
         place_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
-        val cal = Calendar.getInstance()
-        cal.timeInMillis = timestamp
+        val timeFormat = SimpleDateFormat("H:mm")
+        val initCal = Calendar.getInstance()
+        initCal.timeInMillis = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
 
-        date_edit.setText(DateFormat.getDateInstance(DateFormat.MEDIUM).format(cal.time))
-        time_edit.setText(minutesToText(cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN))))
+        val endCal = Calendar.getInstance()
+        endCal.timeInMillis = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
+
+        date_edit.setText(DateFormat.getDateInstance(DateFormat.MEDIUM).format(initCal.time))
+
+        if (!((initCal.get(Calendar.HOUR) == 0)
+                    and (initCal.get(Calendar.MINUTE) == 0)
+                    and (initCal.get(Calendar.SECOND) == 0)
+                    and (initCal.get(Calendar.MILLISECOND) == 0))) {
+            inittime_edit.setText(timeFormat.format(initCal.time))
+        }
+
+        if (!((endCal.get(Calendar.HOUR) == 0)
+                    and (endCal.get(Calendar.MINUTE) == 0)
+                    and (endCal.get(Calendar.SECOND) == 0)
+                    and (endCal.get(Calendar.MILLISECOND) == 0))) {
+            endtime_edit.setText(timeFormat.format(endCal.time))
+        }
 
         if (cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)) != ""){
             phone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
@@ -95,45 +110,66 @@ class EditContactActivity : AppCompatActivity() {
 
         // Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-            cal.set(Calendar.YEAR, year)
-            cal.set(Calendar.MONTH, monthOfYear)
-            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            initCal.set(Calendar.YEAR, year)
+            initCal.set(Calendar.MONTH, monthOfYear)
+            initCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            date_edit.setText(DateFormat.getDateInstance().format(cal.time))
+            date_edit.setText(DateFormat.getDateInstance().format(initCal.time))
 
         }
 
         date_edit.setOnClickListener {
             DatePickerDialog(
                 this@EditContactActivity, dateSetListener,
-                cal.get(Calendar.YEAR),
-                cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)
+                initCal.get(Calendar.YEAR),
+                initCal.get(Calendar.MONTH),
+                initCal.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
 
-        time_edit.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            val dialogView = layoutInflater.inflate(R.layout.duration_dialog, null)
-            val durationText = dialogView.findViewById<EditText>(R.id.duration)
-            builder.setView(dialogView)
-            builder.setTitle(getString(R.string.contact_duration_title))
-            durationText.hint = getString(R.string.duration_instructions)
-            builder.setPositiveButton("OK", DialogInterface.OnClickListener { _, _ ->
-                val durationText = durationStringToText(durationText.text.toString())
-                if (durationText.isEmpty()) {
-                    Toast.makeText(this,
-                        R.string.incorrect_alarm_time,
-                        Toast.LENGTH_LONG).show()
-                } else { time_edit.setText(durationText) }
-            })
-            builder.setNegativeButton("cancel", DialogInterface.OnClickListener { dialog, _ ->
-                dialog.dismiss()
-            })
-            val dialog = builder.create()
-            dialog.window?.setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
-            dialog.show()
+        val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            initCal.set(Calendar.HOUR_OF_DAY, hour)
+            initCal.set(Calendar.MINUTE, minute)
+
+            inittime_edit.setText(timeFormat.format(initCal.time))
+            if (endtime_edit.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
+                endCal.timeInMillis = initCal.timeInMillis
+                endCal.add(Calendar.MINUTE, 30)
+                endtime_edit.setText(timeFormat.format(endCal.time))
+            }
+        }
+
+        val is24Hour = android.text.format.DateFormat.is24HourFormat(applicationContext)
+
+        inittime_edit.setOnClickListener {
+            TimePickerDialog(
+                this@EditContactActivity, initTimeSetListener,
+                initCal.get(Calendar.HOUR_OF_DAY),
+                initCal.get(Calendar.MINUTE),
+                is24Hour
+            ).show()
+        }
+
+        val endTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            endCal.set(Calendar.HOUR_OF_DAY, hour)
+            endCal.set(Calendar.MINUTE, minute)
+
+            if (endCal.timeInMillis < initCal.timeInMillis) {
+                Toast.makeText(
+                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
+                ).show()
+            } else {
+                endtime_edit.setText(timeFormat.format(endCal.time))
+            }
+        }
+
+        endtime_edit.setOnClickListener {
+            TimePickerDialog(
+                this@EditContactActivity, endTimeSetListener,
+                endCal.get(Calendar.HOUR_OF_DAY),
+                endCal.get(Calendar.MINUTE),
+                is24Hour
+            ).show()
         }
 
         okButton_AddContact.setOnClickListener {
@@ -173,8 +209,8 @@ class EditContactActivity : AppCompatActivity() {
                     put(feedEntry.TYPE_COLUMN, "Contact")
                     put(feedEntry.NAME_COLUMN, contactName)
                     put(feedEntry.PLACE_COLUMN, place_edit.text.toString())
-                    put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
-                    put(feedEntry.DURATION_COLUMN, contactDuration)
+                    put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
+                    put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_edit.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
@@ -220,17 +256,22 @@ class EditContactActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
-        val cal = Calendar.getInstance()
-        cal.timeInMillis = timestamp
-        cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+        val beginTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+        val initCal = Calendar.getInstance()
+        initCal.timeInMillis = beginTimestamp
+        initCal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+
+        val endTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
+        val endCal = Calendar.getInstance()
+        endCal.timeInMillis = endTimestamp
+        endCal.set(Calendar.DAY_OF_YEAR, initCal.get(Calendar.DAY_OF_YEAR))
 
         val values = ContentValues().apply {
             put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
             put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
             put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
-            put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
-            put(feedEntry.DURATION_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.DURATION_COLUMN)))
+            put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
+            put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
             put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
             put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
             put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
@@ -247,6 +288,7 @@ class EditContactActivity : AppCompatActivity() {
             applicationContext.resources.getString(R.string.entry_duplicated),
             Toast.LENGTH_SHORT
         ).show()
+        cursor.close()
         finish()
     }
 
@@ -271,27 +313,5 @@ class EditContactActivity : AppCompatActivity() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
-    }
-
-    private fun durationStringToText(durationString: String): String {
-        var durationText = ""
-        val durationSplit = durationString.split(":")
-        if (durationSplit.size == 2) {
-            if (durationSplit[1].toInt() < 60) {
-                durationText = durationSplit[0].toInt().toString() + "h" +
-                        durationSplit[1].toInt().toString() + "m"
-            }
-        } else if (durationSplit.size == 1) {
-            val hours = durationString.toInt() / 60
-            val minutes = durationString.toInt() % 60
-            durationText = hours.toString() + "h" + minutes.toString() + "m"
-        }
-        return durationText
-    }
-
-    private fun minutesToText(duration: Int): String {
-        val hours = duration / 60
-        val minutes = duration % 60
-        return hours.toString() + "h" + minutes.toString() + "m"
     }
 }
