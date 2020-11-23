@@ -28,7 +28,7 @@ import java.text.DateFormat
 import java.util.*
 
 class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, c, 0) {
-    private var mDateColumnIndex = cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TIMESTAMP_COLUMN)
+    private var mDateColumnIndex = cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN)
     private val formatter: DateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM)
     private val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 

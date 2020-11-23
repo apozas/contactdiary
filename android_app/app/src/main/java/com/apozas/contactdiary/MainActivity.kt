@@ -301,7 +301,7 @@ class MainActivity : AppCompatActivity() {
 
 //      Define 'where' part of query.
         val selection = "DELETE FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME} " +
-                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.TIMESTAMP_COLUMN} <= " + fifteenDaysAgo.toString()
+                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN} <= " + fifteenDaysAgo.toString()
 //      Issue SQL statement.
         db.execSQL(selection)
     }
