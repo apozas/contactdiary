@@ -31,7 +31,7 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_editevent.*
+import kotlinx.android.synthetic.main.activity_editevent_inside.*
 import java.text.DateFormat
 import java.util.*
 

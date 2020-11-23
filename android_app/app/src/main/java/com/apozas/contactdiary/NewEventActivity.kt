@@ -28,7 +28,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_addevent.*
+import kotlinx.android.synthetic.main.activity_addevent_inside.*
 import java.text.DateFormat
 import java.util.*
 

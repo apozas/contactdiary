@@ -28,7 +28,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_addcontact.*
+import kotlinx.android.synthetic.main.activity_addcontact_inside.*
 import java.text.DateFormat
 import java.util.*
 

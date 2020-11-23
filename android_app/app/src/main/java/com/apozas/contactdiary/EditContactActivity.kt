@@ -30,7 +30,7 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_editcontact.*
+import kotlinx.android.synthetic.main.activity_editcontact_inside.*
 import java.text.DateFormat
 import java.util.*
 
