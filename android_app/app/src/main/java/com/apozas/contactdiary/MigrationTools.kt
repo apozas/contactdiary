@@ -48,4 +48,30 @@ class MigrationTools {
             }
         }
     }
+
+    fun migrateTo4 (dataBase: SQLiteDatabase) {
+        val query = "Select * from tmp_table"
+        val cursor = dataBase.rawQuery(query, null)
+
+        cursor.use { cursor ->
+            while (cursor.moveToNext()) {
+                val id = cursor.getInt(cursor.getColumnIndex("_id"))
+                val time = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+                val duration = cursor.getLong(cursor.getColumnIndex(feedEntry.DURATION_COLUMN))
+                val hours = duration / 60
+                val minutes = duration % 60
+                cal.timeInMillis = time
+                cal.add(Calendar.HOUR_OF_DAY, hours.toInt())
+                cal.add(Calendar.MINUTE, minutes.toInt())
+
+                val values = ContentValues().apply {
+                    put(feedEntry.TIME_END_COLUMN, cal.timeInMillis)
+                }
+//              Update the database
+                val selection = "_id LIKE ?"
+                val selectionArgs = arrayOf(id.toString())
+                dataBase.update(feedEntry.TABLE_NAME, values, selection, selectionArgs)
+            }
+        }
+    }
 }
