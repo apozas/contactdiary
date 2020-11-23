@@ -16,6 +16,7 @@ package com.apozas.contactdiary
 */
 
 import android.content.ComponentName
+import android.content.ContentValues
 import android.content.Context
 import android.content.pm.PackageManager
 import android.database.Cursor
@@ -27,8 +28,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
+import com.apozas.contactdiary.ContactDatabase.Companion.SQL_CREATE_ENTRIES
+import com.apozas.contactdiary.ContactDatabase.Companion.SQL_DELETE_ENTRIES
+import com.opencsv.CSVReader
 import com.opencsv.CSVWriter
 import java.io.File
+import java.io.FileReader
 import java.io.FileWriter
 import java.text.SimpleDateFormat
 
@@ -108,6 +113,11 @@ class SettingsActivity : AppCompatActivity() {
                 true
             }
 
+            val import = findPreference<Preference>("import")
+            import!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                importDB(requireContext())
+                true
+            }
         }
 
         private fun updateNotificationPreferences(on: Boolean) {
@@ -199,6 +209,69 @@ class SettingsActivity : AppCompatActivity() {
                 Toast.makeText(context, "Exported to $exportDir", Toast.LENGTH_LONG).show()
             } catch (sqlEx: Exception) {
                 Log.e("Export", sqlEx.message, sqlEx)
+            }
+        }
+
+        private fun importDB(context: Context) {
+            val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+            val dbHelper = FeedReaderDbHelper(context)
+            val db = dbHelper.writableDatabase
+            val importDir = File(context.getExternalFilesDir(null), "")
+            val file = File(importDir, "ContactDiary_database.csv")
+            val dateFormatter = SimpleDateFormat("yyyy-MM-dd-HH:mm")
+            try {
+                db.execSQL(SQL_DELETE_ENTRIES)
+                db.execSQL(SQL_CREATE_ENTRIES)
+                val reader = CSVReader(FileReader(file))
+                reader.readNext()    // Skip first line (contains column names)
+                var nextLine = reader.readNext()
+                while (nextLine != null) {
+                    val type = nextLine[0]
+                    val name = nextLine[1]
+                    val place = nextLine[2]
+                    val beginTime = nextLine[3]
+                    val endTime = nextLine[4]
+                    val phone = nextLine[5]
+                    val relative = nextLine[6]
+                    val companions = nextLine[7]
+                    val encounterType = nextLine[8]
+                    val distance = nextLine[9]
+                    val notes = nextLine[10]
+
+                    val values = ContentValues().apply {
+                        put(feedEntry.TYPE_COLUMN, type)
+                        put(feedEntry.NAME_COLUMN, name)
+                        put(feedEntry.PLACE_COLUMN, place)
+                        put(feedEntry.TIME_BEGIN_COLUMN, dateFormatter.parse(beginTime).time)
+                        put(feedEntry.TIME_END_COLUMN, dateFormatter.parse(endTime).time)
+                        put(feedEntry.PHONE_COLUMN, phone)
+                        put(feedEntry.RELATIVE_COLUMN, when (relative) {
+                            "Yes" -> 1
+                            "No" -> 3
+                            else -> -1
+                        })
+                        put(feedEntry.CLOSECONTACT_COLUMN, when (distance) {
+                            "Yes" -> 1
+                            "No" -> 3
+                            "Unsure" -> 5
+                            else -> -1
+                        })
+                        put(feedEntry.ENCOUNTER_COLUMN, when (encounterType) {
+                            "Indoors" -> 1
+                            "Outdoors" -> 3
+                            else -> -1
+                        })
+                        put(feedEntry.COMPANIONS_COLUMN, companions)
+                        put(feedEntry.NOTES_COLUMN, notes)
+                    }
+                    db?.insert(feedEntry.TABLE_NAME, null, values)
+                    nextLine = reader.readNext()
+                }
+                Toast.makeText(context, "Database imported", Toast.LENGTH_LONG).show()
+            } catch (e: java.lang.Exception) {
+                e.printStackTrace()
+                Toast.makeText(context, "The specified file was not found", Toast.LENGTH_LONG)
+                    .show()
             }
         }
     }

@@ -92,4 +92,8 @@
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
     <string name="theme_system">System</string>
+    <string name="import_database">Import database</string>
+    <string name="import_database_summary">Load a saved database</string>
+    <string name="export_database">Export database</string>
+    <string name="export_database_summary">Save the database in CSV format</string>
 </resources>

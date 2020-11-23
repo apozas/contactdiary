@@ -43,9 +43,14 @@
 
         <Preference
             android:key="export"
-            android:title="Export database"
-            android:summary="Save the database in CSV format" />
+            android:title="@string/export_database"
+            android:summary="@string/export_database_summary" />
 
+        <Preference
+            android:key="import"
+            android:title="@string/import_database"
+            android:summary="@string/import_database_summary" />
+        
         <Preference
             android:key="about"
             android:layout_width="match_parent"
