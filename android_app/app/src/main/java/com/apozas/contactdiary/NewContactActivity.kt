@@ -97,7 +97,6 @@ class NewContactActivity : AppCompatActivity() {
         okButton_AddContact.setOnClickListener {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
-
             var errorCount = 0
 
 //          Process RadioButtons
@@ -106,9 +105,6 @@ class NewContactActivity : AppCompatActivity() {
             if (relativeId != -1) {
                 val btn: View = known_group.findViewById(relativeId)
                 relativeChoice = known_group.indexOfChild(btn)
-            } else {
-                known_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
             val contactIndoorOutdoorId = contact_indoor_outdoor.checkedRadioButtonId
@@ -116,9 +112,6 @@ class NewContactActivity : AppCompatActivity() {
             if (contactIndoorOutdoorId != -1) {
                 val btn: View = contact_indoor_outdoor.findViewById(contactIndoorOutdoorId)
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
-            } else {
-                encounter_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
             val contactCloseContactId = distance_group.checkedRadioButtonId
@@ -126,37 +119,14 @@ class NewContactActivity : AppCompatActivity() {
             if (contactCloseContactId != -1) {
                 val btn: View = distance_group.findViewById(contactCloseContactId)
                 contactCloseContactChoice = distance_group.indexOfChild(btn)
-            } else {
-                distance_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
-//          Compulsory text fields
+//          Compulsory text field
             val contactName = name_input.text.toString()
             if (contactName.isEmpty()) {
                 name_input.error = getString(R.string.compulsory_field)
                 errorCount++
             }
-            val contactPlace = place_input.text.toString()
-            if (contactPlace.isEmpty()) {
-                place_input.error = getString(R.string.compulsory_field)
-                errorCount++
-            }
-            val durationText = time_input.text.toString()
-            var contactDuration = 0
-            if (durationText.isEmpty()) {
-                time_input.error = getString(R.string.compulsory_field)
-                errorCount++
-            } else {
-                val durationParts = durationText.split('h')
-                contactDuration = durationParts[0].toInt() * 60 + durationParts[1].dropLast(1).toInt()
-            }
-
-//          Handle time field
-            cal.set(Calendar.HOUR_OF_DAY, 0)
-            cal.set(Calendar.MINUTE, 0)
-            cal.set(Calendar.SECOND, 0)
-            cal.set(Calendar.MILLISECOND, 0)
 
 //          Create a new map of values, where column names are the keys
             if (errorCount == 0) {

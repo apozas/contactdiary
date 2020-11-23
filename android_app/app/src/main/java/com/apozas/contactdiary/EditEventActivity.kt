@@ -151,40 +151,20 @@ class EditEventActivity : AppCompatActivity() {
                 contactCloseContactChoice = eventclosecontact.indexOfChild(btn)
             }
 
-//          Handle time field
-            cal.set(Calendar.HOUR_OF_DAY, 0)
-            cal.set(Calendar.MINUTE, 0)
-            cal.set(Calendar.SECOND, 0)
-            cal.set(Calendar.MILLISECOND, 0)
-
-//          Compulsory text fields
+//          Compulsory text field
             var errorCount = 0
             val eventName = eventname_edit.text.toString()
             if (eventName.isEmpty()) {
                 eventname_edit.error = getString(R.string.compulsory_field)
                 errorCount++
             }
-            val eventPlace = eventplace_edit.text.toString()
-            if (eventPlace.isEmpty()) {
-                eventplace_edit.error = getString(R.string.compulsory_field)
-                errorCount++
-            }
-            val durationText = eventtime_edit.text.toString()
-            var eventDuration = 0
-            if (durationText.isEmpty()) {
-                eventtime_edit.error = getString(R.string.compulsory_field)
-                errorCount++
-            } else {
-                val durationParts = durationText.split('h')
-                eventDuration = durationParts[0].toInt() * 60 + durationParts[1].dropLast(1).toInt()
-            }
             
-//          Create new row
+//          Create updated row
             if (errorCount == 0) {
                 val values = ContentValues().apply {
                     put(feedEntry.TYPE_COLUMN, "Event")
                     put(feedEntry.NAME_COLUMN, eventName)
-                    put(feedEntry.PLACE_COLUMN, eventPlace)
+                    put(feedEntry.PLACE_COLUMN, eventplace_edit.text.toString())
                     put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
                     put(feedEntry.DURATION_COLUMN, eventDuration)
                     put(feedEntry.PHONE_COLUMN, eventphone_edit.text.toString())

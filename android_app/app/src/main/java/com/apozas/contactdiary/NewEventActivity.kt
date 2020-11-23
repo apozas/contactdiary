@@ -96,7 +96,6 @@ class NewEventActivity : AppCompatActivity() {
         okButton_AddEvent.setOnClickListener {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
-
             var errorCount = 0
 
 //          Process RadioButtons
@@ -105,9 +104,6 @@ class NewEventActivity : AppCompatActivity() {
             if (eventIndoorOutdoorId != -1) {
                 val btn: View = event_indoor_outdoor.findViewById(eventIndoorOutdoorId)
                 eventIndoorOutdoorChoice = event_indoor_outdoor.indexOfChild(btn)
-            } else {
-                event_encounter_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
             val eventCloseContactId = eventclosecontact.checkedRadioButtonId
@@ -115,44 +111,21 @@ class NewEventActivity : AppCompatActivity() {
             if (eventCloseContactId != -1) {
                 val btn: View = eventclosecontact.findViewById(eventCloseContactId)
                 eventCloseContactChoice = eventclosecontact.indexOfChild(btn)
-            } else {
-                closecontact_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
-//          Compulsory text fields
+//          Compulsory text field
             val eventName = eventname_input.text.toString()
             if (eventName.isEmpty()) {
                 eventname_input.error = getString(R.string.compulsory_field)
                 errorCount++
             }
-            val eventPlace = eventplace_input.text.toString()
-            if (eventPlace.isEmpty()) {
-                eventplace_input.error = getString(R.string.compulsory_field)
-                errorCount++
-            }
-            val durationText = eventtime_input.text.toString()
-            var contactDuration = 0
-            if (durationText.isEmpty()) {
-                eventtime_input.error = getString(R.string.compulsory_field)
-                errorCount++
-            } else {
-                val durationParts = durationText.split('h')
-                contactDuration = durationParts[0].toInt() * 60 + durationParts[1].dropLast(1).toInt()
-            }
-
-//          Handle time field
-            cal.set(Calendar.HOUR_OF_DAY, 0)
-            cal.set(Calendar.MINUTE, 0)
-            cal.set(Calendar.SECOND, 0)
-            cal.set(Calendar.MILLISECOND, 0)
 
 //          Create a new map of values, where column names are the keys
             if (errorCount == 0) {
                 val values = ContentValues().apply {
                     put(feedEntry.TYPE_COLUMN, "Event")
                     put(feedEntry.NAME_COLUMN, eventName)
-                    put(feedEntry.PLACE_COLUMN, eventPlace)
+                    put(feedEntry.PLACE_COLUMN, eventplace_input.text.toString())
                     put(feedEntry.TIMESTAMP_COLUMN, cal.timeInMillis)
                     put(feedEntry.DURATION_COLUMN, contactDuration)
                     put(feedEntry.PHONE_COLUMN, eventphone_input.text.toString())
