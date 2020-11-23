@@ -30,6 +30,7 @@ import androidx.preference.*
 import com.opencsv.CSVWriter
 import java.io.File
 import java.io.FileWriter
+import java.text.SimpleDateFormat
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -133,6 +134,7 @@ class SettingsActivity : AppCompatActivity() {
         private fun exportDB(context: Context) {
             val dbHelper = FeedReaderDbHelper(context)
             val exportDir = File(context.getExternalFilesDir(null), "")
+            val dateFormatter = SimpleDateFormat("yyyy-LL-dd-HH:mm")
             if (!exportDir.exists()) {
                 exportDir.mkdirs()
             }
@@ -145,24 +147,56 @@ class SettingsActivity : AppCompatActivity() {
                     "SELECT * FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME}",
                     null
                 )
-                csvWrite.writeNext(cursor.columnNames.drop(1).toTypedArray())    // We don't care of the _id column
+                val columnNames =
+                    cursor.columnNames.drop(1).toMutableList()    // We don't care of the _id column
+                columnNames[columnNames.indexOf("CloseContact")] = "DistanceKept"
+                csvWrite.writeNext(columnNames.toTypedArray())
                 while (cursor.moveToNext()) {
                     //Which column you want to export
                     val columns = cursor.columnCount
                     val arrStr = mutableListOf<String>()
                     for (i in 1 until columns) {    // We don't care of the _id column
-                        when (cursor.getType(i)) {
-                            FIELD_TYPE_STRING -> arrStr.add(cursor.getString(i))
-                            FIELD_TYPE_INTEGER -> arrStr.add(cursor.getLong(i).toString())
-                            FIELD_TYPE_NULL -> arrStr.add("")
-//                          TODO(Make the database human-readable. Timestamp to date, RadioButtons to responses)
+                        when (columnNames[i - 1]) {
+                            "BeginTime" -> arrStr.add(dateFormatter.format(cursor.getLong(i)))
+                            "EndTime" -> arrStr.add(dateFormatter.format(cursor.getLong(i)))
+                            "Relative" -> arrStr.add(
+                                when (cursor.getInt(i)) {
+                                    -1 -> ""
+                                    0 -> ""
+                                    1 -> "Yes"
+                                    3 -> "No"
+                                    else -> cursor.getInt(i).toString()
+                                }
+                            )
+                            "EncounterType" -> arrStr.add(
+                                when (cursor.getInt(i)) {
+                                    -1 -> ""
+                                    1 -> "Indoors"
+                                    3 -> "Outdoors"
+                                    else -> cursor.getInt(i).toString()
+                                }
+                            )
+                            "DistanceKept" -> arrStr.add(
+                                when (cursor.getInt(i)) {
+                                    -1 -> ""
+                                    1 -> "Yes"
+                                    3 -> "No"
+                                    5 -> "Unsure"
+                                    else -> cursor.getInt(i).toString()
+                                }
+                            )
+                            else -> when (cursor.getType(i)) {
+                                FIELD_TYPE_STRING -> arrStr.add(cursor.getString(i))
+                                FIELD_TYPE_INTEGER -> arrStr.add(cursor.getLong(i).toString())
+                                FIELD_TYPE_NULL -> arrStr.add("")
+                            }
                         }
                     }
                     csvWrite.writeNext(arrStr.toList().toTypedArray())
                 }
                 csvWrite.close()
                 cursor.close()
-                Toast.makeText(context,"Exported to " + exportDir,Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Exported to $exportDir", Toast.LENGTH_LONG).show()
             } catch (sqlEx: Exception) {
                 Log.e("Export", sqlEx.message, sqlEx)
             }
