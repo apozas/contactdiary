@@ -15,13 +15,13 @@ package com.apozas.contactdiary
     Copyright 2020 by Alex Pozas-Kerstjens (apozas)
 */
 
-import android.content.ComponentName
-import android.content.ContentValues
-import android.content.Context
+import android.app.Activity
+import android.content.*
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.database.Cursor.*
 import android.database.sqlite.SQLiteDatabase
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -30,11 +30,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
 import com.apozas.contactdiary.ContactDatabase.Companion.SQL_CREATE_ENTRIES
 import com.apozas.contactdiary.ContactDatabase.Companion.SQL_DELETE_ENTRIES
-import com.opencsv.CSVReader
-import com.opencsv.CSVWriter
-import java.io.File
-import java.io.FileReader
-import java.io.FileWriter
+import java.io.BufferedReader
+import java.io.InputStreamReader
 import java.text.SimpleDateFormat
 
 
@@ -47,6 +44,10 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
+        private val EXPORT_DB = 1
+        private val IMPORT_DB = 2
+        private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.preferences, rootKey)
 
@@ -109,14 +110,29 @@ class SettingsActivity : AppCompatActivity() {
 
             val export = findPreference<Preference>("export")
             export!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                exportDB(requireContext())
+                createFile()
                 true
             }
 
             val import = findPreference<Preference>("import")
             import!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                importDB(requireContext())
+                readFile()
                 true
+            }
+        }
+
+        override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
+            if ((requestCode == EXPORT_DB) && (resultCode == Activity.RESULT_OK)) {
+                // The result data contains a URI for the document or directory that
+                // the user selected.
+                resultData?.data?.also { uri ->
+                    exportDB(requireActivity().applicationContext, uri)
+                }
+            }
+            if ((requestCode == IMPORT_DB) && (resultCode == Activity.RESULT_OK)) {
+                resultData?.data?.also { uri ->
+                    importDB(requireActivity().applicationContext, uri)
+                }
             }
         }
 
@@ -141,26 +157,22 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        private fun exportDB(context: Context) {
+        private fun exportDB(context: Context, uri: Uri) {
             val dbHelper = FeedReaderDbHelper(context)
-            val exportDir = File(context.getExternalFilesDir(null), "")
             val dateFormatter = SimpleDateFormat("yyyy-LL-dd-HH:mm")
-            if (!exportDir.exists()) {
-                exportDir.mkdirs()
-            }
-            val file = File(exportDir, "ContactDiary_database.csv")
             try {
-                file.createNewFile()
-                val csvWrite = CSVWriter(FileWriter(file))
+                val csvWriter = context.contentResolver.openOutputStream(uri)
                 val db: SQLiteDatabase = dbHelper.readableDatabase
                 val cursor: Cursor = db.rawQuery(
-                    "SELECT * FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME}",
+                    "SELECT * FROM ${feedEntry.TABLE_NAME}",
                     null
                 )
                 val columnNames =
                     cursor.columnNames.drop(1).toMutableList()    // We don't care of the _id column
                 columnNames[columnNames.indexOf("CloseContact")] = "DistanceKept"
-                csvWrite.writeNext(columnNames.toTypedArray())
+                csvWriter!!.write(
+                    columnNames.joinToString(separator = "\t", postfix = "\n").toByteArray()
+                )
                 while (cursor.moveToNext()) {
                     //Which column you want to export
                     val columns = cursor.columnCount
@@ -202,76 +214,132 @@ class SettingsActivity : AppCompatActivity() {
                             }
                         }
                     }
-                    csvWrite.writeNext(arrStr.toList().toTypedArray())
+                    csvWriter!!.write(
+                        arrStr.joinToString(separator = "\t", postfix = "\n").toByteArray()
+                    )
                 }
-                csvWrite.close()
+                csvWriter.close()
                 cursor.close()
-                Toast.makeText(context, "Exported to $exportDir", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Database exported", Toast.LENGTH_LONG).show()
             } catch (sqlEx: Exception) {
                 Log.e("Export", sqlEx.message, sqlEx)
             }
         }
 
-        private fun importDB(context: Context) {
-            val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+        private fun importDB(context: Context, uri: Uri) {
             val dbHelper = FeedReaderDbHelper(context)
             val db = dbHelper.writableDatabase
-            val importDir = File(context.getExternalFilesDir(null), "")
-            val file = File(importDir, "ContactDiary_database.csv")
-            val dateFormatter = SimpleDateFormat("yyyy-MM-dd-HH:mm")
-            try {
-                db.execSQL(SQL_DELETE_ENTRIES)
-                db.execSQL(SQL_CREATE_ENTRIES)
-                val reader = CSVReader(FileReader(file))
-                reader.readNext()    // Skip first line (contains column names)
-                var nextLine = reader.readNext()
-                while (nextLine != null) {
-                    val type = nextLine[0]
-                    val name = nextLine[1]
-                    val place = nextLine[2]
-                    val beginTime = nextLine[3]
-                    val endTime = nextLine[4]
-                    val phone = nextLine[5]
-                    val relative = nextLine[6]
-                    val companions = nextLine[7]
-                    val encounterType = nextLine[8]
-                    val distance = nextLine[9]
-                    val notes = nextLine[10]
+            val csvReader = BufferedReader(
+                InputStreamReader(
+                    context.contentResolver.openInputStream(
+                        uri
+                    )
+                )
+            )
 
-                    val values = ContentValues().apply {
-                        put(feedEntry.TYPE_COLUMN, type)
-                        put(feedEntry.NAME_COLUMN, name)
-                        put(feedEntry.PLACE_COLUMN, place)
-                        put(feedEntry.TIME_BEGIN_COLUMN, dateFormatter.parse(beginTime).time)
-                        put(feedEntry.TIME_END_COLUMN, dateFormatter.parse(endTime).time)
-                        put(feedEntry.PHONE_COLUMN, phone)
-                        put(feedEntry.RELATIVE_COLUMN, when (relative) {
-                            "Yes" -> 1
-                            "No" -> 3
-                            else -> -1
-                        })
-                        put(feedEntry.CLOSECONTACT_COLUMN, when (distance) {
-                            "Yes" -> 1
-                            "No" -> 3
-                            "Unsure" -> 5
-                            else -> -1
-                        })
-                        put(feedEntry.ENCOUNTER_COLUMN, when (encounterType) {
-                            "Indoors" -> 1
-                            "Outdoors" -> 3
-                            else -> -1
-                        })
-                        put(feedEntry.COMPANIONS_COLUMN, companions)
-                        put(feedEntry.NOTES_COLUMN, notes)
+            val columnNames = csvReader.readLine().split("\t")
+            if (columnNames != listOf(
+                    feedEntry.TYPE_COLUMN, feedEntry.NAME_COLUMN, feedEntry.PLACE_COLUMN,
+                    feedEntry.TIME_BEGIN_COLUMN, feedEntry.TIME_END_COLUMN, feedEntry.PHONE_COLUMN,
+                    feedEntry.RELATIVE_COLUMN, feedEntry.COMPANIONS_COLUMN,
+                    feedEntry.ENCOUNTER_COLUMN, "DistanceKept", feedEntry.NOTES_COLUMN
+                )
+            ) {
+                Toast.makeText(
+                    requireActivity().applicationContext,
+                    "There is a problem with the database",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                val dateFormatter = SimpleDateFormat("yyyy-MM-dd-HH:mm")
+                try {
+                    db.execSQL(SQL_DELETE_ENTRIES)
+                    db.execSQL(SQL_CREATE_ENTRIES)
+                    var nextLine = csvReader.readLine()
+                    while (nextLine != null) {
+                        var nextLineList = nextLine.split("\t")
+                        val type = nextLineList[0]
+                        val name = nextLineList[1]
+                        val place = nextLineList[2]
+                        val beginTime = nextLineList[3]
+                        val endTime = nextLineList[4]
+                        val phone = nextLineList[5]
+                        val relative = nextLineList[6]
+                        val companions = nextLineList[7]
+                        val encounterType = nextLineList[8]
+                        val distance = nextLineList[9]
+                        val notes = nextLineList[10]
+
+                        val values = ContentValues().apply {
+                            put(feedEntry.TYPE_COLUMN, type)
+                            put(feedEntry.NAME_COLUMN, name)
+                            put(feedEntry.PLACE_COLUMN, place)
+                            put(feedEntry.TIME_BEGIN_COLUMN, dateFormatter.parse(beginTime).time)
+                            put(feedEntry.TIME_END_COLUMN, dateFormatter.parse(endTime).time)
+                            put(feedEntry.PHONE_COLUMN, phone)
+                            put(
+                                feedEntry.RELATIVE_COLUMN, when (relative) {
+                                    "Yes" -> 1
+                                    "No" -> 3
+                                    else -> -1
+                                }
+                            )
+                            put(
+                                feedEntry.CLOSECONTACT_COLUMN, when (distance) {
+                                    "Yes" -> 1
+                                    "No" -> 3
+                                    "Unsure" -> 5
+                                    else -> -1
+                                }
+                            )
+                            put(
+                                feedEntry.ENCOUNTER_COLUMN, when (encounterType) {
+                                    "Indoors" -> 1
+                                    "Outdoors" -> 3
+                                    else -> -1
+                                }
+                            )
+                            put(feedEntry.COMPANIONS_COLUMN, companions)
+                            put(feedEntry.NOTES_COLUMN, notes)
+                        }
+                        db?.insert(feedEntry.TABLE_NAME, null, values)
+                        nextLine = csvReader.readLine()
                     }
-                    db?.insert(feedEntry.TABLE_NAME, null, values)
-                    nextLine = reader.readNext()
+                    Toast.makeText(context, "Database imported", Toast.LENGTH_LONG).show()
+                } catch (e: java.lang.Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(context, "The specified file was not found", Toast.LENGTH_LONG)
+                        .show()
                 }
-                Toast.makeText(context, "Database imported", Toast.LENGTH_LONG).show()
-            } catch (e: java.lang.Exception) {
-                e.printStackTrace()
-                Toast.makeText(context, "The specified file was not found", Toast.LENGTH_LONG)
-                    .show()
+            }
+        }
+
+        private fun createFile() {
+            val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "text/csv"
+                putExtra(Intent.EXTRA_TITLE, "ContactDiary.csv")
+            }
+            startActivityForResult(intent, EXPORT_DB)
+        }
+
+        private fun readFile() {
+            val intent = Intent(Intent.ACTION_GET_CONTENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "text/csv"
+            }
+            try {
+                startActivityForResult(
+                    Intent.createChooser(intent, "Select the database to import"),
+                    IMPORT_DB
+                )
+            } catch (ex: ActivityNotFoundException) {
+                // Potentially direct the user to the Market with a Dialog
+                Toast.makeText(
+                    requireActivity().applicationContext,
+                    "Please install a File Manager",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
