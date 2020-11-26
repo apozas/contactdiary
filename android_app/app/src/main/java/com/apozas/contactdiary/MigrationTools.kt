@@ -49,14 +49,14 @@ class MigrationTools {
         }
     }
 
-    fun migrateTo4 (dataBase: SQLiteDatabase) {
+    fun migrateTo4(dataBase: SQLiteDatabase) {
         val query = "Select * from tmp_table"
         val cursor = dataBase.rawQuery(query, null)
 
         cursor.use { cursor ->
             while (cursor.moveToNext()) {
                 val id = cursor.getInt(cursor.getColumnIndex("_id"))
-                val time = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+                val time = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
                 val duration = cursor.getLong(cursor.getColumnIndex(feedEntry.DURATION_COLUMN))
                 val hours = duration / 60
                 val minutes = duration % 60
