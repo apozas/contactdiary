@@ -20,10 +20,10 @@ import android.database.sqlite.SQLiteDatabase
 import java.util.*
 
 class MigrationTools {
-    val cal: Calendar = Calendar.getInstance()
+    private val cal: Calendar = Calendar.getInstance()
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
 
-    fun migrateTo3 (dataBase: SQLiteDatabase) {
+    fun migrateTo3(dataBase: SQLiteDatabase) {
         val query = "Select * from " + feedEntry.TABLE_NAME
         val cursor = dataBase.rawQuery(query, null)
 
