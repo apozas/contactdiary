@@ -25,7 +25,6 @@
     <string name="event_saved">Event saved</string>
     <string name="edit_event">Edit event</string>
     <string name="edit_contact">Edit contact</string>
-    <string name="duration">Duration</string>
     <string name="options">Options</string>
     <string name="entry_deleted">Entry deleted</string>
     <string name="contact_developer_summary">Tell me what you think about the app, or problems you have encountered</string>
@@ -86,9 +85,6 @@
     <string name="thanks_polish"><b>Polish translation - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portuguese translation - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
     <string name="thanks_swedish"><b>Swedish translation - </b><a href="https://github.com/nlssn">nlssn</a></string>
-    <string name="duration_instructions">Insert minutes or hh:mm</string>
-    <string name="contact_duration_title">Contact duration</string>
-    <string name="event_duration_title">Event duration</string>
     <string name="theme">Theme</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>

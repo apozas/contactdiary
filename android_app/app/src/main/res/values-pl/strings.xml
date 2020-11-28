@@ -25,7 +25,6 @@
     <string name="event_saved">Wydarzenie zapisane</string>
     <string name="edit_event">Edytuj wydarzenie</string>
     <string name="edit_contact">Edytuj spotkanie</string>
-    <string name="duration">Trwanie</string>
     <string name="options">Opcje</string>
     <string name="entry_deleted">Wpis usunięty</string>
     <string name="contact_developer_summary">Daj znać, co sądzisz o programie albo poinformuj o napotkanych błędach</string>
@@ -70,7 +69,4 @@
     <string name="notes_optional">Notatki (opcjonalnie)</string>
     <string name="acknowledgments">Dzięki</string>
     <string name="about">O</string>
-    <string name="contact_duration_title">Czas trwania kontaktu</string>
-    <string name="event_duration_title">Czas trwania wydarzenia</string>
-    <string name="duration_instructions">Wstaw minuty lub gg:mm</string>
 </resources>

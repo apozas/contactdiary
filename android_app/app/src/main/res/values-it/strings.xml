@@ -22,7 +22,6 @@
     <string name="place">Luogo</string>
     <string name="date">Data</string>
     <string name="time">Ora</string>
-    <string name="duration">Durata</string>
     <string name="companions">Compagni (facoltativi)</string>
     <string name="phone">Telefono (facoltativo)</string>
     <string name="encounter_type">Tipo di incontro</string>
@@ -69,7 +68,4 @@
     <string name="entries_duplicated">Voci duplicate</string>
     <string name="acknowledgments">Grazie</string>
     <string name="about">Di</string>
-    <string name="event_duration_title">Durata dell\'evento</string>
-    <string name="contact_duration_title">Durata del contatto</string>
-    <string name="duration_instructions">Inserisci minuti o oo:mm</string>
 </resources>

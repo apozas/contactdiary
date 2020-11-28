@@ -25,7 +25,6 @@
     <string name="event_saved">Händelsen sparad</string>
     <string name="edit_event">Redigera händelse</string>
     <string name="edit_contact">Redigera kontakt</string>
-    <string name="duration">Varaktighet</string>
     <string name="options">Inställningar</string>
     <string name="entry_deleted">Inlägg raderat</string>
     <string name="contact_developer_summary">Berätta vad du tycker om appen eller de problem du har stött på</string>
@@ -70,7 +69,4 @@
     <string name="notes_optional">Anteckningar (valfritt)</string>
     <string name="acknowledgments">Tack</string>
     <string name="about">Handla om</string>
-    <string name="event_duration_title">Händelsens varaktighet</string>
-    <string name="contact_duration_title">Händelsens kontakt</string>
-    <string name="duration_instructions">Infoga minuter eller tt:mm</string>
 </resources>

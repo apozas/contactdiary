@@ -22,7 +22,6 @@
     <string name="emptydiary">El diario está vacío</string>
     <string name="contact_saved">Contacto guardado</string>
     <string name="event_saved">Evento guardado</string>
-    <string name="duration">Duración</string>
     <string name="edit_event">Editar evento</string>
     <string name="edit_contact">Editar contacto</string>
     <string name="entry_deleted">Entrada eliminada</string>
@@ -79,9 +78,6 @@
     <string name="thanks_indonesian"><b>Traducción al indonesio - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Traducción al polaco - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_swedish"><b>Traducción al sueco - </b><a href="https://github.com/nlssn">nlssn</a></string>
-    <string name="contact_duration_title">Duración del contacto</string>
-    <string name="event_duration_title">Duración del evento</string>
-    <string name="duration_instructions">Introduce minutos o hh:mm</string>
     <string name="theme">Tema</string>
     <string name="theme_light">Claro</string>
     <string name="theme_dark">Oscuro</string>

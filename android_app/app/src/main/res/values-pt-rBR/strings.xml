@@ -25,7 +25,6 @@
     <string name="event_saved">Evento salvo</string>
     <string name="edit_event">Editar evento</string>
     <string name="edit_contact">Editar contato</string>
-    <string name="duration">Duração</string>
     <string name="options">Opções</string>
     <string name="entry_deleted">Entrada excluída</string>
     <string name="contact_developer_summary">Diga-me o que pensa sobre o aplicativo, ou problemas que você tenha encontrado</string>
@@ -81,7 +80,4 @@
     <string name="thanks_polish"><b>Tradução para Polonês - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Tradução para Português - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
     <string name="thanks_swedish"><b>Tradução para Sueco - </b><a href="https://github.com/nlssn">nlssn</a></string>
-    <string name="duration_instructions">Inserir minutos ou hh:mm</string>
-    <string name="contact_duration_title">Duração do contato</string>
-    <string name="event_duration_title">Duração do evento</string>
 </resources>

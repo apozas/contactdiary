@@ -25,7 +25,6 @@
     <string name="event_saved">Gebeurtenis opgeslagen</string>
     <string name="edit_event">Gebeurtenis bewerken</string>
     <string name="edit_contact">Contactpersoon bewerken</string>
-    <string name="duration">Duur</string>
     <string name="options">Opties</string>
     <string name="entry_deleted">Item verwijderd</string>
     <string name="contact_developer_summary">Vertel me wat je van de app vindt of wat voor problemen je bent tegengekomen</string>
@@ -81,9 +80,6 @@
     <string name="thanks_polish"><b>Poolse vertaling - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portugese vertaling - </b><a href="https://github.com/riuri">riuri</a> (Brazilië)</string>
     <string name="thanks_swedish"><b>Zweedse vertaling - </b><a href="https://github.com/nlssn">nlssn</a></string>
-    <string name="contact_duration_title">Contactduur</string>
-    <string name="event_duration_title">Gebeurtenisduur</string>
-    <string name="duration_instructions">Voer het aantal minuten of uu:mm in</string>
     <string name="theme">Thema</string>
     <string name="theme_light">Licht</string>
     <string name="theme_dark">Donker</string>
