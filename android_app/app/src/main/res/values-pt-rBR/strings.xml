@@ -72,13 +72,14 @@
     <string name="about">Sobre</string>
     <string name="thanks_text">Embora o Diário de Contatos tenha começado como um projeto individual, ele se beneficiou de contribuições altruístas inestimáveis de muitas pessoas. Meus sinceros agradecimentos a todos nesta página.</string>
     <string name="thanks_homescreen"><b>Atalhos da tela inicial - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
-    <string name="thanks_dutch"><b>Tradução para Holandês - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_dutch"><b>Tradução para Holandês - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> e <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Tradução para Finlandês - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
     <string name="thanks_french"><b>Tradução para Francês - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
     <string name="thanks_german"><b>Tradução para Alemão - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> e <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Tradução para Italiano - </b><a href="https://github.com/igor-cali">igor-cali</a> e <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Tradução para Indonésio - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Tradução para Polonês - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Tradução para Português - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
     <string name="thanks_swedish"><b>Tradução para Sueco - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="duration_instructions">Inserir minutos ou hh:mm</string>
     <string name="contact_duration_title">Duração do contato</string>

@@ -72,15 +72,25 @@
     <string name="about">Sobre</string>
     <string name="thanks_text">Encara que Diari de Contactes va començar com un projecte en solitari, es va beneficiar d\'inestimables aportacions altruistes de moltes persones. El meu sincer agraïment a tothom en aquesta pàgina.</string>
     <string name="thanks_homescreen"><b>Dreceres de pantalla d\'inici - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
-    <string name="thanks_dutch"><b>Traducció a l\'holandès - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_dutch"><b>Traducció a l\'holandès - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> i <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Traducció al finlandès - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
     <string name="thanks_french"><b>Traducció al francès- </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
     <string name="thanks_german"><b>Traducció a l\'alemany - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> and <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Traducció a l\'italià - </b><a href="https://github.com/igor-cali">igor-cali</a> and <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Traducció a l\'indonesi - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Traducció al polonès - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Traducció al portuguès - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
     <string name="thanks_swedish"><b>Traducció al suec - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="contact_duration_title">Durada del contacte</string>
     <string name="event_duration_title">Durada de l\'esdeveniment</string>
     <string name="duration_instructions">Inseriu minuts o hh:mm</string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Clar</string>
+    <string name="theme_dark">Fosc</string>
+    <string name="theme_system">Seguir sistema</string>
+    <string name="backup">Còpia de seguretat i restauració</string>
+    <string name="import_database">Importar base de dades</string>
+    <string name="import_database_summary">Carregar una base de dades desada</string>
+    <string name="export_database">Exportar base de dades</string>
+    <string name="export_database_summary">Desar la base de dades en format CSV</string>
 </resources>

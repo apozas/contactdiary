@@ -71,7 +71,7 @@
     <string name="about">Acerca de</string>
     <string name="thanks_text">Aunque Diario de Contactos comenzó como un proyecto en solitario, se ha beneficiado de las invaluables contribuciones altruistas de muchas personas. Mi más sincero agradecimiento a todos en esta página.</string>
     <string name="thanks_homescreen"><b>Accesos directos - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
-    <string name="thanks_dutch"><b>Traducción al holandés - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_dutch"><b>Traducción al holandés - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> y <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Traducción al finlandés - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
     <string name="thanks_french"><b>Traducción al francés - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
     <string name="thanks_german"><b>Traducción al alemán - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> and <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
@@ -85,5 +85,11 @@
     <string name="theme">Tema</string>
     <string name="theme_light">Claro</string>
     <string name="theme_dark">Oscuro</string>
-    <string name="theme_system">Sistema</string>
+    <string name="theme_system">Seguir sistema</string>
+    <string name="thanks_portuguese"><b>Traducción al portugués - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
+    <string name="export_database_summary">Guardar la base de datos en formato CSV</string>
+    <string name="export_database">Exportar base de datos</string>
+    <string name="import_database_summary">Cargar una base de datos guardada</string>
+    <string name="import_database">Importar base de datos</string>
+    <string name="backup">Copia de seguridad y restauración</string>
 </resources>
