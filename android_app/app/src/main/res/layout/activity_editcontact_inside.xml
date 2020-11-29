@@ -39,20 +39,20 @@
                             android:layout_height="match_parent"
                             android:background="@color/colorPrimary"
                             android:src="@drawable/ic_duplicate"
-                            android:paddingRight="@dimen/fab_margin"
+                            android:paddingRight="@dimen/fab_margin_right"
                             android:onClick="duplicateContact"
                             android:contentDescription="@string/duplicate"
-                            android:paddingEnd="@dimen/fab_margin" />
+                            android:paddingEnd="@dimen/fab_margin_right" />
 
                         <ImageButton
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:background="@color/colorPrimary"
                             android:src="@drawable/ic_delete"
-                            android:paddingRight="@dimen/fab_margin"
+                            android:paddingRight="@dimen/fab_margin_right"
                             android:onClick="deleteContact"
                             android:contentDescription="@string/delete"
-                            android:paddingEnd="@dimen/fab_margin" />
+                            android:paddingEnd="@dimen/fab_margin_right" />
                     </LinearLayout>
                 </androidx.appcompat.widget.Toolbar>
             </com.google.android.material.appbar.AppBarLayout>
@@ -338,9 +338,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
+        android:layout_marginEnd="@dimen/fab_margin_right"
         android:clickable="true"
         android:focusable="true"
         app:elevation="6dp"

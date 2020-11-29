@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -322,13 +323,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
         android:clickable="true"
         android:focusable="true"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/ic_ok"
         tools:ignore="VectorDrawableCompat"
-        android:layout_marginEnd="@dimen/fab_margin" />
+        android:layout_marginEnd="@dimen/fab_margin_right" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

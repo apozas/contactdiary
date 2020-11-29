@@ -285,13 +285,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
         android:clickable="true"
         android:focusable="true"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
         app:srcCompat="@drawable/ic_ok"
         tools:ignore="VectorDrawableCompat"
-        android:layout_marginEnd="@dimen/fab_margin" />
+        android:layout_marginEnd="@dimen/fab_margin_right" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
