@@ -67,5 +67,17 @@
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Tee kopio tänään</string>
     <string name="select" comment="select. Conjugation should be infinitive">Valitse</string>
     <string name="acknowledgments">Kiitos</string>
-    <string name="about">Noin</string>
+    <string name="about">Tietoja</string>
+    <string name="notes">Huomautukset</string>
+    <string name="thanks_text">Vaikka Yhteystietopäiväkirja aloitti yksityisprojektina, se on hyötynyt monien ihmisten korvaamattomasta ja pyyteettömästä panoksesta. Rehelliset kiitokseni kaikille tällä sivulla oleville.</string>
+    <string name="thanks_homescreen"><b>Kotinäytön pikakuvakkeet - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Hollanninkielinen käännös - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> ja <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Suomenkielinen käännös - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Ranskankielinen käännös - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Saksankielinen käännös - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> ja <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Italiankielinen käännös - </b><a href="https://github.com/igor-cali">igor-cali</a> ja <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Indonesiankielinen käännös - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Puolankielinen käännös - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portugalkielinen käännös - </b><a href="https://github.com/riuri">riuri</a> (Brasilia)</string>
+    <string name="thanks_swedish"><b>Ruotsinkielinen käännös - </b><a href="https://github.com/nlssn">nlssn</a></string>
 </resources>
