@@ -6,6 +6,7 @@ Kontakttagebuch wird dich einmal am Tag auffordern, die Gruppenbegegnungen und K
 <li> Einstellbare Benachrichtigungszeit, damit die Erinnerung dich nicht im Tagesablauf stört.</li>
 <li> Option um nur potenziell risikoreiche Begegnungen anzuzeigen.</li>
 <li> Automatisches Löschen von Einträgen die älter als 15 Tage sind.</li>
+<li> Exportieren Sie Ihre neuesten Kontakte in eine CSV-Datei, die Sie für die Behörden freigeben können.</li>
 <li> NUR EINE BERECHTIGUNG, die benötigt wird um die Erinnerung nach einem Neustart zu ermöglichen. Sonst nichts.</li>
 <li> Insbesondere, KEINE INTERNETZUGRIFF-Berechtigung. Die Informationen die du einträgst sind allein deine und sie verlassen niemals dein Gerät.</li>
 </ul>

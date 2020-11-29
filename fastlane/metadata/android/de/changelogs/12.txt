@@ -1,0 +1,11 @@
+Diese Version bringt einige seit langem gefeierte neue Funktionen ;)
+
+- DUNKLER MODUS. Sie werden nicht länger geblendet, wenn Sie Ihre Kontakte im Dunkeln eingeben.
+- Kontakttabelle importieren/exportieren. Jetzt können Sie Ihre Kontakte in eine CSV-Datei exportieren, um sie für die Behörden freizugeben.
+- Nach Anhörung der Stellungnahmen wurde die Dauer durch die Anfangs- und Endzeit ersetzt.
+- Keine anderen Felder als der Name sind mehr obligatorisch.
+- Einige Fehler wurden beseitigt.
+- Neue Übersetzungen verfügbar: Brasilianisches Portugiesisch (danke an riuri).
+- Kleine Updates und Korrekturen in den anderen Übersetzungen.
+
+Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary

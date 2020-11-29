@@ -1,0 +1,11 @@
+Questa versione offre alcune nuove funzionalità acclamate da tempo ;)
+
+- MODALITÀ SCURA. Non sarai più accecato quando inserisci i tuoi contatti al buio.
+- Importa/Esporta tabella contatti. Ora puoi esportare i tuoi contatti in un file CSV, in modo da poterlo condividere con le autorità.
+- Dopo aver ascoltato le opinioni, la durata è stata sostituita con l'ora di inizio e l'ora di fine.
+- Nessun campo diverso dal Nome è più obbligatorio.
+- Alcuni bug sono stati eliminati.
+- Sono disponibili nuove traduzioni: portoghese brasiliano (grazie a riuri).
+- Piccoli aggiornamenti e correzioni nelle altre traduzioni.
+
+Se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

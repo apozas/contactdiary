@@ -1,0 +1,11 @@
+Esta versión trae algunas características nuevas aclamadas durante mucho tiempo ;)
+
+- MODO OSCURO. Ya no estará cegado al ingresar sus contactos en la oscuridad.
+- Importar/exportar la lista de contactos. Ahora puedes exportar tus contactos a un archivo CSV, para que puedas compartirlo con las autoridades.
+- Tras escuchar opiniones, se ha sustituido la duración por la hora de inicio y hora de finalización del contacto.
+- Ningún campo a parte del Nombre es obligatorio.
+- Se han solucionado algunos errores.
+- Hay nuevas traducciones disponibles: portugués brasileño (gracias a riuri).
+- Pequeñas actualizaciones y correcciones en las otras traducciones.
+
+Si deseas ayudar a traducir Diario de Contactos a tu idioma, visita http://www.crowdin.com/project/contactdiary
