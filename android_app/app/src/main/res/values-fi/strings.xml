@@ -10,12 +10,12 @@
     <string name="date">Päivämäärä</string>
     <string name="time">Aika</string>
     <string name="place">Paikka</string>
-    <string name="companions">Seuralaiset (vapaaehtoinen)</string>
+    <string name="companions">Seuralaiset</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Luuletko, että pidit etäisyyden?</string>
     <string name="name">Nimi</string>
     <string name="known_contact">Sukulainen vai läheinen ystävä?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Luuletko, että pidit etäisyyden?</string>
-    <string name="phone">Puhelinnumero (vapaaehtoinen)</string>
+    <string name="phone">Puhelinnumero</string>
     <string name="unsure">Epävarma</string>
     <string name="encounter_type">Kohtaamisen tyyppi</string>
     <string name="indoors">Sisätiloissa</string>
@@ -47,7 +47,7 @@
     <string name="entries_selected">" merkinnät valittu"</string>
     <string name="privacy_title">Tietosuojakäytäntö</string>
     <string name="privacy_intro">Yhteystietopäiväkirja jaetaan siinä toivossa, että se olisi hyödyllinen, mutta ILMAN MITÄÄN TAKUUTA; ilman edes epäsuoraa takuuta KAUPALLISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Tätä sivua käytetään tiedottamaan kävijöille minun käytännöistäni henkilökohtaisten tietojen keruun, käytön, ja paljastumisen suhteen, jos joku päättää käyttää Yhteystietopäiväkirjaa. Lyhyesti sanottuna, ja koska Yhteystietopäiväkirja ei voi muodostaa yhteyttä Internetiin, mitään henkilötietoja ei tallenneta eikä kopioida käyttäjän laitteen ulkopuolelle. Jos päätät käyttää Yhteystietopäiväkirjaa, niin suostut tietojen keruuseen (ei mitään) ja käyttöön tähän käytäntöön liittyen. Henkilökohtaisia tietoja, joita Yhteystietopäiväkirja kerää, käytetään sen palvelun tarjoamiseen. Kuten edellä on todettu, en voi ja enkä näin ollen käytä tai jaa tietojasi kenenkään kanssa.</string>
-    <string name="privacy_icu">Yhteystietopäiväkirjan käyttö edellyttää, että syötät tiettyjä henkilökohtaisesti tunnistettavissa olevia tietoja, eli nimiä, paikkoja ja (vapaaehtoisesti) puhelinnumeroita. Tiedot, joita Yhteystieto Päiväkirja pyytää, säilytetään laitteellasi ja minä en kerää niitä millään tavalla.</string>
+    <string name="privacy_icu">Yhteystietopäiväkirjan käyttö edellyttää, että syötät tiettyjä henkilökohtaisesti tunnistettavissa olevia tietoja, eli nimiä ja (vapaaehtoisesti) paikkoja ja puhelinnumeroita. Tiedot, joita Yhteystieto Päiväkirja pyytää, säilytetään laitteellasi ja minä en kerää niitä millään tavalla.</string>
     <string name="privacy_cookies">Evästeet ovat tiedostoja, joissa on pieni määrä tietoja, joita käytetään yleisesti nimettöminä yksilöllisinä tunnisteina. Nämä lähetetään selaimeesi sivustoilta, joilla käyt ja jotka tallennetaan laitteesi sisäiseen muistiin.\n\nYhteystiedot Päiväkirja ei käytä mitään evästeitä, ei ensimmäisen osapuolen eikä kolmannen osapuolen.\n\nSamalla tavalla mitään palvelua ei ole delegoitu kolmansille osapuolille. Yhteystiedot Päiväkirjalle antamasi tiedot eivät koskaan poistu laitteestasi.</string>
     <string name="privacy_security">Edelleen, mitään Yhteystietopäiväkirjaan syöttämiäsi tietoja ei koskaan lähde laitteeltasi. Tämä seikka voidaan aina arvioida tarkastamalla Yhteystietopäiväkirjan lähdekoodia, joka on saatavilla osoitteessa <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Näin ollen sovelluksen turvallisuus ja eheys liittyvät laitteesi fyysiseen turvallisuuteen ja eheyteen, joista en ota vastuuta.</string>
     <string name="privacy_changes">Saatan päivittää tätä tietosuojakäytäntöä ajoittain. Täten sinua kehotetaan tarkastelemaan tätä sivua säännöllisin väliajoin muutosten varalta. Ilmoitan sinulle kaikista muutoksista julkaisemalla uuden tietosuojakäytännön tälle sivulle.\n\nTämä politiikka on voimassa 2020-09-08 alkaen</string>
@@ -66,7 +66,6 @@
     <string name="entries_duplicated">Merkinnät kopioitu</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Tee kopio tänään</string>
     <string name="select" comment="select. Conjugation should be infinitive">Valitse</string>
-    <string name="notes_optional">Huomautukset (vapaaehtoinen)</string>
     <string name="acknowledgments">Kiitos</string>
     <string name="about">Noin</string>
 </resources>

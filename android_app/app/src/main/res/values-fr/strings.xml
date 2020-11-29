@@ -10,12 +10,12 @@
     <string name="date">Date</string>
     <string name="time">Heure</string>
     <string name="place">Lieu</string>
-    <string name="companions">Personnes présentes (optionnel)</string>
+    <string name="companions">Personnes présentes</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Pensez-vous avoir maintenu la distance?</string>
     <string name="name">Nom</string>
     <string name="known_contact">Famille ou ami proche?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Pensez-vous avoir respecté la distance entre vous?</string>
-    <string name="phone">Téléphone (optionnel)</string>
+    <string name="phone">Téléphone</string>
     <string name="unsure">Pas sûr</string>
     <string name="encounter_type">Type de rencontre</string>
     <string name="indoors">À l\'intérieur</string>
@@ -47,7 +47,7 @@
     <string name="entries_selected">" entrées sélectionnées"</string>
     <string name="privacy_title">Charte de confidentialité</string>
     <string name="privacy_intro">Journal des Contacts est distribué dans l\'espoir qu\'il sera utile, MAIS SANS AUCUNE GARANTIE; sans même la garantie implicite de COMMERCIALITÉ ou d\'ADAPTATION À UN USAGE PARTICULIER. Ce message a pour but d\'informer les visiteurs à propos de mes politiques de collecte, d\'utilisation et de partage d\'informations personnelles des personnes ayant décidées d\'utiliser Journal des Contacts. Pour faire court, sachant que Journal des Contacts ne peut pas se connecter à Internet, aucune information personnelle ne sera stockée ou copiée en dehors de l\'appareil de l\'utilisateur. Si vous choisissez d\'utiliser Journal des Contacts, alors vous devez accepter la collecte (aucune) et l\'utilisation d\'informations au regard de cette politique. Les informations personnelles que Journal des Contacts collecte sont utilisées afin de fournir son service. Comme explicité ci-dessus, je ne peux pas et n\'utiliserais ou ne partagerais pas vos informations à quiconque.</string>
-    <string name="privacy_icu">L\'utilisation de Journal des Contacts exige que vous saisissiez certaines informations personnelles identifiables, à savoir les Noms, Lieux et (optionnellement) les Numéros de téléphone. Les informations que Journal des Contacts demande seront conservées sur votre appareil et ne seront en aucun cas collectées par moi.</string>
+    <string name="privacy_icu">L\'utilisation de Journal des Contacts exige que vous saisissiez certaines informations personnelles identifiables, à savoir les noms et (optionnellement) lieux et les numéros de téléphone. Les informations que Journal des Contacts demande seront conservées sur votre appareil et ne seront en aucun cas collectées par moi.</string>
     <string name="privacy_cookies">Les cookies sont des fichiers contenant une petite quantité de données qui sont couramment utilisés comme identificateurs uniques anonymes. Ceux-ci sont envoyés à votre navigateur à partir des sites Web que vous visitez et sont stockés dans la mémoire interne de votre appareil.\n\nJournal des Contacts n\'utilise aucun cookie, ni propriétaires ni de tiers\n\nDe la même manière, aucun service n\'est délégué à des tiers. Les informations que vous entrez dans Journal des Contacts ne quittent jamais votre appareil.</string>
     <string name="privacy_security">Encore une fois, aucune des informations que vous entrez dans Journal des Contacts ne quitte votre appareil. Vous pouvez toujours le vérifier en inspectant le code source de Journal des Contacts, disponible sur <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Dès lors, leur sécurité et leur intégrité sont liées à la sécurité physique et à l\'intégrité de votre appareil, dont je ne suis en aucun cas responsable.</string>
     <string name="privacy_changes">Il se peut que je mette à jour cette Charte de Confidentialité de temps à autre. Ainsi, je vous conseille de consulter cette page régulièrement pour surveiller toute modification. Je vous informerai de tout changement en affichant la nouvelle Charte de Confidentialité sur cette page.\n\nCette charte est en vigueur à partir du 08/09/2020</string>
@@ -66,7 +66,7 @@
     <string name="entries_duplicated">Entrées dupliquées</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Faire une copie aujourd\'hui</string>
     <string name="select" comment="select. Conjugation should be infinitive">Sélectionner</string>
-    <string name="notes_optional">Notes (optionnel)</string>
+    <string name="notes">Notes</string>
     <string name="acknowledgments">Merci</string>
     <string name="about">À propos</string>
 </resources>

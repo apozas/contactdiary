@@ -10,12 +10,12 @@
     <string name="date">Datum</string>
     <string name="time">Tijdstip</string>
     <string name="place">Locatie</string>
-    <string name="companions">Metgezellen (optioneel)</string>
+    <string name="companions">Metgezellen</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Denk je dat je afstand gehouden hebt?</string>
     <string name="name">Naam</string>
     <string name="known_contact">Eigen familie of goede vriend?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Denk je dat je afstand gehouden hebt?</string>
-    <string name="phone">Telefoonnummer (optioneel)</string>
+    <string name="phone">Telefoonnummer</string>
     <string name="unsure">Weet ik niet</string>
     <string name="encounter_type">Vorm van contact</string>
     <string name="indoors">Binnenshuis</string>
@@ -47,7 +47,7 @@
     <string name="entries_selected">" items geselecteerd"</string> van de app
     <string name="privacy_title">Privacybeleid</string>
     <string name="privacy_intro">Contactdagboek wordt uitgebracht in de hoop dat het nuttig zal zijn, maar ZONDER ENIGE GARANTIE; zonder de impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL. Deze pagina wordt gebruikt om bezoekers te informeren over mijn beleid met de verzameling, gebruik en openbaarmaking van persoonlijke informatie indien iemand heeft besloten om gebruik te maken van het contactdagboek. Kortom, en omdat Contactdagboek geen verbinding kan maken met het internet, wordt persoonlijke informatie niet opgeslagen of gekopieerd buiten het apparaat van de gebruiker. Als je er voor kiest om de app te gebruiken, ga je akkoord met het verzamelen (niet aan de orde) en gebruik van informatie met betrekking tot dit beleid. De persoonlijke informatie die de contactpersonenlijst verzamelt wordt gebruikt voor het verstrekken van de dienst. Zoals ik al eerder heb gezegd, kan en zal ik je informatie niet gebruiken en met niemand delen.</string>
-    <string name="privacy_icu">Het gebruik van de contactpersonenlijst vereist dat je bepaalde persoonlijk identificeerbare informatie invoert, zoals namen, locaties en (optioneel) telefoonnummers. De informatie die de app opvraagt wordt bewaard op je apparaat en wordt op geen enkele manier door mij opgehaald.</string>
+    <string name="privacy_icu">Het gebruik van de contactpersonenlijst vereist dat je bepaalde persoonlijk identificeerbare informatie invoert, zoals namen en (optioneel) locaties en telefoonnummers. De informatie die de app opvraagt wordt bewaard op je apparaat en wordt op geen enkele manier door mij opgehaald.</string>
     <string name="privacy_cookies">Cookies zijn bestanden met een kleine hoeveelheid gegevens, die vaak worden gebruikt als anonieme unieke id\'s. Deze worden verzonden naar je browser aan de websites die je bezoekt en wordt opgeslagen op het interne geheugen van je apparaat.\n\nContactdagboek gebruikt geen cookies, noch eerste, noch derde partij.\n\n Op dezelfde manier wordt geen enkele dienst aan derden gedelegeerd. De informatie die je invoert op de contactpersonenlijst zal nooit je apparaat verlaten.</string>
     <string name="privacy_security">Nogmaals, informatie die je toevoegt aan de contactpersonenlijst zal nooit je apparaat verlaten. Dit feit kan altijd worden gecontroleerd door de broncode van Contactdagboek na te kijken, welke beschikbaar is op <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. De veiligheid en integriteit ervan is dus gekoppeld aan de fysieke veiligheid en integriteit van je apparaat, waar ik geen verantwoordelijkheid voor draag.</string>
     <string name="privacy_changes">Ik kan dit privacybeleid van tijd tot tijd bijwerken. Het is dus aanbevolen om deze pagina periodiek te bekijken en te controleren op eventuele wijzigingen. Ik zal je op de hoogte houden bij eventuele wijzigingen door het nieuwe privacybeleid op deze pagina te plaatsen.\n\nDit beleid is van kracht sinds 2020-09-08.</string>
@@ -66,7 +66,7 @@
     <string name="entries_duplicated">Items gekloond</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Kopie maken</string>
     <string name="select" comment="select. Conjugation should be infinitive">Selecteren</string>
-    <string name="notes_optional">Aantekeningen (optioneel)</string>
+    <string name="notes">Aantekeningen</string>
     <string name="acknowledgments">Met dank aan</string>
     <string name="about">Over</string>
     <string name="thanks_text">Contactdagboek is begonnen als éénmansproject, maar heeft vele bijdragen vanuit de gemeenschap gehad. Mijn dank is groot aan iedereen op deze pagina.</string>

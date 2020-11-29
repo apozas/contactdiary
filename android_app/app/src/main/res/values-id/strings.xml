@@ -10,12 +10,12 @@
     <string name="date">Tanggal</string>
     <string name="time">Waktu</string>
     <string name="place">Lokasi</string>
-    <string name="companions">Pendamping (opsional)</string>
+    <string name="companions">Pendamping</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Apakah Anda pikir Anda menjaga jarak?</string>
     <string name="name">Nama</string>
     <string name="known_contact">Kerabat atau teman dekat?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Apakah Kalian menjaga jarak?</string>
-    <string name="phone">Telepon (opsional)</string>
+    <string name="phone">Telepon</string>
     <string name="unsure">Tidak yakin</string>
     <string name="encounter_type">Jenis pertemuan</string>
     <string name="indoors">Dalam ruangan</string>
@@ -47,7 +47,7 @@
     <string name="entries_selected">" entri terpilih"</string>
     <string name="privacy_title">Kebijakan privasi</string>
     <string name="privacy_intro">Catatan Kontak didistribusikan dengan harapan bermanfaat, tetapi TANPA JAMINAN APA PUN; bahkan tanpa jaminan tersirat tentang DIPERDAGANGKAN atau KESESUAIAN UNTUK TUJUAN TERTENTU. Halaman ini digunakan untuk memberi tahu pengunjung mengenai kebijakan saya dengan pengumpulan, penggunaan, dan pengungkapan Informasi Pribadi jika ada yang memutuskan untuk menggunakan Catatan Kontak. Singkatnya, dan karena Catatan Kontak tidak dapat terhubung ke internet, tidak ada Informasi Pribadi yang akan disimpan atau disalin di luar perangkat pengguna. Jika Anda memilih untuk menggunakan Catatan Kontak, Anda menyetujui pengumpulan (tidak ada) dan penggunaan informasi terkait dengan kebijakan ini. Informasi Pribadi yang dikumpulkan Catatan Kontak digunakan untuk menyediakan layanannya. Seperti yang dijelaskan di atas, saya tidak dapat dan karenanya tidak akan menggunakan atau membagikan informasi Anda dengan siapa pun.</string>
-    <string name="privacy_icu">Penggunaan Catatan Kontak mengharuskan Anda memasukkan informasi pengenal pribadi tertentu, yaitu Nama, Tempat, dan (opsional) Nomor telepon. Informasi yang diminta Catatan Kontak akan disimpan di perangkat Anda dan tidak dikumpulkan oleh saya dengan cara apa pun.</string>
+    <string name="privacy_icu">Penggunaan Catatan Kontak mengharuskan Anda memasukkan informasi pengenal pribadi tertentu, yaitu nama dan (opsional) tempat dan nomor telepon. Informasi yang diminta Catatan Kontak akan disimpan di perangkat Anda dan tidak dikumpulkan oleh saya dengan cara apa pun.</string>
     <string name="privacy_cookies">Kuki adalah file dengan sejumlah kecil data yang biasanya digunakan sebagai pengenal unik anonim. Ini dikirim ke browser Anda dari situs web yang Anda kunjungi dan disimpan di memori internal perangkat Anda.\n\nCatatan Kontak tidak menggunakan kuki apa pun, baik pihak pertama maupun pihak ketiga.\n\nDengan cara yang sama, tidak layanan didelegasikan kepada pihak ketiga. Informasi yang Anda masukkan ke Catatan Kontak tidak pernah meninggalkan perangkat Anda.</string>
     <string name="privacy_security">Sekali lagi, tidak ada informasi yang Anda masukkan ke Catatan Kontak yang pernah keluar dari perangkat Anda. Fakta ini selalu dapat dievaluasi dengan memeriksa kode sumber Catatan Kontak, yang tersedia di <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Karenanya, keamanan dan integritasnya terkait dengan keamanan fisik dan integritas perangkat Anda, yang saya tidak bertanggung jawab.</string>
     <string name="privacy_changes">Saya dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Dengan demikian, Anda disarankan untuk meninjau halaman ini secara berkala untuk setiap perubahan. Saya akan memberi tahu Anda tentang perubahan apa pun dengan memposting Kebijakan Privasi baru di halaman ini.\n\nKebijakan ini berlaku mulai 08-09-2020</string>
@@ -66,7 +66,7 @@
     <string name="entries_duplicated">Entri digandakan</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Buat salinan hari ini</string>
     <string name="select" comment="select. Conjugation should be infinitive">Pilih</string>
-    <string name="notes_optional">Catatan (opsional)</string>
+    <string name="notes">Catatan</string>
     <string name="acknowledgments">Terima kasih</string>
     <string name="about">Tentang</string>
     <string name="thanks_text">Meskipun Catatan Kontak dimulai sebagai proyek solo, ia memperoleh manfaat dari kontribusi altruistik yang tak ternilai dari banyak orang. Terima kasih yang tulus kepada semua orang di halaman ini.</string>

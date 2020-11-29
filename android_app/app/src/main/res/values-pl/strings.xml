@@ -10,12 +10,12 @@
     <string name="date">Data</string>
     <string name="time">Godzina</string>
     <string name="place">Miejsce</string>
-    <string name="companions">Towarzyszący (opcjonalnie)</string>
+    <string name="companions">Towarzyszący</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Myślisz, że zachowaliście dystans?</string>
     <string name="name">Imię</string>
     <string name="known_contact">Krewny lub bliski znajomy?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Myślisz, że zachowaliście dystans?</string>
-    <string name="phone">Telefon (opcjonalnie)</string>
+    <string name="phone">Telefon</string>
     <string name="unsure">Nie wiem</string>
     <string name="encounter_type">Warunki spotkania</string>
     <string name="indoors">W pomieszczeniu</string>
@@ -47,7 +47,7 @@
     <string name="entries_selected">" wybranych wpisów"</string>
     <string name="privacy_title">Polityka prywatności</string>
     <string name="privacy_intro">Dziennik Kontaktów jest rozprowadzany w nadziei, że będzie pomocny, ale BEZ JAKICHKOLWIEK GWARANCJI, nawet bez gwarancji ZBYWALNOŚCI lub DOPASOWANIA DO KONKRETNYCH CELÓW. Ta strona służy udzieleniu użytkownikom informacji na temat polityki zbierania i udostępniania danych osobowych, jeśli zdecydują się oni na użycie Dziennika Kontaktów. Ponieważ Dziennik Kontaktów nie może łączyć się z internetem, żadne dane nie będą przesłane ani przechowane poza urządzeniem. Jeśli decydujesz się używać Dziennika Kontaktów, zgadzasz się na to, że dane nie będą zbierane ani wykorzystane. Informacje, które zbierze Dziennik Kontaktów, są wykorzystane tylko wewnątrz aplikacji. Jak zostało jasno podkreślone powyżej, nie mogę i nie będę dzielił się informacjami z innymi podmiotami.</string>
-    <string name="privacy_icu">Korzystanie z Dziennika Kontaktów wymaga wprowadzenia pewnych informacji, a mianowicie Nazw, Miejsc i (nieobowiązkowo) numerów Telefonów. Informacje, które Dziennik Kontaktów zbierze, zostaną zachowane na Twoim urządzeniu i nie będą w żaden sposób gromadzone poza nim.</string>
+    <string name="privacy_icu">Korzystanie z Dziennika Kontaktów wymaga wprowadzenia pewnych informacji, a mianowicie nazw i (nieobowiązkowo) miejsc i numerów telefonów. Informacje, które Dziennik Kontaktów zbierze, zostaną zachowane na Twoim urządzeniu i nie będą w żaden sposób gromadzone poza nim.</string>
     <string name="privacy_cookies">Pliki cookie to pliki z niewielką ilością danych, które są powszechnie używane jako anonimowe niepowtarzalne identyfikatory. Są one wysyłane do Twojej przeglądarki z witryn, które odwiedzasz i są przechowywane w wewnętrznej pamięci urządzenia.\n\nDziennik Kontaktów nie używa żadnych plików cookie, ani własnych, ani stron trzecich.\n\nW ten sam sposób żadne informacje nie są przekazywane osobom trzecim. Informacje, które wprowadzasz do Dziennika Kontaktów, nigdy nie opuszczają Twojego urządzenia.</string>
     <string name="privacy_security">Jeszcze raz: żadne informacje, które wprowadzisz w Dzienniku Kontaktów, nie opuszczą Twojego urządzenia. Możesz się o tym przekonać, weryfikując kod źródłowy Dziennika Kontaktów na <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. W związku z tym bezpieczeństwo i integralność danych całkowicie zależą od fizycznego zabezpieczenia Twojego urządzenia, za co nie odpowiadam.</string>
     <string name="privacy_changes">Mogę aktualizować niniejszą Politykę Prywatności od czasu do czasu. Dlatego też zalecam okresowo przeglądać tę strony w celu śledzenia zmian. Powiadomię Cię o wszelkich zmianach, publikując nową Politykę prywatności na tej stronie.\n\nTa polityka wchodzi w życie 2020-09-08</string>
@@ -66,7 +66,7 @@
     <string name="entries_duplicated">Wpisy powielone</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Utworzyć dziś kopię</string>
     <string name="select" comment="select. Conjugation should be infinitive">Wybierz</string>
-    <string name="notes_optional">Notatki (opcjonalnie)</string>
+    <string name="notes">Notatki</string>
     <string name="acknowledgments">Dzięki</string>
     <string name="about">O</string>
 </resources>

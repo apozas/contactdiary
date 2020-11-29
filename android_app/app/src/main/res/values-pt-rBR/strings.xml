@@ -10,12 +10,12 @@
     <string name="date">Data</string>
     <string name="time">Hora</string>
     <string name="place">Local</string>
-    <string name="companions">Companheiros (opcional)</string>
+    <string name="companions">Companheiros</string>
     <string name="close_event_question">Você acha que manteve a distância?</string>
     <string name="name">Nome</string>
     <string name="known_contact">Parente ou amigo próximo?</string>
     <string name="distance_question">Vocês acham que mantiveram a distância?</string>
-    <string name="phone">Telefone (opcional)</string>
+    <string name="phone">Telefone</string>
     <string name="unsure">Não sei</string>
     <string name="encounter_type">Tipo de encontro</string>
     <string name="indoors">Lugar fechado</string>
@@ -47,7 +47,7 @@
     <string name="entries_selected">" entradas selecionadas"</string>
     <string name="privacy_title">Política de privacidade</string>
     <string name="privacy_intro">Diário de Contatos é distribuído na esperança de que seja útil, porém SEM QUALQUER GARANTIA; sem a garantia implícita de COMERCIALIZAÇÃO OU ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Esta página é usada para informar visitantes sobre minhas políticas de coleta, uso e revelação de Dados Pessoais se alguém decidir usar o Diário de Contatos. Em suma, dado que o Diário de Contatos não possui permissão de conexão à internet, nenhum Dado Pessoal será armazenado nem copiado para fora do dispositivo do usuário. Se você escolher usar o Diário de Contatos, você CONCORDA com a coleta (nenhuma) e uso dos dados relacionados a esta política. Os Dados Pessoais que o Diário de Contatos coleta são usados para prover este serviço. Como explicitado, eu não posso e portanto não utilizarei nem compartilharei seus dados com ninguém.</string>
-    <string name="privacy_icu">O uso do Diário de Contatos requer que você entre com certos dados pessoais identificáveis, a saber: nomes, lugares e (opcionalmente) números de telefone. Os dados que o Diário de Contatos requer serão armazenados no seu dispositivo e não coletados por mim de nenhuma maneira.</string>
+    <string name="privacy_icu">O uso do Diário de Contatos requer que você entre com certos dados pessoais identificáveis, a saber: nomes e (opcionalmente) lugares e números de telefone. Os dados que o Diário de Contatos requer serão armazenados no seu dispositivo e não coletados por mim de nenhuma maneira.</string>
     <string name="privacy_cookies">Cookies são arquivos com pequenas quantidades de dados que são utilizados normalmente como identificadores anônimos únicos. Eles são enviados ao seu navegador por websites que você visita e são armazenados na memória interna do seu dispositivo.\n\nO Diário de Contatos não usa nenhum cookie, nem de si nem de terceiros.\n\nDa mesma forma, nenhum serviço é delegado a terceiros. Os dados que você insere no Diário de Contatos nunca saem do seu dispositivo.</string>
     <string name="privacy_security">Novamente, nenhum dado que você insere no Diário de Contatos nunca deixa seu dispositivo. Este fato pode ser sempre verificado ao examinar o código fonte do Diário de Contatos, disponível em <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Portanto, sua segurança e integridade está ligada à segurança física e integridade do seu dispositivo, sobre as quais não tomo responsabilidade.</string>
     <string name="privacy_changes">Posso atualizar esta Política de Privacidade de vez em quando. Assim, recomenda-se que você revise esta página periodicamente para quaisquer alterações. Eu lhe notificarei de qualquer alteração publicando a nova Política de Privacidade nesta página.\n\nEsta política é efetiva em 08 de setembro de 2020</string>
@@ -66,7 +66,7 @@
     <string name="entries_duplicated">Entradas duplicadas</string>
     <string name="duplicate">Fazer uma cópia para hoje</string>
     <string name="select">Selecionar</string>
-    <string name="notes_optional">Notas (opcional)</string>
+    <string name="notes">Notas</string>
     <string name="acknowledgments">Obrigado</string>
     <string name="about">Sobre</string>
     <string name="thanks_text">Embora o Diário de Contatos tenha começado como um projeto individual, ele se beneficiou de contribuições altruístas inestimáveis de muitas pessoas. Meus sinceros agradecimentos a todos nesta página.</string>
