@@ -77,12 +77,12 @@
     <string name="thanks_italian"><b>Traducción al italiano - </b><a href="https://github.com/igor-cali">igor-cali</a> and <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Traducción al indonesio - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Traducción al polaco - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Traducción al portugués - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
     <string name="thanks_swedish"><b>Traducción al sueco - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="theme">Tema</string>
     <string name="theme_light">Claro</string>
     <string name="theme_dark">Oscuro</string>
     <string name="theme_system">Seguir sistema</string>
-    <string name="thanks_portuguese"><b>Traducción al portugués - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
     <string name="export_database_summary">Guardar la base de datos en formato CSV</string>
     <string name="export_database">Exportar base de datos</string>
     <string name="import_database_summary">Cargar una base de datos guardada</string>

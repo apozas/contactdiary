@@ -6,6 +6,6 @@
     <color name="colorSelected">#DADADA</color>
     <color name="colorBackground">#FAFAFA</color>
     <color name="colorDivider">#006C63</color>
-    <color name="colorDateBackground">#009688</color>
     <color name="colorDate">#FFFFFF</color>
+    <color name="colorDateBackground">#009688</color>
 </resources>
