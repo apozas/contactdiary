@@ -220,7 +220,7 @@ class SettingsActivity : AppCompatActivity() {
                 }
                 csvWriter.close()
                 cursor.close()
-                Toast.makeText(context, "Database exported", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, getString(R.string.export_success), Toast.LENGTH_LONG).show()
             } catch (sqlEx: Exception) {
                 Log.e("Export", sqlEx.message, sqlEx)
             }
@@ -247,7 +247,7 @@ class SettingsActivity : AppCompatActivity() {
             ) {
                 Toast.makeText(
                     requireActivity().applicationContext,
-                    "There is a problem with the database",
+                    getString(R.string.import_fail),
                     Toast.LENGTH_LONG
                 ).show()
             } else {
@@ -305,10 +305,10 @@ class SettingsActivity : AppCompatActivity() {
                         db?.insert(feedEntry.TABLE_NAME, null, values)
                         nextLine = csvReader.readLine()
                     }
-                    Toast.makeText(context, "Database imported", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, getString(R.string.import_success), Toast.LENGTH_LONG).show()
                 } catch (e: java.lang.Exception) {
                     e.printStackTrace()
-                    Toast.makeText(context, "The specified file was not found", Toast.LENGTH_LONG)
+                    Toast.makeText(context, getString(R.string.import_notfound), Toast.LENGTH_LONG)
                         .show()
                 }
             }
@@ -330,7 +330,7 @@ class SettingsActivity : AppCompatActivity() {
             }
             try {
                 startActivityForResult(
-                    Intent.createChooser(intent, "Select the database to import"),
+                    Intent.createChooser(intent, getString(R.string.import_select)),
                     IMPORT_DB
                 )
             } catch (ex: ActivityNotFoundException) {

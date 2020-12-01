@@ -94,4 +94,9 @@
     <string name="import_database_summary">Load a saved database</string>
     <string name="export_database">Export database</string>
     <string name="export_database_summary">Save the database in CSV format</string>
+    <string name="export_success">Database saved</string>
+    <string name="import_fail">There is a problem with the database</string>
+    <string name="import_success">Database loaded</string>
+    <string name="import_notfound">The specified file was not found</string>
+    <string name="import_select">Select the database to import</string>
 </resources>

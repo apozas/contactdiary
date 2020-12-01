@@ -89,4 +89,9 @@
     <string name="import_database_summary">Carregar una base de dades desada</string>
     <string name="export_database">Exportar base de dades</string>
     <string name="export_database_summary">Desar la base de dades en format CSV</string>
+    <string name="export_success">Base de dades desada</string>
+    <string name="import_fail">Ha hagut un problema amb la base de dades</string>
+    <string name="import_success">Base de dades carregada</string>
+    <string name="import_notfound">No s\'ha trobat l\'arxiu</string>
+    <string name="import_select">Selecciona la base de dades a importar</string>
 </resources>

@@ -88,4 +88,9 @@
     <string name="import_database_summary">Cargar una base de datos guardada</string>
     <string name="import_database">Importar base de datos</string>
     <string name="backup">Copia de seguridad y restauración</string>
+    <string name="export_success">Base de datos guardada</string>
+    <string name="import_fail">Hay un problema con la base de datos</string>
+    <string name="import_success">Base de datos cargada</string>
+    <string name="import_notfound">No se ha encontrado el archivo</string>
+    <string name="import_select">Selecciona la base de datos a importar</string>
 </resources>
