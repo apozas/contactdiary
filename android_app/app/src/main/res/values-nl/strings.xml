@@ -84,4 +84,9 @@
     <string name="theme_light">Licht</string>
     <string name="theme_dark">Donker</string>
     <string name="theme_system">Systeemthema</string>
+    <string name="backup">Back-up en herstellen</string>
+    <string name="import_database">Databank importeren</string>
+    <string name="import_database_summary">Een opgeslagen database laden</string>
+    <string name="export_database">Database exporteren</string>
+    <string name="export_database_summary">Opslaan van de database in CSV-formaat</string>
 </resources>

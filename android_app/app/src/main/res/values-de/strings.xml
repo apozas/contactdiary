@@ -80,4 +80,13 @@
     <string name="thanks_polish"><b>Polnische Übersetzung - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portugiesische Übersetzung - </b><a href="https://github.com/riuri">riuri</a> (Brasilien)</string>
     <string name="thanks_swedish"><b>Schwedische Übersetzung - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Design</string>
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+    <string name="theme_system">Dem System-Design folgen</string>
+    <string name="backup">Sichern und Wiederherstellen</string>
+    <string name="import_database">Datenbank importieren</string>
+    <string name="import_database_summary">Gespeicherte Datenbank laden</string>
+    <string name="export_database">Datenbank exportieren</string>
+    <string name="export_database_summary">Speichere die Datenbank im CSV-Format</string>
 </resources>
