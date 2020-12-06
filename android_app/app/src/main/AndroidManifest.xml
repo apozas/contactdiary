@@ -54,15 +54,26 @@
         <activity android:name=".SettingsActivity"
             android:label="@string/options"
             android:parentActivityName=".MainActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
         <activity android:name=".PrivacyActivity"
-            android:label="@string/privacy_title">
+            android:label="@string/privacy_title"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="${applicationId}.PrivacyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ThanksActivity"
+            android:label="@string/acknowledgments"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="${applicationId}.ThanksActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

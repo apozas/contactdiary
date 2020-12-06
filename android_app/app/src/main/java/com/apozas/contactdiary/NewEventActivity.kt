@@ -20,15 +20,15 @@ import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.content.Context
 import android.os.Bundle
-import android.text.format.DateFormat.is24HourFormat
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_addevent.*
+import kotlinx.android.synthetic.main.activity_addevent_inside.*
 import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class NewEventActivity : AppCompatActivity() {
@@ -41,44 +41,87 @@ class NewEventActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         setupUI(findViewById(R.id.neweventlayout))
 
-        val cal = Calendar.getInstance()
+        val initCal = Calendar.getInstance()
+        initCal.set(Calendar.HOUR_OF_DAY, 0)
+        initCal.set(Calendar.MINUTE, 0)
+        initCal.set(Calendar.SECOND, 0)
+        initCal.set(Calendar.MILLISECOND, 0)
+
+        val endCal = Calendar.getInstance()
+        endCal.set(Calendar.HOUR_OF_DAY, 0)
+        endCal.set(Calendar.MINUTE, 0)
+        endCal.set(Calendar.SECOND, 0)
+        endCal.set(Calendar.MILLISECOND, 0)
 
         // Set current values
-        eventdate_input.setText(DateFormat.getDateInstance().format(cal.time))
+        eventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
+
+        val timeFormat = SimpleDateFormat("H:mm")
 
         // Listen to new values
         val eventdateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-            cal.set(Calendar.YEAR, year)
-            cal.set(Calendar.MONTH, monthOfYear)
-            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            initCal.set(Calendar.YEAR, year)
+            initCal.set(Calendar.MONTH, monthOfYear)
+            initCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            eventdate_input.setText(DateFormat.getDateInstance().format(cal.time))
+            endCal.set(Calendar.YEAR, year)
+            endCal.set(Calendar.MONTH, monthOfYear)
+            endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            eventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
 
         }
 
         eventdate_input.setOnClickListener {
             DatePickerDialog(
                 this@NewEventActivity, eventdateSetListener,
-                cal.get(Calendar.YEAR),
-                cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)
+                initCal.get(Calendar.YEAR),
+                initCal.get(Calendar.MONTH),
+                initCal.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
 
-        val eventtimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
-            cal.set(Calendar.HOUR_OF_DAY, hour)
-            cal.set(Calendar.MINUTE, minute)
+        val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            initCal.set(Calendar.HOUR_OF_DAY, hour)
+            initCal.set(Calendar.MINUTE, minute)
 
-            eventtime_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
-
+            eventinittime_input.setText(timeFormat.format(initCal.time))
+            if (eventendtime_input.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
+                endCal.timeInMillis = initCal.timeInMillis
+                endCal.add(Calendar.MINUTE, 30)
+                eventendtime_input.setText(timeFormat.format(endCal.time))
+            }
         }
 
-        val is24Hour = is24HourFormat(applicationContext)
-        eventtime_input.setOnClickListener {
+        val is24Hour = android.text.format.DateFormat.is24HourFormat(applicationContext)
+
+        eventinittime_input.setOnClickListener {
             TimePickerDialog(
-                this@NewEventActivity, eventtimeSetListener,
-                cal.get(Calendar.HOUR_OF_DAY),
-                cal.get(Calendar.MINUTE),
+                this@NewEventActivity, initTimeSetListener,
+                initCal.get(Calendar.HOUR_OF_DAY),
+                initCal.get(Calendar.MINUTE),
+                is24Hour
+            ).show()
+        }
+
+        val endTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            endCal.set(Calendar.HOUR_OF_DAY, hour)
+            endCal.set(Calendar.MINUTE, minute)
+
+            if (endCal.timeInMillis < initCal.timeInMillis) {
+                Toast.makeText(
+                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
+                ).show()
+            } else {
+                eventendtime_input.setText(timeFormat.format(endCal.time))
+            }
+        }
+
+        eventendtime_input.setOnClickListener {
+            TimePickerDialog(
+                this@NewEventActivity, endTimeSetListener,
+                endCal.get(Calendar.HOUR_OF_DAY),
+                endCal.get(Calendar.MINUTE),
                 is24Hour
             ).show()
         }
@@ -89,7 +132,6 @@ class NewEventActivity : AppCompatActivity() {
         okButton_AddEvent.setOnClickListener {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
-
             var errorCount = 0
 
 //          Process RadioButtons
@@ -98,9 +140,6 @@ class NewEventActivity : AppCompatActivity() {
             if (eventIndoorOutdoorId != -1) {
                 val btn: View = event_indoor_outdoor.findViewById(eventIndoorOutdoorId)
                 eventIndoorOutdoorChoice = event_indoor_outdoor.indexOfChild(btn)
-            } else {
-                event_encounter_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
             val eventCloseContactId = eventclosecontact.checkedRadioButtonId
@@ -108,29 +147,13 @@ class NewEventActivity : AppCompatActivity() {
             if (eventCloseContactId != -1) {
                 val btn: View = eventclosecontact.findViewById(eventCloseContactId)
                 eventCloseContactChoice = eventclosecontact.indexOfChild(btn)
-            } else {
-                closecontact_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
-//          Compulsory text fields
+//          Compulsory text field
             val eventName = eventname_input.text.toString()
             if (eventName.isEmpty()) {
                 eventname_input.error = getString(R.string.compulsory_field)
                 errorCount++
-            }
-            val eventPlace = eventplace_input.text.toString()
-            if (eventPlace.isEmpty()) {
-                eventplace_input.error = getString(R.string.compulsory_field)
-                errorCount++
-            }
-
-//          Handle time field
-            if (eventtime_input.text.toString() == "") {
-                cal.set(Calendar.HOUR_OF_DAY, 0)
-                cal.set(Calendar.MINUTE, 0)
-                cal.set(Calendar.SECOND, 0)
-                cal.set(Calendar.MILLISECOND, 0)
             }
 
 //          Create a new map of values, where column names are the keys
@@ -138,8 +161,9 @@ class NewEventActivity : AppCompatActivity() {
                 val values = ContentValues().apply {
                     put(feedEntry.TYPE_COLUMN, "Event")
                     put(feedEntry.NAME_COLUMN, eventName)
-                    put(feedEntry.PLACE_COLUMN, eventPlace)
-                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.PLACE_COLUMN, eventplace_input.text.toString())
+                    put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
+                    put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, eventphone_input.text.toString())
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_input.text.toString())
                     put(feedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)

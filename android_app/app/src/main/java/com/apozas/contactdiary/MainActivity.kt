@@ -22,10 +22,14 @@ import android.os.Bundle
 import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.*
+import android.widget.AbsListView
+import android.widget.AdapterView
+import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_inside.*
 import java.util.*
 
 
@@ -37,17 +41,22 @@ class MainActivity : AppCompatActivity() {
     private val dbHelper = FeedReaderDbHelper(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
+        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+
         super.onCreate(savedInstanceState)
+        when (preferences.getString("theme", "System")) {
+            "Dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            "Light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            "System" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
         val notificationHandler = NotificationHandler()
         notificationHandler.scheduleNotification(this)
 
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
-        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
         onlyRisky = preferences.getBoolean("closecontactonly", false)
-
         restrict15LastDays()
         viewData(onlyRisky)
 
@@ -124,14 +133,20 @@ class MainActivity : AppCompatActivity() {
                         return false
                     }
 
-                    override fun onActionItemClicked(actionMode: ActionMode, menuItem: MenuItem): Boolean {
+                    override fun onActionItemClicked(
+                        actionMode: ActionMode,
+                        menuItem: MenuItem
+                    ): Boolean {
                         when (menuItem.itemId) {
                             R.id.context_delete -> {
-                                for (item: Long in itemList) { deleteEntry(item) }
+                                for (item: Long in itemList) {
+                                    deleteEntry(item)
+                                }
                                 Toast.makeText(
                                     applicationContext,
-                                    getString(if (itemList.size > 1) R.string.entries_deleted
-                                    else R.string.entry_deleted
+                                    getString(
+                                        if (itemList.size > 1) R.string.entries_deleted
+                                        else R.string.entry_deleted
                                     ),
                                     Toast.LENGTH_SHORT
                                 ).show()
@@ -141,11 +156,14 @@ class MainActivity : AppCompatActivity() {
                                 return true
                             }
                             R.id.context_duplicate -> {
-                                for (item: Long in itemList) { duplicateEntry(item) }
+                                for (item: Long in itemList) {
+                                    duplicateEntry(item)
+                                }
                                 Toast.makeText(
                                     applicationContext,
-                                    getString(if (itemList.size > 1) R.string.entries_duplicated
-                                    else R.string.entry_duplicated
+                                    getString(
+                                        if (itemList.size > 1) R.string.entries_duplicated
+                                        else R.string.entry_duplicated
                                     ),
                                     Toast.LENGTH_SHORT
                                 ).show()
@@ -173,10 +191,12 @@ class MainActivity : AppCompatActivity() {
                     ) {
                         if (checked) {
                             itemList.add(position)
-                            actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                            actionMode.title =
+                                itemList.size.toString() + getString(R.string.entries_selected)
                         } else {
                             itemList.remove(position)
-                            actionMode.title = itemList.size.toString() + getString(R.string.entries_selected)
+                            actionMode.title =
+                                itemList.size.toString() + getString(R.string.entries_selected)
                         }
                     }
                 })
@@ -265,7 +285,6 @@ class MainActivity : AppCompatActivity() {
 //  Database operation
     private fun viewData(onlyRisky: Boolean) {
         val cursor = dbHelper.viewData(onlyRisky)
-
         val adapter = DataCursorAdapter(this, cursor)
 
         diarytable.adapter = adapter
@@ -282,7 +301,7 @@ class MainActivity : AppCompatActivity() {
 
 //      Define 'where' part of query.
         val selection = "DELETE FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME} " +
-                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN} <= " + fifteenDaysAgo.toString()
+                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN} <= " + fifteenDaysAgo.toString()
 //      Issue SQL statement.
         db.execSQL(selection)
     }
@@ -300,22 +319,55 @@ class MainActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val timestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.DATETIME_COLUMN))
-        val cal = Calendar.getInstance()
-        cal.timeInMillis = timestamp
-        cal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+        val beginTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+        val initCal = Calendar.getInstance()
+        initCal.timeInMillis = beginTimestamp
+        initCal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+
+        val endTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
+        val endCal = Calendar.getInstance()
+        endCal.timeInMillis = endTimestamp
+        endCal.set(Calendar.DAY_OF_YEAR, initCal.get(Calendar.DAY_OF_YEAR))
 
         val values = ContentValues().apply {
-            put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
-            put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
-            put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
-            put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
-            put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
-            put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
-            put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
-            put(feedEntry.CLOSECONTACT_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN)))
-            put(feedEntry.ENCOUNTER_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN)))
-            put(feedEntry.NOTES_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+            put(
+                feedEntry.TYPE_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN))
+            )
+            put(
+                feedEntry.NAME_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN))
+            )
+            put(
+                feedEntry.PLACE_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN))
+            )
+            put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
+            put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
+            put(
+                feedEntry.PHONE_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN))
+            )
+            put(
+                feedEntry.RELATIVE_COLUMN,
+                cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+            )
+            put(
+                feedEntry.COMPANIONS_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN))
+            )
+            put(
+                feedEntry.CLOSECONTACT_COLUMN,
+                cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+            )
+            put(
+                feedEntry.ENCOUNTER_COLUMN,
+                cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+            )
+            put(
+                feedEntry.NOTES_COLUMN,
+                cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN))
+            )
         }
 
 //      Insert the new row

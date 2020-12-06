@@ -1,0 +1,11 @@
+Questa versione porta diverse nuove funzionalità, due dei quali sono importanti.
+
+- Non c'è tempo di contatto più si chiede, perché era irrilevante. Invece, le forme ora chiedono la durata del contatto.
+- Tasti di scelta rapida (grazie a GenosseFlosse). Nel fare una pressione prolungata sull'icona dell'app, verrà visualizzato un menu con le scorciatoie per aggiungere contatti e gli eventi, senza entrare l'applicazione. È inoltre possibile creare icone sul menu con queste scorciatoie.
+
+- Dal momento che è bene essere grati nato, è stata aggiunta la sezione riconoscimenti in app.
+- Corretto alcuni bug, tra cui l'esposizione di rischio di contatto unico.
+- Abbiamo aggiunto nuove traduzioni: Polish (grazie a wasikr7), finlandesi (grazie a Mikko95) e indonesiani (grazie a hexatester).
+- Corretto piccoli dettagli in altre traduzioni.
+
+Se si vuole aiutare a tradurre ufficiale contatti con la lingua, si prega di visitare http://www.crowdin.com/project/contactdiary

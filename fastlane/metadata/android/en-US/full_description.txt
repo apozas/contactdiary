@@ -8,6 +8,7 @@ Every day Contact Diary will prompt you to insert the events you have attended a
 <li> Configurable notification time, so the prompt does not interfere with your daily workflow.</li>
 <li> Show only potentially risky contacts.</li>
 <li> Automatic removal of entries older than 15 days.</li>
+<li> Export your latest contacts to a CSV file that you can share with the authorities.</li>
 <li> JUST ONE PERMISSION, that needed for the app being able to notify you after device restarts. Nothing else.</li>
 <li> In particular, NO INTERNET permission. The information entered is yours, and it never leaves your device.</li>
 </ul>

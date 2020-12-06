@@ -9,12 +9,12 @@
     <string name="date">Fecha</string>
     <string name="time">Hora</string>
     <string name="place">Lugar</string>
-    <string name="companions">Acompañantes (opcional)</string>
+    <string name="companions">Acompañantes</string>
     <string name="close_event_question">¿Crees que mantuviste la distancia?</string>
     <string name="name">Nombre</string>
     <string name="known_contact">¿Es familiar o amigo cercano?</string>
     <string name="distance_question">¿Crees que respetásteis la distancia?</string>
-    <string name="phone">Teléfono (opcional)</string>
+    <string name="phone">Teléfono</string>
     <string name="unsure">No sé</string>
     <string name="encounter_type">Tipo de encuentro</string>
     <string name="indoors">Lugar cerrado</string>
@@ -22,7 +22,6 @@
     <string name="emptydiary">El diario está vacío</string>
     <string name="contact_saved">Contacto guardado</string>
     <string name="event_saved">Evento guardado</string>
-    <string name="time_optional">Hora (opcional)</string>
     <string name="edit_event">Editar evento</string>
     <string name="edit_contact">Editar contacto</string>
     <string name="entry_deleted">Entrada eliminada</string>
@@ -47,7 +46,7 @@
     <string name="entries_selected">" entradas seleccionadas"</string>
     <string name="privacy_title">Política de privacidad</string>
     <string name="privacy_intro">Diario de Contactos es distribuido con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; ni siquiera con las garantías implícitas de COMERCIABILIDAD o APTITUD PARA UN PROPÓSITO PARTICULAR.\n\nEsta página está diseñada para informar a los visitantes acerca de mis políticas en cuanto a la colección, uso y revelación de Información Personal en caso de que alguien decidiera utilizar Diario de Contactos.\n\nEn resumen, dado que Diario de Contactos no puede conectarse con internet, ninguna Información Personal será almacenada o copiada fuera del dispositivo del usuario.\n\nSi decides utilizar Diario de Contactos, aceptas la colección (ninguna) y uso de información en los términos recogidos en esta política. La Información Personal que Diario de Contactos colecciona es utilizada únicamente para proporcionar su servicio. Tal y como se explicita anteriormente, no puedo y consecuentemente jamás utilizaré ni compartiré tu información con nadie.</string>
-    <string name="privacy_icu">El uso de Diario de Contactos requiere que introduzcas cierta información de identificación personal, a saber: nombres, lugares y (opcionalmente) números de teléfono. La información que Diario de Contactos solicita permanece en todo momento en tu dispositivo y no es coleccionada en ningún modo por mi parte.</string>
+    <string name="privacy_icu">El uso de Diario de Contactos requiere que introduzcas cierta información de identificación personal, a saber: nombres y (opcionalmente) lugares y números de teléfono. La información que Diario de Contactos solicita permanece en todo momento en tu dispositivo y no es coleccionada en ningún modo por mi parte.</string>
     <string name="privacy_cookies">Las cookies son archivos con una pequeña cantidad de datos que comúnmente se utilizan como identificadores únicos anónimos. Estas cookies son enviadas a tu navegador desde las páginas que visitas y se almacenan en la memoria interna de tu dispositivo.\n\nDiario de Contactos no utiliza ningún tipo de cookies, ni propias ni de terceras personas.\n\nDe la misma manera, ningún servicio es delegado a terceras personas. La información que introduces en Diario de Contactos nunca abandona tu dispositivo.</string>
     <string name="privacy_security">Una vez más, ningún tipo de información que introduzcas a Diario de Contactos jamás abandona tu dispositivo. Esta afirmación siempre puede comprobarse mediante la inspección del código fuente de Diario de Contactos, el cual está disponible en <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Consecuentemente, su seguridad e integridad está conectada a la seguridad e integridad física de tu dispositivo, de las cuales no asumo ninguna responsabilidad.</string>
     <string name="privacy_changes">Puedo actualizar esta Política de Privacidad de vez en cuando. Consecuentemente, es aconsejable revisar esta página periódicamente en busca de cambios. Te notificaré de cualquier cambio a través de la publicación de la nueva Política de Privacidad en esta página.\n\nEsta política toma efecto desde 2020-09-08</string>
@@ -66,5 +65,32 @@
     <string name="entries_duplicated">Entradas duplicadas</string>
     <string name="duplicate">Hacer copia hoy</string>
     <string name="select">Seleccionar</string>
-    <string name="notes_optional">Notas (opcional)</string>
+    <string name="notes">Notas</string>
+    <string name="acknowledgments">Gracias</string>
+    <string name="about">Acerca de</string>
+    <string name="thanks_text">Aunque Diario de Contactos comenzó como un proyecto en solitario, se ha beneficiado de las invaluables contribuciones altruistas de muchas personas. Mi más sincero agradecimiento a todos en esta página.</string>
+    <string name="thanks_homescreen"><b>Accesos directos - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Traducción al holandés - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> y <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Traducción al finlandés - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Traducción al francés - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Traducción al alemán - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> y <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Traducción al italiano - </b><a href="https://github.com/igor-cali">igor-cali</a> y <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Traducción al indonesio - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Traducción al polaco - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Traducción al portugués - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
+    <string name="thanks_swedish"><b>Traducción al sueco - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="theme_system">Seguir sistema</string>
+    <string name="export_database_summary">Guardar la base de datos en formato CSV</string>
+    <string name="export_database">Exportar base de datos</string>
+    <string name="import_database_summary">Cargar una base de datos guardada</string>
+    <string name="import_database">Importar base de datos</string>
+    <string name="backup">Copia de seguridad y restauración</string>
+    <string name="export_success">Base de datos guardada</string>
+    <string name="import_fail">Hay un problema con la base de datos</string>
+    <string name="import_success">Base de datos cargada</string>
+    <string name="import_notfound">No se ha encontrado el archivo</string>
+    <string name="import_select">Selecciona la base de datos a importar</string>
 </resources>

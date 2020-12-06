@@ -1,0 +1,11 @@
+Diese Version bietet einige neue Funktionen, darunter zwei wichtige.
+
+- Der Uhrzeit des Kontakts wird nicht mehr abgefragt, da er weitgehend irrelevant ist. Stattdessen fragen die Formulare jetzt nach der Dauer des Kontakts.
+- App-Verknüpfungen (dank GenosseFlosse). Wenn Sie lange auf das App-Symbol drücken, wird ein Menü mit Verknüpfungen zum Hinzufügen von Kontakten angezeigt, ohne die App aufzurufen. Sie können Symbole mit dem Menü Auch diese Verknüpfungen erstellen.
+
+- Kredit sollte dort gegeben werden, wo er es verdient. Die App hat einen neuen Dankesbereich.
+- Einige Fehler wurden behoben, einschließlich der Visualisierung nur riskanter Kontakte.
+- Neue Übersetzungen sind: Polnisch (dank wasikr7), Finnisch (dank Mikko95) und Indonesisch (dank hexatester).
+- Kleine Korrekturen in den anderen Übersetzungen.
+
+Wenn Sie bei der Übersetzung in Ihre Sprache helfen möchten, besuchen Sie bitte das Tagebuch. Besuchen Sie http://www.crowdin.com/project/contactdiary

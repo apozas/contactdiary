@@ -10,12 +10,12 @@
     <string name="date">Data</string>
     <string name="time">Hora</string>
     <string name="place">Lloc</string>
-    <string name="companions">Acompanyants (opcional)</string>
+    <string name="companions">Acompanyants</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Creus que vas mantenir la distància?</string>
     <string name="name">Nom</string>
     <string name="known_contact">Familiar o amic proper?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Creus que vau mantenir la distància?</string>
-    <string name="phone">Telèfon (opcional)</string>
+    <string name="phone">Telèfon</string>
     <string name="unsure">No estic segur</string>
     <string name="encounter_type">Tipus de trobada</string>
     <string name="indoors">A l\'interior</string>
@@ -25,7 +25,6 @@
     <string name="event_saved">Esdeveniment guardat</string>
     <string name="edit_event">Editar esdeveniment</string>
     <string name="edit_contact">Editar contacte</string>
-    <string name="time_optional">Hora (opcional)</string>
     <string name="options">Opcions</string>
     <string name="entry_deleted">Entrada eliminada</string>
     <string name="contact_developer_summary">Digues-me què en penses de l\'app, o problemes que has trobat</string>
@@ -48,7 +47,7 @@
     <string name="entries_selected">" entrades seleccionades"</string>
     <string name="privacy_title">Política de privacitat</string>
     <string name="privacy_intro">Diari de Contactes es distribueix amb l\'esperança que sigui útil, però SENSE CAP GARANTIA; ni tan sols amb la garantia implícita de COMERCIALITZACIÓ o d\'IDONEITAT PER A UN PROPÒSIT PARTICULAR. Aquesta pàgina s’utilitza per informar els visitants sobre les meves polítiques sobre la recopilació, l’ús i la divulgació d’Informació Personal si algú decideix utilitzar Diari de Contactes. En resum, i com que Diari de Contactes no pot connectar-se a l\'internet, cap Informació Personal mai s’emmagatzemarà ni copiarà fora del dispositiu de l’usuari. Si decideixes utilitzar Diari de Contactes, acceptes la recopilació (cap) i l’ús d\'informació en relació amb aquesta política. La Informació Personal que Diari de Contactes recull s’utilitza per proporcionar el seu servei. Com s\'ha explicitat anteriorment, jo no puc i per tant no faré servir ni compartiré la teva informació amb ningú.</string>
-    <string name="privacy_icu">L\'ús de Diari de Contactes requereix que introdueixis certa informació identificativa, com Noms, Llocs i (opcionalment) números de Teléfon. La informació que Diari de Contactes sol·licita es mantindrá al teu dispositiu i no la recopilaré de cap manera.</string>
+    <string name="privacy_icu">L\'ús de Diari de Contactes requereix que introdueixis certa informació identificativa, com noms i (opcionalment) llocs i números de telèfon. La informació que Diari de Contactes sol·licita es mantindrá al teu dispositiu i no la recopilaré de cap manera.</string>
     <string name="privacy_cookies">Les Cookies són fitxers amb una petita quantitat de dades que s’utilitzen habitualment com a identificadors únics anònims. Les Cookies s’envien al navegador des dels llocs web que visites i s’emmagatzemen a la memòria interna del dispositiu.\n\nDiari de Contactes no utilitza cap Cookies, ni pròpies ni de tercers.\n\nIgualment, cap servei és delegat a tercers. La informació que introdueixes a Diari de Contactes no surt mai del teu dispositiu.</string>
     <string name="privacy_security">Una vegada més, cap informació que introdueixes a Diari de Contactes no surt mai del teu dispositiu. Aquest fet es pot avaluar sempre inspeccionant el codi font de Diari de Contactes, que està disponible a <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Per tant, la seva seguretat i integritat està relacionada amb la seguretat física i la integritat del teu dispositiu, de la qual no assumeixo cap responsabilitat.</string>
     <string name="privacy_changes">És possible que actualitzi aquesta Política de Privacitat de tant en tant. Per tant, et recomano que revisis aquesta pàgina periòdicament per si hi ha canvis. Jo notificaré qualsevol canvi publicant la nova Política de Privacitat en aquesta pàgina.\n\nAquesta política és efectiva a partir del 08-09-2020</string>
@@ -67,5 +66,32 @@
     <string name="entries_duplicated">Entrades duplicades</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Fes-ne una còpia avui</string>
     <string name="select" comment="select. Conjugation should be infinitive">Seleccionar</string>
-    <string name="notes_optional">Notes (opcional)</string>
+    <string name="notes">Notes</string>
+    <string name="acknowledgments">Gràcies</string>
+    <string name="about">Sobre</string>
+    <string name="thanks_text">Encara que Diari de Contactes va començar com un projecte en solitari, es va beneficiar d\'inestimables aportacions altruistes de moltes persones. El meu sincer agraïment a tothom en aquesta pàgina.</string>
+    <string name="thanks_homescreen"><b>Dreceres de pantalla d\'inici - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Traducció a l\'holandès - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> i <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Traducció al finlandès - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Traducció al francès- </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Traducció a l\'alemany - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> and <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Traducció a l\'italià - </b><a href="https://github.com/igor-cali">igor-cali</a> and <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Traducció a l\'indonesi - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Traducció al polonès - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Traducció al portuguès - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
+    <string name="thanks_swedish"><b>Traducció al suec - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Clar</string>
+    <string name="theme_dark">Fosc</string>
+    <string name="theme_system">Seguir sistema</string>
+    <string name="backup">Còpia de seguretat i restauració</string>
+    <string name="import_database">Importar base de dades</string>
+    <string name="import_database_summary">Carregar una base de dades desada</string>
+    <string name="export_database">Exportar base de dades</string>
+    <string name="export_database_summary">Desar la base de dades en format CSV</string>
+    <string name="export_success">Base de dades desada</string>
+    <string name="import_fail">Ha hagut un problema amb la base de dades</string>
+    <string name="import_success">Base de dades carregada</string>
+    <string name="import_notfound">No s\'ha trobat l\'arxiu</string>
+    <string name="import_select">Selecciona la base de dades a importar</string>
 </resources>

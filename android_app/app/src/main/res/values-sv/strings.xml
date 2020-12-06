@@ -10,12 +10,12 @@
     <string name="date">Datum</string>
     <string name="time">Tid</string>
     <string name="place">Plats</string>
-    <string name="companions">Följeslagare (valfritt)</string>
+    <string name="companions">Följeslagare</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Tror du att du höll avståndet?</string>
     <string name="name">Namn</string>
     <string name="known_contact">Släkting eller nära vän?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Tror du att ni höll avståndet?</string>
-    <string name="phone">Telefonnummer (valfritt)</string>
+    <string name="phone">Telefonnummer</string>
     <string name="unsure">Osäker</string>
     <string name="encounter_type">Typ av möte</string>
     <string name="indoors">Inomhus</string>
@@ -25,7 +25,6 @@
     <string name="event_saved">Händelsen sparad</string>
     <string name="edit_event">Redigera händelse</string>
     <string name="edit_contact">Redigera kontakt</string>
-    <string name="time_optional">Tid (valfritt)</string>
     <string name="options">Inställningar</string>
     <string name="entry_deleted">Inlägg raderat</string>
     <string name="contact_developer_summary">Berätta vad du tycker om appen eller de problem du har stött på</string>
@@ -48,7 +47,7 @@
     <string name="entries_selected">" inlägg valda"</string>
     <string name="privacy_title">Sekretesspolicy</string>
     <string name="privacy_intro">Kontaktdagboken distribueras i hopp om att det kommer att vara användbart, men UTAN NÅGON GARANTI; utan att ens den underförstådda garantin för SÄLJBARHET eller ANVÄNDNING FÖR ETT SPECIFIKT SYFTE. Denna sida är till för att för att informera besökare om min policy gällande insamling, användning, och utlämnande av personuppgifter om någon väljer att använda Kontaktdagboken. Kort sagt, eftersom Kontaktdagboken inte kan ansluta till internet, kommer ingen personlig information lagras eller kopieras utanför användarens enhet. Om du väljer att använda Kontaktdagboken, då godkänner du insamling (ingen) och användning av information i förhållande till denna policy. De personuppgifter som Kontaktdagboken samlar in används för att tillhandahålla sin service. Som uttryckligen nämnts ovan, jag kan inte och kommer därmed inte att använda eller dela din information med någon.</string>
-    <string name="privacy_icu">Användningen av Kontaktdagboken kräver att du matar in viss personligt identifierbar information, nämligen namn, platser och (valfritt) telefonnummer. Den information som Kontaktdagboken begär kommer att lagras på din enhet och inte samlas in av mig på något sätt.</string>
+    <string name="privacy_icu">Användningen av Kontaktdagboken kräver att du matar in viss personligt identifierbar information, nämligen namn och (valfritt) platser och telefonnummer. Den information som Kontaktdagboken begär kommer att lagras på din enhet och inte samlas in av mig på något sätt.</string>
     <string name="privacy_cookies">Cookies är filer med en liten mängd data som ofta används som anonyma unika identifierare. Dessa skickas till din webbläsare från de webbplatser som du besöker och lagras på din enhets interna minne.\n\nKontaktdagboken använder inga cookies, varken första part eller tredje part.\n\nPå samma sätt är ingen tjänst delegerad till tredje part. Informationen du matar in i Kontaktdagboken lämnar aldrig din enhet.</string>
     <string name="privacy_security">Återigen, ingen information du matar in till Kontaktdagboken lämnar någonsin din enhet. Detta faktum kan alltid utvärderas genom att inspektera Kontaktdagbokens källkod, som finns på <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Således är dess säkerhet och integritet kopplad till den fysiska säkerheten och integriteten hos din enhet, som jag inte tar något ansvar för.</string>
     <string name="privacy_changes">Jag kan komma att uppdatera denna sekretesspolicy i framtiden. Således uppmanas du att granska denna sida regelbundet för eventuella ändringar. Jag kommer att meddela dig om eventuella ändringar genom att publicera den nya sekretesspolicyn på denna sida.\n\nDenna policy gäller från och med 2020-09-08</string>
@@ -67,5 +66,7 @@
     <string name="entries_duplicated">Inlägg duplicerade</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Skapa en kopia idag</string>
     <string name="select" comment="select. Conjugation should be infinitive">Välj</string>
-    <string name="notes_optional">Anteckningar (valfritt)</string>
+    <string name="notes">Anteckningar</string>
+    <string name="acknowledgments">Tack</string>
+    <string name="about">Handla om</string>
 </resources>

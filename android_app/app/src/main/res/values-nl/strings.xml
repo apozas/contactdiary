@@ -1,71 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Contacten Dagboek</string>
+    <string name="app_name">Contactdagboek</string>
     <string name="action_settings">Instellingen</string>
-    <string name="new_contact">Nieuw contact</string>
+    <string name="new_contact">Nieuwe contactpersoon</string>
     <string name="new_event">Nieuwe gebeurtenis</string>
-    <string name="event_name">Gebeurtenisnaam</string>
+    <string name="event_name">Naam van gebeurtenis</string>
     <string name="no">Nee</string>
     <string name="yes">Ja</string>
     <string name="date">Datum</string>
-    <string name="time">Tijd</string>
-    <string name="place">Plaats</string>
-    <string name="companions">Metgezellen (optioneel)</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Denk je dat je de afstand behouden hebt?</string>
+    <string name="time">Tijdstip</string>
+    <string name="place">Locatie</string>
+    <string name="companions">Metgezellen</string>
+    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Denk je dat je afstand gehouden hebt?</string>
     <string name="name">Naam</string>
     <string name="known_contact">Eigen familie of goede vriend?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Denk je dat je de afstand behouden hebt?</string>
-    <string name="phone">Telefoon (optioneel)</string>
-    <string name="unsure">Niet zeker</string>
+    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Denk je dat je afstand gehouden hebt?</string>
+    <string name="phone">Telefoonnummer</string>
+    <string name="unsure">Weet ik niet</string>
     <string name="encounter_type">Vorm van contact</string>
     <string name="indoors">Binnenshuis</string>
-    <string name="outdoors">Openlucht</string>
-    <string name="emptydiary">De dagboek is leeg</string>
-    <string name="contact_saved">Contact opgeslagen</string>
+    <string name="outdoors">Buitenshuis</string>
+    <string name="emptydiary">Het dagboek is blanco</string>
+    <string name="contact_saved">Contactpersoon opgeslagen</string>
     <string name="event_saved">Gebeurtenis opgeslagen</string>
-    <string name="edit_event">Bewerk gebeurtenis</string>
-    <string name="edit_contact">Contact bewerken</string>
-    <string name="time_optional">Tijd (optioneel)</string>
+    <string name="edit_event">Gebeurtenis bewerken</string>
+    <string name="edit_contact">Contactpersoon bewerken</string>
     <string name="options">Opties</string>
-    <string name="entry_deleted">Vermelding verwijderd</string>
-    <string name="contact_developer_summary">Vertel me wat je vindt van de app, of wat voor problemen ben je tegen gekomen</string>
-    <string name="contact_developer">Contact met ontwikkelaar</string>
-    <string name="about_donate">Koop een koffie voor me</string>
+    <string name="entry_deleted">Item verwijderd</string>
+    <string name="contact_developer_summary">Vertel me wat je van de app vindt of wat voor problemen je bent tegengekomen</string>
+    <string name="contact_developer">Contact opnemen met ontwikkelaar</string>
+    <string name="about_donate">Trakteer me op koffie</string>
     <string name="notification_title" comment="notification_title. &quot;You&quot; should be singular">Met wie ben je vandaag geweest?</string>
-    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Je contacten toevoegen aan de dagboek</string>
-    <string name="choose_option">Kies alstublieft een optie</string>
+    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Contactpersonen toevoegen aan dagboek</string>
+    <string name="choose_option">Kies een optie</string>
     <string name="compulsory_field">Verplicht veld</string>
-    <string name="edit" comment="edit. Conjugation should be infinitive">Bewerken</string>
+    <string name="edit" comment="edit. Conjugation should be infinitive">Aanpassen</string>
     <string name="delete" comment="delete. Conjugation should be infinitive">Verwijderen</string>
     <string name="alarm_modified">Alarm aangepast</string>
     <string name="incorrect_alarm_time">Voer een correcte datum in</string>
     <string name="daily_reminder">Dagelijkse herinnering</string>
-    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Kies tijdstip</string>
-    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Toon alleen nauwe contacten</string>
+    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Kies een tijdstip</string>
+    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Alleen nauwe contactpersonen tonen</string>
     <string name="more">Meer</string>
     <string name="settings">Instellingen</string>
-    <string name="entries_deleted">Vermeldingen verwijderd</string>
-    <string name="entries_selected">" vermeldingen geselecteerd"</string>
+    <string name="entries_deleted">Items verwijderd</string>
+    <string name="entries_selected">" items geselecteerd"</string> van de app
     <string name="privacy_title">Privacybeleid</string>
-    <string name="privacy_intro">Contacten Dagboek wordt gepublisherd in de hoop dat het nuttig zal zijn, maar ZONDER ENIGE GARANTIE; zonder de impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL. Deze pagina wordt gebruikt om bezoekers te informeren over mijn beleid met de verzameling, gebruik en openbaarmaking van persoonlijke informatie indien iemand heeft besloten om gebruik te maken van de Contacten Dagboek. Kortom, en omdat de Contacten Dagboek geen verbinding kan maken met het internet, worden persoonlijke informatie niet opgeslagen of gekopieerd buiten het apparaat van de gebruiker. Als u kiest voor het gebruiken van de Contacten Dagboek, ga je akkoord met het verzamelen (niet aan de orde) en gebruik van informatie met betrekking tot dit beleid. De persoonlijke informatie die de contactenlijst verzamelt wordt gebruikt voor het verstrekken van zijn service. Zoals ik al eerder heb gezegd, kan en zal ik uw informatie niet gebruiken en met niemand delen.</string>
-    <string name="privacy_icu">Het gebruik van de contactenlijst vereist dat u bepaalde persoonlijk identificeerbare informatie invoert, namelijk Namen, Plaatsen en (optioneel) Telefoonnummers. De informatie die Contacten Dagboek aanvraag wordt bewaard op uw apparaat en wordt op geen enkele manier door mij opgehaald.</string>
-    <string name="privacy_cookies">Cookies zijn bestanden met een kleine hoeveelheid gegevens die vaak worden gebruikt als anonieme unieke Id\'s. Deze worden verzonden naar uw browser van de websites die u bezoekt en wordt opgeslagen in het interne geheugen van uw apparaat.\n\nContacten Dagboek gebruikt geen cookies, noch eerste noch derde partij.\n\n Op dezelfde manier wordt geen enkele service aan derden gedelegeerd. De informatie die u invoert in de contactenlijst zal nooit uw apparaat verlaten.</string>
-    <string name="privacy_security">Nogmaals, geen informatie die je toevoegt aan de contactenlijst zal nooit je apparaat verlaten. Dit feit kan altijd worden geëvalueerd door Contacten Dagboek\'s broncode te inspecteren, welke beschikbaar is op <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. De veiligheid en integriteit ervan is dus gekoppeld aan de fysieke veiligheid en integriteit van uw apparaat, waar ik geen verantwoordelijkheid voor draag.</string>
-    <string name="privacy_changes">Ik kan dit Privacybeleid van tijd tot tijd bijwerken. U wordt dus aangeraden om deze pagina periodiek te bekijken voor eventuele wijzigingen. Ik zal u op de hoogte brengen van eventuele wijzigingen door het nieuwe privacybeleid op deze pagina te plaatsen.\n\nDit beleid is van kracht vanaf 2020-09-09-08</string>
-    <string name="privacy_contact">Als je vragen of suggesties hebt over dit privacybeleid, aarzel dan niet om mij contact op te nemen via <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (bij voorkeur in het Engels).</string>
-    <string name="privacy_changes_title">Wijzigingen in ons privacybeleid</string>
+    <string name="privacy_intro">Contactdagboek wordt uitgebracht in de hoop dat het nuttig zal zijn, maar ZONDER ENIGE GARANTIE; zonder de impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL. Deze pagina wordt gebruikt om bezoekers te informeren over mijn beleid met de verzameling, gebruik en openbaarmaking van persoonlijke informatie indien iemand heeft besloten om gebruik te maken van het contactdagboek. Kortom, en omdat Contactdagboek geen verbinding kan maken met het internet, wordt persoonlijke informatie niet opgeslagen of gekopieerd buiten het apparaat van de gebruiker. Als je er voor kiest om de app te gebruiken, ga je akkoord met het verzamelen (niet aan de orde) en gebruik van informatie met betrekking tot dit beleid. De persoonlijke informatie die de contactpersonenlijst verzamelt wordt gebruikt voor het verstrekken van de dienst. Zoals ik al eerder heb gezegd, kan en zal ik je informatie niet gebruiken en met niemand delen.</string>
+    <string name="privacy_icu">Het gebruik van de contactpersonenlijst vereist dat je bepaalde persoonlijk identificeerbare informatie invoert, zoals namen en (optioneel) locaties en telefoonnummers. De informatie die de app opvraagt wordt bewaard op je apparaat en wordt op geen enkele manier door mij opgehaald.</string>
+    <string name="privacy_cookies">Cookies zijn bestanden met een kleine hoeveelheid gegevens, die vaak worden gebruikt als anonieme unieke id\'s. Deze worden verzonden naar je browser aan de websites die je bezoekt en wordt opgeslagen op het interne geheugen van je apparaat.\n\nContactdagboek gebruikt geen cookies, noch eerste, noch derde partij.\n\n Op dezelfde manier wordt geen enkele dienst aan derden gedelegeerd. De informatie die je invoert op de contactpersonenlijst zal nooit je apparaat verlaten.</string>
+    <string name="privacy_security">Nogmaals, informatie die je toevoegt aan de contactpersonenlijst zal nooit je apparaat verlaten. Dit feit kan altijd worden gecontroleerd door de broncode van Contactdagboek na te kijken, welke beschikbaar is op <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. De veiligheid en integriteit ervan is dus gekoppeld aan de fysieke veiligheid en integriteit van je apparaat, waar ik geen verantwoordelijkheid voor draag.</string>
+    <string name="privacy_changes">Ik kan dit privacybeleid van tijd tot tijd bijwerken. Het is dus aanbevolen om deze pagina periodiek te bekijken en te controleren op eventuele wijzigingen. Ik zal je op de hoogte houden bij eventuele wijzigingen door het nieuwe privacybeleid op deze pagina te plaatsen.\n\nDit beleid is van kracht sinds 2020-09-08.</string>
+    <string name="privacy_contact">Als je vragen of suggesties hebt over dit privacybeleid, aarzel dan niet om contact met me op te nemen via <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (bij voorkeur in het Engels).</string>
+    <string name="privacy_changes_title">Wijzigingen aan het privacybeleid</string>
     <string name="privacy_icu_title">Verzamelen en gebruik van informatie</string>
-    <string name="privacy_cookies_title">Cookies en serviceproviders</string>
+    <string name="privacy_cookies_title">Cookies en dienstproviders</string>
     <string name="privacy_security_title">Veiligheid</string>
-    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Neem contact op</string>
-    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Druk op (+) om contacten toe te voegen</string>
-    <string name="app_version_title">App versie</string>
+    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Contact opnemen</string>
+    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Druk op (+) om contactpersonen toe te voegen</string>
+    <string name="app_version_title">Appversie</string>
     <string name="about_donate_summary"></string>
     <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Beoordeel de app</string>
-    <string name="about_rate_summary">Als je de app handig vindt, beoordeel het dan en beoordeel het zodat het meer mensen kan bereiken die het misschien nuttig vinden</string>
-    <string name="entry_duplicated">Vermelding gedupliceerd</string>
-    <string name="entries_duplicated">Vermeldingen gedupliceerd</string>
-    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Maak vandaag een kopie</string>
-    <string name="select" comment="select. Conjugation should be infinitive">Selecteeren</string>
-    <string name="notes_optional">Notities (optioneel)</string>
+    <string name="about_rate_summary">Als je de app graag gebruikt, beoordeel deze dan zodat de app meer mensen kan bereiken die hem misschien nuttig vinden</string>
+    <string name="entry_duplicated">Item gekloond</string>
+    <string name="entries_duplicated">Items gekloond</string>
+    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Kopie maken</string>
+    <string name="select" comment="select. Conjugation should be infinitive">Selecteren</string>
+    <string name="notes">Aantekeningen</string>
+    <string name="acknowledgments">Met dank aan</string>
+    <string name="about">Over</string>
+    <string name="thanks_text">Contactdagboek is begonnen als éénmansproject, maar heeft vele bijdragen vanuit de gemeenschap gehad. Mijn dank is groot aan iedereen op deze pagina.</string>
+    <string name="thanks_homescreen"><b>Startschermsnelkoppelingen - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Nederlandse vertaling - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> en <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Finse vertaling - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Franse vertaling - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Duitse vertaling - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> en <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Italiaanse vertaling - </b><a href="https://github.com/igor-cali">igor-cali</a> en <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Indonesische vertaling - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Poolse vertaling - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portugese vertaling - </b><a href="https://github.com/riuri">riuri</a> (Brazilië)</string>
+    <string name="thanks_swedish"><b>Zweedse vertaling - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Thema</string>
+    <string name="theme_light">Licht</string>
+    <string name="theme_dark">Donker</string>
+    <string name="theme_system">Systeemthema</string>
+    <string name="backup">Back-up en herstellen</string>
+    <string name="import_database">Databank importeren</string>
+    <string name="import_database_summary">Een opgeslagen database laden</string>
+    <string name="export_database">Database exporteren</string>
+    <string name="export_database_summary">Opslaan van de database in CSV-formaat</string>
 </resources>

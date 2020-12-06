@@ -27,8 +27,9 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_addcontact.*
+import kotlinx.android.synthetic.main.activity_addcontact_inside.*
 import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class NewContactActivity : AppCompatActivity() {
@@ -42,40 +43,86 @@ class NewContactActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.newcontactlayout))
 
-        val cal = Calendar.getInstance()
+        val initCal = Calendar.getInstance()
+        initCal.set(Calendar.HOUR_OF_DAY, 0)
+        initCal.set(Calendar.MINUTE, 0)
+        initCal.set(Calendar.SECOND, 0)
+        initCal.set(Calendar.MILLISECOND, 0)
+
+        val endCal = Calendar.getInstance()
+        endCal.set(Calendar.HOUR_OF_DAY, 0)
+        endCal.set(Calendar.MINUTE, 0)
+        endCal.set(Calendar.SECOND, 0)
+        endCal.set(Calendar.MILLISECOND, 0)
 
         // Set current values
-        date_input.setText(DateFormat.getDateInstance().format(cal.time))
+        date_input.setText(DateFormat.getDateInstance().format(initCal.time))
+
+        val timeFormat = SimpleDateFormat("H:mm")
 
         // Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-            cal.set(Calendar.YEAR, year)
-            cal.set(Calendar.MONTH, monthOfYear)
-            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            initCal.set(Calendar.YEAR, year)
+            initCal.set(Calendar.MONTH, monthOfYear)
+            initCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            date_input.setText(DateFormat.getDateInstance().format(cal.time))
+            endCal.set(Calendar.YEAR, year)
+            endCal.set(Calendar.MONTH, monthOfYear)
+            endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
+            date_input.setText(DateFormat.getDateInstance().format(initCal.time))
         }
 
         date_input.setOnClickListener {
-            DatePickerDialog(this@NewContactActivity, dateSetListener,
-                cal.get(Calendar.YEAR),
-                cal.get(Calendar.MONTH),
-                cal.get(Calendar.DAY_OF_MONTH)).show()
+            DatePickerDialog(
+                this@NewContactActivity, dateSetListener,
+                initCal.get(Calendar.YEAR),
+                initCal.get(Calendar.MONTH),
+                initCal.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
 
-        val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
-            cal.set(Calendar.HOUR_OF_DAY, hour)
-            cal.set(Calendar.MINUTE, minute)
+        val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            initCal.set(Calendar.HOUR_OF_DAY, hour)
+            initCal.set(Calendar.MINUTE, minute)
 
-            time_input.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(cal.time))
+            inittime_input.setText(timeFormat.format(initCal.time))
+            if (endtime_input.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
+                endCal.timeInMillis = initCal.timeInMillis
+                endCal.add(Calendar.MINUTE, 30)
+                endtime_input.setText(timeFormat.format(endCal.time))
+            }
         }
 
         val is24Hour = is24HourFormat(applicationContext)
-        time_input.setOnClickListener {
-            TimePickerDialog(this@NewContactActivity, timeSetListener,
-                cal.get(Calendar.HOUR_OF_DAY),
-                cal.get(Calendar.MINUTE),
+
+        inittime_input.setOnClickListener {
+            TimePickerDialog(
+                this@NewContactActivity, initTimeSetListener,
+                initCal.get(Calendar.HOUR_OF_DAY),
+                initCal.get(Calendar.MINUTE),
+                is24Hour
+            ).show()
+        }
+
+        val endTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+            endCal.set(Calendar.HOUR_OF_DAY, hour)
+            endCal.set(Calendar.MINUTE, minute)
+
+            if (endCal.timeInMillis < initCal.timeInMillis) {
+                Toast.makeText(
+                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
+                ).show()
+            } else {
+                endtime_input.setText(timeFormat.format(endCal.time))
+            }
+        }
+
+        endtime_input.setOnClickListener {
+            TimePickerDialog(
+                this@NewContactActivity, endTimeSetListener,
+                endCal.get(Calendar.HOUR_OF_DAY),
+                endCal.get(Calendar.MINUTE),
                 is24Hour
             ).show()
         }
@@ -86,7 +133,6 @@ class NewContactActivity : AppCompatActivity() {
         okButton_AddContact.setOnClickListener {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
-
             var errorCount = 0
 
 //          Process RadioButtons
@@ -95,9 +141,6 @@ class NewContactActivity : AppCompatActivity() {
             if (relativeId != -1) {
                 val btn: View = known_group.findViewById(relativeId)
                 relativeChoice = known_group.indexOfChild(btn)
-            } else {
-                known_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
             val contactIndoorOutdoorId = contact_indoor_outdoor.checkedRadioButtonId
@@ -105,9 +148,6 @@ class NewContactActivity : AppCompatActivity() {
             if (contactIndoorOutdoorId != -1) {
                 val btn: View = contact_indoor_outdoor.findViewById(contactIndoorOutdoorId)
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
-            } else {
-                encounter_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
             val contactCloseContactId = distance_group.checkedRadioButtonId
@@ -115,29 +155,13 @@ class NewContactActivity : AppCompatActivity() {
             if (contactCloseContactId != -1) {
                 val btn: View = distance_group.findViewById(contactCloseContactId)
                 contactCloseContactChoice = distance_group.indexOfChild(btn)
-            } else {
-                distance_question.error = getString(R.string.choose_option)
-                errorCount++
             }
 
-//          Compulsory text fields
+//          Compulsory text field
             val contactName = name_input.text.toString()
             if (contactName.isEmpty()) {
                 name_input.error = getString(R.string.compulsory_field)
                 errorCount++
-            }
-            val contactPlace = place_input.text.toString()
-            if (contactPlace.isEmpty()) {
-                place_input.error = getString(R.string.compulsory_field)
-                errorCount++
-            }
-
-//          Handle time field
-            if (time_input.text.toString() == "") {
-                cal.set(Calendar.HOUR_OF_DAY, 0)
-                cal.set(Calendar.MINUTE, 0)
-                cal.set(Calendar.SECOND, 0)
-                cal.set(Calendar.MILLISECOND, 0)
             }
 
 //          Create a new map of values, where column names are the keys
@@ -145,8 +169,9 @@ class NewContactActivity : AppCompatActivity() {
                 val values = ContentValues().apply {
                     put(feedEntry.TYPE_COLUMN, "Contact")
                     put(feedEntry.NAME_COLUMN, contactName)
-                    put(feedEntry.PLACE_COLUMN, contactPlace)
-                    put(feedEntry.DATETIME_COLUMN, cal.timeInMillis)
+                    put(feedEntry.PLACE_COLUMN, place_input.text.toString())
+                    put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
+                    put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_input.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)

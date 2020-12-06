@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Catatan Kontak</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="new_contact">Kontak baru</string>
+    <string name="new_event">Acara baru</string>
+    <string name="event_name">Nama acara</string>
+    <string name="no">Tidak</string>
+    <string name="yes">Ya</string>
+    <string name="date">Tanggal</string>
+    <string name="time">Waktu</string>
+    <string name="place">Lokasi</string>
+    <string name="companions">Pendamping</string>
+    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Apakah Anda pikir Anda menjaga jarak?</string>
+    <string name="name">Nama</string>
+    <string name="known_contact">Kerabat atau teman dekat?</string>
+    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Apakah Kalian menjaga jarak?</string>
+    <string name="phone">Telepon</string>
+    <string name="unsure">Tidak yakin</string>
+    <string name="encounter_type">Jenis pertemuan</string>
+    <string name="indoors">Dalam ruangan</string>
+    <string name="outdoors">Luar ruangan</string>
+    <string name="emptydiary">Catatan kosong</string>
+    <string name="contact_saved">Kontak disimpan</string>
+    <string name="event_saved">Acara disimpan</string>
+    <string name="edit_event">Edit acara</string>
+    <string name="edit_contact">Edit kontak</string>
+    <string name="options">Pilihan</string>
+    <string name="entry_deleted">Entri dihapus</string>
+    <string name="contact_developer_summary">Beri tahu saya pendapat Anda tentang aplikasi, atau masalah yang Anda temui</string>
+    <string name="contact_developer">Hubungi pengembang</string>
+    <string name="about_donate">Belikan aku kopi</string>
+    <string name="notification_title" comment="notification_title. &quot;You&quot; should be singular">Dengan siapa Anda hari ini?</string>
+    <string name="notification_text" comment="notification_text. The conjugation of &quot;Add&quot; is present, first person singular">Tambahkan kontak Anda ke buku harian</string>
+    <string name="choose_option">Harap pilih satu opsi</string>
+    <string name="compulsory_field">Wajib diisi</string>
+    <string name="edit" comment="edit. Conjugation should be infinitive">Edit</string>
+    <string name="delete" comment="delete. Conjugation should be infinitive">Hapus</string>
+    <string name="alarm_modified">Alarm diubah</string>
+    <string name="incorrect_alarm_time">Harap masukkan waktu yang benar</string>
+    <string name="daily_reminder">Pengingat harian</string>
+    <string name="choose_time" comment="choose_time. The conjugation of &quot;Choose&quot; is infinitive">Pilih waktu</string>
+    <string name="show_close_contacts" comment="show_close_contacts. The conjugation of &quot;Show&quot; is infinitive">Tampilkan hanya kontak dekat saja</string>
+    <string name="more">Lainnya</string>
+    <string name="settings">Pengaturan</string>
+    <string name="entries_deleted">Entri dihapus</string>
+    <string name="entries_selected">" entri terpilih"</string>
+    <string name="privacy_title">Kebijakan privasi</string>
+    <string name="privacy_intro">Catatan Kontak didistribusikan dengan harapan bermanfaat, tetapi TANPA JAMINAN APA PUN; bahkan tanpa jaminan tersirat tentang DIPERDAGANGKAN atau KESESUAIAN UNTUK TUJUAN TERTENTU. Halaman ini digunakan untuk memberi tahu pengunjung mengenai kebijakan saya dengan pengumpulan, penggunaan, dan pengungkapan Informasi Pribadi jika ada yang memutuskan untuk menggunakan Catatan Kontak. Singkatnya, dan karena Catatan Kontak tidak dapat terhubung ke internet, tidak ada Informasi Pribadi yang akan disimpan atau disalin di luar perangkat pengguna. Jika Anda memilih untuk menggunakan Catatan Kontak, Anda menyetujui pengumpulan (tidak ada) dan penggunaan informasi terkait dengan kebijakan ini. Informasi Pribadi yang dikumpulkan Catatan Kontak digunakan untuk menyediakan layanannya. Seperti yang dijelaskan di atas, saya tidak dapat dan karenanya tidak akan menggunakan atau membagikan informasi Anda dengan siapa pun.</string>
+    <string name="privacy_icu">Penggunaan Catatan Kontak mengharuskan Anda memasukkan informasi pengenal pribadi tertentu, yaitu nama dan (opsional) tempat dan nomor telepon. Informasi yang diminta Catatan Kontak akan disimpan di perangkat Anda dan tidak dikumpulkan oleh saya dengan cara apa pun.</string>
+    <string name="privacy_cookies">Kuki adalah file dengan sejumlah kecil data yang biasanya digunakan sebagai pengenal unik anonim. Ini dikirim ke browser Anda dari situs web yang Anda kunjungi dan disimpan di memori internal perangkat Anda.\n\nCatatan Kontak tidak menggunakan kuki apa pun, baik pihak pertama maupun pihak ketiga.\n\nDengan cara yang sama, tidak layanan didelegasikan kepada pihak ketiga. Informasi yang Anda masukkan ke Catatan Kontak tidak pernah meninggalkan perangkat Anda.</string>
+    <string name="privacy_security">Sekali lagi, tidak ada informasi yang Anda masukkan ke Catatan Kontak yang pernah keluar dari perangkat Anda. Fakta ini selalu dapat dievaluasi dengan memeriksa kode sumber Catatan Kontak, yang tersedia di <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Karenanya, keamanan dan integritasnya terkait dengan keamanan fisik dan integritas perangkat Anda, yang saya tidak bertanggung jawab.</string>
+    <string name="privacy_changes">Saya dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Dengan demikian, Anda disarankan untuk meninjau halaman ini secara berkala untuk setiap perubahan. Saya akan memberi tahu Anda tentang perubahan apa pun dengan memposting Kebijakan Privasi baru di halaman ini.\n\nKebijakan ini berlaku mulai 08-09-2020</string>
+    <string name="privacy_contact">Jika Anda memiliki pertanyaan atau saran tentang Kebijakan Privasi ini, jangan ragu untuk menghubungi saya di <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (sebaiknya dalam bahasa Inggris).</string>
+    <string name="privacy_changes_title">Perubahan pada kebijakan privasi ini</string>
+    <string name="privacy_icu_title">Pengumpulan dan penggunaan informasi</string>
+    <string name="privacy_cookies_title">Kuki dan penyedia layanan</string>
+    <string name="privacy_security_title">Keamanan</string>
+    <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Hubungi saya</string>
+    <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Tekan (+) untuk mulai menambahkan kontak</string>
+    <string name="app_version_title">Versi aplikasi</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Beri nilai aplikasi</string>
+    <string name="about_rate_summary">Jika Anda menyukai aplikasinya, beri peringkat dan ulas agar dapat menjangkau lebih banyak orang yang mungkin merasakan kegunaannya</string>
+    <string name="entry_duplicated">Entri digandakan</string>
+    <string name="entries_duplicated">Entri digandakan</string>
+    <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Buat salinan hari ini</string>
+    <string name="select" comment="select. Conjugation should be infinitive">Pilih</string>
+    <string name="notes">Catatan</string>
+    <string name="acknowledgments">Terima kasih</string>
+    <string name="about">Tentang</string>
+    <string name="thanks_text">Meskipun Catatan Kontak dimulai sebagai proyek solo, ia memperoleh manfaat dari kontribusi altruistik yang tak ternilai dari banyak orang. Terima kasih yang tulus kepada semua orang di halaman ini.</string>
+    <string name="thanks_homescreen"><b>Pintasan layar beranda - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Terjemahan bahasa Belanda - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> dan <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Terjemahan bahasa Finlandia - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Terjemahan bahasa Perancis - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Terjemahan bahasa Jerman - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> dan <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Terjemahan bahasa Italia - </b><a href="https://github.com/igor-cali">igor-cali</a> dan <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Terjemahan bahasa Indonesia - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Terjemahan bahasa Polandia - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Terjemahan bahasa Portugal - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
+    <string name="thanks_swedish"><b>Terjemahan bahasa Swedia - </b><a href="https://github.com/nlssn">nlssn</a></string>
+</resources>

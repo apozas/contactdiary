@@ -28,6 +28,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:title="@string/show_close_contacts" />
+
+        <ListPreference
+            android:key="theme"
+            android:title="@string/theme"
+            app:useSimpleSummaryProvider="true"
+            android:defaultValue="System"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/backup" >
+            <Preference
+            android:key="export"
+            android:title="@string/export_database"
+            android:summary="@string/export_database_summary" />
+
+        <Preference
+            android:key="import"
+            android:title="@string/import_database"
+            android:summary="@string/import_database_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -44,16 +65,6 @@
         </Preference>
 
         <Preference
-            android:key="rate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:title="@string/about_rate"
-            android:summary="@string/about_rate_summary">
-            <intent android:action="android.intent.action.VIEW"
-                android:data="@string/rate_url"/>
-        </Preference>
-
-        <Preference
             android:key="contactDev"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,10 +72,22 @@
             android:summary="@string/contact_developer_summary">
             <intent android:action="android.intent.action.VIEW"
                 android:data="@string/contact_developer_uri">
+
                 <extra android:name="android.intent.extra.SUBJECT"
                     android:value="@string/feedback_subject" />
             </intent>
+        </Preference>
+    </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/about">
+
+        <Preference
+            android:key="acknowledgments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/acknowledgments" >
+            <intent android:action="com.apozas.contactdiary.ThanksActivity"/>
         </Preference>
 
         <Preference

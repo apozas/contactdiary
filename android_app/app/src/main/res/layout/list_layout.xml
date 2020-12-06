@@ -4,15 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <!-- List divider: the  line between elements -->
+    <!-- Header divider: the  line between elements -->
     <View
-        android:id="@+id/list_divider"
+        android:id="@+id/header_divider"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:contextClickable="false" />
+        android:background="@color/colorDivider"
+        android:layout_marginLeft="@dimen/margin_divider"
+        android:layout_marginRight="@dimen/margin_divider"
+        android:contextClickable="false"
+        android:visibility="gone"/>
 
     <!-- Date separator: the header with the date -->
     <TextView
@@ -20,12 +21,22 @@
         android:id="@+id/list_item_header"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimary"
+        android:textColor="@color/colorDate"
+        android:background="@color/colorDateBackground"
         android:visibility="gone"
         android:contextClickable="false"
         android:padding="6dp"
         android:clickable="false" />
+
+    <!-- List divider: the  line between elements -->
+    <View
+        android:id="@+id/list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorDivider"
+        android:layout_marginLeft="@dimen/margin_divider"
+        android:layout_marginRight="@dimen/margin_divider"
+        android:contextClickable="false" />
 
     <!-- List entries -->
     <LinearLayout

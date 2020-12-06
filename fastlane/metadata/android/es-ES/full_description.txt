@@ -8,6 +8,7 @@ Cada día, Diario de Contactos mostrará una notificación invitándote a introd
 <li> Hora de la notificación configurable, de tal manera que no interfiera con tu día.</li>
 <li> Opción para mostrar solo los contactos potencialmente de riesgo.</li>
 <li> Eliminación automática de las entradas más antiguas de 15 días.</li>
+<li> Exporta tus últimos contactos a una archivo CSV que puedes compartir con las autoridades.</li>
 <li> SOLO UN PERMISO, el necesario para que la app te notifique tras reinicios del dispositivo. Nada más.</li>
 <li> En particular, SIN PERMISO DE INTERNET. La información que introduzcas a Diario de Contactos es tuya, y nunca abandona tu dispositivo.</li>
 </ul>

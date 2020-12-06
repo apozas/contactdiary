@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/thanks_text"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_homescreen"
+            android:text="@string/thanks_homescreen"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_dutch"
+            android:text="@string/thanks_dutch"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_finnish"
+            android:text="@string/thanks_finnish"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_french"
+            android:text="@string/thanks_french"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_german"
+            android:text="@string/thanks_german"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_indonesian"
+            android:text="@string/thanks_indonesian"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_italian"
+            android:text="@string/thanks_italian"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_polish"
+            android:text="@string/thanks_polish"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_portuguese"
+            android:text="@string/thanks_portuguese"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_swedish"
+            android:text="@string/thanks_swedish"/>
+
+    </LinearLayout>
+</ScrollView>

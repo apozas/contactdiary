@@ -26,13 +26,29 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
     }
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion < 2) { db.execSQL(ContactDatabase.SQL_UPDATE_2) }
+        if (oldVersion < 3) {
+            db.execSQL(ContactDatabase.SQL_UPDATE_3)
+            MigrationTools().migrateTo3(db)
+        }
+        if (oldVersion < 4) {
+//          Rename table to temporary name
+            db.execSQL(ContactDatabase.SQL_UPDATE_4_PART1)
+//          Create new table
+            db.execSQL(ContactDatabase.SQL_CREATE_ENTRIES)
+//          Move relevant information
+            db.execSQL(ContactDatabase.SQL_UPDATE_4_PART2)
+//          Create new information (EndTime = BeginTime + Duration)
+            MigrationTools().migrateTo4(db)
+//          Remove old table
+            db.execSQL(ContactDatabase.SQL_UPDATE_4_PART3)
+        }
     }
     override fun onDowngrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        onUpgrade(db, oldVersion, newVersion)
+//        onUpgrade(db, oldVersion, newVersion)
     }
     companion object {
         // If you change the database schema, you must increment the database version.
-        const val DATABASE_VERSION = 2
+        const val DATABASE_VERSION = 4
         const val DATABASE_NAME = "ContactDiary.db"
     }
 
@@ -41,11 +57,11 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
 
         val query = if (onlyRisky) {
             "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
-                    " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + ">=1" +
-                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC"
+                    " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + ">1" +
+                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN + " DESC"
         } else {
             "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
-                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.DATETIME_COLUMN + " DESC"
+                    " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN + " DESC"
         }
 
         return db.rawQuery(query, null)

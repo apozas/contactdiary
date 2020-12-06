@@ -1,0 +1,11 @@
+This version brings quite a few new features, with two important ones.
+
+- The time of the contact is no longer asked, because it is largely irrelevant. Instead, now the forms ask for the duration of the contact.
+- App shortcuts (thanks to GenosseFlosse). Long-pressing the app's icon will show a menu with shortcuts for adding contacts without entering the app. You can also create menu icons with these shortcuts.
+
+- Since credit must be given where credit is due, a section with acknowledgments has been added.
+- Some bugs have been squashed, including the visualization of risky contacts only.
+- New translations are available: Polish (thanks to wasikr7), Finnish (thanks to Mikko95) and Indonesian (thanks to hexatester).
+- Small fixes in the other translations.
+
+If you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary

@@ -10,12 +10,12 @@
     <string name="date">Datum</string>
     <string name="time">Uhrzeit</string>
     <string name="place">Ort</string>
-    <string name="companions">Begleitpersonen (optional)</string>
+    <string name="companions">Begleitpersonen</string>
     <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Glaubst du, du hast genug Abstand eingehalten?</string>
     <string name="name">Name</string>
     <string name="known_contact">Verwandte*r oder enge*r Freund*in?</string>
     <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Glaubst du, ihr habt genug Abstand eingehalten?</string>
-    <string name="phone">Telefonnummer (optional)</string>
+    <string name="phone">Telefonnummer</string>
     <string name="unsure">Nicht sicher</string>
     <string name="encounter_type">Art der Begegnung</string>
     <string name="indoors">Drinnen</string>
@@ -25,7 +25,6 @@
     <string name="event_saved">Gruppenbegegnung gespeichert</string>
     <string name="edit_event">Gruppenbegegnung bearbeiten</string>
     <string name="edit_contact">Begegnung bearbeiten</string>
-    <string name="time_optional">Uhrzeit (optional)</string>
     <string name="options">Optionen</string>
     <string name="entry_deleted">Eintrag gelöscht</string>
     <string name="contact_developer_summary">Erzähl mir, was du von der App hältst oder melde Probleme, die dir auffallen</string>
@@ -48,7 +47,7 @@
     <string name="entries_selected">" einträge ausgewählt"</string>
     <string name="privacy_title">Datenschutzrichtlinien</string>
     <string name="privacy_intro">Kontakttagebuch wird in der Hoffnung entwickelt, dass es nützlich ist, jedoch OHNE JEGLICHE GARANTIE; ebenso ohne jegliche Gewährleistung von MÄNGELFREIHEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Diese Seite wird verwendet, um Besucher über meine Richtlinien bezüglich der Sammlung, Verwendung und Veröffentlichung von persönlichen Daten im Zusammenhang, mit der Nutzung von Kontakttagebuch zu informieren. Kurz gesagt: da sich Kontakttagebuch nicht mit dem Internet verbinden kann, werden keine persönlichen Informationen außerhalb des Gerätes des Benutzers gespeichert. Wenn du dich für die Nutzung von Kontakttagebuch entscheidest, stimmst du der Sammlung (keine) und der Nutzung von Informationen im Rahmen dieser Richtlinie zu. Die persönlichen Informationen, die Kontakttagebuch sammelt, werden für die Bereitstellung der Dienstleistungen der App verwendet. Wie bereits ausdrücklich dargelegt, kann und werde ich keine deiner Daten an Dritte weitergeben.</string>
-    <string name="privacy_icu">Die Verwendung von Kontakttagebuch erfordert die Eingabe bestimmter persönlich identifizierenden Daten, wie Namen, Orte und (optional) Telefonnummern. Die Informationen, die Kontakttagebuch anfordert, werden auf deinem Gerät gespeichert und werden von mir in keiner Weise gesammelt.</string>
+    <string name="privacy_icu">Die Verwendung von Kontakttagebuch erfordert die Eingabe bestimmter persönlich identifizierenden Daten, wie namen und (optional) orte und telefonnummern. Die Informationen, die Kontakttagebuch anfordert, werden auf deinem Gerät gespeichert und werden von mir in keiner Weise gesammelt.</string>
     <string name="privacy_cookies">Cookies sind Dateien mit wenig Inhalt, die häufig als anonyme, eindeutige Identifikatoren verwendet werden. Diese werden von den Webseiten, die du besuchst, an deinen Browser gesendet und auf dem internen Speicher deines Geräts gespeichert.\n\nKontakttagebuch verwendet keine Cookies, weder eigene noch von Drittanbietern.\n\nAußerdem wird auch keine Dienstleistung an Drittanbieter ausgelagert. Die Informationen, die du in Kontakttagebuch eingibst, verlassen niemals dein Gerät.</string>
     <string name="privacy_security">Nochmals, keine Information, die du in Kontakttagebuch eingibst, verlässt jemals dein Gerät. Diese Tatsache kann immer überprüft werden, indem der Quellcode der App inspiziert wird, der hier zu finden ist: <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. So ist die Sicherheit und Integrität der App von der physischen Sicherheit und Integrität deines Geräts abhängig, für die ich keine Verantwortung übernehme.</string>
     <string name="privacy_changes">Ich kann diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, daher wird empfohlen, diese Seite regelmäßig auf Änderungen zu überprüfen. Ich werde dich über alle Änderungen informieren, indem ich die neue Datenschutzrichtlinie auf dieser Seite veröffentliche.\n\nDiese Richtlinie gilt ab 2020-09-08</string>
@@ -67,5 +66,27 @@
     <string name="entries_duplicated">Einträge verdoppelt</string>
     <string name="duplicate" comment="duplicate. The conjugation of &quot;Make&quot; is infinitive">Eintrag für heute kopieren</string>
     <string name="select" comment="select. Conjugation should be infinitive">Auswählen</string>
-    <string name="notes_optional">Notizen (optional)</string>
+    <string name="notes">Notizen</string>
+    <string name="acknowledgments">Danksagungen</string>
+    <string name="about">Über</string>
+    <string name="thanks_text">Während Kontakttagebuch als Einzelprojekt begann, profitierte es von wertvollen, altruistischen Beiträgen vieler Menschen. Mein aufrichtiger Dank an alle auf dieser Seite genannten.</string>
+    <string name="thanks_homescreen"><b>Schnellzugriffe für den Startbildschirm - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Niederländische Übersetzung - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> und <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Finnische Übersetzung - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Französische Übersetzung - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Deutsche Übersetzung - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> und <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Italienische Übersetzung - </b><a href="https://github.com/igor-cali">igor-cali</a> und <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Indonesische Übersetzung - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Polnische Übersetzung - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portugiesische Übersetzung - </b><a href="https://github.com/riuri">riuri</a> (Brasilien)</string>
+    <string name="thanks_swedish"><b>Schwedische Übersetzung - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Design</string>
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+    <string name="theme_system">Dem System-Design folgen</string>
+    <string name="backup">Sichern und Wiederherstellen</string>
+    <string name="import_database">Datenbank importieren</string>
+    <string name="import_database_summary">Gespeicherte Datenbank laden</string>
+    <string name="export_database">Datenbank exportieren</string>
+    <string name="export_database_summary">Speichere die Datenbank im CSV-Format</string>
 </resources>
