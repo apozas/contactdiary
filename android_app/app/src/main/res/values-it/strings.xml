@@ -66,6 +66,32 @@
     <string name="edit">Modifica</string>
     <string name="entry_duplicated">Voce duplicata</string>
     <string name="entries_duplicated">Voci duplicate</string>
-    <string name="acknowledgments">Grazie</string>
-    <string name="about">Di</string>
+    <string name="acknowledgments">Ringraziamenti</string>
+    <string name="about">Informazioni</string>
+    <string name="thanks_text">Sebbene Diario dei Contatti sia nato come progetto individuale, esso ha beneficiato dell\'inestimabile ed altruistico contributo di molte persone. I miei più sinceri ringraziamenti vanno alle persone in questa pagina.</string>
+    <string name="thanks_homescreen"><b>Scorciatoie del launcher - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Traduzione olandese - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> e <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Traduzione finlandese - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Traduzione francese - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Traduzione tedesca - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> e <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Traduzione italiana - </b><a href="https://github.com/igor-cali">igor-cali</a> e <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Traduzione indonesiana - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Traduzione polacca - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Traduzione portoghese - </b><a href="https://github.com/riuri">riuri</a> (Brasile)</string>
+    <string name="thanks_swedish"><b>Traduzione svedese - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Chiaro</string>
+    <string name="theme_dark">Scuro</string>
+    <string name="theme_system">Impostazione di sistema</string>
+    <string name="backup">Backup e ripristino</string>
+    <string name="export_database">Esporta l\'archivio</string>
+    <string name="export_database_summary">Salva l\'archivio in formato CSV</string>
+    <string name="export_success">Archivio salvato</string>
+    <string name="import_database">Importa un archivio</string>
+    <string name="import_database_summary">Carica un archivio salvato</string>
+    <string name="import_fail">C\'è un problema con l\'archivio</string>
+    <string name="import_success">Archivio caricato</string>
+    <string name="import_notfound">Il file specificato non è stato trovato</string>
+    <string name="import_select">Seleziona l\'archivio da importare</string>
+    <string name="about_donate_summary">Dona</string>
 </resources>
