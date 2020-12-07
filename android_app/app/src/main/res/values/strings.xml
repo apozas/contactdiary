@@ -63,7 +63,7 @@
     <string name="privacy_contact_title">Contact me</string>
     <string name="empty_table">Press (+) to begin adding contacts</string>
     <string name="app_version_title">App version</string>
-    <string name="about_donate_summary" >Donate</string>
+    <string name="about_donate_summary" />
     <string name="about_rate">Rate the app</string>
     <string name="about_rate_summary">If you like the app, please rate and review it so it can reach more people that may find it useful</string>
     <string name="rate_url" translatable="false">https://play.google.com/store/apps/details?id=com.apozas.contactdiary</string>
