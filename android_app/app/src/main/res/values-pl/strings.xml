@@ -69,4 +69,29 @@
     <string name="notes">Notatki</string>
     <string name="acknowledgments">Dzięki</string>
     <string name="about">O</string>
+    <string name="thanks_text">Chociaż Dziennik Kontaktów zaczynał jako projekt solowy, skorzystał z nieocenionego altruistycznego wkładu wielu osób. Moje szczere podziękowania dla wszystkich na tej stronie.</string>
+    <string name="thanks_homescreen"><b>Skróty ekranu głównego - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Niderlandzkie tłumaczenie - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> i <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Fińskie tłumaczenie - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Francuskie tłumaczenie - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Niemieckie tłumaczenie - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> i <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Włoskie tłumaczenie - </b><a href="https://github.com/igor-cali">igor-cali</a> i <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Indonezyjskie tłumaczenie - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Polskie tłumaczenie - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portugalskie tłumaczenie - </b><a href="https://github.com/riuri">riuri</a> (Brazylia)</string>
+    <string name="thanks_swedish"><b>Szwedzkie tłumaczenie - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Motyw</string>
+    <string name="theme_light">Jasny</string>
+    <string name="theme_dark">Ciemny</string>
+    <string name="theme_system">Śledź motyw systemu</string>
+    <string name="backup">Kopia zapasowa i przywracanie</string>
+    <string name="import_database">Importuj bazę danych</string>
+    <string name="import_database_summary">Załaduj zapisaną bazę danych</string>
+    <string name="export_database">Eksportuj bazę danych</string>
+    <string name="export_database_summary">Zapisz bazę danych w formacie CSV</string>
+    <string name="export_success">Baza danych zapisana</string>
+    <string name="import_fail">Wystąpił problem z bazą danych</string>
+    <string name="import_success">Baza danych załadowana</string>
+    <string name="import_notfound">Nie znaleziono określonego pliku</string>
+    <string name="import_select">Wybierz plik do zaimportowania</string>
 </resources>

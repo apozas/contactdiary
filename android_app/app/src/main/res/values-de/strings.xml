@@ -89,4 +89,9 @@
     <string name="import_database_summary">Gespeicherte Datenbank laden</string>
     <string name="export_database">Datenbank exportieren</string>
     <string name="export_database_summary">Speichere die Datenbank im CSV-Format</string>
+    <string name="export_success">Datenbank gespeichert</string>
+    <string name="import_fail">Es gibt ein Problem mit der Datenbank</string>
+    <string name="import_success">Datenbank geladen</string>
+    <string name="import_notfound">Die gewählte Datei wurde nicht gefunden</string>
+    <string name="import_select">Zu importierende Datenbank auswählen</string>
 </resources>

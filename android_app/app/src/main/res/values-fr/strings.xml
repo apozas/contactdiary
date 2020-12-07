@@ -69,4 +69,29 @@
     <string name="notes">Notes</string>
     <string name="acknowledgments">Merci</string>
     <string name="about">À propos</string>
+    <string name="thanks_text">Alors que Journal des Contactes a commencé comme un projet solo, il a bénéficié de contributions altruistes inestimables de nombreuses personnes. Mes sincères remerciements à tout le monde sur cette page.</string>
+    <string name="thanks_homescreen"><b>Raccourcis de l\'écran d\'accueil - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Traduction néerlandaise - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> et <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Traduction finlandaise - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Traduction française - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Traduction allemande - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> et <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Traduction italienne - </b><a href="https://github.com/igor-cali">igor-cali</a> et <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Traduction indonésienne - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Traduction polonaise - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Traduction portugaise - </b><a href="https://github.com/riuri">riuri</a> (Brésil)</string>
+    <string name="thanks_swedish"><b>Traduction suédoise - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Thème</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Foncé</string>
+    <string name="theme_system">Thème de l\'appareil</string>
+    <string name="backup">Sauvegarde et restauration</string>
+    <string name="import_database">Importer base de données</string>
+    <string name="import_database_summary">Charger une base de données sauvegardée</string>
+    <string name="export_database">Exporter base de données</string>
+    <string name="export_database_summary">Sauvegarder la base de données au format CSV</string>
+    <string name="export_success">Base de données sauvegardée</string>
+    <string name="import_fail">Il y a un problème avec la base de données</string>
+    <string name="import_success">Base de données chargée</string>
+    <string name="import_notfound">Le fichier spécifié n\'a pas été trouvé</string>
+    <string name="import_select">Sélectionnez le fichier à importer</string>
 </resources>

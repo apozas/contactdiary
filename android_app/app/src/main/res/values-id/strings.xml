@@ -80,4 +80,18 @@
     <string name="thanks_polish"><b>Terjemahan bahasa Polandia - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Terjemahan bahasa Portugal - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
     <string name="thanks_swedish"><b>Terjemahan bahasa Swedia - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Bersih</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="theme_system">Ikuti sistem</string>
+    <string name="backup">Cadangkan dan kembalikan</string>
+    <string name="import_database">Mengimpor database</string>
+    <string name="import_database_summary">Memuat database yang disimpan</string>
+    <string name="export_database">Ekspor database</string>
+    <string name="export_database_summary">Simpan database dalam format CSV</string>
+    <string name="export_success">Database disimpan</string>
+    <string name="import_fail">Ada masalah dengan database</string>
+    <string name="import_success">Database dimuat</string>
+    <string name="import_notfound">File yang ditentukan tidak ditemukan</string>
+    <string name="import_select">Pilih file yang akan diimpor</string>
 </resources>

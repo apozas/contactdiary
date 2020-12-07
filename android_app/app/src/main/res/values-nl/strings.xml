@@ -89,4 +89,9 @@
     <string name="import_database_summary">Een opgeslagen database laden</string>
     <string name="export_database">Database exporteren</string>
     <string name="export_database_summary">Opslaan van de database in CSV-formaat</string>
+    <string name="export_success">Database opgeslagen</string>
+    <string name="import_fail">Er is een problem met de database</string>
+    <string name="import_success">Database geladen</string>
+    <string name="import_notfound">Het gekozen bestand is niet gevonden</string>
+    <string name="import_select">Kies het bestand om te importeren</string>
 </resources>

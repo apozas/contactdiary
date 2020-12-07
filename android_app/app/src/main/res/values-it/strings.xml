@@ -93,5 +93,4 @@
     <string name="import_success">Archivio caricato</string>
     <string name="import_notfound">Il file specificato non è stato trovato</string>
     <string name="import_select">Seleziona l\'archivio da importare</string>
-    <string name="about_donate_summary">Dona</string>
 </resources>

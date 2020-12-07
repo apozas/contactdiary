@@ -80,4 +80,18 @@
     <string name="thanks_polish"><b>Tradução para Polonês - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Tradução para Português - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
     <string name="thanks_swedish"><b>Tradução para Sueco - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="import_select">Selecione o arquivo para importar</string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="theme_system">Seguir sistema</string>
+    <string name="backup">Backup e restauração</string>
+    <string name="import_database">Importar banco de dados</string>
+    <string name="import_database_summary">Carregar um banco de dados salvo</string>
+    <string name="export_database">Exportar banco de dados</string>
+    <string name="export_database_summary">Salvar a base de dados em formato CSV</string>
+    <string name="export_success">Banco de dados salvo</string>
+    <string name="import_fail">Há um problema com o banco de dados</string>
+    <string name="import_success">Banco de dados carregado</string>
+    <string name="import_notfound">O arquivo especificado não foi encontrado</string>
 </resources>

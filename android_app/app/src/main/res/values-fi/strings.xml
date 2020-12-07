@@ -80,4 +80,18 @@
     <string name="thanks_polish"><b>Puolankielinen käännös - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portugalkielinen käännös - </b><a href="https://github.com/riuri">riuri</a> (Brasilia)</string>
     <string name="thanks_swedish"><b>Ruotsinkielinen käännös - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Teema</string>
+    <string name="theme_light">Selvä</string>
+    <string name="theme_dark">Tumma</string>
+    <string name="theme_system">Seuraa järjestelmää</string>
+    <string name="backup">Varmuuskopiointi ja palautus</string>
+    <string name="import_database">Tuo tietokanta</string>
+    <string name="import_database_summary">Lataa tallennettu tietokanta</string>
+    <string name="export_database">Vie tietokanta</string>
+    <string name="export_database_summary">Tallenna tietokanta CSV-muodossa</string>
+    <string name="export_success">Tietokanta tallennettu</string>
+    <string name="import_fail">Tietokannassa on ongelma</string>
+    <string name="import_success">Tietokanta ladattu</string>
+    <string name="import_notfound">Määritettyä tiedostoa ei löytynyt</string>
+    <string name="import_select">Valitse tuotava tietokanta</string>
 </resources>
