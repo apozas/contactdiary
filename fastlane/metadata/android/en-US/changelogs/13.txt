@@ -1,0 +1,11 @@
+- All partial translations have been completed.
+- The app icon is fixed in lower versions.
+
+- DARK MODE. No longer you will be blinded when entering yout contacts in the dark.
+- Import/Export contact table. Now you can export your contacts to a CSV file, so you can share it with the authorities.
+- After hearing opinions, the duration has been substituted to beginning time and end time.
+- No fields other than the Name are compulsory any more.
+- Some bugs have been squashed.
+- New translations are available: Brazilian Portuguese (thanks to riuri).
+
+If you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary
