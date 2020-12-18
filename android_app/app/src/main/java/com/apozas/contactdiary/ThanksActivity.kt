@@ -28,6 +28,9 @@ class ThanksActivity : AppCompatActivity() {
         val homeScreen = findViewById<TextView>(R.id.thanks_homescreen)
         homeScreen.movementMethod = LinkMovementMethod.getInstance()
 
+        val chinese = findViewById<TextView>(R.id.thanks_chinese)
+        chinese.movementMethod = LinkMovementMethod.getInstance()
+
         val dutch = findViewById<TextView>(R.id.thanks_dutch)
         dutch.movementMethod = LinkMovementMethod.getInstance()
 

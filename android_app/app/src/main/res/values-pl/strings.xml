@@ -94,4 +94,5 @@
     <string name="import_success">Baza danych załadowana</string>
     <string name="import_notfound">Nie znaleziono określonego pliku</string>
     <string name="import_select">Wybierz plik do zaimportowania</string>
+    <string name="thanks_chinese"><b>Chińskie tłumaczenie - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradycyjne)</string>
 </resources>

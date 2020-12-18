@@ -94,4 +94,5 @@
     <string name="import_success">Datenbank geladen</string>
     <string name="import_notfound">Die gewählte Datei wurde nicht gefunden</string>
     <string name="import_select">Zu importierende Datenbank auswählen</string>
+    <string name="thanks_chinese"><b>Chinesische Übersetzung - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditionell)</string>
 </resources>

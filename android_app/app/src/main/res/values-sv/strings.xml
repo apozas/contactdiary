@@ -94,4 +94,5 @@
     <string name="import_success">Databas laddad</string>
     <string name="import_notfound">Den angivna filen kunde inte hittas</string>
     <string name="import_select">Välj den databas som ska importeras</string>
+    <string name="thanks_chinese"><b>Kinesisk överstättning - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditionell)</string>
 </resources>

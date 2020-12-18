@@ -94,4 +94,5 @@
     <string name="import_success">Database dimuat</string>
     <string name="import_notfound">File yang ditentukan tidak ditemukan</string>
     <string name="import_select">Pilih file yang akan diimpor</string>
+    <string name="thanks_chinese"><b>Terjemahan bahasa Mandarin - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradisional)</string>
 </resources>

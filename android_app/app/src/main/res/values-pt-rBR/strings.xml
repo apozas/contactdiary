@@ -94,4 +94,5 @@
     <string name="import_fail">Há um problema com o banco de dados</string>
     <string name="import_success">Banco de dados carregado</string>
     <string name="import_notfound">O arquivo especificado não foi encontrado</string>
+    <string name="thanks_chinese"><b>Traduçao para Chinês - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditional)</string>
 </resources>
