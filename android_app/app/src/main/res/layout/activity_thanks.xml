@@ -66,6 +66,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/thanks_hungarian"
+            android:text="@string/thanks_hungarian"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/thanks_indonesian"
             android:text="@string/thanks_indonesian"/>
 

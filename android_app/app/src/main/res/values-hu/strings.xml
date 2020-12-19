@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contact Diary</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="new_contact">Új kapcsolat</string>
+    <string name="new_event">Új esemény</string>
+    <string name="event_name">Esemény neve</string>
+    <string name="no">Nem</string>
+    <string name="yes">Igen</string>
+    <string name="date">Dátum</string>
+    <string name="time">Idő</string>
+    <string name="place">Hely</string>
+    <string name="companions">Társak</string>
+    <string name="close_event_question">Gondolod, hogy megtartottad a távolságot?</string>
+    <string name="name">Név</string>
+    <string name="known_contact">Rokon vagy közeli barát?</string>
+    <string name="distance_question">Gondolod, hogy megtartottad a távolságot?</string>
+    <string name="phone">Telefon</string>
+    <string name="unsure">Nem biztos</string>
+    <string name="encounter_type">Találkozás típusa</string>
+    <string name="indoors">Beltérben</string>
+    <string name="outdoors">Szabadban</string>
+    <string name="emptydiary">A napló üres</string>
+    <string name="contact_saved">Kapcsolat elmentve</string>
+    <string name="event_saved">Esemény mentve</string>
+    <string name="edit_event">Esemény szerkesztése</string>
+    <string name="edit_contact">Kapcsolat szerkesztése</string>
+    <string name="options">Opciók</string>
+    <string name="entry_deleted">Bejegyzés törölve</string>
+    <string name="contact_developer_summary">Mondja el, mit gondol az alkalmazásról, vagy problémák, amelyekkel találkozott</string>
+    <string name="contact_developer">Vegye fel a kapcsolatot a fejlesztővel</string>
+    <string name="about_donate">Vegyél nekem egy kávét</string>
+    <string name="notification_title">Kivel voltál ma?</string>
+    <string name="notification_text">Adja hozzá a névjegyeket a naplóhoz</string>
+    <string name="choose_option">Kérjük, válasszon egy lehetőséget</string>
+    <string name="compulsory_field">Kötelező mező</string>
+    <string name="edit">Szerkesztés</string>
+    <string name="delete">Törlés</string>
+    <string name="alarm_modified">Riasztás módosítva</string>
+    <string name="incorrect_alarm_time">Kérjük, helyezze be a megfelelő időt</string>
+    <string name="daily_reminder">Napi emlékeztető</string>
+    <string name="choose_time">Válasszon időt</string>
+    <string name="show_close_contacts">Csak a közeli kapcsolatok megjelenítése</string>
+    <string name="more">Több</string>
+    <string name="settings">Beállítások</string>
+    <string name="entries_deleted">Törölt bejegyzések</string>
+    <string name="entries_selected">" kiválasztott bejegyzések"</string>
+    <string name="privacy_title">Adatvédelmi Irányelvek</string>
+    <string name="privacy_intro">A kapcsolattartó naplót abban a reményben terjesztik, hogy hasznos lesz, de garancia nélkül; még az eladhatóság vagy az adott célra való alkalmasság vélelmezett garanciája nélkül is. Ez az oldal arra szolgál, hogy tájékoztassa a látogatókat a szabályzataimról a személyes adatok gyűjtésével, használatával és nyilvánosságra hozatalával kapcsolatban, ha valaki úgy döntött, hogy használja a kapcsolat naplót. Röviden, és mivel a Contact Diary nem tud csatlakozni az internethez, a Felhasználó eszközén kívül semmilyen személyes adat nem kerül tárolásra vagy másolásra. Ha úgy dönt, hogy a kapcsolat naplót használja, akkor elfogadja a gyűjtést (Nincs), valamint az ezzel a házirenddel kapcsolatos információk felhasználását. A Contact Diary által gyűjtött Személyes adatokat a szolgáltatás nyújtására használják. Amint azt a fentiekben kifejtettük, nem tudom, így nem fogom használni, sem megosztani az Ön adatait senkivel.</string>
+    <string name="privacy_icu">A névjegyzék használata megköveteli, hogy bizonyos személyazonosításra alkalmas adatokat, nevezetesen neveket és (opcionálisan) helyeket és telefonszámokat adjon meg. A kapcsolatfelvételi naplók által kért információkat az Ön eszközén tároljuk, és semmilyen módon nem gyűjtjük össze.</string>
+    <string name="privacy_cookies">A cookie-k olyan fájlok, amelyek kis mennyiségű adatot tartalmaznak, amelyeket általában névtelen egyedi azonosítóként használnak. Ezeket az Ön által meglátogatott webhelyekről küldi el a böngészőjének, és azokat az eszköz belső memóriájában tárolja.\n\nContact Diary nem használ semmilyen cookie-t, sem az első fél, sem a harmadik fél.\n\nugyanúgy, nincs szolgáltatás harmadik felekre ruházva. A kapcsolat naplóba bevitt információk soha nem hagyják el a készüléket.</string>
+    <string name="privacy_security">Ismét nincs olyan információ, amelyet a Kapcsolatfelvétel naplójába bevitt, soha nem hagyja el a készüléket. Ezt a tényt mindig értékelni lehet a Contact Diary forráskódjának ellenőrzésével, amely elérhető a <a href="https://www.github.com/apozas/contactdiary" >www.github.com/apozas/contactdiary</a>. így a biztonság és integritás kapcsolódik a fizikai biztonság és integritását a készülék, amelynek nem vállal felelősséget.</string>
+    <string name="privacy_changes">Időről időre frissíthetem ezt az Adatvédelmi irányelvet. Ezért javasoljuk, hogy rendszeresen vizsgálja felül ezt az oldalt a változások miatt. Értesítem Önt a változásokról az új Adatvédelmi Irányelvek ezen az oldalon történő közzétételével.\n\nez a politika 2020-09-08-tól érvényes</string>
+    <string name="privacy_contact">Ha bármilyen kérdése vagy javaslata van az Adatvédelmi irányelvekkel kapcsolatban, ne habozzon kapcsolatba lépni velem a <a href="címen mailto:contactdiary@alexpozas.com" >contactdiary@alexpozas.com</a>.</string>
+    <string name="privacy_changes_title">Változások az Adatvédelmi irányelvekben</string>
+    <string name="privacy_icu_title">Információgyűjtés és-felhasználás</string>
+    <string name="privacy_cookies_title">Cookie-k és szolgáltatók</string>
+    <string name="privacy_security_title">Biztonság</string>
+    <string name="privacy_contact_title">Lépjen kapcsolatba velem</string>
+    <string name="empty_table">Nyomja meg a (+) gombot a névjegyek hozzáadásának megkezdéséhez</string>
+    <string name="app_version_title">Alkalmazás verzió</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate">Értékelje az alkalmazást</string>
+    <string name="about_rate_summary">Ha tetszik az alkalmazás, kérjük, értékelje, majd tekintse át, így elérheti több ember, hogy hasznos lehe</string>
+    <string name="entry_duplicated">Bejegyzés duplikált</string>
+    <string name="entries_duplicated">A bejegyzések duplikáltak</string>
+    <string name="duplicate">Készíts egy másolatot ma</string>
+    <string name="select">Válassza ki</string>
+    <string name="notes">Megjegyzések</string>
+    <string name="acknowledgments">Köszönöm</string>
+    <string name="about">Ról ről</string>
+    <string name="thanks_text">Míg a Contact Diary egyéni projektként indult, sok ember felbecsülhetetlen önzetlen hozzájárulásából részesült. Őszinte köszönet mindenkinek ezen az oldalon.</string>
+    <string name="thanks_homescreen"><b>Kezdőképernyő parancsikonok - </b><a href="https://github.com/GenosseFlosse" > GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Holland fordítás - </b> <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> és <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Finn fordítás - </b> <a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Francia fordítás - </b> <a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Német fordítás - </b> <a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> és <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Olasz fordítás - </b><a href="https://github.com/igor-cali">igor-cali</a> és <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Indonéz fordítás - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Lengyel fordítás - </b> <a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portugál fordítás - </b><a href="https://github.com/riuri">riuri</a> (Brazília)</string>
+    <string name="thanks_swedish"><b>Svéd fordítás - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Téma</string>
+    <string name="theme_light">Fény</string>
+    <string name="theme_dark">Sötét</string>
+    <string name="theme_system">Kövesse a rendszert</string>
+    <string name="backup">Biztonsági mentés és visszaállítás</string>
+    <string name="import_database">Adatbázis importálása</string>
+    <string name="import_database_summary">Mentett adatbázis betöltése</string>
+    <string name="export_database">Adatbázis exportálása</string>
+    <string name="export_database_summary">Mentse el az adatbázist CSV formátumban</string>
+    <string name="export_success">Mentett adatbázis</string>
+    <string name="import_fail">Probléma van az adatbázissal</string>
+    <string name="import_success">Adatbázis betöltve</string>
+    <string name="import_notfound">A megadott fájl nem található</string>
+    <string name="import_select">Válassza ki az importálni kívánt adatbázist</string>
+    <string name="thanks_chinese"><b>Kínai fordítás - </b> </string>
+    <string name="thanks_hungarian"><b>Magyar fordítás - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+</resources>

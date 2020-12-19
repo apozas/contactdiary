@@ -94,4 +94,5 @@
     <string name="import_notfound">No se ha encontrado el archivo</string>
     <string name="import_select">Selecciona la base de datos a importar</string>
     <string name="thanks_chinese"><b>Traducción al chino - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradicional)</string>
+    <string name="thanks_hungarian"><b>Traducción al húngaro - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
 </resources>

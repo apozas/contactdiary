@@ -95,4 +95,5 @@
     <string name="import_notfound">找不到檔案</string>
     <string name="import_select">選擇匯入資料</string>
     <string name="thanks_chinese"><b>成中文翻譯 - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditional)</string>
+    <string name="thanks_hungarian"><b>匈牙利語翻譯 - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
 </resources>

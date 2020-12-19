@@ -95,4 +95,5 @@
     <string name="import_notfound">Määritettyä tiedostoa ei löytynyt</string>
     <string name="import_select">Valitse tuotava tietokanta</string>
     <string name="thanks_chinese"><b>Kiinankielinen käännös - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Perinteiten)</string>
+    <string name="thanks_hungarian"><b>Unkarinkielinen käännös - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
 </resources>
