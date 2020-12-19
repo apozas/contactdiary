@@ -89,16 +89,16 @@ class EditEventActivity : AppCompatActivity() {
         }
 
         var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        if (encounter%2==0) {encounter = 2*encounter+1}
-        else if (encounter==-1) {encounter = event_indoor_outdoor.childCount-2}    // Migration from 1.0.4 fix
-        val encounterBtn = event_indoor_outdoor.getChildAt(encounter) as RadioButton
-        encounterBtn.isChecked = true
+        if (encounter > 0) {
+            val encounterBtn = event_indoor_outdoor.getChildAt(encounter) as RadioButton
+            encounterBtn.isChecked = true
+        }
 
         var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
-        if (closeContact%2==0) {closeContact = 2*closeContact+1}
-        else if (closeContact==-1) {closeContact = eventclosecontact.childCount-2}    // Migration from 1.0.4 fix
-        val closeContactBtn = eventclosecontact.getChildAt(closeContact) as RadioButton
-        closeContactBtn.isChecked = true
+        if (closeContact > 0) {
+            val closeContactBtn = eventclosecontact.getChildAt(closeContact) as RadioButton
+            closeContactBtn.isChecked = true
+        }
 
         eventnotes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
 
