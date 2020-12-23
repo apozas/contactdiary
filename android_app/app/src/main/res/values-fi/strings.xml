@@ -11,10 +11,9 @@
     <string name="time">Aika</string>
     <string name="place">Paikka</string>
     <string name="companions">Seuralaiset</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Luuletko, että pidit etäisyyden?</string>
     <string name="name">Nimi</string>
     <string name="known_contact">Sukulainen vai läheinen ystävä?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Luuletko, että pidit etäisyyden?</string>
+    <string name="mitigation_question">Luuletko, että pidit etäisyyden?</string>
     <string name="phone">Puhelinnumero</string>
     <string name="unsure">Epävarma</string>
     <string name="encounter_type">Kohtaamisen tyyppi</string>

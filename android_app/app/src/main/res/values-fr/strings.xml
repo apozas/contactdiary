@@ -11,10 +11,9 @@
     <string name="time">Heure</string>
     <string name="place">Lieu</string>
     <string name="companions">Personnes présentes</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Pensez-vous avoir maintenu la distance?</string>
     <string name="name">Nom</string>
     <string name="known_contact">Famille ou ami proche?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Pensez-vous avoir respecté la distance entre vous?</string>
+    <string name="mitigation_question">Pensez-vous avoir respecté la distance entre vous?</string>
     <string name="phone">Téléphone</string>
     <string name="unsure">Pas sûr</string>
     <string name="encounter_type">Type de rencontre</string>

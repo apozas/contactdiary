@@ -10,7 +10,6 @@
     <string name="time">Hora</string>
     <string name="place">Lugar</string>
     <string name="companions">Acompañantes</string>
-    <string name="close_event_question">¿Crees que mantuviste la distancia?</string>
     <string name="name">Nombre</string>
     <string name="known_contact">¿Es familiar o amigo cercano?</string>
     <string name="distance_question">¿Crees que respetásteis la distancia?</string>

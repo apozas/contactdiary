@@ -11,10 +11,9 @@
     <string name="time">Hora</string>
     <string name="place">Lloc</string>
     <string name="companions">Acompanyants</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Creus que vas mantenir la distància?</string>
     <string name="name">Nom</string>
     <string name="known_contact">Familiar o amic proper?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Creus que vau mantenir la distància?</string>
+    <string name="mitigation_question">Creus que vau mantenir la distància?</string>
     <string name="phone">Telèfon</string>
     <string name="unsure">No estic segur</string>
     <string name="encounter_type">Tipus de trobada</string>

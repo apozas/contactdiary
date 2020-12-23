@@ -169,7 +169,7 @@ class SettingsActivity : AppCompatActivity() {
                 )
                 val columnNames =
                     cursor.columnNames.drop(1).toMutableList()    // We don't care of the _id column
-                columnNames[columnNames.indexOf("CloseContact")] = "DistanceKept"
+                columnNames[columnNames.indexOf("CloseContact")] = "Mitigation"
                 csvWriter!!.write(
                     columnNames.joinToString(separator = "\t", postfix = "\n").toByteArray()
                 )
@@ -198,7 +198,7 @@ class SettingsActivity : AppCompatActivity() {
                                     else -> cursor.getInt(i).toString()
                                 }
                             )
-                            "DistanceKept" -> arrStr.add(
+                            "Mitigation" -> arrStr.add(
                                 when (cursor.getInt(i)) {
                                     -1 -> ""
                                     1 -> "Yes"
@@ -242,7 +242,7 @@ class SettingsActivity : AppCompatActivity() {
                     feedEntry.TYPE_COLUMN, feedEntry.NAME_COLUMN, feedEntry.PLACE_COLUMN,
                     feedEntry.TIME_BEGIN_COLUMN, feedEntry.TIME_END_COLUMN, feedEntry.PHONE_COLUMN,
                     feedEntry.RELATIVE_COLUMN, feedEntry.COMPANIONS_COLUMN,
-                    feedEntry.ENCOUNTER_COLUMN, "DistanceKept", feedEntry.NOTES_COLUMN
+                    feedEntry.ENCOUNTER_COLUMN, "Mitigation", feedEntry.NOTES_COLUMN
                 )
             ) {
                 Toast.makeText(
@@ -267,7 +267,7 @@ class SettingsActivity : AppCompatActivity() {
                         val relative = nextLineList[6]
                         val companions = nextLineList[7]
                         val encounterType = nextLineList[8]
-                        val distance = nextLineList[9]
+                        val mitigation = nextLineList[9]
                         val notes = nextLineList[10]
 
                         val values = ContentValues().apply {
@@ -285,7 +285,7 @@ class SettingsActivity : AppCompatActivity() {
                                 }
                             )
                             put(
-                                feedEntry.CLOSECONTACT_COLUMN, when (distance) {
+                                feedEntry.CLOSECONTACT_COLUMN, when (mitigation) {
                                     "Yes" -> 1
                                     "No" -> 3
                                     "Unsure" -> 5

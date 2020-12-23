@@ -241,16 +241,20 @@
                         android:layout_weight="1" />
                 </RadioGroup>
 
-                <TextView
-                    android:id="@+id/distance_question"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/distance_question"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="@string/mitigation_question" />
+                </RelativeLayout>
 
                 <RadioGroup
-                    android:id="@+id/distance_group"
+                    android:id="@+id/mitigation_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -262,7 +266,7 @@
                         android:layout_weight="1" />
 
                     <RadioButton
-                        android:id="@+id/distance_yes"
+                        android:id="@+id/mitigation_yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -274,7 +278,7 @@
                         android:layout_weight="1" />
 
                     <RadioButton
-                        android:id="@+id/distance_no"
+                        android:id="@+id/mitigation_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -286,7 +290,7 @@
                         android:layout_weight="1" />
 
                     <RadioButton
-                        android:id="@+id/distance_maybe"
+                        android:id="@+id/mitigation_maybe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"

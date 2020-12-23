@@ -11,10 +11,9 @@
     <string name="time">時間</string>
     <string name="place">位置</string>
     <string name="companions">同行者</string>
-    <string name="close_event_question">您認為您有與他人保持距離嗎?</string>
     <string name="name">姓名</string>
     <string name="known_contact">是您的親戚或是好友嗎</string>
-    <string name="distance_question">您認為您有與他人保持距離嗎?</string>
+    <string name="mitigation_question">您認為您有與他人保持距離嗎?</string>
     <string name="phone">電話號碼</string>
     <string name="unsure">不確定</string>
     <string name="encounter_type">接觸類型</string>

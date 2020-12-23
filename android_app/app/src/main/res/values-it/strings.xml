@@ -28,7 +28,7 @@
     <string name="encounter_type">Tipo di incontro</string>
     <string name="indoors">Al chiuso</string>
     <string name="outdoors">All\'aperto</string>
-    <string name="distance_question">Pensi di aver mantenuto la distanza?</string>
+    <string name="mitigation_question">Pensi di aver mantenuto la distanza?</string>
     <string name="no">No</string>
     <string name="yes">Sì</string>
     <string name="unsure">Non sicuro</string>
@@ -40,7 +40,6 @@
     <string name="duplicate">Crea una copia oggi</string>
     <string name="delete">Elimina</string>
     <string name="entry_deleted">Voce eliminata</string>
-    <string name="close_event_question">Pensi di aver mantenuto la distanza?</string>
     <string name="contact_saved">Contatto salvato</string>
     <string name="event_saved">Evento salvato</string>
     <string name="edit_event">Modifica l\'evento</string>

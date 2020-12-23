@@ -11,10 +11,9 @@
     <string name="time">Uhrzeit</string>
     <string name="place">Ort</string>
     <string name="companions">Begleitpersonen</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Glaubst du, du hast genug Abstand eingehalten?</string>
     <string name="name">Name</string>
     <string name="known_contact">Verwandte*r oder enge*r Freund*in?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Glaubst du, ihr habt genug Abstand eingehalten?</string>
+    <string name="mitigation_question">Glaubst du, ihr habt genug Abstand eingehalten?</string>
     <string name="phone">Telefonnummer</string>
     <string name="unsure">Nicht sicher</string>
     <string name="encounter_type">Art der Begegnung</string>

@@ -24,9 +24,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editcontact_inside.*
 import java.text.DateFormat
@@ -99,7 +97,7 @@ class EditContactActivity : AppCompatActivity() {
 
         var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
         if (closeContact > 0) {
-            val closeContactBtn = distance_group.getChildAt(closeContact) as RadioButton
+            val closeContactBtn = mitigation_group.getChildAt(closeContact) as RadioButton
             closeContactBtn.isChecked = true
         }
 
@@ -188,11 +186,11 @@ class EditContactActivity : AppCompatActivity() {
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
             }
 
-            val contactCloseContactId = distance_group.checkedRadioButtonId
+            val contactCloseContactId = mitigation_group.checkedRadioButtonId
             var contactCloseContactChoice = -1
             if (contactCloseContactId != -1) {
-                val btn: View = distance_group.findViewById(contactCloseContactId)
-                contactCloseContactChoice = distance_group.indexOfChild(btn)
+                val btn: View = mitigation_group.findViewById(contactCloseContactId)
+                contactCloseContactChoice = mitigation_group.indexOfChild(btn)
             }
 
 //          Compulsory text field

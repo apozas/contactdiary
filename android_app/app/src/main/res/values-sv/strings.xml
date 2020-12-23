@@ -11,10 +11,9 @@
     <string name="time">Tid</string>
     <string name="place">Plats</string>
     <string name="companions">Följeslagare</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Tror du att du höll avståndet?</string>
     <string name="name">Namn</string>
     <string name="known_contact">Släkting eller nära vän?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Tror du att ni höll avståndet?</string>
+    <string name="mitigation_question">Tror du att ni höll avståndet?</string>
     <string name="phone">Telefonnummer</string>
     <string name="unsure">Osäker</string>
     <string name="encounter_type">Typ av möte</string>

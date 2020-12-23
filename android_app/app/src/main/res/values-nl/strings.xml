@@ -11,10 +11,9 @@
     <string name="time">Tijdstip</string>
     <string name="place">Locatie</string>
     <string name="companions">Metgezellen</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Denk je dat je afstand gehouden hebt?</string>
     <string name="name">Naam</string>
     <string name="known_contact">Eigen familie of goede vriend?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Denk je dat je afstand gehouden hebt?</string>
+    <string name="mitigation_question">Denk je dat je afstand gehouden hebt?</string>
     <string name="phone">Telefoonnummer</string>
     <string name="unsure">Weet ik niet</string>
     <string name="encounter_type">Vorm van contact</string>

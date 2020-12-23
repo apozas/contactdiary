@@ -11,10 +11,9 @@
     <string name="time">Godzina</string>
     <string name="place">Miejsce</string>
     <string name="companions">Towarzyszący</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Myślisz, że zachowaliście dystans?</string>
     <string name="name">Imię</string>
     <string name="known_contact">Krewny lub bliski znajomy?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Myślisz, że zachowaliście dystans?</string>
+    <string name="mitigation_question">Myślisz, że zachowaliście dystans?</string>
     <string name="phone">Telefon</string>
     <string name="unsure">Nie wiem</string>
     <string name="encounter_type">Warunki spotkania</string>

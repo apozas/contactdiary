@@ -11,10 +11,9 @@
     <string name="time">Hora</string>
     <string name="place">Local</string>
     <string name="companions">Companheiros</string>
-    <string name="close_event_question">Você acha que manteve a distância?</string>
     <string name="name">Nome</string>
     <string name="known_contact">Parente ou amigo próximo?</string>
-    <string name="distance_question">Vocês acham que mantiveram a distância?</string>
+    <string name="mitigation_question">Vocês acham que mantiveram a distância?</string>
     <string name="phone">Telefone</string>
     <string name="unsure">Não sei</string>
     <string name="encounter_type">Tipo de encontro</string>

@@ -21,8 +21,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.os.Bundle
 import android.text.format.DateFormat.is24HourFormat
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
@@ -150,11 +149,11 @@ class NewContactActivity : AppCompatActivity() {
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
             }
 
-            val contactCloseContactId = distance_group.checkedRadioButtonId
+            val contactCloseContactId = mitigation_group.checkedRadioButtonId
             var contactCloseContactChoice = -1
             if (contactCloseContactId != -1) {
-                val btn: View = distance_group.findViewById(contactCloseContactId)
-                contactCloseContactChoice = distance_group.indexOfChild(btn)
+                val btn: View = mitigation_group.findViewById(contactCloseContactId)
+                contactCloseContactChoice = mitigation_group.indexOfChild(btn)
             }
 
 //          Compulsory text field
