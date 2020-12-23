@@ -12,7 +12,7 @@
     <string name="companions">Acompañantes</string>
     <string name="name">Nombre</string>
     <string name="known_contact">¿Es familiar o amigo cercano?</string>
-    <string name="distance_question">¿Crees que respetásteis la distancia?</string>
+    <string name="mitigation_question">¿Crees que respetásteis la distancia?</string>
     <string name="phone">Teléfono</string>
     <string name="unsure">No sé</string>
     <string name="encounter_type">Tipo de encuentro</string>

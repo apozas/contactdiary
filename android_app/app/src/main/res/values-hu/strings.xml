@@ -13,7 +13,7 @@
     <string name="companions">Társak</string>
     <string name="name">Név</string>
     <string name="known_contact">Rokon vagy közeli barát?</string>
-    <string name="distance_question">Gondolod, hogy megtartottad a távolságot?</string>
+    <string name="mitigation_question">Gondolod, hogy megtartottad a távolságot?</string>
     <string name="phone">Telefon</string>
     <string name="unsure">Nem biztos</string>
     <string name="encounter_type">Találkozás típusa</string>
