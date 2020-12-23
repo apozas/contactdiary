@@ -326,8 +326,14 @@ class SettingsActivity : AppCompatActivity() {
         private fun readFile() {
             val intent = Intent(Intent.ACTION_GET_CONTENT).apply {
                 addCategory(Intent.CATEGORY_OPENABLE)
-                type = "text/csv"
+                type = "file/*"
             }
+            intent.putExtra(
+                Intent.EXTRA_MIME_TYPES,
+                arrayOf(
+                    "text/csv", "text/comma-separated-values", "text/tab-separated-values"
+                )
+            )
             try {
                 startActivityForResult(
                     Intent.createChooser(intent, getString(R.string.import_select)),
