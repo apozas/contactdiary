@@ -330,12 +330,17 @@ class SettingsActivity : AppCompatActivity() {
                 addCategory(Intent.CATEGORY_OPENABLE)
                 type = "file/*"
             }
-            intent.putExtra(
-                Intent.EXTRA_MIME_TYPES,
-                arrayOf(
-                    "text/csv", "text/comma-separated-values", "text/tab-separated-values"
-                )
+            val mimeTypes = arrayOf(
+                "text/csv", "text/comma-separated-values", "text/tab-separated-values"
             )
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                intent.putExtra(
+                    Intent.EXTRA_MIME_TYPES,
+                    mimeTypes
+                )
+            } else {
+                intent.type = mimeTypes.joinToString(separator = "|")
+            }
             try {
                 startActivityForResult(
                     Intent.createChooser(intent, getString(R.string.import_select)),
