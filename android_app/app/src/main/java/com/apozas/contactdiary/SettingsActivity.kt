@@ -214,7 +214,7 @@ class SettingsActivity : AppCompatActivity() {
                             }
                         }
                     }
-                    csvWriter!!.write(
+                    csvWriter.write(
                         arrStr.joinToString(separator = "\t", postfix = "\n").toByteArray()
                     )
                 }
@@ -306,12 +306,14 @@ class SettingsActivity : AppCompatActivity() {
                         nextLine = csvReader.readLine()
                     }
                     Toast.makeText(context, getString(R.string.import_success), Toast.LENGTH_LONG).show()
+                    db.close()
                 } catch (e: java.lang.Exception) {
                     e.printStackTrace()
                     Toast.makeText(context, getString(R.string.import_notfound), Toast.LENGTH_LONG)
                         .show()
                 }
             }
+            csvReader.close()
         }
 
         private fun createFile() {

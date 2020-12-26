@@ -58,7 +58,7 @@
     <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Kontakta mig</string>
     <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Tryck (+) för att börja lägga till kontakter</string>
     <string name="app_version_title">Appversion</string>
-    <string name="about_donate_summary"></string>
+    <string name="about_donate_summary" />
     <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Betygsätt appen</string>
     <string name="about_rate_summary">Om du gillar appen, vänligen betygsätt den och lämna en recension så att den kan nå fler personer som kan ha användning av den</string>
     <string name="entry_duplicated">Inlägg duplicerat</string>
