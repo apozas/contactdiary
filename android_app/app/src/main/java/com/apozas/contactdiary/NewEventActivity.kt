@@ -87,6 +87,7 @@ class NewEventActivity : AppCompatActivity() {
         val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             initCal.set(Calendar.HOUR_OF_DAY, hour)
             initCal.set(Calendar.MINUTE, minute)
+            initCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
             eventinittime_input.setText(timeFormat.format(initCal.time))
             if (eventendtime_input.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
@@ -110,6 +111,7 @@ class NewEventActivity : AppCompatActivity() {
         val endTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             endCal.set(Calendar.HOUR_OF_DAY, hour)
             endCal.set(Calendar.MINUTE, minute)
+            endCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
             if (endCal.timeInMillis < initCal.timeInMillis) {
                 Toast.makeText(
