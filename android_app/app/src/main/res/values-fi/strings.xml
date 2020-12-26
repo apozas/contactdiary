@@ -13,7 +13,7 @@
     <string name="companions">Seuralaiset</string>
     <string name="name">Nimi</string>
     <string name="known_contact">Sukulainen vai läheinen ystävä?</string>
-    <string name="mitigation_question">Luuletko, että pidit etäisyyden?</string>
+    <string name="mitigation_question">Toteutettiinko ehkäiseviä toimenpiteitä?</string>
     <string name="phone">Puhelinnumero</string>
     <string name="unsure">Epävarma</string>
     <string name="encounter_type">Kohtaamisen tyyppi</string>
@@ -95,5 +95,5 @@
     <string name="import_select">Valitse tuotava tietokanta</string>
     <string name="thanks_chinese"><b>Kiinankielinen käännös - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Perinteiten)</string>
     <string name="thanks_hungarian"><b>Unkarinkielinen käännös - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>Turkinkielinen käännös - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="thanks_turkish"><b>Turkinkielinen käännös - </b><a href="https://crowdin.com/profile/perboran">perboran</a> ja <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

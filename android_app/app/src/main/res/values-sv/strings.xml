@@ -13,7 +13,7 @@
     <string name="companions">Följeslagare</string>
     <string name="name">Namn</string>
     <string name="known_contact">Släkting eller nära vän?</string>
-    <string name="mitigation_question">Tror du att ni höll avståndet?</string>
+    <string name="mitigation_question">Vidtogs förebyggande åtgärder?</string>
     <string name="phone">Telefonnummer</string>
     <string name="unsure">Osäker</string>
     <string name="encounter_type">Typ av möte</string>
@@ -95,5 +95,5 @@
     <string name="import_select">Välj den databas som ska importeras</string>
     <string name="thanks_chinese"><b>Kinesisk överstättning - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditionell)</string>
     <string name="thanks_hungarian"><b>Ungerska översättning - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>Turkisk översättning - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="thanks_turkish"><b>Turkisk översättning - </b><a href="https://crowdin.com/profile/perboran">perboran</a> och <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

@@ -13,7 +13,7 @@
     <string name="companions">Pendamping</string>
     <string name="name">Nama</string>
     <string name="known_contact">Kerabat atau teman dekat?</string>
-    <string name="mitigation_question">Apakah Kalian menjaga jarak?</string>
+    <string name="mitigation_question">Apakah tindakan pencegahan diambil?</string>
     <string name="phone">Telepon</string>
     <string name="unsure">Tidak yakin</string>
     <string name="encounter_type">Jenis pertemuan</string>
@@ -95,5 +95,5 @@
     <string name="import_select">Pilih file yang akan diimpor</string>
     <string name="thanks_chinese"><b>Terjemahan bahasa Mandarin - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradisional)</string>
     <string name="thanks_hungarian"><b>Terjemahan bahasa Hongaria - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>Terjemahan bahasa turki - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="thanks_turkish"><b>Terjemahan bahasa turki - </b><a href="https://crowdin.com/profile/perboran">perboran</a> dan <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

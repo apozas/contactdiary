@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Contact Diary</string>
+    <string name="app_name">Kapcsolattartó Napló</string>
     <string name="action_settings">Beállítások</string>
     <string name="new_contact">Új kapcsolat</string>
     <string name="new_event">Új esemény</string>
@@ -13,7 +13,7 @@
     <string name="companions">Társak</string>
     <string name="name">Név</string>
     <string name="known_contact">Rokon vagy közeli barát?</string>
-    <string name="mitigation_question">Gondolod, hogy megtartottad a távolságot?</string>
+    <string name="mitigation_question">Megtették a megelőző intézkedéseket?</string>
     <string name="phone">Telefon</string>
     <string name="unsure">Nem biztos</string>
     <string name="encounter_type">Találkozás típusa</string>
@@ -45,12 +45,12 @@
     <string name="entries_deleted">Törölt bejegyzések</string>
     <string name="entries_selected">" kiválasztott bejegyzések"</string>
     <string name="privacy_title">Adatvédelmi Irányelvek</string>
-    <string name="privacy_intro">A kapcsolattartó naplót abban a reményben terjesztik, hogy hasznos lesz, de garancia nélkül; még az eladhatóság vagy az adott célra való alkalmasság vélelmezett garanciája nélkül is. Ez az oldal arra szolgál, hogy tájékoztassa a látogatókat a szabályzataimról a személyes adatok gyűjtésével, használatával és nyilvánosságra hozatalával kapcsolatban, ha valaki úgy döntött, hogy használja a kapcsolat naplót. Röviden, és mivel a Contact Diary nem tud csatlakozni az internethez, a Felhasználó eszközén kívül semmilyen személyes adat nem kerül tárolásra vagy másolásra. Ha úgy dönt, hogy a kapcsolat naplót használja, akkor elfogadja a gyűjtést (Nincs), valamint az ezzel a házirenddel kapcsolatos információk felhasználását. A Contact Diary által gyűjtött Személyes adatokat a szolgáltatás nyújtására használják. Amint azt a fentiekben kifejtettük, nem tudom, így nem fogom használni, sem megosztani az Ön adatait senkivel.</string>
-    <string name="privacy_icu">A névjegyzék használata megköveteli, hogy bizonyos személyazonosításra alkalmas adatokat, nevezetesen neveket és (opcionálisan) helyeket és telefonszámokat adjon meg. A kapcsolatfelvételi naplók által kért információkat az Ön eszközén tároljuk, és semmilyen módon nem gyűjtjük össze.</string>
-    <string name="privacy_cookies">A cookie-k olyan fájlok, amelyek kis mennyiségű adatot tartalmaznak, amelyeket általában névtelen egyedi azonosítóként használnak. Ezeket az Ön által meglátogatott webhelyekről küldi el a böngészőjének, és azokat az eszköz belső memóriájában tárolja.\n\nContact Diary nem használ semmilyen cookie-t, sem az első fél, sem a harmadik fél.\n\nugyanúgy, nincs szolgáltatás harmadik felekre ruházva. A kapcsolat naplóba bevitt információk soha nem hagyják el a készüléket.</string>
-    <string name="privacy_security">Ismét nincs olyan információ, amelyet a Kapcsolatfelvétel naplójába bevitt, soha nem hagyja el a készüléket. Ezt a tényt mindig értékelni lehet a Contact Diary forráskódjának ellenőrzésével, amely elérhető a <a href="https://www.github.com/apozas/contactdiary" >www.github.com/apozas/contactdiary</a>. így a biztonság és integritás kapcsolódik a fizikai biztonság és integritását a készülék, amelynek nem vállal felelősséget.</string>
-    <string name="privacy_changes">Időről időre frissíthetem ezt az Adatvédelmi irányelvet. Ezért javasoljuk, hogy rendszeresen vizsgálja felül ezt az oldalt a változások miatt. Értesítem Önt a változásokról az új Adatvédelmi Irányelvek ezen az oldalon történő közzétételével.\n\nez a politika 2020-09-08-tól érvényes</string>
-    <string name="privacy_contact">Ha bármilyen kérdése vagy javaslata van az Adatvédelmi irányelvekkel kapcsolatban, ne habozzon kapcsolatba lépni velem a <a href="címen mailto:contactdiary@alexpozas.com" >contactdiary@alexpozas.com</a>.</string>
+    <string name="privacy_intro">A Kapcsolattartó Naplót abban a reményben terjesztik, hogy hasznos lesz, de garancia nélkül; még az eladhatóság vagy az adott célra való alkalmasság vélelmezett garanciája nélkül is. Ez az oldal arra szolgál, hogy tájékoztassa a látogatókat a szabályzataimról a személyes adatok gyűjtésével, használatával és nyilvánosságra hozatalával kapcsolatban, ha valaki úgy döntött, hogy használja a Kapcsolattartó Napló. Röviden, és mivel a Kapcsolattartó Napló nem tud csatlakozni az internethez, a Felhasználó eszközén kívül semmilyen személyes adat nem kerül tárolásra vagy másolásra. Ha úgy dönt, hogy a Kapcsolattartó Napló használja, akkor elfogadja a gyűjtést (Nincs), valamint az ezzel a házirenddel kapcsolatos információk felhasználását. A Kapcsolattartó Napló által gyűjtött Személyes adatokat a szolgáltatás nyújtására használják. Amint azt a fentiekben kifejtettük, nem tudom, így nem fogom használni, sem megosztani az Ön adatait senkivel.</string>
+    <string name="privacy_icu">A névjegyzék használata megköveteli, hogy bizonyos személyazonosításra alkalmas adatokat, nevezetesen neveket és (opcionálisan) helyeket és telefonszámokat adjon meg. A Kapcsolatfelvételi Naplók által kért információkat az Ön eszközén tároljuk, és semmilyen módon nem gyűjtjük össze.</string>
+    <string name="privacy_cookies">A cookie-k olyan fájlok, amelyek kis mennyiségű adatot tartalmaznak, amelyeket általában névtelen egyedi azonosítóként használnak. Ezeket az Ön által meglátogatott webhelyekről küldi el a böngészőjének, és azokat az eszköz belső memóriájában tárolja.\n\nKapcsolattartó Napló nem használ semmilyen cookie-t, sem az első fél, sem a harmadik fél.\n\nUgyanúgy, nincs szolgáltatás harmadik felekre ruházva. A Kapcsolat Naplóba bevitt információk soha nem hagyják el a készüléket.</string>
+    <string name="privacy_security">Ismét nincs olyan információ, amelyet a Kapcsolatfelvétel Naplójába bevitt, soha nem hagyja el a készüléket. Ezt a tényt mindig értékelni lehet a Kapcsolattartó Napló forráskódjának ellenőrzésével, amely elérhető a <a href="https://www.github.com/apozas/contactdiary" >www.github.com/apozas/contactdiary</a>. így a biztonság és integritás kapcsolódik a fizikai biztonság és integritását a készülék, amelynek nem vállal felelősséget.</string>
+    <string name="privacy_changes">Időről időre frissíthetem ezt az Adatvédelmi irányelvet. Ezért javasoljuk, hogy rendszeresen vizsgálja felül ezt az oldalt a változások miatt. Értesítem Önt a változásokról az új Adatvédelmi Irányelvek ezen az oldalon történő közzétételével.\n\nEz a politika 2020-09-08-tól érvényes</string>
+    <string name="privacy_contact">Ha bármilyen kérdése vagy javaslata van az Adatvédelmi irányelvekkel kapcsolatban, ne habozzon kapcsolatba lépni velem a <a href="címen mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (lehetőleg angolul).</string>
     <string name="privacy_changes_title">Változások az Adatvédelmi irányelvekben</string>
     <string name="privacy_icu_title">Információgyűjtés és-felhasználás</string>
     <string name="privacy_cookies_title">Cookie-k és szolgáltatók</string>
@@ -68,7 +68,7 @@
     <string name="notes">Megjegyzések</string>
     <string name="acknowledgments">Köszönöm</string>
     <string name="about">Ról ről</string>
-    <string name="thanks_text">Míg a Contact Diary egyéni projektként indult, sok ember felbecsülhetetlen önzetlen hozzájárulásából részesült. Őszinte köszönet mindenkinek ezen az oldalon.</string>
+    <string name="thanks_text">Míg a Kapcsolattartó Napló egyéni projektként indult, sok ember felbecsülhetetlen önzetlen hozzájárulásából részesült. Őszinte köszönet mindenkinek ezen az oldalon.</string>
     <string name="thanks_homescreen"><b>Kezdőképernyő parancsikonok - </b><a href="https://github.com/GenosseFlosse" > GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Holland fordítás - </b> <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> és <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Finn fordítás - </b> <a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
@@ -93,7 +93,7 @@
     <string name="import_success">Adatbázis betöltve</string>
     <string name="import_notfound">A megadott fájl nem található</string>
     <string name="import_select">Válassza ki az importálni kívánt adatbázist</string>
-    <string name="thanks_chinese"><b>Kínai fordítás - </b> </string>
+    <string name="thanks_chinese"><b>Kínai fordítás - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Hagyományos)</string>
     <string name="thanks_hungarian"><b>Magyar fordítás - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>Török fordítás - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="thanks_turkish"><b>Török fordítás - </b><a href="https://crowdin.com/profile/perboran">perboran</a> és <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

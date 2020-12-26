@@ -13,7 +13,7 @@
     <string name="companions">同行者</string>
     <string name="name">姓名</string>
     <string name="known_contact">是您的親戚或是好友嗎</string>
-    <string name="mitigation_question">您認為您有與他人保持距離嗎?</string>
+    <string name="mitigation_question">有採取任何預防措施嗎?</string>
     <string name="phone">電話號碼</string>
     <string name="unsure">不確定</string>
     <string name="encounter_type">接觸類型</string>
@@ -95,5 +95,5 @@
     <string name="import_select">選擇匯入資料</string>
     <string name="thanks_chinese"><b>成中文翻譯 - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditional)</string>
     <string name="thanks_hungarian"><b>匈牙利語翻譯 - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>土耳其語翻譯 - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="thanks_turkish"><b>土耳其語翻譯 - </b><a href="https://crowdin.com/profile/perboran">perboran</a> 和 <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

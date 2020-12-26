@@ -12,7 +12,7 @@
     <string name="companions">Acompañantes</string>
     <string name="name">Nombre</string>
     <string name="known_contact">¿Es familiar o amigo cercano?</string>
-    <string name="mitigation_question">¿Crees que respetásteis la distancia?</string>
+    <string name="mitigation_question">¿Se adoptaron medidas de prevención?</string>
     <string name="phone">Teléfono</string>
     <string name="unsure">No sé</string>
     <string name="encounter_type">Tipo de encuentro</string>
@@ -94,5 +94,6 @@
     <string name="import_select">Selecciona la base de datos a importar</string>
     <string name="thanks_chinese"><b>Traducción al chino - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradicional)</string>
     <string name="thanks_hungarian"><b>Traducción al húngaro - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>Traducción al turco - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="mitigation_text">Las medidas de prevención incluyen uso de mascarillas, distancia y/o ventilación</string>
+    <string name="thanks_turkish"><b>Traducción al turco - </b><a href="https://crowdin.com/profile/perboran">perboran</a> y <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

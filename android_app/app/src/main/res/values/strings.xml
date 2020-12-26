@@ -54,7 +54,7 @@
     <string name="privacy_cookies">Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device\'s internal memory.\n\nContact Diary does not use any cookies, neither first-party nor third-party.\n\nIn the same way, no service is delegated to third parties. The information you input into Contact Diary never leaves your device.</string>
     <string name="privacy_security">Again, no information you input to Contact Diary ever leaves your device. This fact can be always evaluated by inspecting Contact Diary\'s source code, which is available at <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Thus, its security and integrity is linked to the physical security and integrity of your device, of which I take no responsibility.</string>
     <string name="privacy_changes">I may update this Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.\n\nThis policy is effective as of 2020-09-08</string>
-    <string name="privacy_contact">If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact me at <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a>.</string>
+    <string name="privacy_contact">If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact me at <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (preferably in English).</string>
     <string name="privacy_changes_title">Changes to this privacy policy</string>
     <string name="privacy_icu_title">Information collection and use</string>
     <string name="privacy_cookies_title">Cookies and service providers</string>
@@ -86,7 +86,7 @@
     <string name="thanks_polish"><b>Polish translation - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portuguese translation - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
     <string name="thanks_swedish"><b>Swedish translation - </b><a href="https://github.com/nlssn">nlssn</a></string>
-    <string name="thanks_turkish"><b>Turkish translation - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="thanks_turkish"><b>Turkish translation - </b><a href="https://crowdin.com/profile/perboran">perboran</a> and<a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="theme">Theme</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>

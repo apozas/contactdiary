@@ -28,7 +28,7 @@
     <string name="encounter_type">Tipo di incontro</string>
     <string name="indoors">Al chiuso</string>
     <string name="outdoors">All\'aperto</string>
-    <string name="mitigation_question">Pensi di aver mantenuto la distanza?</string>
+    <string name="mitigation_question">Sono state adottate misure di prevenzione?</string>
     <string name="no">No</string>
     <string name="yes">Sì</string>
     <string name="unsure">Non sicuro</string>
@@ -95,5 +95,5 @@
     <string name="import_select">Seleziona l\'archivio da importare</string>
     <string name="thanks_chinese"><b>Traduzione cinese - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradizionale)</string>
     <string name="thanks_hungarian"><b>Traduzione ungherese - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>Traduzione turca - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
+    <string name="thanks_turkish"><b>Traduzione turca - </b><a href="https://crowdin.com/profile/perboran">perboran</a> e <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>
