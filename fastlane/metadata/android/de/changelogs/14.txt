@@ -1,0 +1,7 @@
+Das wichtigste Merkmal dieser neuen Version ist, dass die Frage nach der Entfernung jetzt allgemeiner ist und andere Präventionsmaßnahmen umfasst. WICHTIG!! Diese Änderung führt dazu, dass der Import von Tabellen, die in älteren Versionen erstellt wurden, fehlschlägt. Wenn Sie eine alte Tabelle importieren möchten, importieren Sie sie, aktualisieren Sie sie, und exportieren Sie sie erneut.
+Auch:
+- Der Importmechanismus wurde verbessert.
+- Einige kleinere Fehler wurden behoben.
+- Neue Übersetzungen verfügbar: Traditionelles Chinesisch (dank walfrido42), Ungarisch (dank mondlicht-und-sterne) und Türkisch (dank perboran).
+
+Wenn Sie Contact Diary in Ihre Sprache übersetzen möchten, besuchen Sie http://www.crowdin.com/project/contactdiary
