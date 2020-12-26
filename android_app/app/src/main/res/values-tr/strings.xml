@@ -95,4 +95,5 @@
     <string name="import_success">Veritabanı yüklendi</string>
     <string name="import_notfound">Belirtilen dosya bulunamadı</string>
     <string name="import_select">İçe aktarılacak veritabanını seçiniz</string>
+    <string name="thanks_turkish"><b>Türkçe çeviri - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
 </resources>

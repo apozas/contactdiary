@@ -60,5 +60,8 @@ class ThanksActivity : AppCompatActivity() {
 
         val swedish = findViewById<TextView>(R.id.thanks_swedish)
         swedish.movementMethod = LinkMovementMethod.getInstance()
+
+        val turkish = findViewById<TextView>(R.id.thanks_turkish)
+        turkish.movementMethod = LinkMovementMethod.getInstance()
     }
 }

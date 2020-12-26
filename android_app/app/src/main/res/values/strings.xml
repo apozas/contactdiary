@@ -86,6 +86,7 @@
     <string name="thanks_polish"><b>Polish translation - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portuguese translation - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
     <string name="thanks_swedish"><b>Swedish translation - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="thanks_turkish"><b>Turkish translation - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
     <string name="theme">Theme</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>

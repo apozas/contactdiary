@@ -95,4 +95,5 @@
     <string name="import_select">Válassza ki az importálni kívánt adatbázist</string>
     <string name="thanks_chinese"><b>Kínai fordítás - </b> </string>
     <string name="thanks_hungarian"><b>Magyar fordítás - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_turkish"><b>Török fordítás - </b><a href="https://crowdin.com/profile/perboran">perboran</a></string>
 </resources>
