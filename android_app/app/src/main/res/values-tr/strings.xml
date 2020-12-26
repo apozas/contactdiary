@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">İletişim Günlüğü</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="new_contact">Yeni bağlantı</string>
+    <string name="new_event">Yeni etkinlik</string>
+    <string name="event_name">Etkinlik ismi</string>
+    <string name="no">Hayır</string>
+    <string name="yes">Evet</string>
+    <string name="date">Tarih</string>
+    <string name="time">Zaman</string>
+    <string name="place">Yer</string>
+    <string name="companions">Yoldaşlar</string>
+    <string name="name">İsim</string>
+    <string name="known_contact">Aile veya yakin arkadas?</string>
+    <string name="mitigation_question">Önleme tedbirleri alındı ​​mı?</string>
+    <string name="phone">Telefon</string>
+    <string name="unsure">Emin değilim</string>
+    <string name="encounter_type">Karşılaşma türü</string>
+    <string name="indoors">İç mekan</string>
+    <string name="outdoors">Dış mekanlar</string>
+    <string name="emptydiary">Liste boş</string>
+    <string name="contact_saved">Kişi kaydedildi</string>
+    <string name="event_saved">Etkinlik kaydedildi</string>
+    <string name="edit_event">Etkinliği düzenle</string>
+    <string name="edit_contact">Kişi düzenleme</string>
+    <string name="options">Seçenekler</string>
+    <string name="entry_deleted">Giriş silindi</string>
+    <string name="contact_developer_summary">Bana uygulama hakkında ne düşündüğünüzü veya karşılaştığınız sorunları söyleyin</string>
+    <string name="contact_developer">Geliştiricisine iletişime geçin</string>
+    <string name="about_donate">Bana kahve ısmarlayın</string>
+    <string name="notification_title">Bugün kiminle birlikteydin?</string>
+    <string name="notification_text">Kişilerinizi günlüğe ekleyin</string>
+    <string name="choose_option">Bir seçeneği seçiniz</string>
+    <string name="compulsory_field">Zorunlu alan</string>
+    <string name="edit">Düzenle</string>
+    <string name="delete">Temizle</string>
+    <string name="alarm_modified">Alarm değiştirildi</string>
+    <string name="incorrect_alarm_time">Lütfen doğru bir zaman giriniz</string>
+    <string name="daily_reminder">Günlük hatırlatma</string>
+    <string name="choose_time">Zamanı seç</string>
+    <string name="show_close_contacts">Yalnızca yakın kişileri göster</string>
+    <string name="more">Daha Fazla</string>
+    <string name="settings">Ayarlar</string>
+    <string name="entries_deleted">Giriş silindi</string>
+    <string name="entries_selected">" girdiler seçildi"</string>
+    <string name="privacy_title">Gizlilik Politikası</string>
+    <string name="privacy_intro">İletişim Günlüğü yararlı olacağı ümidiyle ancak HERHANGİ BİR GARANTİ VERMEKSİZİN dağıtılır; BELİRLİ BİR AMACA UYGUNLUK veya ZIMNİ TİCARET garantisi olmadan. Bu sayfa, herhangi birinin İletişim Günlüğü\'nü kullanmaya karar vermesi durumunda Kişisel Bilgilerin toplanması, kullanılması ve ifşa edilmesi ile ilgili politikalarım hakkında ziyaretçileri bilgilendirmek için kullanılır. Kısaca ve İletişim Günlüğü internete bağlanamadığından, hiçbir kişisel bilgi kullanıcının cihazı dışında saklanmayacak veya kopyalanmayacaktır. İletişim Günlüğü\'nü kullanmayı seçerseniz, bu politikayla ilgili bilgilerin toplanmasını (yok) ve kullanılmasını kabul etmiş olursunuz. İletişim Günlüğünün topladığı Kişisel Bilgiler, hizmet sağlamak için kullanılır. Yukarıda açıklandığı gibi, bilgilerinizi hiç kimseyle kullanamam ve bu sebeple de paylaşmayacağım.</string>
+    <string name="privacy_icu">İletişim Günlüğü\'nün kullanımı, isimler ve (isteğe bağlı olarak) yerler ve telefon numaraları gibi kişisel olarak tanımlanabilir belirli bilgileri girmenizi gerektirir. İletişim Günlüğü\'nün talep ettiği bilgiler cihazınızda saklanacak ve hiçbir şekilde tarafımdan toplanmayacaktır.</string>
+    <string name="privacy_cookies">Çerezler, anonim ve benzersiz tanımlayıcı olarak kullanılan az miktarda veri içeren dosyalardır. Bunlar, ziyaret ettiğiniz web sitelerinden tarayıcınıza gönderilir ve cihazınızın dahili belleğinde saklanır.\n\nİletişim Günlüğü, ne birinci taraf ne de üçüncü taraf çerezler kullanmaz.\n\nAynı şekilde hiçbir hizmet üçüncü şahıslara devredilmez. İletişim Günlüğü\'ne girdiğiniz bilgiler asla cihazınızdan çıkmaz.</string>
+    <string name="privacy_security">Yine, İletişim Günlüğü\'ne girdiğiniz hiçbir bilgi cihazınızdan çıkmaz. Bu gerçek, <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a> adresinde bulunan İletişim Günlüğü kaynak kodu incelenerek her zaman değerlendirilebilir. Bu nedenle, güvenlik ve bütünlüğü, hiçbir sorumluluk almadığım cihazınızın fiziksel güvenliği ve bütünlüğü ile bağlantılıdır.</string>
+    <string name="privacy_changes">Bu Gizlilik Politikasını zaman zaman güncelleyebilirim. Bu nedenle, herhangi bir değişiklik için bu sayfayı periyodik olarak gözden geçirmeniz önerilir. Yeni Gizlilik Politikasını bu sayfada yayınlayarak her türlü değişikliği size bildireceğim.\n\nBu politika 2020-09-08 tarihinden itibaren geçerlidir</string>
+    <string name="privacy_contact">Bu Gizlilik Politikası hakkında herhangi bir sorunuz veya öneriniz varsa, benimle <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> adresinden (tercihen İngilizce olarak) iletişime geçmekten çekinmeyin.</string>
+    <string name="privacy_changes_title">Gizlilik politikasındaki değişiklikler</string>
+    <string name="privacy_icu_title">Bilgi toplama ve kullanma</string>
+    <string name="privacy_cookies_title">Çerezler ve servis sağlayıcılar</string>
+    <string name="privacy_security_title">Güvenlik</string>
+    <string name="privacy_contact_title">Bana ulaşın</string>
+    <string name="empty_table">Kişi eklemeye başlamak için (+) tuşuna basın</string>
+    <string name="app_version_title">Uygulama sürümü</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate">Uygulamayı değerlendirin</string>
+    <string name="about_rate_summary">Eğer uygulamayı beğendiyseniz, lütfen daha fazla insana yararlı olabilmesi için inceleyin ve değerlendirin</string>
+    <string name="entry_duplicated">Girdi kopyalandı</string>
+    <string name="entries_duplicated">Girdiler kopyalandı</string>
+    <string name="duplicate">Bugünün bir kopyasını oluştur</string>
+    <string name="select">Seç</string>
+    <string name="notes">Notlar</string>
+    <string name="acknowledgments">Teşekkürler</string>
+    <string name="about">Hakkında</string>
+    <string name="thanks_text">İletişim Günlüğü solo bir proje olarak başlarken, birçok kişinin paha biçilmez fedakar katkılarına ev sahipliği yaptı. Bu sayfadaki herkese içten teşekkürlerimi sunarım.</string>
+    <string name="thanks_homescreen"><b>Ana ekran kısayolları - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_chinese"><b>Çince çeviri - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Geleneksel)</string>
+    <string name="thanks_dutch"><b>Hollandaca çeviri- </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> ve <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Fince çeviri - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Fransızca çeviri - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Almanca çeviri - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> ve <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_hungarian"><b>Macarca çeviri - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_italian"><b>İtalyanca çeviri - </b><a href="https://github.com/igor-cali">igor-cali</a> ve <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Endonezce çeviri - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Lehçe çeviri - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portekizce çeviri - </b><a href="https://github.com/riuri">riuri</a> (Brezilya)</string>
+    <string name="thanks_swedish"><b>İsveççe çeviri - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Açık</string>
+    <string name="theme_dark">Koyu</string>
+    <string name="theme_system">Sistemi izleyin</string>
+    <string name="backup">Yedekle ve geri yükle</string>
+    <string name="import_database">Veritabanını içe aktar</string>
+    <string name="import_database_summary">Veritabanı yükle</string>
+    <string name="export_database">Veritabanını dışa aktar</string>
+    <string name="export_database_summary">Veritabanını CSV formatında kaydedin</string>
+    <string name="export_success">Veritabanı kaydedildi</string>
+    <string name="import_fail">Veritabanıyla ilgili bir sorun var</string>
+    <string name="import_success">Veritabanı yüklendi</string>
+    <string name="import_notfound">Belirtilen dosya bulunamadı</string>
+    <string name="import_select">İçe aktarılacak veritabanını seçiniz</string>
+</resources>
