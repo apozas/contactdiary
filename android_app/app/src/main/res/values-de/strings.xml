@@ -11,10 +11,9 @@
     <string name="time">Uhrzeit</string>
     <string name="place">Ort</string>
     <string name="companions">Begleitpersonen</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Glaubst du, du hast genug Abstand eingehalten?</string>
     <string name="name">Name</string>
     <string name="known_contact">Verwandte*r oder enge*r Freund*in?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Glaubst du, ihr habt genug Abstand eingehalten?</string>
+    <string name="mitigation_question">Wurden Präventionsmaßnahmen ergriffen?</string>
     <string name="phone">Telefonnummer</string>
     <string name="unsure">Nicht sicher</string>
     <string name="encounter_type">Art der Begegnung</string>
@@ -89,4 +88,13 @@
     <string name="import_database_summary">Gespeicherte Datenbank laden</string>
     <string name="export_database">Datenbank exportieren</string>
     <string name="export_database_summary">Speichere die Datenbank im CSV-Format</string>
+    <string name="export_success">Datenbank gespeichert</string>
+    <string name="import_fail">Es gibt ein Problem mit der Datenbank</string>
+    <string name="import_success">Datenbank geladen</string>
+    <string name="import_notfound">Die gewählte Datei wurde nicht gefunden</string>
+    <string name="import_select">Zu importierende Datenbank auswählen</string>
+    <string name="thanks_chinese"><b>Chinesische Übersetzung - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditionell)</string>
+    <string name="thanks_hungarian"><b>Ungarische Übersetzung - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_turkish"><b>Türkische Übersetzung - </b><a href="https://crowdin.com/profile/perboran">perboran</a> und <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="mitigation_text">Präventionsmaßnahmen umfassen Maskennutzung, Abstand und/oder Lüftung</string>
 </resources>

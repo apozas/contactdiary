@@ -11,10 +11,9 @@
     <string name="time">Waktu</string>
     <string name="place">Lokasi</string>
     <string name="companions">Pendamping</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Apakah Anda pikir Anda menjaga jarak?</string>
     <string name="name">Nama</string>
     <string name="known_contact">Kerabat atau teman dekat?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Apakah Kalian menjaga jarak?</string>
+    <string name="mitigation_question">Apakah tindakan pencegahan diambil?</string>
     <string name="phone">Telepon</string>
     <string name="unsure">Tidak yakin</string>
     <string name="encounter_type">Jenis pertemuan</string>
@@ -80,4 +79,21 @@
     <string name="thanks_polish"><b>Terjemahan bahasa Polandia - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Terjemahan bahasa Portugal - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
     <string name="thanks_swedish"><b>Terjemahan bahasa Swedia - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Bersih</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="theme_system">Ikuti sistem</string>
+    <string name="backup">Cadangkan dan kembalikan</string>
+    <string name="import_database">Mengimpor database</string>
+    <string name="import_database_summary">Memuat database yang disimpan</string>
+    <string name="export_database">Ekspor database</string>
+    <string name="export_database_summary">Simpan database dalam format CSV</string>
+    <string name="export_success">Database disimpan</string>
+    <string name="import_fail">Ada masalah dengan database</string>
+    <string name="import_success">Database dimuat</string>
+    <string name="import_notfound">File yang ditentukan tidak ditemukan</string>
+    <string name="import_select">Pilih file yang akan diimpor</string>
+    <string name="thanks_chinese"><b>Terjemahan bahasa Mandarin - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradisional)</string>
+    <string name="thanks_hungarian"><b>Terjemahan bahasa Hongaria - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_turkish"><b>Terjemahan bahasa turki - </b><a href="https://crowdin.com/profile/perboran">perboran</a> dan <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

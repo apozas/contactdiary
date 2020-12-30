@@ -20,10 +20,13 @@ import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_addevent_inside.*
@@ -84,6 +87,7 @@ class NewEventActivity : AppCompatActivity() {
         val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             initCal.set(Calendar.HOUR_OF_DAY, hour)
             initCal.set(Calendar.MINUTE, minute)
+            initCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
             eventinittime_input.setText(timeFormat.format(initCal.time))
             if (eventendtime_input.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
@@ -107,6 +111,7 @@ class NewEventActivity : AppCompatActivity() {
         val endTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             endCal.set(Calendar.HOUR_OF_DAY, hour)
             endCal.set(Calendar.MINUTE, minute)
+            endCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
             if (endCal.timeInMillis < initCal.timeInMillis) {
                 Toast.makeText(
@@ -208,5 +213,23 @@ class NewEventActivity : AppCompatActivity() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+    }
+
+    fun openPopup(view: View) {
+        val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val popupView: View = inflater.inflate(R.layout.popup_window, null)
+
+        val width = LinearLayout.LayoutParams.WRAP_CONTENT
+        val height = LinearLayout.LayoutParams.WRAP_CONTENT
+        val focusable = true // Taps outside the popup also dismiss it
+
+        val popupWindow = PopupWindow(popupView, width, height, focusable)
+        popupWindow.showAsDropDown(help, 0, 10)
+
+//      Dismiss the popup window when touched
+        popupView.setOnTouchListener { _, _ ->
+            popupWindow.dismiss()
+            true
+        }
     }
 }

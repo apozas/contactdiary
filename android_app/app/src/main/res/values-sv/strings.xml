@@ -11,10 +11,9 @@
     <string name="time">Tid</string>
     <string name="place">Plats</string>
     <string name="companions">Följeslagare</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Tror du att du höll avståndet?</string>
     <string name="name">Namn</string>
     <string name="known_contact">Släkting eller nära vän?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Tror du att ni höll avståndet?</string>
+    <string name="mitigation_question">Vidtogs förebyggande åtgärder?</string>
     <string name="phone">Telefonnummer</string>
     <string name="unsure">Osäker</string>
     <string name="encounter_type">Typ av möte</string>
@@ -59,7 +58,7 @@
     <string name="privacy_contact_title" comment="privacy_contact_title. The conjugation of &quot;Contact&quot; is present, first person singular">Kontakta mig</string>
     <string name="empty_table" comment="empty_table. The conjugation of &quot;Press&quot; is present, first person singular">Tryck (+) för att börja lägga till kontakter</string>
     <string name="app_version_title">Appversion</string>
-    <string name="about_donate_summary"></string>
+    <string name="about_donate_summary" />
     <string name="about_rate" comment="about_rate. The conjugation of &quot;Rate&quot; is present, first person singular">Betygsätt appen</string>
     <string name="about_rate_summary">Om du gillar appen, vänligen betygsätt den och lämna en recension så att den kan nå fler personer som kan ha användning av den</string>
     <string name="entry_duplicated">Inlägg duplicerat</string>
@@ -69,4 +68,32 @@
     <string name="notes">Anteckningar</string>
     <string name="acknowledgments">Tack</string>
     <string name="about">Handla om</string>
+    <string name="thanks_text">Medan Kontaktdagbok startade som ett soloprojekt, har det gynnats av ovärderliga altruistiska bidrag från många människor. Mitt ärliga tack till alla på denna sida.</string>
+    <string name="thanks_homescreen"><b>Hemskärmsgenvägar - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>Nederländsk översättning - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> och <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Finsk översättning - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Fransk översättning - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Tysk översättning - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> och <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>Italiensk översättning - </b><a href="https://github.com/igor-cali">igor-cali</a> och <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Indonesisk översättning - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Polsk översättning - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portugisisk översättning - </b><a href="https://github.com/riuri">riuri</a> (Brasilien)</string>
+    <string name="thanks_swedish"><b>Svensk översättning - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Tema</string>
+    <string name="theme_light">Klar</string>
+    <string name="theme_dark">Mörk</string>
+    <string name="theme_system">Använd systemtema</string>
+    <string name="backup">Säkerhetskopiering och återställning</string>
+    <string name="import_database">Importera databas</string>
+    <string name="import_database_summary">Ladda en sparad databas</string>
+    <string name="export_database">Exportera databas</string>
+    <string name="export_database_summary">Spara databasen i CSV-format</string>
+    <string name="export_success">Databas sparad</string>
+    <string name="import_fail">Det finns ett problem med databasen</string>
+    <string name="import_success">Databas laddad</string>
+    <string name="import_notfound">Den angivna filen kunde inte hittas</string>
+    <string name="import_select">Välj den databas som ska importeras</string>
+    <string name="thanks_chinese"><b>Kinesisk överstättning - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditionell)</string>
+    <string name="thanks_hungarian"><b>Ungerska översättning - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_turkish"><b>Turkisk översättning - </b><a href="https://crowdin.com/profile/perboran">perboran</a> och <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

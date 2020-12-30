@@ -10,6 +10,7 @@
     <string name="more">Addizionali</string>
     <string name="settings">Impostazioni</string>
     <string name="about_donate">Offrimi un caffè</string>
+    <string name="about_donate_summary"></string>
     <string name="about_rate">Valuta la app</string>
     <string name="about_rate_summary">Se l\'app ti piace, valutala e recensiscila in modo che raggiunga più persone che possano trovarla utile</string>
     <string name="contact_developer">Contatta lo sviluppatore</string>
@@ -27,7 +28,7 @@
     <string name="encounter_type">Tipo di incontro</string>
     <string name="indoors">Al chiuso</string>
     <string name="outdoors">All\'aperto</string>
-    <string name="distance_question">Pensi di aver mantenuto la distanza?</string>
+    <string name="mitigation_question">Sono state adottate misure di prevenzione?</string>
     <string name="no">No</string>
     <string name="yes">Sì</string>
     <string name="unsure">Non sicuro</string>
@@ -39,7 +40,6 @@
     <string name="duplicate">Crea una copia oggi</string>
     <string name="delete">Elimina</string>
     <string name="entry_deleted">Voce eliminata</string>
-    <string name="close_event_question">Pensi di aver mantenuto la distanza?</string>
     <string name="contact_saved">Contatto salvato</string>
     <string name="event_saved">Evento salvato</string>
     <string name="edit_event">Modifica l\'evento</string>
@@ -93,5 +93,7 @@
     <string name="import_success">Archivio caricato</string>
     <string name="import_notfound">Il file specificato non è stato trovato</string>
     <string name="import_select">Seleziona l\'archivio da importare</string>
-    <string name="about_donate_summary">Dona</string>
+    <string name="thanks_chinese"><b>Traduzione cinese - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradizionale)</string>
+    <string name="thanks_hungarian"><b>Traduzione ungherese - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_turkish"><b>Traduzione turca - </b><a href="https://crowdin.com/profile/perboran">perboran</a> e <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

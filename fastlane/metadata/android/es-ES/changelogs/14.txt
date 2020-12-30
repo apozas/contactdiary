@@ -1,0 +1,7 @@
+La característica más importante de esta nueva versión es que la pregunta acerca de la distancia ahora es más general e incluye otras medidas de prevención. IMPORTANTE!! Este cambio hará que la importación de tablas creadas en versiones antiguas falle. Por favor, si quieres importar una tabla antigua, impórtala, actualiza, y después expórtala de nuevo.
+También:
+- Se ha mejorado el mecanismo de importación.
+- Se han solucionado algunos errores menores.
+- Nuevas traducciones disponibles: Chino tradicional (gracias a walfrido42), húngaro (gracias a mondlicht-und-sterne), y turco (gracias a perboran).
+
+Si deseas ayudar a traducir Diario de Contactos a tu idioma, visita http://www.crowdin.com/project/contactdiary

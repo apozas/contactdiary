@@ -11,10 +11,9 @@
     <string name="time">Aika</string>
     <string name="place">Paikka</string>
     <string name="companions">Seuralaiset</string>
-    <string name="close_event_question" comment="close_event_question. The &quot;you&quot; here should be singular">Luuletko, että pidit etäisyyden?</string>
     <string name="name">Nimi</string>
     <string name="known_contact">Sukulainen vai läheinen ystävä?</string>
-    <string name="distance_question" comment="distance_question. The &quot;you&quot; here should be plural">Luuletko, että pidit etäisyyden?</string>
+    <string name="mitigation_question">Toteutettiinko ehkäiseviä toimenpiteitä?</string>
     <string name="phone">Puhelinnumero</string>
     <string name="unsure">Epävarma</string>
     <string name="encounter_type">Kohtaamisen tyyppi</string>
@@ -80,4 +79,21 @@
     <string name="thanks_polish"><b>Puolankielinen käännös - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portugalkielinen käännös - </b><a href="https://github.com/riuri">riuri</a> (Brasilia)</string>
     <string name="thanks_swedish"><b>Ruotsinkielinen käännös - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">Teema</string>
+    <string name="theme_light">Selvä</string>
+    <string name="theme_dark">Tumma</string>
+    <string name="theme_system">Seuraa järjestelmää</string>
+    <string name="backup">Varmuuskopiointi ja palautus</string>
+    <string name="import_database">Tuo tietokanta</string>
+    <string name="import_database_summary">Lataa tallennettu tietokanta</string>
+    <string name="export_database">Vie tietokanta</string>
+    <string name="export_database_summary">Tallenna tietokanta CSV-muodossa</string>
+    <string name="export_success">Tietokanta tallennettu</string>
+    <string name="import_fail">Tietokannassa on ongelma</string>
+    <string name="import_success">Tietokanta ladattu</string>
+    <string name="import_notfound">Määritettyä tiedostoa ei löytynyt</string>
+    <string name="import_select">Valitse tuotava tietokanta</string>
+    <string name="thanks_chinese"><b>Kiinankielinen käännös - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Perinteiten)</string>
+    <string name="thanks_hungarian"><b>Unkarinkielinen käännös - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_turkish"><b>Turkinkielinen käännös - </b><a href="https://crowdin.com/profile/perboran">perboran</a> ja <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
 </resources>

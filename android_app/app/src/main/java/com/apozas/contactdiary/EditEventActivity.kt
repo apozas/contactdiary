@@ -21,12 +21,11 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editevent_inside.*
 import java.text.DateFormat
@@ -89,16 +88,16 @@ class EditEventActivity : AppCompatActivity() {
         }
 
         var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
-        if (encounter%2==0) {encounter = 2*encounter+1}
-        else if (encounter==-1) {encounter = event_indoor_outdoor.childCount-2}    // Migration from 1.0.4 fix
-        val encounterBtn = event_indoor_outdoor.getChildAt(encounter) as RadioButton
-        encounterBtn.isChecked = true
+        if (encounter > 0) {
+            val encounterBtn = event_indoor_outdoor.getChildAt(encounter) as RadioButton
+            encounterBtn.isChecked = true
+        }
 
         var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
-        if (closeContact%2==0) {closeContact = 2*closeContact+1}
-        else if (closeContact==-1) {closeContact = eventclosecontact.childCount-2}    // Migration from 1.0.4 fix
-        val closeContactBtn = eventclosecontact.getChildAt(closeContact) as RadioButton
-        closeContactBtn.isChecked = true
+        if (closeContact > 0) {
+            val closeContactBtn = eventclosecontact.getChildAt(closeContact) as RadioButton
+            closeContactBtn.isChecked = true
+        }
 
         eventnotes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
 
@@ -131,6 +130,7 @@ class EditEventActivity : AppCompatActivity() {
         val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             initCal.set(Calendar.HOUR_OF_DAY, hour)
             initCal.set(Calendar.MINUTE, minute)
+            initCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
             eventinittime_edit.setText(timeFormat.format(initCal.time))
             if (eventendtime_edit.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
@@ -154,6 +154,7 @@ class EditEventActivity : AppCompatActivity() {
         val endTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
             endCal.set(Calendar.HOUR_OF_DAY, hour)
             endCal.set(Calendar.MINUTE, minute)
+            endCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
             if (endCal.timeInMillis < initCal.timeInMillis) {
                 Toast.makeText(
@@ -311,5 +312,23 @@ class EditEventActivity : AppCompatActivity() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+    }
+
+    fun openPopup(view: View) {
+        val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val popupView: View = inflater.inflate(R.layout.popup_window, null)
+
+        val width = LinearLayout.LayoutParams.WRAP_CONTENT
+        val height = LinearLayout.LayoutParams.WRAP_CONTENT
+        val focusable = true // Taps outside the popup also dismiss it
+
+        val popupWindow = PopupWindow(popupView, width, height, focusable)
+        popupWindow.showAsDropDown(help, 0, 10)
+
+//      Dismiss the popup window when touched
+        popupView.setOnTouchListener { _, _ ->
+            popupWindow.dismiss()
+            true
+        }
     }
 }

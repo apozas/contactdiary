@@ -31,6 +31,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/thanks_chinese"
+            android:text="@string/thanks_chinese"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/thanks_dutch"
             android:text="@string/thanks_dutch"/>
 
@@ -54,6 +61,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/thanks_german"
             android:text="@string/thanks_german"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_hungarian"
+            android:text="@string/thanks_hungarian"/>
 
         <TextView
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -89,6 +103,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/thanks_swedish"
             android:text="@string/thanks_swedish"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_turkish"
+            android:text="@string/thanks_turkish"/>
 
     </LinearLayout>
 </ScrollView>

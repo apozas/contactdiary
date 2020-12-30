@@ -1,0 +1,7 @@
+La caratteristica più importante di questa nuova versione è che la questione della distanza è ora più generale e include altre misure di prevenzione. IMPORTANTE!! Questa modifica causerà il fallimento dell'importazione delle tabelle create nelle versioni precedenti. Per favore, se vuoi importare una vecchia tabella, importala, aggiorna l'app e poi esportala di nuovo.
+Anche:
+- Il meccanismo di importazione è stato migliorato.
+- Alcuni bug minori sono stati corretti.
+- Nuove traduzioni disponibili: cinese tradizionale (grazie a walfrido42), ungherese (grazie a mondlicht-und-sterne) e turco (grazie a perboran).
+
+Se vuoi aiutare a tradurre Contact Diary nella tua lingua, visita http://www.crowdin.com/project/contactdiary

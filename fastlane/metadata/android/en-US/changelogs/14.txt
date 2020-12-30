@@ -1,0 +1,7 @@
+The most important feature of this new version is that the question about distance is now more general, and includes other prevention measures. IMPORTANT!! This change will make that importing tables created in older versions to fail. Please, if you want to import an old table at some point, import it, update the app, and export it again.
+Also:
+- Importing has been improved.
+- Some minor bugs have been squashed.
+- New translations are available: Traditional Chinese (thanks to walfrido42), Hungarian (thanks to mondlicht-und-sterne), and Turkish (thanks to perboran).
+
+If you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary

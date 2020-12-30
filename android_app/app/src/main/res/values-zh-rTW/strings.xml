@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">接觸史日記</string>
+    <string name="action_settings">設定</string>
+    <string name="new_contact">新增接觸者</string>
+    <string name="new_event">新增活動</string>
+    <string name="event_name">活動名稱</string>
+    <string name="no">否</string>
+    <string name="yes">是</string>
+    <string name="date">日期</string>
+    <string name="time">時間</string>
+    <string name="place">位置</string>
+    <string name="companions">同行者</string>
+    <string name="name">姓名</string>
+    <string name="known_contact">是您的親戚或是好友嗎</string>
+    <string name="mitigation_question">有採取任何預防措施嗎?</string>
+    <string name="phone">電話號碼</string>
+    <string name="unsure">不確定</string>
+    <string name="encounter_type">接觸類型</string>
+    <string name="indoors">室內</string>
+    <string name="outdoors">戶外</string>
+    <string name="emptydiary">日記為空</string>
+    <string name="contact_saved">已儲存接觸者</string>
+    <string name="event_saved">已儲存活動</string>
+    <string name="edit_event">編輯活動</string>
+    <string name="edit_contact">編輯接觸者</string>
+    <string name="options">選項</string>
+    <string name="entry_deleted">項目已刪除</string>
+    <string name="contact_developer_summary">表達您對此應用程式的看法，或您遭遇的問題</string>
+    <string name="contact_developer">與開發人員聯絡</string>
+    <string name="about_donate">贊助開發者</string>
+    <string name="notification_title">您今天和誰在一起？</string>
+    <string name="notification_text">添加接觸者到日記中</string>
+    <string name="choose_option">請選擇一個選項</string>
+    <string name="compulsory_field">必須填寫</string>
+    <string name="edit">編輯</string>
+    <string name="delete">刪除</string>
+    <string name="alarm_modified">成功更改鬧鐘</string>
+    <string name="incorrect_alarm_time">請輸入正確的時間</string>
+    <string name="daily_reminder">每日提醒</string>
+    <string name="choose_time">選擇時間</string>
+    <string name="show_close_contacts">僅顯示親密接觸者</string>
+    <string name="more">更多</string>
+    <string name="settings">設定</string>
+    <string name="entries_deleted">多則項目已刪除</string>
+    <string name="entries_selected">" 則選取的記事"</string>
+    <string name="privacy_title">隱私權政策</string>
+    <string name="privacy_intro">接觸史日記的發布是希望它能夠有幫助，但沒有任何保障， 甚至沒有暗示任何可銷售性或符合特定用途的適配性。如果您決定使用接觸史日記，這個頁面用以通知您關於我蒐集、使用、及揭露個人資料的政策。簡言之，既然接觸史日記沒辦法連接至網際網路，沒有任何個人資料會在使用者裝置外被儲存或是被複製。如果您選擇使用接觸史日記，則視為您同意在此政策中提到關於資料的蒐集和使用(沒有任何資料會被蒐集)。接觸史日記蒐集的資料僅用以提供其服務。上述文字已清楚說明，我無法、也不會與任何人使用或分享您的資訊。</string>
+    <string name="privacy_icu">接觸史日記的使用要求您輸入可辨識的個人資訊，即姓名、地點和電話號碼(選填)。接觸史日記所要求的資訊將會儲存在裝置上而不會被開發者以任何方式蒐集。</string>
+    <string name="privacy_cookies">Cookies是一個存有少量資料的檔案，通常通常用作匿名特定標識符。 這些從您瀏覽的網站送到瀏覽器的檔案被儲存在裝置的內部儲存空間。\n\n接觸史日記不會使用任何自身或第三方cookies。\n\n同樣地，沒有任何服務授予第三方執行。您輸入的接觸史日記的資料永遠不會離開您的裝置。</string>
+    <string name="privacy_security">再次強調，任何您輸入接觸史日記的資料不會離開您的裝置。這項事實在您檢視接觸史日記的原始碼時，可以一直被檢驗。原始碼可於 <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>查看。因此，它的安全性以及完整性與實際您的裝置的安全性和完整性相連結，但裝置安全性不在我的責任範圍。</string>
+    <string name="privacy_changes">我可能會不定期更新隱私權政策。因此建議您定期瀏覽此頁面以查看任何變更。我將會在此頁面貼上最新的隱私權政策以通知您任何改動。\n\n此隱私權政策於2020-09-08 生效</string>
+    <string name="privacy_contact">如果您對隱私權政策有任何問題或建議，請不要猶豫，透過以下電子郵件地址聯絡我 <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a>。</string>
+    <string name="privacy_changes_title">隱私權政策的變更</string>
+    <string name="privacy_icu_title">資料蒐集與使用</string>
+    <string name="privacy_cookies_title">Cookies和服務提供者</string>
+    <string name="privacy_security_title">安全性</string>
+    <string name="privacy_contact_title">與我聯繫</string>
+    <string name="empty_table">輕觸 (+) 符號新增接觸者</string>
+    <string name="app_version_title">程式版本</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate">為此程式評分</string>
+    <string name="about_rate_summary">如果您喜歡此應用程式，請留下評分和評論，讓它能觸及到更多覺得這個程式很實用的人。</string>
+    <string name="entry_duplicated">條目已複製</string>
+    <string name="entries_duplicated">多項條目已複製</string>
+    <string name="duplicate">複製到今日</string>
+    <string name="select">選擇</string>
+    <string name="notes">備註</string>
+    <string name="acknowledgments">致謝</string>
+    <string name="about">關於</string>
+    <string name="thanks_text">雖然接觸史日記由個人計畫開始開發，它仍得益許多人寶貴的無私貢獻。我在此頁面真誠的感謝每一個人。</string>
+    <string name="thanks_homescreen"><b>桌面捷徑 - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_dutch"><b>荷蘭語翻譯 - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> 和 <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>芬蘭語翻譯 - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>法語翻譯 - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>德文翻譯 - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> 和 <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_italian"><b>義大利文翻譯 - </b><a href="https://github.com/igor-cali">igor-cali</a> 和 <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>印尼語翻譯 - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>波蘭文翻譯 - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>葡萄牙語翻譯 - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
+    <string name="thanks_swedish"><b>瑞典語翻譯 - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="theme">主題</string>
+    <string name="theme_light">亮色主題</string>
+    <string name="theme_dark">暗色主題</string>
+    <string name="theme_system">依據系統設定</string>
+    <string name="backup">備份與還原</string>
+    <string name="import_database">載入資料</string>
+    <string name="import_database_summary">載入已儲存的資料</string>
+    <string name="export_database">匯出資料</string>
+    <string name="export_database_summary">以CSV格式儲存資料</string>
+    <string name="export_success">資料已儲存</string>
+    <string name="import_fail">資料發生問題</string>
+    <string name="import_success">載入資料</string>
+    <string name="import_notfound">找不到檔案</string>
+    <string name="import_select">選擇匯入資料</string>
+    <string name="thanks_chinese"><b>成中文翻譯 - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditional)</string>
+    <string name="thanks_hungarian"><b>匈牙利語翻譯 - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_turkish"><b>土耳其語翻譯 - </b><a href="https://crowdin.com/profile/perboran">perboran</a> 和 <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+</resources>

@@ -169,7 +169,7 @@ class SettingsActivity : AppCompatActivity() {
                 )
                 val columnNames =
                     cursor.columnNames.drop(1).toMutableList()    // We don't care of the _id column
-                columnNames[columnNames.indexOf("CloseContact")] = "DistanceKept"
+                columnNames[columnNames.indexOf("CloseContact")] = "Mitigation"
                 csvWriter!!.write(
                     columnNames.joinToString(separator = "\t", postfix = "\n").toByteArray()
                 )
@@ -198,7 +198,7 @@ class SettingsActivity : AppCompatActivity() {
                                     else -> cursor.getInt(i).toString()
                                 }
                             )
-                            "DistanceKept" -> arrStr.add(
+                            "Mitigation" -> arrStr.add(
                                 when (cursor.getInt(i)) {
                                     -1 -> ""
                                     1 -> "Yes"
@@ -214,7 +214,7 @@ class SettingsActivity : AppCompatActivity() {
                             }
                         }
                     }
-                    csvWriter!!.write(
+                    csvWriter.write(
                         arrStr.joinToString(separator = "\t", postfix = "\n").toByteArray()
                     )
                 }
@@ -242,7 +242,7 @@ class SettingsActivity : AppCompatActivity() {
                     feedEntry.TYPE_COLUMN, feedEntry.NAME_COLUMN, feedEntry.PLACE_COLUMN,
                     feedEntry.TIME_BEGIN_COLUMN, feedEntry.TIME_END_COLUMN, feedEntry.PHONE_COLUMN,
                     feedEntry.RELATIVE_COLUMN, feedEntry.COMPANIONS_COLUMN,
-                    feedEntry.ENCOUNTER_COLUMN, "DistanceKept", feedEntry.NOTES_COLUMN
+                    feedEntry.ENCOUNTER_COLUMN, "Mitigation", feedEntry.NOTES_COLUMN
                 )
             ) {
                 Toast.makeText(
@@ -267,7 +267,7 @@ class SettingsActivity : AppCompatActivity() {
                         val relative = nextLineList[6]
                         val companions = nextLineList[7]
                         val encounterType = nextLineList[8]
-                        val distance = nextLineList[9]
+                        val mitigation = nextLineList[9]
                         val notes = nextLineList[10]
 
                         val values = ContentValues().apply {
@@ -285,7 +285,7 @@ class SettingsActivity : AppCompatActivity() {
                                 }
                             )
                             put(
-                                feedEntry.CLOSECONTACT_COLUMN, when (distance) {
+                                feedEntry.CLOSECONTACT_COLUMN, when (mitigation) {
                                     "Yes" -> 1
                                     "No" -> 3
                                     "Unsure" -> 5
@@ -306,12 +306,14 @@ class SettingsActivity : AppCompatActivity() {
                         nextLine = csvReader.readLine()
                     }
                     Toast.makeText(context, getString(R.string.import_success), Toast.LENGTH_LONG).show()
+                    db.close()
                 } catch (e: java.lang.Exception) {
                     e.printStackTrace()
                     Toast.makeText(context, getString(R.string.import_notfound), Toast.LENGTH_LONG)
                         .show()
                 }
             }
+            csvReader.close()
         }
 
         private fun createFile() {
@@ -326,7 +328,18 @@ class SettingsActivity : AppCompatActivity() {
         private fun readFile() {
             val intent = Intent(Intent.ACTION_GET_CONTENT).apply {
                 addCategory(Intent.CATEGORY_OPENABLE)
-                type = "text/csv"
+                type = "file/*"
+            }
+            val mimeTypes = arrayOf(
+                "text/csv", "text/comma-separated-values", "text/tab-separated-values"
+            )
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                intent.putExtra(
+                    Intent.EXTRA_MIME_TYPES,
+                    mimeTypes
+                )
+            } else {
+                intent.type = mimeTypes.joinToString(separator = "|")
             }
             try {
                 startActivityForResult(
