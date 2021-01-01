@@ -1,0 +1,4 @@
+¡Feliz Año Nuevo!
+
+Bug de Año Nuevo arrelgado: "Hacer una copia hoy" ahora trata correctamente el cambio de año.
+Actualizaciones de traducciones. Si deseas ayudar a traducir Diario de Contactos a tu idioma, visita http://www.crowdin.com/project/contactdiary

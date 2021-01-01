@@ -1,0 +1,4 @@
+Frohes Neues Jahr!
+
+Neujahrsfehler behoben: "Eintrag für heute kopieren" behandelt jetzt den Jahresübergang korrekt.
+Auch die Übersetzungen wurden aktualisiert. Wenn Sie Kontakttagebuch in Ihre Sprache übersetzen möchten, besuchen Sie http://www.crowdin.com/project/contactdiary

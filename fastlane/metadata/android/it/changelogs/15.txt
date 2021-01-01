@@ -1,0 +1,4 @@
+Felice Anno Nuovo!
+
+Correzione del bug del Nuovo Anno: "Crea una copia oggi" ora gestisce correttamente la transizione dell'anno.
+Inoltre, le traduzioni sono state aggiornate. Se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

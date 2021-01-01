@@ -1,0 +1,4 @@
+Happy New Year!
+
+New Year bug fixed: "Make a copy today" now correctly handles the year transition.
+Also, translations have been updated. If you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary
