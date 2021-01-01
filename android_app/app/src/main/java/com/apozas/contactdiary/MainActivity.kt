@@ -321,13 +321,17 @@ class MainActivity : AppCompatActivity() {
 
         val beginTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
         val initCal = Calendar.getInstance()
+        val currentDay = initCal.get(Calendar.DAY_OF_YEAR)
+        val currentYear = initCal.get(Calendar.YEAR)
         initCal.timeInMillis = beginTimestamp
-        initCal.set(Calendar.DAY_OF_YEAR, Calendar.getInstance().get(Calendar.DAY_OF_YEAR))
+        initCal.set(Calendar.DAY_OF_YEAR, currentDay)
+        initCal.set(Calendar.YEAR, currentYear)
 
         val endTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
         val endCal = Calendar.getInstance()
         endCal.timeInMillis = endTimestamp
-        endCal.set(Calendar.DAY_OF_YEAR, initCal.get(Calendar.DAY_OF_YEAR))
+        endCal.set(Calendar.DAY_OF_YEAR, currentDay)
+        endCal.set(Calendar.YEAR, currentYear)
 
         val values = ContentValues().apply {
             put(
