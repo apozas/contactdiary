@@ -147,14 +147,14 @@ class NewEventActivity : AppCompatActivity() {
                 }
             }
 
-            builder.setPositiveButton("OK") { _, _ ->
+            builder.setPositiveButton(getString(android.R.string.ok)) { _, _ ->
                 var measuresTaken = getString(R.string.none)
                 if (preventionMeasures.isNotEmpty()) {
                     measuresTaken = preventionMeasures.sorted().joinToString(", ")
                 }
                 event_mitigation.text = measuresTaken
             }
-            builder.setNegativeButton("Cancel") { _, _ -> }
+            builder.setNegativeButton(getString(android.R.string.cancel)) { _, _ -> }
             builder.create().show()
         }
 
