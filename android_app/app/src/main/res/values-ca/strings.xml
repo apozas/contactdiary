@@ -96,4 +96,10 @@
     <string name="thanks_chinese"><b>Traducció al xinès - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradicional)</string>
     <string name="thanks_hungarian"><b>Traducció a l\'hongarés - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Traducció al turc - </b><a href="https://crowdin.com/profile/perboran">perboran</a> i <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="mitigation_distance_value">Distància</string>
+    <string name="mitigation_mask_me_value">Mascareta (jo)</string>
+    <string name="mitigation_mask_other_value">Mascareta (altres)</string>
+    <string name="mitigation_ventilation_value">Ventilació</string>
+    <string name="mitigation_title">Mesures de prevenció</string>
+    <string name="none">Cap</string>
 </resources>

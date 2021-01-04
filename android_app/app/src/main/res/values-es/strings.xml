@@ -95,4 +95,15 @@
     <string name="thanks_chinese"><b>Traducción al chino - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradicional)</string>
     <string name="thanks_hungarian"><b>Traducción al húngaro - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Traducción al turco - </b><a href="https://crowdin.com/profile/perboran">perboran</a> y <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="mitigation_distance">La distancia era mayor de 2m</string>
+    <string name="mitigation_mask_me">Yo llevaba mascarilla</string>
+    <string name="mitigation_mask_other">Los otros llevaban mascarilla</string>
+    <string name="mitigation_ventilation">El entorno estaba ventilado</string>
+    <string name="mitigation_distance_value">Distancia</string>
+    <string name="mitigation_mask_me_value">Mascarilla (yo)</string>
+    <string name="mitigation_mask_other_value">Mascarilla (otros)</string>
+    <string name="mitigation_ventilation_value">Ventilación</string>
+    <string name="click_to_select">Pulsa para seleccionar</string>
+    <string name="mitigation_title">Medidas de prevención</string>
+    <string name="none">Ninguna</string>
 </resources>

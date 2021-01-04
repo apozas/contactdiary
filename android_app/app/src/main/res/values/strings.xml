@@ -110,6 +110,6 @@
     <string name="mitigation_mask_other_value">Mask (others)</string>
     <string name="mitigation_ventilation_value">Ventilation</string>
     <string name="click_to_select">Click to select</string>
-    <string name="mitigation_title">Preventive measures</string>
+    <string name="mitigation_title">Prevention measures</string>
     <string name="none">None</string>
 </resources>
