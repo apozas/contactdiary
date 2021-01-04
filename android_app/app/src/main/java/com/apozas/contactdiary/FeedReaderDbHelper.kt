@@ -63,7 +63,7 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
 
         val query = if (onlyRisky) {
             "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
-                    " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + ">1" +
+                    " WHERE " + ContactDatabase.ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN + "!=0" +
                     " ORDER BY " + ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN + " DESC"
         } else {
             "Select * from " + ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME +
