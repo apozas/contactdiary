@@ -322,6 +322,8 @@ class EditEventActivity : AppCompatActivity() {
             put(feedEntry.CLOSECONTACT_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN)))
             put(feedEntry.ENCOUNTER_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN)))
             put(feedEntry.NOTES_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+            put(feedEntry.MASK_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.MASK_COLUMN)))
+            put(feedEntry.VENTILATION_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.VENTILATION_COLUMN)))
         }
 
         db?.insert(feedEntry.TABLE_NAME, null, values)
