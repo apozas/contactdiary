@@ -170,7 +170,9 @@ class SettingsActivity : AppCompatActivity() {
                 )
                 val columnNames =
                     cursor.columnNames.drop(1).toMutableList()    // We don't care of the _id column
-                columnNames[columnNames.indexOf("CloseContact")] = "Mitigation"
+                columnNames[columnNames.indexOf("CloseContact")] = "DistanceKept"
+                columnNames[columnNames.indexOf("Masks")] = "MaskMe"
+                columnNames.add(columnNames.size-1,"MaskOthers")
                 csvWriter!!.write(
                     columnNames.joinToString(separator = "\t", postfix = "\n").toByteArray()
                 )
@@ -178,7 +180,7 @@ class SettingsActivity : AppCompatActivity() {
                     //Which column you want to export
                     val columns = cursor.columnCount
                     val arrStr = mutableListOf<String>()
-                    for (i in 1 until columns) {    // We don't care of the _id column
+                    for (i in 1 until columns + 1) {    // We don't care of the _id column
                         when (columnNames[i - 1]) {
                             "BeginTime" -> arrStr.add(dateFormatter.format(cursor.getLong(i)))
                             "EndTime" -> arrStr.add(dateFormatter.format(cursor.getLong(i)))
@@ -199,13 +201,44 @@ class SettingsActivity : AppCompatActivity() {
                                     else -> cursor.getInt(i).toString()
                                 }
                             )
-                            "Mitigation" -> arrStr.add(
+                            "DistanceKept" -> arrStr.add(
                                 when (cursor.getInt(i)) {
                                     -1 -> ""
-                                    1 -> "Yes"
-                                    3 -> "No"
-                                    5 -> "Unsure"
+                                    0 -> "Yes"
+                                    1 -> "No"
                                     else -> cursor.getInt(i).toString()
+                                }
+                            )
+                            "MaskMe" -> when (cursor.getInt(i)) {
+                                    -1 -> {
+                                        arrStr.add("")
+                                        arrStr.add("")
+                                    }
+                                    0 -> {
+                                        arrStr.add("No")
+                                        arrStr.add("No")
+                                    }
+                                    1 -> {
+                                        arrStr.add("No")
+                                        arrStr.add("Yes")
+                                    }
+                                    2 -> {
+                                        arrStr.add("Yes")
+                                        arrStr.add("No")
+                                    }
+                                    3 -> {
+                                        arrStr.add("Yes")
+                                        arrStr.add("Yes")
+                                    }
+                                    else -> cursor.getInt(i).toString()
+                                }
+                            "MaskOthers" -> {}
+                            "Ventilation" -> arrStr.add(
+                                when (cursor.getInt(i - 1)) {    // The -1 is because MaskOthers
+                                    -1 -> ""
+                                    0 -> "No"
+                                    1 -> "Yes"
+                                    else -> cursor.getInt(i - 1).toString()
                                 }
                             )
                             else -> when (cursor.getType(i)) {
@@ -243,7 +276,8 @@ class SettingsActivity : AppCompatActivity() {
                     feedEntry.TYPE_COLUMN, feedEntry.NAME_COLUMN, feedEntry.PLACE_COLUMN,
                     feedEntry.TIME_BEGIN_COLUMN, feedEntry.TIME_END_COLUMN, feedEntry.PHONE_COLUMN,
                     feedEntry.RELATIVE_COLUMN, feedEntry.COMPANIONS_COLUMN,
-                    feedEntry.ENCOUNTER_COLUMN, "Mitigation", feedEntry.NOTES_COLUMN
+                    feedEntry.ENCOUNTER_COLUMN, "DistanceKept", feedEntry.NOTES_COLUMN, "MaskMe",
+                    "MaskOthers", feedEntry.VENTILATION_COLUMN
                 )
             ) {
                 Toast.makeText(
@@ -258,7 +292,7 @@ class SettingsActivity : AppCompatActivity() {
                     db.execSQL(SQL_CREATE_ENTRIES)
                     var nextLine = csvReader.readLine()
                     while (nextLine != null) {
-                        var nextLineList = nextLine.split("\t")
+                        val nextLineList = nextLine.split("\t")
                         val type = nextLineList[0]
                         val name = nextLineList[1]
                         val place = nextLineList[2]
@@ -268,8 +302,19 @@ class SettingsActivity : AppCompatActivity() {
                         val relative = nextLineList[6]
                         val companions = nextLineList[7]
                         val encounterType = nextLineList[8]
-                        val mitigation = nextLineList[9]
+                        val distanceKept = nextLineList[9]
                         val notes = nextLineList[10]
+                        val maskMe = when (nextLineList[11]) {
+                            "Yes" -> 1
+                            "No" -> 0
+                            else -> 0
+                        }
+                        val maskOther = when (nextLineList[12]) {
+                            "Yes" -> 1
+                            "No" -> 0
+                            else -> 0
+                        }
+                        val ventilation = nextLineList[13]
 
                         val values = ContentValues().apply {
                             put(feedEntry.TYPE_COLUMN, type)
@@ -278,30 +323,29 @@ class SettingsActivity : AppCompatActivity() {
                             put(feedEntry.TIME_BEGIN_COLUMN, dateFormatter.parse(beginTime).time)
                             put(feedEntry.TIME_END_COLUMN, dateFormatter.parse(endTime).time)
                             put(feedEntry.PHONE_COLUMN, phone)
-                            put(
-                                feedEntry.RELATIVE_COLUMN, when (relative) {
-                                    "Yes" -> 1
-                                    "No" -> 3
-                                    else -> -1
-                                }
-                            )
-                            put(
-                                feedEntry.CLOSECONTACT_COLUMN, when (mitigation) {
-                                    "Yes" -> 1
-                                    "No" -> 3
-                                    "Unsure" -> 5
-                                    else -> -1
-                                }
-                            )
-                            put(
-                                feedEntry.ENCOUNTER_COLUMN, when (encounterType) {
-                                    "Indoors" -> 1
-                                    "Outdoors" -> 3
-                                    else -> -1
-                                }
-                            )
+                            put(feedEntry.RELATIVE_COLUMN, when (relative) {
+                                "Yes" -> 1
+                                "No" -> 3
+                                else -> -1
+                            })
+                            put(feedEntry.CLOSECONTACT_COLUMN, when (distanceKept) {
+                                "Yes" -> 0
+                                "No" -> 1
+                                else -> -1
+                            })
+                            put(feedEntry.ENCOUNTER_COLUMN, when (encounterType) {
+                                "Indoors" -> 1
+                                "Outdoors" -> 3
+                                else -> -1
+                            })
                             put(feedEntry.COMPANIONS_COLUMN, companions)
                             put(feedEntry.NOTES_COLUMN, notes)
+                            put(feedEntry.MASK_COLUMN, 2*maskMe + maskOther)
+                            put(feedEntry.VENTILATION_COLUMN, when (ventilation) {
+                                "Yes" -> 1
+                                "No" -> 0
+                                else -> -1
+                            })
                         }
                         db?.insert(feedEntry.TABLE_NAME, null, values)
                         nextLine = csvReader.readLine()
