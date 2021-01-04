@@ -96,5 +96,4 @@
     <string name="import_notfound">Belirtilen dosya bulunamadı</string>
     <string name="import_select">İçe aktarılacak veritabanını seçiniz</string>
     <string name="thanks_turkish"><b>Türkçe çeviri - </b><a href="https://crowdin.com/profile/perboran">perboran</a> ve <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
-    <string name="mitigation_text">Önleme tedbirleri arasında maske kullanımı, mesafe ve/veya ventilasyon bulunur</string>
 </resources>

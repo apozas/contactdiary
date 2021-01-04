@@ -101,7 +101,6 @@
     <string name="import_success">Database loaded</string>
     <string name="import_notfound">The specified file was not found</string>
     <string name="import_select">Select the database to import</string>
-    <string name="mitigation_text">Prevention measures include mask use, distance, and/or ventilation</string>
     <string name="mitigation_distance">Distance was greater than 2m/6ft</string>
     <string name="mitigation_mask_me">I wore mask</string>
     <string name="mitigation_mask_other">The other(s) wore mask</string>

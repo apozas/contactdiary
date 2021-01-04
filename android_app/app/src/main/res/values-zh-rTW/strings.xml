@@ -96,5 +96,4 @@
     <string name="thanks_chinese"><b>中文翻譯 - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (繁體中文)</string>
     <string name="thanks_hungarian"><b>匈牙利語翻譯 - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>土耳其語翻譯 - </b><a href="https://crowdin.com/profile/perboran">perboran</a> 和 <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
-    <string name="mitigation_text">預防措施包含使用口罩，保持距離，或是空氣流通</string>
 </resources>

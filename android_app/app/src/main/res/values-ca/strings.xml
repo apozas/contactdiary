@@ -13,7 +13,7 @@
     <string name="companions">Acompanyants</string>
     <string name="name">Nom</string>
     <string name="known_contact">Familiar o amic proper?</string>
-    <string name="mitigation_question">Es van posar mesures de prevenció?</string>
+    <string name="mitigation_question">Quines mesures de prevenció es van prendre?</string>
     <string name="phone">Telèfon</string>
     <string name="unsure">No estic segur</string>
     <string name="encounter_type">Tipus de trobada</string>
@@ -96,5 +96,4 @@
     <string name="thanks_chinese"><b>Traducció al xinès - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradicional)</string>
     <string name="thanks_hungarian"><b>Traducció a l\'hongarés - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Traducció al turc - </b><a href="https://crowdin.com/profile/perboran">perboran</a> i <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
-    <string name="mitigation_text">Les mesures de prevenció inclouen ús de mascaretes, distància i/o ventilació</string>
 </resources>
