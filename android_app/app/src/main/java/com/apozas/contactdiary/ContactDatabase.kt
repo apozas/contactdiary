@@ -54,7 +54,9 @@ class ContactDatabase {
                     "${ContactDatabase.FeedEntry.COMPANIONS_COLUMN} TEXT," +
                     "${ContactDatabase.FeedEntry.ENCOUNTER_COLUMN} TINYINT," +
                     "${ContactDatabase.FeedEntry.CLOSECONTACT_COLUMN} TINYINT," +
-                    "${ContactDatabase.FeedEntry.NOTES_COLUMN} TEXT)"
+                    "${ContactDatabase.FeedEntry.NOTES_COLUMN} TEXT," +
+                    "${ContactDatabase.FeedEntry.MASK_COLUMN} TINYINT," +
+                    "${ContactDatabase.FeedEntry.VENTILATION_COLUMN} TINYINT)"
         const val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS ${ContactDatabase.FeedEntry.TABLE_NAME}"
         const val SQL_UPDATE_2 = "ALTER TABLE ${ContactDatabase.FeedEntry.TABLE_NAME} ADD COLUMN " +
                 "${ContactDatabase.FeedEntry.NOTES_COLUMN} TEXT"
