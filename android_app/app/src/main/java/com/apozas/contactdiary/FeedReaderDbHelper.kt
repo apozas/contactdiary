@@ -42,13 +42,19 @@ class FeedReaderDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
 //          Remove old table
             db.execSQL(ContactDatabase.SQL_UPDATE_4_PART3)
         }
+        if (oldVersion < 5) {
+//          Creation of each column must have its own instruction
+            db.execSQL(ContactDatabase.SQL_UPDATE_5_PART1)
+            db.execSQL(ContactDatabase.SQL_UPDATE_5_PART2)
+            MigrationTools().migrateTo5(db)
+        }
     }
     override fun onDowngrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
 //        onUpgrade(db, oldVersion, newVersion)
     }
     companion object {
         // If you change the database schema, you must increment the database version.
-        const val DATABASE_VERSION = 4
+        const val DATABASE_VERSION = 5
         const val DATABASE_NAME = "ContactDiary.db"
     }
 

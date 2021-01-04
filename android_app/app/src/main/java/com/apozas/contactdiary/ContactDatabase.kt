@@ -35,6 +35,8 @@ class ContactDatabase {
             const val NOTES_COLUMN = "Notes"
             const val TIME_BEGIN_COLUMN = "BeginTime"
             const val TIME_END_COLUMN = "EndTime"
+            const val MASK_COLUMN = "Masks"
+            const val VENTILATION_COLUMN = "Ventilation"
         }
     }
 
@@ -75,5 +77,9 @@ class ContactDatabase {
                 "${ContactDatabase.FeedEntry.NOTES_COLUMN} " +
                 "FROM tmp_table"
         const val SQL_UPDATE_4_PART3 = "DROP TABLE tmp_table"
+        const val SQL_UPDATE_5_PART1 = "ALTER TABLE ${ContactDatabase.FeedEntry.TABLE_NAME} " +
+                "ADD COLUMN ${ContactDatabase.FeedEntry.MASK_COLUMN} TINYINT"
+        const val SQL_UPDATE_5_PART2 = "ALTER TABLE ${ContactDatabase.FeedEntry.TABLE_NAME} " +
+                "ADD COLUMN ${ContactDatabase.FeedEntry.VENTILATION_COLUMN} TINYINT"
     }
 }

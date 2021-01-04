@@ -74,4 +74,29 @@ class MigrationTools {
             }
         }
     }
+
+    fun migrateTo5(dataBase: SQLiteDatabase) {
+        val query = "Select * from " + feedEntry.TABLE_NAME
+        val cursor = dataBase.rawQuery(query, null)
+
+        cursor.use { cursor ->
+            while (cursor.moveToNext()) {
+                val id = cursor.getInt(cursor.getColumnIndex("_id"))
+                val closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+                val values = ContentValues().apply {
+                    put(feedEntry.CLOSECONTACT_COLUMN,
+                        when (closeContact) {
+                            1 -> 0
+                            3 -> 1
+                            else -> -1
+                        }
+                    )
+                }
+//              Update the database
+                val selection = "_id LIKE ?"
+                val selectionArgs = arrayOf(id.toString())
+                dataBase.update(feedEntry.TABLE_NAME, values, selection, selectionArgs)
+            }
+        }
+    }
 }
