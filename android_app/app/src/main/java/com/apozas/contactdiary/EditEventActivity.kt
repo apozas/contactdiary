@@ -87,7 +87,7 @@ class EditEventActivity : AppCompatActivity() {
             eventphone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
         if (encounter > 0) {
             val encounterBtn = event_indoor_outdoor.getChildAt(encounter) as RadioButton
             encounterBtn.isChecked = true
@@ -338,7 +338,7 @@ class EditEventActivity : AppCompatActivity() {
     }
 
     private fun setupUI(view: View) {
-        //Set up touch listener for non-text box views to hide keyboard.
+//      Set up touch listener for non-text box views to hide keyboard.
         if (view !is EditText) {
             view.setOnTouchListener { v, _ ->
                 v.clearFocus()
@@ -347,7 +347,7 @@ class EditEventActivity : AppCompatActivity() {
             }
         }
 
-        //If a layout container, iterate over children and seed recursion.
+//      If a layout container, iterate over children and seed recursion.
         if (view is ViewGroup) {
             for (i in 0 until view.childCount) {
                 val innerView = view.getChildAt(i)

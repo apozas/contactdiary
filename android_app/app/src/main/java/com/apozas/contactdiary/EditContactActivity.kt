@@ -84,13 +84,13 @@ class EditContactActivity : AppCompatActivity() {
             phone_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
         }
 
-        var relative = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+        val relative = cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
         if (relative > 0) {
             val relativeBtn = known_group.getChildAt(relative) as RadioButton
             relativeBtn.isChecked = true
         }
 
-        var encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
         if (encounter > 0) {
             val encounterBtn = contact_indoor_outdoor.getChildAt(encounter) as RadioButton
             encounterBtn.isChecked = true

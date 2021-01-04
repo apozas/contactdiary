@@ -56,12 +56,12 @@ class NewContactActivity : AppCompatActivity() {
         endCal.set(Calendar.SECOND, 0)
         endCal.set(Calendar.MILLISECOND, 0)
 
-        // Set current values
+//      Set current values
         date_input.setText(DateFormat.getDateInstance().format(initCal.time))
 
         val timeFormat = SimpleDateFormat("H:mm")
 
-        // Listen to new values
+//      Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             initCal.set(Calendar.YEAR, year)
             initCal.set(Calendar.MONTH, monthOfYear)

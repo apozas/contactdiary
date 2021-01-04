@@ -215,7 +215,7 @@ class NewEventActivity : AppCompatActivity() {
     }
 
     private fun setupUI(view: View) {
-        //Set up touch listener for non-text box views to hide keyboard.
+//      Set up touch listener for non-text box views to hide keyboard.
         if (view !is EditText) {
             view.setOnTouchListener { v, _ ->
                 v.clearFocus()
@@ -224,7 +224,7 @@ class NewEventActivity : AppCompatActivity() {
             }
         }
 
-        //If a layout container, iterate over children and seed recursion.
+//      If a layout container, iterate over children and seed recursion.
         if (view is ViewGroup) {
             for (i in 0 until view.childCount) {
                 val innerView = view.getChildAt(i)
