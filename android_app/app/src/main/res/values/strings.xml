@@ -13,7 +13,7 @@
     <string name="companions">Companions</string>
     <string name="name">Name</string>
     <string name="known_contact">Relative or close friend?</string>
-    <string name="mitigation_question">Were prevention measures taken?</string>
+    <string name="mitigation_question">Which prevention measures were taken?</string>
     <string name="phone">Phone</string>
     <string name="unsure">Not sure</string>
     <string name="encounter_type">Encounter type</string>
