@@ -15,6 +15,7 @@ package com.apozas.contactdiary
     Copyright 2020 by Alex Pozas-Kerstjens (apozas)
 */
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
@@ -131,6 +132,32 @@ class NewEventActivity : AppCompatActivity() {
             ).show()
         }
 
+        val preventionMeasures = ArrayList<String>()
+        event_mitigation.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            val checkedItems = BooleanArray(4) {i -> preventionMeasures.contains(resources.getStringArray(R.array.mitigation_values)[i])}
+            builder.setTitle(getString(R.string.mitigation_title))
+            builder.setMultiChoiceItems(R.array.mitigation_entries, checkedItems
+            ) { _, which, isChecked ->
+                val measures = this.resources.getStringArray(R.array.mitigation_values)
+                if (isChecked) {
+                    preventionMeasures.add(measures[which])
+                } else if (preventionMeasures.contains(measures[which])) {
+                    preventionMeasures.remove(measures[which])
+                }
+            }
+
+            builder.setPositiveButton("OK") { _, _ ->
+                var measuresTaken = getString(R.string.none)
+                if (preventionMeasures.isNotEmpty()) {
+                    measuresTaken = preventionMeasures.sorted().joinToString(", ")
+                }
+                event_mitigation.text = measuresTaken
+            }
+            builder.setNegativeButton("Cancel") { _, _ -> }
+            builder.create().show()
+        }
+
 //      Database operation
         val dbHelper = FeedReaderDbHelper(this)
 
@@ -147,12 +174,8 @@ class NewEventActivity : AppCompatActivity() {
                 eventIndoorOutdoorChoice = event_indoor_outdoor.indexOfChild(btn)
             }
 
-            val eventCloseContactId = eventclosecontact.checkedRadioButtonId
-            var eventCloseContactChoice = -1
-            if (eventCloseContactId != -1) {
-                val btn: View = eventclosecontact.findViewById(eventCloseContactId)
-                eventCloseContactChoice = eventclosecontact.indexOfChild(btn)
-            }
+            val maskMe = preventionMeasures.contains(getString(R.string.mitigation_mask_me_value)).compareTo(false)
+            val maskOther = preventionMeasures.contains(getString(R.string.mitigation_mask_other_value)).compareTo(false)
 
 //          Compulsory text field
             val eventName = eventname_input.text.toString()
@@ -172,8 +195,12 @@ class NewEventActivity : AppCompatActivity() {
                     put(feedEntry.PHONE_COLUMN, eventphone_input.text.toString())
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_input.text.toString())
                     put(feedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)
-                    put(feedEntry.CLOSECONTACT_COLUMN, eventCloseContactChoice)
+                    put(feedEntry.CLOSECONTACT_COLUMN,
+                        (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(false))
                     put(feedEntry.NOTES_COLUMN, eventnotes_input.text.toString())
+                    put(feedEntry.MASK_COLUMN, 2*maskMe + maskOther)
+                    put(feedEntry.VENTILATION_COLUMN,
+                        (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(false))
                 }
 
 //              Insert the new row, returning the primary key value of the new row

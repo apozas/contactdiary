@@ -11,4 +11,18 @@
         <item>Light</item>
         <item>Dark</item>
     </string-array>
+
+    <string-array name="mitigation_entries">
+        <item>@string/mitigation_distance</item>
+        <item>@string/mitigation_mask_me</item>
+        <item>@string/mitigation_mask_other</item>
+        <item>@string/mitigation_ventilation</item>
+    </string-array>
+
+    <string-array name="mitigation_values">
+        <item>@string/mitigation_distance_value</item>
+        <item>@string/mitigation_mask_me_value</item>
+        <item>@string/mitigation_mask_other_value</item>
+        <item>@string/mitigation_ventilation_value</item>
+    </string-array>
 </resources>

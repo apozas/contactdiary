@@ -15,6 +15,7 @@ package com.apozas.contactdiary
     Copyright 2020 by Alex Pozas-Kerstjens (apozas)
 */
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
@@ -32,6 +33,7 @@ import kotlinx.android.synthetic.main.activity_addcontact_inside.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class NewContactActivity : AppCompatActivity() {
 
@@ -130,6 +132,32 @@ class NewContactActivity : AppCompatActivity() {
             ).show()
         }
 
+        val preventionMeasures = ArrayList<String>()
+        mitigation.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            val checkedItems = BooleanArray(4) {i -> preventionMeasures.contains(resources.getStringArray(R.array.mitigation_values)[i])}
+            builder.setTitle(getString(R.string.mitigation_title))
+            builder.setMultiChoiceItems(R.array.mitigation_entries, checkedItems
+            ) { _, which, isChecked ->
+                val measures = this.resources.getStringArray(R.array.mitigation_values)
+                if (isChecked) {
+                    preventionMeasures.add(measures[which])
+                } else if (preventionMeasures.contains(measures[which])) {
+                    preventionMeasures.remove(measures[which])
+                }
+            }
+
+            builder.setPositiveButton("OK") { _, _ ->
+                var measuresTaken = getString(R.string.none)
+                if (preventionMeasures.isNotEmpty()) {
+                    measuresTaken = preventionMeasures.sorted().joinToString(", ")
+                }
+                mitigation.text = measuresTaken
+            }
+            builder.setNegativeButton("Cancel") { _, _ -> }
+            builder.create().show()
+        }
+
 //      Database operation
         val dbHelper = FeedReaderDbHelper(this)
 
@@ -153,12 +181,8 @@ class NewContactActivity : AppCompatActivity() {
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
             }
 
-            val contactCloseContactId = mitigation_group.checkedRadioButtonId
-            var contactCloseContactChoice = -1
-            if (contactCloseContactId != -1) {
-                val btn: View = mitigation_group.findViewById(contactCloseContactId)
-                contactCloseContactChoice = mitigation_group.indexOfChild(btn)
-            }
+            val maskMe = preventionMeasures.contains(getString(R.string.mitigation_mask_me_value)).compareTo(false)
+            val maskOther = preventionMeasures.contains(getString(R.string.mitigation_mask_other_value)).compareTo(false)
 
 //          Compulsory text field
             val contactName = name_input.text.toString()
@@ -177,9 +201,13 @@ class NewContactActivity : AppCompatActivity() {
                     put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_input.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
-                    put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
+                    put(feedEntry.CLOSECONTACT_COLUMN,
+                        (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(false))
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
                     put(feedEntry.NOTES_COLUMN, notes_input.text.toString())
+                    put(feedEntry.MASK_COLUMN, 2*maskMe + maskOther)
+                    put(feedEntry.VENTILATION_COLUMN,
+                        (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(false))
                 }
 
 //              Insert the new row, returning the primary key value of the new row

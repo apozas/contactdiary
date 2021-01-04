@@ -102,4 +102,15 @@
     <string name="import_notfound">The specified file was not found</string>
     <string name="import_select">Select the database to import</string>
     <string name="mitigation_text">Prevention measures include mask use, distance, and/or ventilation</string>
+    <string name="mitigation_distance">Distance was greater than 2m/6ft</string>
+    <string name="mitigation_mask_me">I wore mask</string>
+    <string name="mitigation_mask_other">The other(s) wore mask</string>
+    <string name="mitigation_ventilation">The environment was ventilated</string>
+    <string name="mitigation_distance_value">Distance</string>
+    <string name="mitigation_mask_me_value">Mask (me)</string>
+    <string name="mitigation_mask_other_value">Mask (others)</string>
+    <string name="mitigation_ventilation_value">Ventilation</string>
+    <string name="click_to_select">Click to select</string>
+    <string name="mitigation_title">Preventive measures</string>
+    <string name="none">None</string>
 </resources>

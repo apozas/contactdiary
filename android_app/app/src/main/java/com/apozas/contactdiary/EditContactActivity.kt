@@ -26,6 +26,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_editcontact_inside.*
 import java.text.DateFormat
@@ -96,10 +97,27 @@ class EditContactActivity : AppCompatActivity() {
             encounterBtn.isChecked = true
         }
 
-        var closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
-        if (closeContact > 0) {
-            val closeContactBtn = mitigation_group.getChildAt(closeContact) as RadioButton
-            closeContactBtn.isChecked = true
+        val preventionMeasures = ArrayList<String>()
+        val closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+        val mask = cursor.getInt(cursor.getColumnIndex(feedEntry.MASK_COLUMN))
+        val ventilation = cursor.getInt(cursor.getColumnIndex(feedEntry.VENTILATION_COLUMN))
+        if (closeContact == 0) {
+            preventionMeasures.add(getString(R.string.mitigation_distance_value))
+        }
+        when (mask) {
+            1 -> preventionMeasures.add(getString(R.string.mitigation_mask_other_value))
+            2 -> preventionMeasures.add(getString(R.string.mitigation_mask_me_value))
+            3 -> {
+                preventionMeasures.add(getString(R.string.mitigation_mask_me_value))
+                preventionMeasures.add(getString(R.string.mitigation_mask_other_value))
+            }
+        }
+        if (ventilation == 1) {
+            preventionMeasures.add(getString(R.string.mitigation_ventilation_value))
+        }
+
+        if (preventionMeasures.isNotEmpty()) {
+            mitigation.text = preventionMeasures.sorted().joinToString(", ")
         }
 
         notes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
@@ -173,6 +191,31 @@ class EditContactActivity : AppCompatActivity() {
             ).show()
         }
 
+        mitigation.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            val checkedItems = BooleanArray(4) {i -> preventionMeasures.contains(resources.getStringArray(R.array.mitigation_values)[i])}
+            builder.setTitle(getString(R.string.mitigation_title))
+            builder.setMultiChoiceItems(R.array.mitigation_entries, checkedItems
+            ) { _, which, isChecked ->
+                val measures = this.resources.getStringArray(R.array.mitigation_values)
+                if (isChecked) {
+                    preventionMeasures.add(measures[which])
+                } else if (preventionMeasures.contains(measures[which])) {
+                    preventionMeasures.remove(measures[which])
+                }
+            }
+
+            builder.setPositiveButton("OK") { _, _ ->
+                var measuresTaken = getString(R.string.none)
+                if (preventionMeasures.isNotEmpty()) {
+                    measuresTaken = preventionMeasures.sorted().joinToString(", ")
+                }
+                mitigation.text = measuresTaken
+            }
+            builder.setNegativeButton("Cancel") { _, _ -> }
+            builder.create().show()
+        }
+
         okButton_AddContact.setOnClickListener {
 //          Process RadioButtons
             val relativeId = known_group.checkedRadioButtonId
@@ -189,12 +232,8 @@ class EditContactActivity : AppCompatActivity() {
                 contactIndoorOutdoorChoice = contact_indoor_outdoor.indexOfChild(btn)
             }
 
-            val contactCloseContactId = mitigation_group.checkedRadioButtonId
-            var contactCloseContactChoice = -1
-            if (contactCloseContactId != -1) {
-                val btn: View = mitigation_group.findViewById(contactCloseContactId)
-                contactCloseContactChoice = mitigation_group.indexOfChild(btn)
-            }
+            val maskMe = preventionMeasures.contains(getString(R.string.mitigation_mask_me_value)).compareTo(false)
+            val maskOther = preventionMeasures.contains(getString(R.string.mitigation_mask_other_value)).compareTo(false)
 
 //          Compulsory text field
             var errorCount = 0
@@ -214,9 +253,13 @@ class EditContactActivity : AppCompatActivity() {
                     put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_edit.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
-                    put(feedEntry.CLOSECONTACT_COLUMN, contactCloseContactChoice)
+                    put(feedEntry.CLOSECONTACT_COLUMN,
+                        (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(false))
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
                     put(feedEntry.NOTES_COLUMN, notes_edit.text.toString())
+                    put(feedEntry.MASK_COLUMN, 2*maskMe + maskOther)
+                    put(feedEntry.VENTILATION_COLUMN,
+                        (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(false))
                 }
 
 //              Update the database

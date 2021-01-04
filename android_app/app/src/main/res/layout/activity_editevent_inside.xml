@@ -231,78 +231,23 @@
                         android:layout_weight="1" />
                 </RadioGroup>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mitigation_question" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_centerVertical="true"
-                        android:text="@string/mitigation_question" />
-
-                    <ImageButton
-                        android:id="@+id/help"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:src="@drawable/ic_question"
-                        android:background="@null"
-                        android:layout_alignParentEnd="true"
-                        android:onClick="openPopup"/>
-                </RelativeLayout>
-
-                <RadioGroup
-                    android:id="@+id/eventclosecontact"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:id="@+id/closeevent_yes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/yes" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:id="@+id/closeevent_no"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/no" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <RadioButton
-                        android:id="@+id/closeevent_maybe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/unsure" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-                </RadioGroup>
+                <TextView
+                    android:id="@+id/event_mitigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/click_to_select"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="?attr/editTextColor"
+                    android:background="?attr/editTextBackground"
+                    android:backgroundTint="#00000000"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"/>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
