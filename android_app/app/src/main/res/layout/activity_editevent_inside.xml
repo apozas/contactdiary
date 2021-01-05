@@ -241,7 +241,7 @@
                     android:id="@+id/event_mitigation"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/click_to_select"
+                    android:text="@string/none"
                     android:clickable="true"
                     android:focusable="true"
                     android:textColor="?attr/editTextColor"

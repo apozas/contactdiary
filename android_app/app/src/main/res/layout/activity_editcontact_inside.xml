@@ -270,7 +270,7 @@
                     android:id="@+id/mitigation"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="None"
+                    android:text="@string/none"
                     android:clickable="true"
                     android:focusable="true"
                     android:textColor="?attr/editTextColor"
