@@ -101,4 +101,5 @@
     <string name="mitigation_distance_value">Mesafe</string>
     <string name="mitigation_mask_me_value">Maske (ben)</string>
     <string name="mitigation_mask_other_value">Maske (diğerleri)</string>
+    <string name="none">Yok</string>
 </resources>

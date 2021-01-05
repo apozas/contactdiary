@@ -28,7 +28,7 @@
     <string name="encounter_type">Tipo di incontro</string>
     <string name="indoors">Al chiuso</string>
     <string name="outdoors">All\'aperto</string>
-    <string name="mitigation_question">Sono state adottate misure di prevenzione?</string>
+    <string name="mitigation_question">Quali misure di prevenzione sono state prese?</string>
     <string name="no">No</string>
     <string name="yes">Sì</string>
     <string name="unsure">Non sicuro</string>
@@ -98,7 +98,13 @@
     <string name="thanks_turkish"><b>Traduzione turca - </b><a href="https://crowdin.com/profile/perboran">perboran</a> e <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="mitigation_mask_me_value">Mascherina (io)</string>
     <string name="mitigation_mask_other_value">Mascherina (altri)</string>
-    <string name="mitigation_distance_value">Distanziamento</string>
+    <string name="mitigation_distance_value">Distanza</string>
     <string name="mitigation_ventilation_value">Ventilazione</string>
     <string name="mitigation_title">Misure di prevenzione</string>
+    <string name="none">Nessuna</string>
+    <string name="click_to_select">Premi per selezionare</string>
+    <string name="mitigation_distance">La distanza era maggiore di 2m</string>
+    <string name="mitigation_mask_me">Io indossavo mascherina</string>
+    <string name="mitigation_mask_other">Gli altri indossavano mascherina</string>
+    <string name="mitigation_ventilation">L\'ambiente era ventilato</string>
 </resources>
