@@ -1,0 +1,3 @@
+Questo aggiornamento porta i dettagli tanto attesi delle misure preventive adottate. Ora potrai specificare se durante il contatto erano presenti distanza, mascherine e/o ventilazione.
+
+Come sempre, se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

@@ -1,0 +1,3 @@
+Dieses Update enthält die lang erwarteten Details der ergriffenen Präventionsmaßnahmen. Jetzt können Sie festlegen, ob während des Kontakts Abstand, Masken und/oder Lüften vorhanden waren.
+
+Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie wie immer http://www.crowdin.com/project/contactdiary
