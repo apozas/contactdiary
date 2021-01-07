@@ -27,6 +27,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_editevent_inside.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -360,7 +361,7 @@ class EditEventActivity : AppCompatActivity() {
 
     private fun setupUI(view: View) {
 //      Set up touch listener for non-text box views to hide keyboard.
-        if (view !is EditText) {
+        if (!((view is EditText) or (view is FloatingActionButton))) {
             view.setOnTouchListener { v, _ ->
                 v.clearFocus()
                 hideSoftKeyboard()
