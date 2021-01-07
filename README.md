@@ -49,6 +49,11 @@ If you still haven't found an answer, please create a [new issue](https://github
 If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, feel free to donate. Your donation is highly appreciated. Thank you!
 
 [![PayPal Donation](https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif)](https://paypal.me/apozasker)
+<a href="bitcoin:3EiWPF4x98SUEeqLqKqZGNDDj3rfaDcdJL"><img src="https://drive.google.com/uc?export=view&id=1UCywyTVUW_hCPpU9y4LXqN5_MRd7vYT8" width="100" height="auto" title="Donate BTC" /></a>
+<a href="web+stellar:pay?destination=GDQP2KPQGKIHYJGXNUIYOMHARUARCA7DJT5FO2FFOOKY3B2WSQHG4W37&memo=2884750593&memo_type=MEMO_ID"><img src="https://drive.google.com/uc?export=view&id=12juczJtFzWjthH56kdvpM43Y21ftEnIj" width="100" height="auto" title="Donate XLM" /></a>
+<a href="ethereum:0x71A8dBE4e99aaB4413b443541537d589ffC347A2"><img src="https://drive.google.com/uc?export=view&id=1AWo3ZVxd3p4BlZDMc7W-jwc-1aSVQ3d6" width="100" height="auto" title="Donate ETH" /></a>
+  
+> Bitcoin: 3EiWPF4x98SUEeqLqKqZGNDDj3rfaDcdJL<br>Stellar: GDQP2KPQGKIHYJGXNUIYOMHARUARCA7DJT5FO2FFOOKY3B2WSQHG4W37:::ucl:::2884750593<br>Ethereum: 0x71A8dBE4e99aaB4413b443541537d589ffC347A2
 
 # Contributing :+1:
 
