@@ -210,18 +210,27 @@ class NewContactActivity : AppCompatActivity() {
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(
                         feedEntry.CLOSECONTACT_COLUMN,
-                        (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(
-                            false
-                        )
+                        if (mitigation.text != getString(R.string.click_to_select)) {
+                                (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(
+                                false
+                            )
+                        } else { -1 }
                     )
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
                     put(feedEntry.NOTES_COLUMN, notes_input.text.toString())
-                    put(feedEntry.MASK_COLUMN, 2 * maskMe + maskOther)
+                    put(
+                        feedEntry.MASK_COLUMN,
+                        if (mitigation.text != getString(R.string.click_to_select)) {
+                            2 * maskMe + maskOther
+                        } else { -1 }
+                    )
                     put(
                         feedEntry.VENTILATION_COLUMN,
-                        (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(
-                            false
-                        )
+                        if (mitigation.text != getString(R.string.click_to_select)) {
+                                (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(
+                                false
+                            )
+                        } else { -1 }
                     )
                 }
 

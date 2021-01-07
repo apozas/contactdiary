@@ -192,12 +192,29 @@ class NewEventActivity : AppCompatActivity() {
                     put(feedEntry.PHONE_COLUMN, eventphone_input.text.toString())
                     put(feedEntry.COMPANIONS_COLUMN, eventpeople_input.text.toString())
                     put(feedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)
-                    put(feedEntry.CLOSECONTACT_COLUMN,
-                        (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(false))
+                    put(
+                        feedEntry.CLOSECONTACT_COLUMN,
+                        if (event_mitigation.text != getString(R.string.click_to_select)) {
+                            (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(
+                                false
+                            )
+                        } else { -1 }
+                    )
                     put(feedEntry.NOTES_COLUMN, eventnotes_input.text.toString())
-                    put(feedEntry.MASK_COLUMN, 2*maskMe + maskOther)
-                    put(feedEntry.VENTILATION_COLUMN,
-                        (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(false))
+                    put(
+                        feedEntry.MASK_COLUMN,
+                        if (event_mitigation.text != getString(R.string.click_to_select)) {
+                            2 * maskMe + maskOther
+                        } else { -1 }
+                    )
+                    put(
+                        feedEntry.VENTILATION_COLUMN,
+                        if (event_mitigation.text != getString(R.string.click_to_select)) {
+                            (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(
+                                false
+                            )
+                        } else { -1 }
+                    )
                 }
 
 //              Insert the new row, returning the primary key value of the new row

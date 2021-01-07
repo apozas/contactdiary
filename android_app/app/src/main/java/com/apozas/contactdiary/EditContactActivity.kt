@@ -115,8 +115,12 @@ class EditContactActivity : AppCompatActivity() {
             preventionMeasures.add(getString(R.string.mitigation_ventilation_value))
         }
 
-        if (preventionMeasures.isNotEmpty()) {
-            mitigation.text = preventionMeasures.sorted().joinToString(", ")
+        if (closeContact + mask + ventilation == -3) {
+            mitigation.text = getString(R.string.click_to_select)
+        } else {
+            if (preventionMeasures.isNotEmpty()) {
+                mitigation.text = preventionMeasures.sorted().joinToString(", ")
+            }
         }
 
         notes_edit.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
@@ -252,13 +256,30 @@ class EditContactActivity : AppCompatActivity() {
                     put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
                     put(feedEntry.PHONE_COLUMN, phone_edit.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
-                    put(feedEntry.CLOSECONTACT_COLUMN,
-                        (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(false))
+                    put(
+                        feedEntry.CLOSECONTACT_COLUMN,
+                        if (mitigation.text != getString(R.string.click_to_select)) {
+                            (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(
+                                false
+                            )
+                        } else { -1 }
+                    )
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
                     put(feedEntry.NOTES_COLUMN, notes_edit.text.toString())
-                    put(feedEntry.MASK_COLUMN, 2*maskMe + maskOther)
-                    put(feedEntry.VENTILATION_COLUMN,
-                        (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(false))
+                    put(
+                        feedEntry.MASK_COLUMN,
+                        if (mitigation.text != getString(R.string.click_to_select)) {
+                            2 * maskMe + maskOther
+                        } else { -1 }
+                    )
+                    put(
+                        feedEntry.VENTILATION_COLUMN,
+                        if (mitigation.text != getString(R.string.click_to_select)) {
+                            (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(
+                                false
+                            )
+                        } else { -1 }
+                    )
                 }
 
 //              Update the database
