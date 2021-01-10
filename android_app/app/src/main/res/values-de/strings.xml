@@ -98,13 +98,13 @@
     <string name="thanks_turkish"><b>Türkische Übersetzung - </b><a href="https://crowdin.com/profile/perboran">perboran</a> und <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="mitigation_mask_me_value">Maske (ich)</string>
     <string name="mitigation_mask_other_value">Maske (andere)</string>
-    <string name="mitigation_ventilation_value">Lüften</string>
+    <string name="mitigation_ventilation_value">Belüftung</string>
     <string name="mitigation_distance_value">Abstand</string>
     <string name="mitigation_title">Präventionsmaßnahmen</string>
     <string name="none">Keine</string>
-    <string name="mitigation_distance">Die Abstand war größer als 2m</string>
+    <string name="mitigation_distance">Der Abstand war größer als 2m</string>
     <string name="mitigation_mask_me">Ich habe Maske getragen</string>
-    <string name="mitigation_mask_other">Die andere(n) habe Maske getragen</string>
+    <string name="mitigation_mask_other">Die andere(n) Person(en) hat/haben Maske getragen</string>
     <string name="mitigation_ventilation">Die Umgebung wurde belüftet</string>
     <string name="click_to_select">Klicke um auszuwählen</string>
 </resources>
