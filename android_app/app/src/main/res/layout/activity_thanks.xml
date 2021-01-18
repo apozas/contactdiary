@@ -111,5 +111,11 @@
             android:id="@+id/thanks_turkish"
             android:text="@string/thanks_turkish"/>
 
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_ukrainian"
+            android:text="@string/thanks_ukrainian"/>
     </LinearLayout>
 </ScrollView>

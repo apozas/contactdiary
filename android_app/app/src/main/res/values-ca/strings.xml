@@ -107,4 +107,5 @@
     <string name="mitigation_ventilation">L\'entorn estava ventilat</string>
     <string name="mitigation_mask_other">Els altres van portar mascareta</string>
     <string name="mitigation_mask_me">Jo vaig portar mascareta</string>
+    <string name="thanks_ukrainian"><b>Traducció a l\'ucraïnès - </b><a href="https://crowdin.com/profile/olexndr">olexndr</a></string>
 </resources>

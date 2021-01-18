@@ -107,4 +107,5 @@
     <string name="mitigation_mask_other">其他人有配戴口罩</string>
     <string name="mitigation_mask_me">我有佩戴口罩</string>
     <string name="mitigation_distance">保持大於2公尺的距離</string>
+    <string name="thanks_ukrainian"><b>烏克蘭語翻譯 - </b><a href="https://crowdin.com/profile/olexndr">olexndr</a></string>
 </resources>

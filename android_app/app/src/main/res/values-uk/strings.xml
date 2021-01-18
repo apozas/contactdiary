@@ -107,4 +107,5 @@
     <string name="click_to_select">Натисніть, щоб вибрати</string>
     <string name="mitigation_title">Заходи профілактики</string>
     <string name="none" comment="none. It should match the gender of &quot;preventive measures&quot;">Ніякий</string>
+    <string name="thanks_ukrainian"><b>Переклад Українською - </b><a href="https://crowdin.com/profile/olexndr">olexndr</a></string>
 </resources>
