@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Щоденник контактів</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="new_contact">Новий контакт</string>
+    <string name="new_event">Нова подія</string>
+    <string name="event_name">Назва події</string>
+    <string name="no">Ні</string>
+    <string name="yes">Так</string>
+    <string name="date">Дата</string>
+    <string name="time">Час</string>
+    <string name="place">Розташування</string>
+    <string name="companions">Друзі</string>
+    <string name="name">Ім\'я</string>
+    <string name="known_contact">Родич чи близький друг?</string>
+    <string name="mitigation_question">Які заходи профілактики було вжито?</string>
+    <string name="phone">Номер телефону</string>
+    <string name="unsure">Не впевнений</string>
+    <string name="encounter_type">Тип зіткнення</string>
+    <string name="indoors">У приміщенні</string>
+    <string name="outdoors">На вулиці</string>
+    <string name="emptydiary">Щоденник порожній</string>
+    <string name="contact_saved">Контакт збережено</string>
+    <string name="event_saved">Подію збережено</string>
+    <string name="edit_event">Редагувати подію</string>
+    <string name="edit_contact">Редагувати контакт</string>
+    <string name="options">Параметри</string>
+    <string name="entry_deleted">Запис видалено</string>
+    <string name="contact_developer_summary">Скажіть, що Ви думаєте про сам додаток або проблеми, з якими Ви зіткнулися</string>
+    <string name="contact_developer">Зв\'яжіться з розробниками</string>
+    <string name="about_donate">Купіть мені каву</string>
+    <string name="notification_title">З ким Ви були сьогодні?</string>
+    <string name="notification_text">Додайте Ваші контакти до щоденника</string>
+    <string name="choose_option">Будь ласка, оберіть варіант</string>
+    <string name="compulsory_field">Обов\'язкове поле</string>
+    <string name="edit">Редагувати</string>
+    <string name="delete">Видалити</string>
+    <string name="alarm_modified">Сигнал змінено</string>
+    <string name="incorrect_alarm_time">Будь ласка, введіть правильний час</string>
+    <string name="daily_reminder">Щоденне нагадування</string>
+    <string name="choose_time">Обрати час</string>
+    <string name="show_close_contacts">Показати лише близькі контакти</string>
+    <string name="more">Більше</string>
+    <string name="settings">Налаштування</string>
+    <string name="entries_deleted">Записи видалено</string>
+    <string name="entries_selected">" записи вибрано"</string>
+    <string name="privacy_title">Політика конфіденційності</string>
+    <string name="privacy_intro">Щоденник контактів (Contact Diary) розповсюджується з надією, що він буде корисним, але БЕЗ БУДЬ-ЯКИХ ГАРАНТІЙ; навіть без передбачуваної гарантії КОМПЕНСАЦІЇ або ПРИГОДНОСТІ ДЛЯ ПЕВНОЇ ЦІЛІ. Ця сторінка використовується, щоб інформувати відвідувачів про Політикою Конфіденційності щодо зібрання, використанням, і розкриття особистої інформації тих, хто вирішив використовувати Щоденник контактів (Contact Diary). Одним словом, оскільки Щоденник контактів (Contact Diary) не може підключитись до Інтернету, жодна особиста інформація не буде ні збережена, ні скопіювана за межами пристрою користувача. Якщо Ви обераєте Щоденник контактів (Contact Diary), Ви погоджуєтеся із зібранням (якого насправді нема) і користуванням інформації відповідно до цієї Політики Конфіденційності. Особиста інформація, яку збирає Щоденник контактів (Contact Diary) використовується у наданні його послуг. Як зазначалося вище, я не можу і тому відповідно не буду ні використовувати, ні ділитися Вашою інформацією з кимось іншим.</string>
+    <string name="privacy_icu">Використання Щоденника контактів (Contact Diary), вимагає введення певної персональної інформації, імена та (за необхідністю) місця та телефонні номери. Інформація, яка запитується з Щоденника контактів (Contact Diary) зберігається лише на Вашому пристрої і я не збираю її жодним чином.</string>
+    <string name="privacy_cookies">Файли cookie - це файли з невеликою кількістю даних, які зазвичай використовуються, як анонімні унікальні ідентифікатори. Вони надсилаються у ваш браузер із веб-сайтів, які Ви відвідуєте, і зберігаються у внутрішній пам’яті Вашого пристрою. \n\n Щоденник контактів (Contact Diary) не використовує жодних файлів cookie і не надає їх ні близьким, ні стороннім. \n\n Таким же чином, ніякі послуги не делегуються стороннім особам. Інформація, яку ви вводите в Щоденник контактів (Contact Diary) ніколи не покидає межі внутрішньої пам\'яті Вашого пристрою.</string>
+    <string name="privacy_security">Знову ж таки, жодна інформація, яку ви вводите в Щоденник контактів, ніколи не залишає Ваш пристрій. Цей факт завжди можна оцінити, перевіривши вихідний код  Щоденника контактів, який доступний за посиланням <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a> . Таким чином, його безпека та цілісність пов’язані з фізичною безпекою та цілісністю Вашого пристрою, за який я не несу відповідальности.</string>
+    <string name="privacy_changes">Я можу час від часу оновлювати цю Політику конфіденційності. Таким чином, Вам рекомендується періодично переглядати цю сторінку щодо будь-яких змін. Я повідомлю Вас про будь-які зміни, опублікувавши нову Політику конфіденційності на цій сторінці. \n\n Ця політика набирає чинності з 2020-09-08</string>
+    <string name="privacy_contact">Якщо у Вас є будь-які запитання чи пропозиції щодо цієї Політики конфіденційності, можете без вагань зв’язатися зі мною за адресою <a href="mailto:contactdiary@alexpozas.com"> contactdiary@alexpozas.com </a> (бажано англійською мовою).</string>
+    <string name="privacy_changes_title">Зміни в цій Політиці Конфіденційності</string>
+    <string name="privacy_icu_title">Збір та використання інформації</string>
+    <string name="privacy_cookies_title">Куки та постачальники послуг</string>
+    <string name="privacy_security_title">Безпека</string>
+    <string name="privacy_contact_title">Зв\'яжіться зі мною</string>
+    <string name="empty_table">Натисніть (+), щоб розпочати додавання контактів</string>
+    <string name="app_version_title">Версія додатку</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate">Оцініть додаток</string>
+    <string name="about_rate_summary">Якщо Вам подобається додаток - будь ласка, оцініть та перегляньте його. Так більше людей, для яких він може стати корисним дізнаються про нього</string>
+    <string name="entry_duplicated">Запис продубльовано</string>
+    <string name="entries_duplicated">Записи продубльовано</string>
+    <string name="duplicate">Зробити копію сьогодні</string>
+    <string name="select">Вибрати</string>
+    <string name="notes">Нотатки</string>
+    <string name="acknowledgments">Дякую</string>
+    <string name="about">Про</string>
+    <string name="thanks_text">Хоча \"Щоденник контактів\" розпочався як сольний проект, він став кращим від безцінного альтруїстичного внеска багатьох людей. Щиро дякую всім на цій сторінці.</string>
+    <string name="thanks_homescreen"><b>Ярлики головного екрану - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_chinese"><b>Переклад Китайською- </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (традиційне письмо)</string>
+    <string name="thanks_dutch"><b>Переклад Нідерландською - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> і <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Переклад Фінською - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Переклад Французькою - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>Переклад Німецькою - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> і <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_hungarian"><b>Переклад Угорською - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_italian"><b>Переклад Італійською - </b><a href="https://github.com/igor-cali">igor-cali</a> і <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Переклад Індонезійською - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>Переклад Польською - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Переклад Португальською - </b><a href="https://github.com/riuri">riuri</a> (Бразилія)</string>
+    <string name="thanks_swedish"><b>Переклад Шведською - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="thanks_turkish"><b>Переклад Турецькою - </b><a href="https://crowdin.com/profile/perboran">perboran</a> і <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="theme">Тема</string>
+    <string name="theme_light">Світла</string>
+    <string name="theme_dark">Темна</string>
+    <string name="theme_system">Як в системі</string>
+    <string name="backup">Резервне копіювання і відновлення</string>
+    <string name="import_database">Імпорт бази даних</string>
+    <string name="import_database_summary">Завантажити збережену базу даних</string>
+    <string name="export_database">Експорт бази даних</string>
+    <string name="export_database_summary">Зберегти базу даних у форматі CSV</string>
+    <string name="export_success">Базу даних збережено</string>
+    <string name="import_fail">Виникла проблема з базою даних</string>
+    <string name="import_success">База даних завантажена</string>
+    <string name="import_notfound">Зазначений файл не знайдено</string>
+    <string name="import_select">Виберіть базу даних для імпорту</string>
+    <string name="mitigation_distance" comment="mitigation_distance. Feel free to use only metric system (or other) if preferred">Відстань перевищувала 2м/6ф</string>
+    <string name="mitigation_mask_me">Я був/була у масці</string>
+    <string name="mitigation_mask_other">Інші були в масці</string>
+    <string name="mitigation_ventilation">Середовище було вентильоване</string>
+    <string name="mitigation_distance_value">Відстань</string>
+    <string name="mitigation_mask_me_value">Замаскувати (мене)</string>
+    <string name="mitigation_mask_other_value">Замаскувати (інших)</string>
+    <string name="mitigation_ventilation_value">Вентиляція</string>
+    <string name="click_to_select">Натисніть, щоб вибрати</string>
+    <string name="mitigation_title">Заходи профілактики</string>
+    <string name="none" comment="none. It should match the gender of &quot;preventive measures&quot;">Ніякий</string>
+</resources>
