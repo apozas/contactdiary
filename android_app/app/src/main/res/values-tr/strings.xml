@@ -2,18 +2,18 @@
 <resources>
     <string name="app_name">İletişim Günlüğü</string>
     <string name="action_settings">Ayarlar</string>
-    <string name="new_contact">Yeni bağlantı</string>
+    <string name="new_contact">Yeni kişi</string>
     <string name="new_event">Yeni etkinlik</string>
     <string name="event_name">Etkinlik ismi</string>
     <string name="no">Hayır</string>
     <string name="yes">Evet</string>
     <string name="date">Tarih</string>
-    <string name="time">Zaman</string>
+    <string name="time">Saat</string>
     <string name="place">Yer</string>
-    <string name="companions">Yoldaşlar</string>
+    <string name="companions">Yanındakiler</string>
     <string name="name">İsim</string>
-    <string name="known_contact">Aile veya yakin arkadas?</string>
-    <string name="mitigation_question">Önleme tedbirleri alındı ​​mı?</string>
+    <string name="known_contact">Aile veya yakın arkadaş mı?</string>
+    <string name="mitigation_question">Hangi önleme tedbirleri alındı?</string>
     <string name="phone">Telefon</string>
     <string name="unsure">Emin değilim</string>
     <string name="encounter_type">Karşılaşma türü</string>
@@ -27,7 +27,7 @@
     <string name="options">Seçenekler</string>
     <string name="entry_deleted">Giriş silindi</string>
     <string name="contact_developer_summary">Bana uygulama hakkında ne düşündüğünüzü veya karşılaştığınız sorunları söyleyin</string>
-    <string name="contact_developer">Geliştiricisine iletişime geçin</string>
+    <string name="contact_developer">Geliştiriciyle iletişime geçin</string>
     <string name="about_donate">Bana kahve ısmarlayın</string>
     <string name="notification_title">Bugün kiminle birlikteydin?</string>
     <string name="notification_text">Kişilerinizi günlüğe ekleyin</string>
@@ -36,14 +36,14 @@
     <string name="edit">Düzenle</string>
     <string name="delete">Temizle</string>
     <string name="alarm_modified">Alarm değiştirildi</string>
-    <string name="incorrect_alarm_time">Lütfen doğru bir zaman giriniz</string>
+    <string name="incorrect_alarm_time">Lütfen doğru bir saat giriniz</string>
     <string name="daily_reminder">Günlük hatırlatma</string>
     <string name="choose_time">Zamanı seç</string>
     <string name="show_close_contacts">Yalnızca yakın kişileri göster</string>
     <string name="more">Daha Fazla</string>
     <string name="settings">Ayarlar</string>
-    <string name="entries_deleted">Giriş silindi</string>
-    <string name="entries_selected">" girdiler seçildi"</string>
+    <string name="entries_deleted">Girişler silindi</string>
+    <string name="entries_selected"> girişler seçildi</string>
     <string name="privacy_title">Gizlilik Politikası</string>
     <string name="privacy_intro">İletişim Günlüğü yararlı olacağı ümidiyle ancak HERHANGİ BİR GARANTİ VERMEKSİZİN dağıtılır; BELİRLİ BİR AMACA UYGUNLUK veya ZIMNİ TİCARET garantisi olmadan. Bu sayfa, herhangi birinin İletişim Günlüğü\'nü kullanmaya karar vermesi durumunda Kişisel Bilgilerin toplanması, kullanılması ve ifşa edilmesi ile ilgili politikalarım hakkında ziyaretçileri bilgilendirmek için kullanılır. Kısaca ve İletişim Günlüğü internete bağlanamadığından, hiçbir kişisel bilgi kullanıcının cihazı dışında saklanmayacak veya kopyalanmayacaktır. İletişim Günlüğü\'nü kullanmayı seçerseniz, bu politikayla ilgili bilgilerin toplanmasını (yok) ve kullanılmasını kabul etmiş olursunuz. İletişim Günlüğünün topladığı Kişisel Bilgiler, hizmet sağlamak için kullanılır. Yukarıda açıklandığı gibi, bilgilerinizi hiç kimseyle kullanamam ve bu sebeple de paylaşmayacağım.</string>
     <string name="privacy_icu">İletişim Günlüğü\'nün kullanımı, isimler ve (isteğe bağlı olarak) yerler ve telefon numaraları gibi kişisel olarak tanımlanabilir belirli bilgileri girmenizi gerektirir. İletişim Günlüğü\'nün talep ettiği bilgiler cihazınızda saklanacak ve hiçbir şekilde tarafımdan toplanmayacaktır.</string>
@@ -60,7 +60,7 @@
     <string name="app_version_title">Uygulama sürümü</string>
     <string name="about_donate_summary"></string>
     <string name="about_rate">Uygulamayı değerlendirin</string>
-    <string name="about_rate_summary">Eğer uygulamayı beğendiyseniz, lütfen daha fazla insana yararlı olabilmesi için inceleyin ve değerlendirin</string>
+    <string name="about_rate_summary">Eğer uygulamayı beğendiyseniz, daha fazla insana ulaşması ve faydalı olabilmesi için lütfen değerlendirme yapın ve yorum yazın</string>
     <string name="entry_duplicated">Girdi kopyalandı</string>
     <string name="entries_duplicated">Girdiler kopyalandı</string>
     <string name="duplicate">Bugünün bir kopyasını oluştur</string>
@@ -68,7 +68,7 @@
     <string name="notes">Notlar</string>
     <string name="acknowledgments">Teşekkürler</string>
     <string name="about">Hakkında</string>
-    <string name="thanks_text">İletişim Günlüğü solo bir proje olarak başlarken, birçok kişinin paha biçilmez fedakar katkılarına ev sahipliği yaptı. Bu sayfadaki herkese içten teşekkürlerimi sunarım.</string>
+    <string name="thanks_text">İletişim Günlüğü tek kişilik bir proje olarak başlamasına rağmen birçok kişinin paha biçilmez fedakar katkılarına ev sahipliği yaptı. Bu sayfadaki herkese içten teşekkürlerimi sunarım.</string>
     <string name="thanks_homescreen"><b>Ana ekran kısayolları - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_chinese"><b>Çince çeviri - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Geleneksel)</string>
     <string name="thanks_dutch"><b>Hollandaca çeviri- </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> ve <a href="https://github.com/Vistaus">Vistaus</a></string>
@@ -97,9 +97,14 @@
     <string name="import_select">İçe aktarılacak veritabanını seçiniz</string>
     <string name="thanks_turkish"><b>Türkçe çeviri - </b><a href="https://crowdin.com/profile/perboran">perboran</a> ve <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="mitigation_title">Önleme tedbirleri</string>
-    <string name="mitigation_ventilation_value">Ventilasyon</string>
+    <string name="mitigation_ventilation_value">Havalandırma</string>
     <string name="mitigation_distance_value">Mesafe</string>
     <string name="mitigation_mask_me_value">Maske (ben)</string>
     <string name="mitigation_mask_other_value">Maske (diğerleri)</string>
-    <string name="none">Yok</string>
+    <string name="none">Hiçbiri</string>
+    <string name="mitigation_distance">Mesafe 2 metreden fazlaydı</string>
+    <string name="mitigation_mask_me">Maske taktım</string>
+    <string name="mitigation_mask_other">Diğer kişi(ler) maske takmıştı</string>
+    <string name="mitigation_ventilation">Ortam havalandırılıyordu</string>
+    <string name="click_to_select">Seçmek için tıkla</string>
 </resources>

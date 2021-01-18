@@ -102,4 +102,9 @@
     <string name="mitigation_ventilation_value">Ventilació</string>
     <string name="mitigation_title">Mesures de prevenció</string>
     <string name="none">Cap</string>
+    <string name="mitigation_distance">La distància va ser més de 2m</string>
+    <string name="click_to_select">Clica per seleccionar</string>
+    <string name="mitigation_ventilation">L\'entorn estava ventilat</string>
+    <string name="mitigation_mask_other">Els altres van portar mascareta</string>
+    <string name="mitigation_mask_me">Jo vaig portar mascareta</string>
 </resources>

@@ -13,7 +13,7 @@
     <string name="companions">Metgezellen</string>
     <string name="name">Naam</string>
     <string name="known_contact">Eigen familie of goede vriend?</string>
-    <string name="mitigation_question">Zijn er preventiemaatregelen genomen?</string>
+    <string name="mitigation_question">Welke preventiemaatregelen zijn er genomen?</string>
     <string name="phone">Telefoonnummer</string>
     <string name="unsure">Weet ik niet</string>
     <string name="encounter_type">Vorm van contact</string>
@@ -96,4 +96,15 @@
     <string name="thanks_chinese"><b>Chinese vertaling - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditioneel)</string>
     <string name="thanks_hungarian"><b>Hongaarse vertaling - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Turkse vertaling - </b><a href="https://crowdin.com/profile/perboran">perboran</a> en <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="mitigation_distance">Afstand was groter dan 2m/6ft</string>
+    <string name="mitigation_mask_me">Ik droeg een mondmasker</string>
+    <string name="mitigation_mask_other">De andere(n) droegen mondmaskers</string>
+    <string name="mitigation_ventilation">De omgeving was geventileerd</string>
+    <string name="mitigation_distance_value">Afstand</string>
+    <string name="mitigation_mask_me_value">Mondmasker (ik)</string>
+    <string name="mitigation_mask_other_value">Mondmaskers (anderen)</string>
+    <string name="mitigation_ventilation_value">Ventilatie</string>
+    <string name="click_to_select">Klik om te selecteren</string>
+    <string name="mitigation_title">Preventie maatregelen</string>
+    <string name="none">Geen</string>
 </resources>

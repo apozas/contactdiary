@@ -10,10 +10,10 @@
     <string name="date">Data</string>
     <string name="time">Hora</string>
     <string name="place">Local</string>
-    <string name="companions">Companheiros</string>
+    <string name="companions">Companhias</string>
     <string name="name">Nome</string>
     <string name="known_contact">Parente ou amigo próximo?</string>
-    <string name="mitigation_question">Foram tomadas medidas de prevenção?</string>
+    <string name="mitigation_question">Quais medidas de prevenção foram tomadas?</string>
     <string name="phone">Telefone</string>
     <string name="unsure">Não sei</string>
     <string name="encounter_type">Tipo de encontro</string>
@@ -83,7 +83,7 @@
     <string name="theme">Tema</string>
     <string name="theme_light">Claro</string>
     <string name="theme_dark">Escuro</string>
-    <string name="theme_system">Seguir sistema</string>
+    <string name="theme_system">Padrão do sistema</string>
     <string name="backup">Backup e restauração</string>
     <string name="import_database">Importar banco de dados</string>
     <string name="import_database_summary">Carregar um banco de dados salvo</string>
@@ -93,7 +93,18 @@
     <string name="import_fail">Há um problema com o banco de dados</string>
     <string name="import_success">Banco de dados carregado</string>
     <string name="import_notfound">O arquivo especificado não foi encontrado</string>
-    <string name="thanks_chinese"><b>Traduçao para Chinês - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditional)</string>
+    <string name="thanks_chinese"><b>Traduçao para Chinês - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradicional)</string>
     <string name="thanks_hungarian"><b>Tradução para Húngaro - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
-    <string name="thanks_turkish"><b>Tradução para turco - </b><a href="https://crowdin.com/profile/perboran">perboran</a> e <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_turkish"><b>Tradução para Turco - </b><a href="https://crowdin.com/profile/perboran">perboran</a> e <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="mitigation_distance">Distância foi maior que 2m</string>
+    <string name="mitigation_mask_me">Eu estava de máscara</string>
+    <string name="mitigation_mask_other">O(s) outro(s) estavam de máscara</string>
+    <string name="mitigation_ventilation">O ambiente estava ventilado</string>
+    <string name="mitigation_distance_value">Distância</string>
+    <string name="mitigation_mask_me_value">Máscara (eu)</string>
+    <string name="mitigation_mask_other_value">Máscara (outros)</string>
+    <string name="mitigation_ventilation_value">Ventilação</string>
+    <string name="click_to_select">Clique para selecionar</string>
+    <string name="mitigation_title">Medidas de prevenção</string>
+    <string name="none">Nenhum</string>
 </resources>

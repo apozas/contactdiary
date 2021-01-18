@@ -100,5 +100,11 @@
     <string name="mitigation_distance_value">距離</string>
     <string name="mitigation_title">預防措施</string>
     <string name="mitigation_mask_me_value">口罩 (我)</string>
-    <string name="mitigation_mask_other_value">口罩 (其他)</string>
+    <string name="mitigation_mask_other_value">口罩 (其他人)</string>
+    <string name="none">無</string>
+    <string name="click_to_select">點擊以選取</string>
+    <string name="mitigation_ventilation">環境有通風</string>
+    <string name="mitigation_mask_other">其他人有配戴口罩</string>
+    <string name="mitigation_mask_me">我有佩戴口罩</string>
+    <string name="mitigation_distance">保持大於2公尺的距離</string>
 </resources>
