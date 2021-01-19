@@ -129,7 +129,7 @@ class EditContactActivity : AppCompatActivity() {
 //      Close the cursor after reading it
         cursor.close()
 
-        // Listen to new values
+//       Listen to new values
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             initCal.set(Calendar.YEAR, year)
             initCal.set(Calendar.MONTH, monthOfYear)
@@ -290,7 +290,7 @@ class EditContactActivity : AppCompatActivity() {
 
                 Toast.makeText(
                     applicationContext,
-                    applicationContext.getResources().getString(R.string.contact_saved),
+                    getString(R.string.contact_saved),
                     Toast.LENGTH_SHORT
                 ).show()
                 finish()

@@ -178,7 +178,6 @@ class SettingsActivity : AppCompatActivity() {
                     columnNames.joinToString(separator = "\t", postfix = "\n").toByteArray()
                 )
                 while (cursor.moveToNext()) {
-                    //Which column you want to export
                     val columns = cursor.columnCount
                     val arrStr = mutableListOf<String>()
                     for (i in 1 until columns + 1) {    // We don't care of the _id column
