@@ -1,0 +1,3 @@
+Questo aggiornamento aggiunge nuove traduzioni (giapponese, grazie a ysakamoto_, e ucraino, grazie ai tabak) e completa il resto. Inoltre, viene evitato un arresto anomalo durante l'esportazione in Android 4.3 e versioni precedenti.
+
+Se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

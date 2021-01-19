@@ -1,0 +1,3 @@
+Dieses Update fügt neue Übersetzungen hinzu (Japanisch dank ysakamoto_ und Ukrainisch dank tabaks) und vervollständigt den Rest. Außerdem wird ein Absturz beim Exportieren in Android 4.3 und niedriger verhindert.
+
+Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary

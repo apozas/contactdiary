@@ -1,0 +1,3 @@
+Esta actualización añade nuevas traducciones (japonés, gracias a ysakamoto_, y ucraniano, gracias a tabaks) y completa el resto. Además, evita un bloqueo al exportar en Android 4.3 y versiones anteriores.
+
+Si deseas ayudar a traducir Diario de Contactos a tu idioma, visita http://www.crowdin.com/project/contactdiary
