@@ -98,4 +98,15 @@
     <string name="thanks_turkish"><b>Turkinkielinen käännös - </b><a href="https://crowdin.com/profile/perboran">perboran</a> ja <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukrainalainen käännös - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japaninkielinen käännös - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="mitigation_distance">Etäisyys oli yli 2m</string>
+    <string name="mitigation_mask_me">Minulla oli naamio</string>
+    <string name="mitigation_mask_other">Muu(t) käyttivät naamiota</string>
+    <string name="mitigation_ventilation">Ympäristö oli tuuletettu</string>
+    <string name="mitigation_distance_value">Etäisyys</string>
+    <string name="mitigation_mask_me_value">Maski (minä)</string>
+    <string name="mitigation_mask_other_value">Maski (muut)</string>
+    <string name="mitigation_ventilation_value">Ilmanvaihto</string>
+    <string name="click_to_select">Klikkaa valitaksesi</string>
+    <string name="mitigation_title">Ehkäisevät toimenpiteet</string>
+    <string name="none">Ei mitään</string>
 </resources>

@@ -98,4 +98,15 @@
     <string name="thanks_turkish"><b>Terjemahan bahasa Turki - </b><a href="https://crowdin.com/profile/perboran">perboran</a> dan <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Terjemahan bahasa Ukraina - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Terjemahan bahasa Jepang - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="mitigation_distance">Jaraknya lebih besar dari 2m</string>
+    <string name="mitigation_mask_me">Saya memakai topeng</string>
+    <string name="mitigation_mask_other">Yang lainnya memakai topeng</string>
+    <string name="mitigation_ventilation">Lingkungan berventilasi</string>
+    <string name="mitigation_distance_value">Jarak</string>
+    <string name="mitigation_mask_me_value">Topeng (saya)</string>
+    <string name="mitigation_mask_other_value">Topeng (orang lain)</string>
+    <string name="mitigation_ventilation_value">Ventilasi</string>
+    <string name="click_to_select">Klik untuk memilih</string>
+    <string name="mitigation_title">Tindakan pencegahan</string>
+    <string name="none">Tidak ada</string>
 </resources>

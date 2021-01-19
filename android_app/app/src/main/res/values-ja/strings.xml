@@ -83,4 +83,19 @@
     <string name="mitigation_title">予防対策</string>
     <string name="none">なし</string>
     <string name="thanks_japanese"><b>日本語訳 - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_homescreen"><b>ホーム画面のショートカット - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_chinese"><b>中国語の翻訳 - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (伝統的)</string>
+    <string name="thanks_dutch"><b>オランダ語訳 - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> そして <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>フィンランド語翻訳 - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>フランス語の翻訳 - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_german"><b>ドイツ語訳 - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> e <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_hungarian"><b>ハンガリー語の翻訳 - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_italian"><b>イタリア語翻訳 - </b><a href="https://github.com/igor-cali">igor-cali</a> e <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>インドネシア語訳 - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_polish"><b>ポーランド語翻訳 - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>ポルトガル語訳 - </b><a href="https://github.com/riuri">riuri</a> (Brasile)</string>
+    <string name="thanks_swedish"><b>スウェーデン語訳 - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="thanks_turkish"><b>トルコ語翻訳 - </b><a href="https://crowdin.com/profile/perboran">perboran</a> そして <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_ukrainian"><b>ウクライナ語訳 - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="thanks_text">接触ダイアリーは単独のプロジェクトとして始まりましたが、多くの人々からの貴重な利他的な貢献の恩恵を受けてきました。 このページの皆さんに正直に感謝します。</string>
 </resources>

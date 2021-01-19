@@ -98,4 +98,15 @@
     <string name="thanks_turkish"><b>Tureckie tłumaczenie - </b><a href="https://crowdin.com/profile/perboran">perboran</a> i <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukraińskie tłumaczenie - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japońskie tłumaczenie - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="mitigation_distance">Odległość była większa niż 2m</string>
+    <string name="mitigation_mask_me">Nosiłem maskę</string>
+    <string name="mitigation_mask_other">Inni nosili maskę</string>
+    <string name="mitigation_ventilation">Środowisko było wentylowane</string>
+    <string name="mitigation_distance_value">Odległość</string>
+    <string name="mitigation_mask_me_value">Maska (ja)</string>
+    <string name="mitigation_mask_other_value">Maska (inne)</string>
+    <string name="mitigation_ventilation_value">Wentylacja</string>
+    <string name="click_to_select">Kliknij aby wybrać</string>
+    <string name="mitigation_title">Środki zapobiegawcze</string>
+    <string name="none">Żaden</string>
 </resources>

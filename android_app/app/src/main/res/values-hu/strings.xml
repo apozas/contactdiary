@@ -98,4 +98,15 @@
     <string name="thanks_turkish"><b>Török fordítás - </b><a href="https://crowdin.com/profile/perboran">perboran</a> és <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukrán fordítás - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japán fordítás - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="mitigation_distance">A távolság nagyobb volt, mint 2m</string>
+    <string name="mitigation_mask_me">Maszkot viseltem</string>
+    <string name="mitigation_mask_other">A többiek maszkot viseltek</string>
+    <string name="mitigation_ventilation">Szellőztették a környezetet</string>
+    <string name="mitigation_distance_value">Távolság</string>
+    <string name="mitigation_mask_me_value">Maszk (én)</string>
+    <string name="mitigation_mask_other_value">Maszk (mások)</string>
+    <string name="mitigation_ventilation_value">Szellőzés</string>
+    <string name="click_to_select">Klikkelj a kiválasztáshoz</string>
+    <string name="mitigation_title">Megelőző intézkedések</string>
+    <string name="none">Egyik sem</string>
 </resources>

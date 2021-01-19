@@ -98,4 +98,15 @@
     <string name="thanks_turkish"><b>Turkisk översättning - </b><a href="https://crowdin.com/profile/perboran">perboran</a> och <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukranisk översättning - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japansk översättning - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="mitigation_distance">Avstånd var större än 2m</string>
+    <string name="mitigation_mask_me">Jag bar mask</string>
+    <string name="mitigation_mask_other">De andra(na) bar mask</string>
+    <string name="mitigation_ventilation">Miljön ventilerades</string>
+    <string name="mitigation_distance_value">Avstånd</string>
+    <string name="mitigation_mask_me_value">Mask (mig)</string>
+    <string name="mitigation_mask_other_value">Mask (andra)</string>
+    <string name="mitigation_ventilation_value">Ventilation</string>
+    <string name="click_to_select">Klicka för att välja</string>
+    <string name="mitigation_title">Åtgärder för förebyggande</string>
+    <string name="none">Ingen</string>
 </resources>
