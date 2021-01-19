@@ -26,6 +26,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
@@ -362,12 +363,21 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         private fun createFile() {
-            val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "text/csv"
-                putExtra(Intent.EXTRA_TITLE, "ContactDiary.csv")
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                    addCategory(Intent.CATEGORY_OPENABLE)
+                    type = "text/csv"
+                    putExtra(Intent.EXTRA_TITLE, "ContactDiary.csv")
+                }
+                startActivityForResult(intent, EXPORT_DB)
+            } else {
+                val builder = AlertDialog.Builder(requireContext())
+                builder.setMessage("I am afraid that the Export option is not yet available for " +
+                        "Android versions below KitKat (4.4). I appreciate your patience while " +
+                        "this is being developed. Feel free to drop me an email at any point.")
+                builder.setPositiveButton(android.R.string.ok) { _, _ -> }
+                builder.create().show()
             }
-            startActivityForResult(intent, EXPORT_DB)
         }
 
         private fun readFile() {
