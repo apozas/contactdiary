@@ -83,11 +83,12 @@
     <string name="thanks_hungarian"><b>Hungarian translation - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_italian"><b>Italian translation - </b><a href="https://github.com/igor-cali">igor-cali</a> and <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesian translation - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_japanese"><b>Japanese translation - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
     <string name="thanks_polish"><b>Polish translation - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portuguese translation - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
     <string name="thanks_swedish"><b>Swedish translation - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="thanks_turkish"><b>Turkish translation - </b><a href="https://crowdin.com/profile/perboran">perboran</a> and <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
-    <string name="thanks_ukrainian"><b>Ukrainian translation - </b><a href="https://crowdin.com/profile/olexndr">olexndr</a></string>
+    <string name="thanks_ukrainian"><b>Ukrainian translation - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="theme">Theme</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>

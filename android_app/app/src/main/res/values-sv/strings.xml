@@ -96,5 +96,6 @@
     <string name="thanks_chinese"><b>Kinesisk överstättning - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditionell)</string>
     <string name="thanks_hungarian"><b>Ungerska översättning - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Turkisk översättning - </b><a href="https://crowdin.com/profile/perboran">perboran</a> och <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
-    <string name="thanks_ukrainian"><b>Ukranisk översättning - </b><a href="https://crowdin.com/profile/olexndr">olexndr</a></string>
+    <string name="thanks_ukrainian"><b>Ukranisk översättning - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="thanks_japanese"><b>Japansk översättning - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
 </resources>

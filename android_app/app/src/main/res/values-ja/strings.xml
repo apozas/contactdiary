@@ -82,4 +82,5 @@
     <string name="click_to_select">クリックして選択</string>
     <string name="mitigation_title">予防対策</string>
     <string name="none">なし</string>
+    <string name="thanks_japanese"><b>日本語訳 - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
 </resources>

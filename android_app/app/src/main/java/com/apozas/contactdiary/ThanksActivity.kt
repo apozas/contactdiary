@@ -52,6 +52,9 @@ class ThanksActivity : AppCompatActivity() {
         val italian = findViewById<TextView>(R.id.thanks_italian)
         italian.movementMethod = LinkMovementMethod.getInstance()
 
+        val japanese = findViewById<TextView>(R.id.thanks_japanese)
+        japanese.movementMethod = LinkMovementMethod.getInstance()
+
         val polish = findViewById<TextView>(R.id.thanks_polish)
         polish.movementMethod = LinkMovementMethod.getInstance()
 

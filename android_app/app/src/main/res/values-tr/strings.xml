@@ -107,5 +107,6 @@
     <string name="mitigation_mask_other">Diğer kişi(ler) maske takmıştı</string>
     <string name="mitigation_ventilation">Ortam havalandırılıyordu</string>
     <string name="click_to_select">Seçmek için tıkla</string>
-    <string name="thanks_ukrainian"><b>Ukraynaca çeviri - </b><a href="https://crowdin.com/profile/olexndr">olexndr</a></string>
+    <string name="thanks_ukrainian"><b>Ukraynaca çeviri - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="thanks_japanese"><b>Japonca çeviri - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
 </resources>

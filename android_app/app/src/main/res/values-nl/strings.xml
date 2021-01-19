@@ -107,5 +107,6 @@
     <string name="click_to_select">Klik om te selecteren</string>
     <string name="mitigation_title">Preventie maatregelen</string>
     <string name="none">Geen</string>
-    <string name="thanks_ukrainian"><b>Oekraïnese vertaling - </b><a href="https://crowdin.com/profile/olexndr">olexndr</a></string>
+    <string name="thanks_ukrainian"><b>Oekraïnese vertaling - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="thanks_japanese"><b>Japanse vertaling - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
 </resources>
