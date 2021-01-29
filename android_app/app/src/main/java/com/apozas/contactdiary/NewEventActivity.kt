@@ -22,6 +22,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Base64
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -273,6 +274,21 @@ class NewEventActivity : AppCompatActivity() {
 
     private fun getPlace(qrCode: String): String {
         var place = ""
+        if (qrCode.take(12) == "UKC19TRACING") {
+            val data = qrCode.split(":").last().split(".")[1]
+            val decoded = String(Base64.decode(data, Base64.DEFAULT), charset("UTF-8"))
+            val parts = decoded.drop(1).dropLast(1).split(",")
+            run loop@{
+                parts.forEach {
+                    if (it.split(":")[0] == "\"opn\"") {
+                        place = it.split(":")[1].drop(1).dropLast(1)
+                        return@loop
+                    }
+                }
+            }
+        } else {
+            Toast.makeText(this, "The code could not be read", Toast.LENGTH_LONG).show()
+        }
         return place
     }
 }
