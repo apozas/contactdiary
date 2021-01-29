@@ -20,6 +20,7 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -55,10 +56,23 @@ class NewEventActivity : AppCompatActivity() {
         endCal.set(Calendar.SECOND, 0)
         endCal.set(Calendar.MILLISECOND, 0)
 
-        // Set current values
+        val timeFormat = SimpleDateFormat("H:mm")
+
+//      Set current values
         eventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
 
-        val timeFormat = SimpleDateFormat("H:mm")
+//      If coming from Open With menu, set place and time if appropriate
+        if ((intent.type != null) and (intent.action.equals(Intent.ACTION_SEND))) {
+            val place = getPlace(intent.getStringExtra(Intent.EXTRA_TEXT) as String)
+            if (place.isNotEmpty()) {
+                eventplace_input.setText(place)
+
+                val initCal = Calendar.getInstance()
+                endCal.timeInMillis = initCal.timeInMillis + 60 * 60 * 1000
+                eventinittime_input.setText(timeFormat.format(initCal.time))
+                eventendtime_input.setText(timeFormat.format(endCal.time))
+            }
+        }
 
         // Listen to new values
         val eventdateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
@@ -255,5 +269,10 @@ class NewEventActivity : AppCompatActivity() {
         val inputMethodManager: InputMethodManager =
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+    }
+
+    private fun getPlace(qrCode: String): String {
+        var place = ""
+        return place
     }
 }
