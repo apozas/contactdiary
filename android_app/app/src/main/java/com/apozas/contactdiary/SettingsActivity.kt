@@ -363,7 +363,7 @@ class SettingsActivity : AppCompatActivity() {
 
         private fun createFile() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                     addCategory(Intent.CATEGORY_OPENABLE)
                     type = "text/csv"
                     putExtra(Intent.EXTRA_TITLE, "ContactDiary.csv")
