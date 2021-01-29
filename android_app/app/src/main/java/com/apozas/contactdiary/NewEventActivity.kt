@@ -75,7 +75,7 @@ class NewEventActivity : AppCompatActivity() {
             }
         }
 
-        // Listen to new values
+//      Listen to new values
         val eventdateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             initCal.set(Calendar.YEAR, year)
             initCal.set(Calendar.MONTH, monthOfYear)
@@ -148,7 +148,9 @@ class NewEventActivity : AppCompatActivity() {
         val preventionMeasures = ArrayList<String>()
         event_mitigation.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            val checkedItems = BooleanArray(4) {i -> preventionMeasures.contains(resources.getStringArray(R.array.mitigation_values)[i])}
+            val checkedItems = BooleanArray(4) { i -> preventionMeasures.contains(
+                resources.getStringArray(R.array.mitigation_values)[i]
+            )}
             builder.setTitle(getString(R.string.mitigation_title))
             builder.setMultiChoiceItems(R.array.mitigation_entries, checkedItems
             ) { _, which, isChecked ->
