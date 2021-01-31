@@ -81,7 +81,7 @@
     <string name="thanks_swedish"><b>Traduction suédoise - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="theme">Thème</string>
     <string name="theme_light">Clair</string>
-    <string name="theme_dark">Foncé</string>
+    <string name="theme_dark">Sombre</string>
     <string name="theme_system">Thème de l\'appareil</string>
     <string name="backup">Sauvegarde et restauration</string>
     <string name="import_database">Importer base de données</string>
@@ -99,13 +99,13 @@
     <string name="thanks_ukrainian"><b>Traduction ukrainienne - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Traduction japonaise - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
     <string name="mitigation_distance">La distance était supérieure à 2m</string>
-    <string name="mitigation_mask_other">L(es) autre(s) portaient masque</string>
-    <string name="mitigation_mask_me">J\'ai porté masque</string>
-    <string name="mitigation_ventilation">L\'environnement a été ventilé</string>
+    <string name="mitigation_mask_other">L(es) autre(s) portaient le masque</string>
+    <string name="mitigation_mask_me">J\'ai porté le masque</string>
+    <string name="mitigation_ventilation">L\'environnement a été aéré</string>
     <string name="mitigation_distance_value">Distance</string>
     <string name="mitigation_mask_me_value">Masque (moi)</string>
     <string name="mitigation_mask_other_value">Masque (autres)</string>
-    <string name="mitigation_ventilation_value">Ventilation</string>
+    <string name="mitigation_ventilation_value">Aération</string>
     <string name="click_to_select">Cliquez pour choisir</string>
     <string name="mitigation_title">Mesures de prévention</string>
     <string name="none">Aucune</string>
