@@ -274,23 +274,56 @@ class NewEventActivity : AppCompatActivity() {
         inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
     }
 
-    private fun getPlace(qrCode: String): String {
+    private fun getPlace(qrCode: String): List<String> {
+        var name = ""
         var place = ""
-        if (qrCode.take(12) == "UKC19TRACING") {
-            val data = qrCode.split(":").last().split(".")[1]
-            val decoded = String(Base64.decode(data, Base64.DEFAULT), charset("UTF-8"))
-            val parts = decoded.drop(1).dropLast(1).split(",")
-            run loop@{
-                parts.forEach {
-                    if (it.split(":")[0] == "\"opn\"") {
-                        place = it.split(":")[1].drop(1).dropLast(1)
-                        return@loop
+        var notes = ""
+        when {
+            qrCode.take(12) == "UKC19TRACING" -> {
+                val data = qrCode.split(":").last().split(".")[1]
+                val decoded = String(Base64.decode(data, Base64.DEFAULT), charset("UTF-8"))
+                val parts = decoded.drop(1).dropLast(1).split(",")
+                run loop@{
+                    parts.forEach {
+                        when {
+                                (it.split(":")[0] == "\"opn\"") -> {
+                                name = it.split(":")[1].drop(1).dropLast(1)
+//                                return@loop
+                                }
+                            (it.split(":")[0] == "\"pc\"") -> {
+                                place = "PC " + it.split(":")[1].drop(1).dropLast(1)
+//                                return@loop
+                            }
+                        }
                     }
                 }
+                notes = getString(R.string.read_from) + " UKC19TRACING"
             }
-        } else {
-            Toast.makeText(this, "The code could not be read", Toast.LENGTH_LONG).show()
+            qrCode.take(13) == "NZCOVIDTRACER" -> {
+                val data = qrCode.split(":").last()
+                val decoded = String(Base64.decode(data, Base64.DEFAULT), charset("UTF-8"))
+                val parts = decoded.drop(1).dropLast(1).split(",")
+                run loop@{
+                    parts.forEach {
+                        when {
+                            (it.split(":")[0] == "\"opn\"") -> {
+                                name = it.split(":")[1].drop(1).dropLast(1)
+//                                return@loop
+                            }
+                            (it.split(":")[0] == "\"adr\"") -> {
+                                place = it.split(":")[1].drop(1).dropLast(1)
+                                place = place.split("\\n").joinToString(", ")
+//                                return@loop
+                            }
+                        }
+                    }
+                }
+                notes = getString(R.string.read_from) + " NZCOVIDTRACER"
+            }
+            else -> {
+                Toast.makeText(this, "The code could not be read", Toast.LENGTH_LONG).show()
+            }
         }
-        return place
+        return listOf(name, place, notes)
     }
 }
