@@ -29,6 +29,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_addevent_inside.*
 import java.text.DateFormat
@@ -64,9 +65,26 @@ class NewEventActivity : AppCompatActivity() {
 
 //      If coming from Open With menu, set place and time if appropriate
         if ((intent.type != null) and (intent.action.equals(Intent.ACTION_SEND))) {
-            val place = getPlace(intent.getStringExtra(Intent.EXTRA_TEXT) as String)
-            if (place.isNotEmpty()) {
-                eventplace_input.setText(place)
+            val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+            if (preferences.getBoolean("remindWarning", true)) {
+                val checkInReminder = androidx.appcompat.app.AlertDialog.Builder(this)
+                checkInReminder.setTitle(getString(R.string.checkin_title))
+                    .setMessage(getString(R.string.checkin_reminder))
+                    .setCancelable(true)
+                    .setPositiveButton(getString(android.R.string.ok)) {_, _ -> }
+                    .setNegativeButton(getString(R.string.do_not_show_again)) { _, _ ->
+                    val editor = preferences.edit()
+                    editor.putBoolean("remindWarning", false)
+                    editor.apply()
+                }
+                    .create()
+                    .show()
+            }
+            val data = getPlace(intent.getStringExtra(Intent.EXTRA_TEXT) as String)
+            if (data.any {it.isNotEmpty()}) {
+                eventname_input.setText(data[0])
+                eventplace_input.setText(data[1])
+                eventnotes_input.setText(data[2])
 
                 val initCal = Calendar.getInstance()
                 endCal.timeInMillis = initCal.timeInMillis + 60 * 60 * 1000
@@ -322,7 +340,7 @@ class NewEventActivity : AppCompatActivity() {
                         }
                     }
                 }
-                notes = getString(R.string.read_from) + " NZCOVIDTRACER"
+                notes = getString(R.string.shared_from) + " NZCOVIDTRACER"
             }
             else -> {
                 Toast.makeText(this, "The code could not be read", Toast.LENGTH_LONG).show()
