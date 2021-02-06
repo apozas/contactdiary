@@ -63,6 +63,22 @@ _Translations:_
 
 You can translate the in-app texts of Contact Diary on [Crowdin](https://crwd.in/contactdiary). If your language is not listed, please please create a [new issue](https://github.com/apozas/contactdiary/issues/new/choose) on GitHub, or [send me an email](mailto:contactdiary@alexpozas.com).
 
+| Language | Contributors |
+|----------|--------------|
+| Chinese (Traditional) | [walfrido42](https://crowdin.com/profile/walfrido42) |
+| Dutch | [Tonyinspace](https://crowdin.com/profile/Tonyinspace) &bull; [Heimen Stoffels](https://github.com/Vistaus) |
+| Finnish | [Mikko95](https://crowdin.com/profile/Mikko95) |
+| French | [matthus](https://crowdin.com/profile/matthus) &bull; [Marco Loiodice](https://crowdin.com/profile/adaok) |
+| German | [GenosseFlosse](https://github.com/GenosseFlosse) &bull; [Flo Edelmann](https://github.com/FloEdelmann) &bull; [jensMF](https://crowdin.com/profile/jensMF) &bull; [Leso_KN](https://github.com/leso-kn) &bull; [mkamp](https://crowdin.com/profile/mkamp) |
+| Hungarian | [mondstern](https://github.com/mondlicht-und-sterne) |
+| Indonesian | [Habib Roman](https://github.com/hexatester) |
+| Italian | [Igor](https://github.com/igor-cali) &bull; [lrt84](https://crowdin.com/profile/lrt84) |
+| Japanese | [ysakamoto_](https://crowdin.com/profile/ysakamoto_) |
+| Polish | [Robert W](https://crowdin.com/profile/wasikr7) |
+| Portuguese (Brazilian) | [Iuri Rezende Souza](https://github.com/riuri) |
+| Swedish | [Johannes Nilsson](https://github.com/nlssn) |
+| Turkish | [Boran Per](https://crowdin.com/profile/perboran) &bull; [Tonyinspace](https://crowdin.com/profile/Tonyinspace) |
+| Ukrainian | [tabaks](https://github.com/tabaks) |
 
 # Screenshots :eyes:
 
