@@ -13,7 +13,7 @@
     <string name="companions">Seuralaiset</string>
     <string name="name">Nimi</string>
     <string name="known_contact">Sukulainen vai läheinen ystävä?</string>
-    <string name="mitigation_question">Toteutettiinko ehkäiseviä toimenpiteitä?</string>
+    <string name="mitigation_question">Mitä ehkäiseviä toimenpiteitä toteutettiin?</string>
     <string name="phone">Puhelinnumero</string>
     <string name="unsure">Epävarma</string>
     <string name="encounter_type">Kohtaamisen tyyppi</string>
@@ -46,7 +46,7 @@
     <string name="entries_selected">" merkinnät valittu"</string>
     <string name="privacy_title">Tietosuojakäytäntö</string>
     <string name="privacy_intro">Yhteystietopäiväkirja jaetaan siinä toivossa, että se olisi hyödyllinen, mutta ILMAN MITÄÄN TAKUUTA; ilman edes epäsuoraa takuuta KAUPALLISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Tätä sivua käytetään tiedottamaan kävijöille minun käytännöistäni henkilökohtaisten tietojen keruun, käytön, ja paljastumisen suhteen, jos joku päättää käyttää Yhteystietopäiväkirjaa. Lyhyesti sanottuna, ja koska Yhteystietopäiväkirja ei voi muodostaa yhteyttä Internetiin, mitään henkilötietoja ei tallenneta eikä kopioida käyttäjän laitteen ulkopuolelle. Jos päätät käyttää Yhteystietopäiväkirjaa, niin suostut tietojen keruuseen (ei mitään) ja käyttöön tähän käytäntöön liittyen. Henkilökohtaisia tietoja, joita Yhteystietopäiväkirja kerää, käytetään sen palvelun tarjoamiseen. Kuten edellä on todettu, en voi ja enkä näin ollen käytä tai jaa tietojasi kenenkään kanssa.</string>
-    <string name="privacy_icu">Yhteystietopäiväkirjan käyttö edellyttää, että syötät tiettyjä henkilökohtaisesti tunnistettavissa olevia tietoja, eli nimiä ja (vapaaehtoisesti) paikkoja ja puhelinnumeroita. Tiedot, joita Yhteystieto Päiväkirja pyytää, säilytetään laitteellasi ja minä en kerää niitä millään tavalla.</string>
+    <string name="privacy_icu">Yhteystietopäiväkirjan käyttö edellyttää, että syötät tiettyjä henkilökohtaisesti tunnistettavissa olevia tietoja, eli nimiä ja (vapaaehtoisesti) paikkoja ja puhelinnumeroita. Tiedot, joita Yhteystietopäiväkirja pyytää, säilytetään laitteellasi ja minä en kerää niitä millään tavalla.</string>
     <string name="privacy_cookies">Evästeet ovat tiedostoja, joissa on pieni määrä tietoja, joita käytetään yleisesti nimettöminä yksilöllisinä tunnisteina. Nämä lähetetään selaimeesi sivustoilta, joilla käyt ja jotka tallennetaan laitteesi sisäiseen muistiin.\n\nYhteystiedot Päiväkirja ei käytä mitään evästeitä, ei ensimmäisen osapuolen eikä kolmannen osapuolen.\n\nSamalla tavalla mitään palvelua ei ole delegoitu kolmansille osapuolille. Yhteystiedot Päiväkirjalle antamasi tiedot eivät koskaan poistu laitteestasi.</string>
     <string name="privacy_security">Edelleen, mitään Yhteystietopäiväkirjaan syöttämiäsi tietoja ei koskaan lähde laitteeltasi. Tämä seikka voidaan aina arvioida tarkastamalla Yhteystietopäiväkirjan lähdekoodia, joka on saatavilla osoitteessa <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Näin ollen sovelluksen turvallisuus ja eheys liittyvät laitteesi fyysiseen turvallisuuteen ja eheyteen, joista en ota vastuuta.</string>
     <string name="privacy_changes">Saatan päivittää tätä tietosuojakäytäntöä ajoittain. Täten sinua kehotetaan tarkastelemaan tätä sivua säännöllisin väliajoin muutosten varalta. Ilmoitan sinulle kaikista muutoksista julkaisemalla uuden tietosuojakäytännön tälle sivulle.\n\nTämä politiikka on voimassa 2020-09-08 alkaen</string>
@@ -77,10 +77,10 @@
     <string name="thanks_italian"><b>Italiankielinen käännös - </b><a href="https://github.com/igor-cali">igor-cali</a> ja <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesiankielinen käännös - </b><a href="https://github.com/hexatester">hexatester</a></string>
     <string name="thanks_polish"><b>Puolankielinen käännös - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
-    <string name="thanks_portuguese"><b>Portugalkielinen käännös - </b><a href="https://github.com/riuri">riuri</a> (Brasilia)</string>
+    <string name="thanks_portuguese"><b>Portugalinkielinen käännös - </b><a href="https://github.com/riuri">riuri</a> (Brasilia)</string>
     <string name="thanks_swedish"><b>Ruotsinkielinen käännös - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="theme">Teema</string>
-    <string name="theme_light">Selvä</string>
+    <string name="theme_light">Vaalea</string>
     <string name="theme_dark">Tumma</string>
     <string name="theme_system">Seuraa järjestelmää</string>
     <string name="backup">Varmuuskopiointi ja palautus</string>
@@ -93,14 +93,14 @@
     <string name="import_success">Tietokanta ladattu</string>
     <string name="import_notfound">Määritettyä tiedostoa ei löytynyt</string>
     <string name="import_select">Valitse tuotava tietokanta</string>
-    <string name="thanks_chinese"><b>Kiinankielinen käännös - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Perinteiten)</string>
+    <string name="thanks_chinese"><b>Kiinankielinen käännös - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Perinteinen)</string>
     <string name="thanks_hungarian"><b>Unkarinkielinen käännös - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Turkinkielinen käännös - </b><a href="https://crowdin.com/profile/perboran">perboran</a> ja <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
-    <string name="thanks_ukrainian"><b>Ukrainalainen käännös - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="thanks_ukrainian"><b>Ukrainankielinen käännös - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japaninkielinen käännös - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
     <string name="mitigation_distance">Etäisyys oli yli 2m</string>
-    <string name="mitigation_mask_me">Minulla oli naamio</string>
-    <string name="mitigation_mask_other">Muu(t) käyttivät naamiota</string>
+    <string name="mitigation_mask_me">Minä käytin maskia</string>
+    <string name="mitigation_mask_other">Muut käyttivät maskeja</string>
     <string name="mitigation_ventilation">Ympäristö oli tuuletettu</string>
     <string name="mitigation_distance_value">Etäisyys</string>
     <string name="mitigation_mask_me_value">Maski (minä)</string>
