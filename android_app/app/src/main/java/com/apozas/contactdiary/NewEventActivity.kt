@@ -278,6 +278,7 @@ class NewEventActivity : AppCompatActivity() {
         var name = ""
         var place = ""
         var notes = ""
+        var postalCode = ""
         when {
             qrCode.take(12) == "UKC19TRACING" -> {
                 val data = qrCode.split(":").last().split(".")[1]
@@ -286,18 +287,21 @@ class NewEventActivity : AppCompatActivity() {
                 run loop@{
                     parts.forEach {
                         when {
-                                (it.split(":")[0] == "\"opn\"") -> {
+                            (it.split(":")[0] == "\"opn\"") -> {
                                 name = it.split(":")[1].drop(1).dropLast(1)
-//                                return@loop
-                                }
+                            }
                             (it.split(":")[0] == "\"pc\"") -> {
-                                place = "PC " + it.split(":")[1].drop(1).dropLast(1)
-//                                return@loop
+                                postalCode = "PC " + it.split(":")[1].drop(1).dropLast(1)
+                            }
+                            (it.split(":")[0] == "\"adr\"") -> {
+                                place = it.split(":")[1].drop(1).dropLast(1)
+                                place = place.split("\\n").joinToString(", ")
                             }
                         }
                     }
                 }
-                notes = getString(R.string.read_from) + " UKC19TRACING"
+                if (place == "") { place = postalCode }
+                notes = getString(R.string.shared_from) + " UKC19TRACING"
             }
             qrCode.take(13) == "NZCOVIDTRACER" -> {
                 val data = qrCode.split(":").last()
