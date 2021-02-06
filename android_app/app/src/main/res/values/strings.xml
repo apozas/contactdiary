@@ -118,4 +118,5 @@
     <string name="do_not_show_again">Don\'t show again</string>
     <string name="checkin_title">Register at the venue</string>
     <string name="checkin_reminder">This is just a register for yourself. Please, do not forget to register your details at the venue so the local authority can notify you if necessary.</string>
+    <string name="qr_error">The code could not be read</string>
 </resources>

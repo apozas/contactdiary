@@ -343,7 +343,7 @@ class NewEventActivity : AppCompatActivity() {
                 notes = getString(R.string.shared_from) + " NZCOVIDTRACER"
             }
             else -> {
-                Toast.makeText(this, "The code could not be read", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.qr_error), Toast.LENGTH_LONG).show()
             }
         }
         return listOf(name, place, notes)
