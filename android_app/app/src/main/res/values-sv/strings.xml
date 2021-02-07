@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Hemskärmsgenvägar - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Nederländsk översättning - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> och <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Finsk översättning - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Fransk översättning - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_french"><b>Fransk översättning - </b><a href="https://crowdin.com/profile/matthus">matthus</a> och <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
     <string name="thanks_german"><b>Tysk översättning - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> och <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Italiensk översättning - </b><a href="https://github.com/igor-cali">igor-cali</a> och <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesisk översättning - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -109,4 +109,9 @@
     <string name="click_to_select">Klicka för att välja</string>
     <string name="mitigation_title">Åtgärder för förebyggande</string>
     <string name="none">Ingen</string>
+    <string name="shared_from">Delad från</string>
+    <string name="do_not_show_again">Visa inte igen</string>
+    <string name="checkin_title">Registrera dig på platsen</string>
+    <string name="checkin_reminder">Det här är bara ett rekord för dig. Glöm inte att registrera dina uppgifter på platsen så att den lokala myndigheten kan meddela dig vid behov.</string>
+    <string name="qr_error">Koden kunde inte läsas</string>
 </resources>

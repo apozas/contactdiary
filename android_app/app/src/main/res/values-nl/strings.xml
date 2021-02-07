@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Startschermsnelkoppelingen - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Nederlandse vertaling - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> en <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Finse vertaling - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Franse vertaling - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_french"><b>Franse vertaling - </b><a href="https://crowdin.com/profile/matthus">matthus</a> en <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
     <string name="thanks_german"><b>Duitse vertaling - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> en <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Italiaanse vertaling - </b><a href="https://github.com/igor-cali">igor-cali</a> en <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesische vertaling - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -109,4 +109,9 @@
     <string name="none">Geen</string>
     <string name="thanks_ukrainian"><b>Oekraïnese vertaling - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japanse vertaling - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="shared_from">Gedeeld van</string>
+    <string name="do_not_show_again">Niet meer weergeven</string>
+    <string name="checkin_title">Registreer op de locatie</string>
+    <string name="checkin_reminder">Dit is slechts een record voor jou. Vergeet niet uw gegevens op de locatie te registreren, zodat de lokale overheid u indien nodig op de hoogte kan stellen.</string>
+    <string name="qr_error">De code kon niet worden gelezen</string>
 </resources>

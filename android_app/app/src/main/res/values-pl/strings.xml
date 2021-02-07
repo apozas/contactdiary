@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Skróty ekranu głównego - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Niderlandzkie tłumaczenie - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> i <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Fińskie tłumaczenie - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Francuskie tłumaczenie - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_french"><b>Francuskie tłumaczenie - </b><a href="https://crowdin.com/profile/matthus">matthus</a> i <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
     <string name="thanks_german"><b>Niemieckie tłumaczenie - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> i <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Włoskie tłumaczenie - </b><a href="https://github.com/igor-cali">igor-cali</a> i <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonezyjskie tłumaczenie - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -109,4 +109,9 @@
     <string name="click_to_select">Kliknij aby wybrać</string>
     <string name="mitigation_title">Środki zapobiegawcze</string>
     <string name="none">Żaden</string>
+    <string name="shared_from">Udostępnione od</string>
+    <string name="do_not_show_again">Nie pokazuj ponownie</string>
+    <string name="checkin_title">Zarejestruj się na miejscu</string>
+    <string name="checkin_reminder">To tylko rekord dla ciebie. Nie zapomnij zarejestrować swoich danych na miejscu, aby w razie potrzeby władze lokalne mogły Cię o tym powiadomić.</string>
+    <string name="qr_error">Nie można odczytać kodu</string>
 </resources>

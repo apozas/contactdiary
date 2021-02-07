@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Schnellzugriffe für den Startbildschirm - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Niederländische Übersetzung - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> und <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Finnische Übersetzung - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Französische Übersetzung - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_french"><b>Französische Übersetzung - </b><a href="https://crowdin.com/profile/matthus">matthus</a> und <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
     <string name="thanks_german"><b>Deutsche Übersetzung - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> und <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Italienische Übersetzung - </b><a href="https://github.com/igor-cali">igor-cali</a> und <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesische Übersetzung - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -109,4 +109,9 @@
     <string name="click_to_select">Klicke um auszuwählen</string>
     <string name="thanks_ukrainian"><b>Ukrainisch Übersetzung - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japanische Übersetzung - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="shared_from">Geteilt von</string>
+    <string name="do_not_show_again">Nicht wieder anzeigen</string>
+    <string name="checkin_title">Registrieren Sie sich am Veranstaltungsort</string>
+    <string name="checkin_reminder">Dies ist nur ein Rekord für Sie. Bitte vergessen Sie nicht, Ihre Daten am Veranstaltungsort zu registrieren, damit die örtliche Behörde Sie bei Bedarf benachrichtigen kann.</string>
+    <string name="qr_error">Der Code konnte nicht gelesen werden</string>
 </resources>

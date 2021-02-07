@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Raccourcis de l\'écran d\'accueil - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Traduction néerlandaise - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> et <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Traduction finlandaise - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Traduction française - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_french"><b>Traduction française - </b><a href="https://crowdin.com/profile/matthus">matthus</a> et <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
     <string name="thanks_german"><b>Traduction allemande - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> et <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Traduction italienne - </b><a href="https://github.com/igor-cali">igor-cali</a> et <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Traduction indonésienne - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -109,4 +109,9 @@
     <string name="click_to_select">Cliquez pour choisir</string>
     <string name="mitigation_title">Mesures de prévention</string>
     <string name="none">Aucune</string>
+    <string name="shared_from">Partagé depuis</string>
+    <string name="do_not_show_again">Ne pas remontrer</string>
+    <string name="checkin_reminder">Ceci est just un record pour vous. N\'oubliez pas d\'enregistrer vos coordonnées sur place afin que les autorités locales puissent vous en informer si nécessaire.</string>
+    <string name="checkin_title">Inscrivez-vous sur place</string>
+    <string name="qr_error">Le code n\'a pas pu être lu</string>
 </resources>

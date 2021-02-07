@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Kotinäytön pikakuvakkeet - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Hollanninkielinen käännös - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> ja <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Suomenkielinen käännös - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Ranskankielinen käännös - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_french"><b>Ranskankielinen käännös - </b><a href="https://crowdin.com/profile/matthus">matthus</a> ja <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
     <string name="thanks_german"><b>Saksankielinen käännös - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> ja <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Italiankielinen käännös - </b><a href="https://github.com/igor-cali">igor-cali</a> ja <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesiankielinen käännös - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -109,4 +109,9 @@
     <string name="click_to_select">Klikkaa valitaksesi</string>
     <string name="mitigation_title">Ehkäisevät toimenpiteet</string>
     <string name="none">Ei mitään</string>
+    <string name="shared_from">Jaettu alkaen</string>
+    <string name="do_not_show_again">Älä näytä uudelleen</string>
+    <string name="checkin_title">Rekisteröidy paikan päällä</string>
+    <string name="checkin_reminder">Tämä on vain rekisteri itsellesi. Olkaa hyvä ja älkää unohtako rekisteröidä tietojasi paikassa, jotta paikallinen viranomainen voi ilmoittaa niistä sinulle tarvittaessa.</string>
+    <string name="qr_error">Koodia ei voitu lukea</string>
 </resources>

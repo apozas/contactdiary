@@ -73,7 +73,7 @@
     <string name="thanks_chinese"><b>Çince çeviri - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Geleneksel)</string>
     <string name="thanks_dutch"><b>Hollandaca çeviri- </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> ve <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Fince çeviri - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Fransızca çeviri - </b><a href="https://crowdin.com/profile/matthus">matthus</a></string>
+    <string name="thanks_french"><b>Fransızca çeviri - </b><a href="https://crowdin.com/profile/matthus">matthus</a> ve <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
     <string name="thanks_german"><b>Almanca çeviri - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> ve <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_hungarian"><b>Macarca çeviri - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_italian"><b>İtalyanca çeviri - </b><a href="https://github.com/igor-cali">igor-cali</a> ve <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
@@ -109,4 +109,9 @@
     <string name="click_to_select">Seçmek için tıkla</string>
     <string name="thanks_ukrainian"><b>Ukraynaca çeviri - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japonca çeviri - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="shared_from">Tarafından paylaşıldı</string>
+    <string name="do_not_show_again">Tekrar gösterme</string>
+    <string name="checkin_title">Mekanda kayıt olun</string>
+    <string name="checkin_reminder">Bu sadece sizin için bir rekor. Yerel makamın gerekirse size haber verebilmesi için lütfen ayrıntılarınızı mekana kaydetmeyi unutmayınız.</string>
+    <string name="qr_error">Kod okunamadı</string>
 </resources>
