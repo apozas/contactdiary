@@ -1,0 +1,4 @@
+This update brings support to the venue QR codes in New Zealand and the United Kingdom. When you scan the QR codes, you can now share them with Contact Diary, generating a new event automatically. If your country also has a venue QR code system, please drop me an email.
+
+Also, translations have been updated.
+If you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary
