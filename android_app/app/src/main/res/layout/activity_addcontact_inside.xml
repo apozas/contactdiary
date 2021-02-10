@@ -87,7 +87,6 @@
                         android:gravity="center"
                         android:clickable="true"
                         android:focusable="false"
-                        android:gravity="center"
                         android:cursorVisible="false" />
                 </LinearLayout>
 

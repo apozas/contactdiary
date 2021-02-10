@@ -330,12 +330,10 @@ class NewEventActivity : AppCompatActivity() {
                         when {
                             (it.split(":")[0] == "\"opn\"") -> {
                                 name = it.split(":")[1].drop(1).dropLast(1)
-//                                return@loop
                             }
                             (it.split(":")[0] == "\"adr\"") -> {
                                 place = it.split(":")[1].drop(1).dropLast(1)
                                 place = place.split("\\n").joinToString(", ")
-//                                return@loop
                             }
                         }
                     }
