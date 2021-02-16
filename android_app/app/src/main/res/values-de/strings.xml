@@ -107,11 +107,11 @@
     <string name="mitigation_mask_other">Die andere(n) Person(en) hat/haben Maske getragen</string>
     <string name="mitigation_ventilation">Die Umgebung wurde belüftet</string>
     <string name="click_to_select">Klicke um auszuwählen</string>
-    <string name="thanks_ukrainian"><b>Ukrainisch Übersetzung - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="thanks_ukrainian"><b>Ukrainische Übersetzung - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japanische Übersetzung - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
-    <string name="shared_from">Geteilt von</string>
+    <string name="shared_from">Freigegeben von</string>
     <string name="do_not_show_again">Nicht wieder anzeigen</string>
-    <string name="checkin_title">Registrieren Sie sich am Veranstaltungsort</string>
-    <string name="checkin_reminder">Dies ist nur ein Rekord für Sie. Bitte vergessen Sie nicht, Ihre Daten am Veranstaltungsort zu registrieren, damit die örtliche Behörde Sie bei Bedarf benachrichtigen kann.</string>
+    <string name="checkin_title">Registrierung am Veranstaltungsort</string>
+    <string name="checkin_reminder">Dies ist nur ein Eintrag für Sie. Bitte vergessen Sie nicht, sich am Veranstaltungsort zu registrieren, damit die örtliche Behörde Sie bei Bedarf benachrichtigen kann.</string>
     <string name="qr_error">Der Code konnte nicht gelesen werden</string>
 </resources>
