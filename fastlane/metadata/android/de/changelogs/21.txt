@@ -1,0 +1,5 @@
+Dieses Update unterstützt die QR-Codes des Veranstaltungsortes in Neuseeland und Großbritannien. Wenn Sie die QR-Codes scannen, können Sie sie jetzt für Kontakttagebuch freigeben und automatisch ein neues Ereignis generieren. Wenn Ihr Land auch über ein QR-Code-System für Veranstaltungsorte verfügt, senden Sie mir bitte eine E-Mail.
+
+Neue Übersetzung: Spanisch (Lateinamerika)
+Auch die Übersetzungen wurden aktualisiert.
+Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary

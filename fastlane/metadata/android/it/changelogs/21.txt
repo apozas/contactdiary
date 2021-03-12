@@ -1,0 +1,5 @@
+Questo aggiornamento offre supporto ai codici QR della sede in Nuova Zelanda e Regno Unito. Quando si scansionano i codici QR, ora è possibile condividerli con Diario dei Contatti, generando automaticamente un nuovo evento. Se il tuo paese ha anche un sistema di codici QR per la sede, inviami un'e-mail.
+
+Nuova traduzione: Spagnolo (America Latina)
+Inoltre, le traduzioni sono state aggiornate.
+Se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

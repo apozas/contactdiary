@@ -1,0 +1,5 @@
+Esta actualización añade soporte para los códigos QR de establecimeiento en Nueva Zelanda y el Reino Unido. Cuando escanees los códigos QR, ahora puedes compartirlos con Diario de Contactos, generando un nuevo evento automáticamente. Si tu país también tiene un sistema de código QR de establecimeintos, por favor mándame un correo.
+
+Nueva traducción: Español (Latinoamérica)
+Además, las traducciones han sido actualizadas.
+Si deseas ayudar a traducir Diario de Contactos a tu idioma, visita http://www.crowdin.com/project/contactdiary 
