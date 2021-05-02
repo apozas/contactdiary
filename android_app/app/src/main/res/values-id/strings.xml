@@ -109,9 +109,9 @@
     <string name="click_to_select">Klik untuk memilih</string>
     <string name="mitigation_title">Tindakan pencegahan</string>
     <string name="none">Tidak ada</string>
-    <string name="shared_from">Dibagi dari</string>
-    <string name="do_not_show_again">Jangan perlihatkan lagi</string>
+    <string name="shared_from">Dibagikan dari</string>
+    <string name="do_not_show_again">Jangan tampilkan lagi</string>
     <string name="checkin_title">Daftar di tempat tersebut</string>
-    <string name="checkin_reminder">Ini hanya rekor untukmu. Harap jangan lupa untuk mendaftarkan detail Anda di tempat tersebut sehingga otoritas setempat dapat memberi tahu Anda jika perlu.</string>
-    <string name="qr_error">Kode tidak bisa dibaca</string>
+    <string name="checkin_reminder">Ini hanyalah daftar untuk diri Anda sendiri. Tolong, jangan lupa untuk mendaftarkan detail Anda di tempat tersebut sehingga otoritas setempat dapat memberi tahu Anda jika perlu.</string>
+    <string name="qr_error">Kode tidak dapat dibaca</string>
 </resources>
