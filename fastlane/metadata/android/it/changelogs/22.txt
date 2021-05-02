@@ -1,0 +1,3 @@
+Questo aggiornamento porta aggiornamenti di traduzione. Grazie a hexatester e nlssn!
+
+Se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

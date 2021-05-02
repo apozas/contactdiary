@@ -1,0 +1,3 @@
+Dieses Update bringt Übersetzungsupdates. Danke an Hexatester und nlssn!
+
+Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary
