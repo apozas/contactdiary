@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kontaktdagbok</string>
+    <string name="app_name">Kontaktdagboken</string>
     <string name="action_settings">Inställningar</string>
     <string name="new_contact">Ny kontakt</string>
     <string name="new_event">Ny händelse</string>
@@ -13,7 +13,7 @@
     <string name="companions">Följeslagare</string>
     <string name="name">Namn</string>
     <string name="known_contact">Släkting eller nära vän?</string>
-    <string name="mitigation_question">Vidtogs förebyggande åtgärder?</string>
+    <string name="mitigation_question">Vilka förebyggande åtgärder vidtogs?</string>
     <string name="phone">Telefonnummer</string>
     <string name="unsure">Osäker</string>
     <string name="encounter_type">Typ av möte</string>
@@ -67,8 +67,8 @@
     <string name="select" comment="select. Conjugation should be infinitive">Välj</string>
     <string name="notes">Anteckningar</string>
     <string name="acknowledgments">Tack</string>
-    <string name="about">Handla om</string>
-    <string name="thanks_text">Medan Kontaktdagbok startade som ett soloprojekt, har det gynnats av ovärderliga altruistiska bidrag från många människor. Mitt ärliga tack till alla på denna sida.</string>
+    <string name="about">Om</string>
+    <string name="thanks_text">Även om Kontaktdagboken startade som ett soloprojekt, har det gynnats av ovärderliga altruistiska bidrag från många människor. Ett hjärtligt tack till alla på denna sida.</string>
     <string name="thanks_homescreen"><b>Hemskärmsgenvägar - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Nederländsk översättning - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> och <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Finsk översättning - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
@@ -80,9 +80,9 @@
     <string name="thanks_portuguese"><b>Portugisisk översättning - </b><a href="https://github.com/riuri">riuri</a> (Brasilien)</string>
     <string name="thanks_swedish"><b>Svensk översättning - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="theme">Tema</string>
-    <string name="theme_light">Klar</string>
+    <string name="theme_light">Ljust</string>
     <string name="theme_dark">Mörk</string>
-    <string name="theme_system">Använd systemtema</string>
+    <string name="theme_system">Använd systemets tema</string>
     <string name="backup">Säkerhetskopiering och återställning</string>
     <string name="import_database">Importera databas</string>
     <string name="import_database_summary">Ladda en sparad databas</string>
@@ -94,24 +94,24 @@
     <string name="import_notfound">Den angivna filen kunde inte hittas</string>
     <string name="import_select">Välj den databas som ska importeras</string>
     <string name="thanks_chinese"><b>Kinesisk överstättning - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditionell)</string>
-    <string name="thanks_hungarian"><b>Ungerska översättning - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_hungarian"><b>Ungersk översättning - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Turkisk översättning - </b><a href="https://crowdin.com/profile/perboran">perboran</a> och <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukranisk översättning - </b><a href="https://github.com/tabaks">tabaks</a></string>
     <string name="thanks_japanese"><b>Japansk översättning - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
-    <string name="mitigation_distance">Avstånd var större än 2m</string>
+    <string name="mitigation_distance">Avstånd var längre än 2m</string>
     <string name="mitigation_mask_me">Jag bar mask</string>
-    <string name="mitigation_mask_other">De andra(na) bar mask</string>
-    <string name="mitigation_ventilation">Miljön ventilerades</string>
+    <string name="mitigation_mask_other">De andra bar mask</string>
+    <string name="mitigation_ventilation">Miljön var ventilerad</string>
     <string name="mitigation_distance_value">Avstånd</string>
-    <string name="mitigation_mask_me_value">Mask (mig)</string>
+    <string name="mitigation_mask_me_value">Mask (jag)</string>
     <string name="mitigation_mask_other_value">Mask (andra)</string>
     <string name="mitigation_ventilation_value">Ventilation</string>
     <string name="click_to_select">Klicka för att välja</string>
-    <string name="mitigation_title">Åtgärder för förebyggande</string>
+    <string name="mitigation_title">Förebyggande åtgärder</string>
     <string name="none">Ingen</string>
     <string name="shared_from">Delad från</string>
     <string name="do_not_show_again">Visa inte igen</string>
     <string name="checkin_title">Registrera dig på platsen</string>
-    <string name="checkin_reminder">Det här är bara ett rekord för dig. Glöm inte att registrera dina uppgifter på platsen så att den lokala myndigheten kan meddela dig vid behov.</string>
+    <string name="checkin_reminder">Det här är bara en notering för dig själv. Glöm inte att registrera dina uppgifter på platsen så att den lokala myndigheten kan meddela dig vid behov.</string>
     <string name="qr_error">Koden kunde inte läsas</string>
 </resources>
