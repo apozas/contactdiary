@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contact Diary</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="new_contact">Nový kontakt</string>
+    <string name="new_event">Nová událost</string>
+    <string name="event_name">Název události</string>
+    <string name="no">Ne</string>
+    <string name="yes">Ano</string>
+    <string name="date">Datum</string>
+    <string name="time">Čas</string>
+    <string name="place">Místo</string>
+    <string name="companions">Společníci</string>
+    <string name="name">Jméno</string>
+    <string name="known_contact">Příbuzný nebo blízký přítel?</string>
+    <string name="mitigation_question">Jaká preventivní opatření byla přijata?</string>
+    <string name="phone">Telefon</string>
+    <string name="unsure">Těžko říct</string>
+    <string name="encounter_type">Typ setkání</string>
+    <string name="indoors">Uvnitř</string>
+    <string name="outdoors">Venku</string>
+    <string name="emptydiary">Deník je prázdný</string>
+    <string name="contact_saved">Kontakt uložen</string>
+    <string name="event_saved">Událost uložena</string>
+    <string name="edit_event">Upravit událost</string>
+    <string name="edit_contact">Upravit kontakt</string>
+    <string name="options">Možnosti</string>
+    <string name="entry_deleted">Záznam smazán</string>
+    <string name="contact_developer_summary">Řekněte mi, co si myslíte o aplikaci nebo problémech, se kterými jste se setkali</string>
+    <string name="contact_developer">Kontaktovat vývojáře</string>
+    <string name="about_donate">Kupte mi kávu</string>
+    <string name="notification_title">S kým jsi dnes byl(a)?</string>
+    <string name="notification_text">Přidejte své kontakty do deníku</string>
+    <string name="choose_option">Prosím, vyberte možnost</string>
+    <string name="compulsory_field">Povinné pole</string>
+    <string name="edit">Upravit</string>
+    <string name="delete">Smazat</string>
+    <string name="alarm_modified">Upozornění změněno</string>
+    <string name="incorrect_alarm_time">Prosím, zadejte správný čas</string>
+    <string name="daily_reminder">Denní připomenutí</string>
+    <string name="choose_time">Vyberte čas</string>
+    <string name="show_close_contacts">Zobrazit pouze blízké kontakty</string>
+    <string name="more">Více</string>
+    <string name="settings">Nastavení</string>
+    <string name="entries_deleted">Záznamy smazány</string>
+    <string name="entries_selected">" záznamy vybrány"</string>
+    <string name="privacy_title">Zásady ochrany osobních údajů</string>
+    <string name="privacy_intro">Aplikace Contact Diary je distribuována v naději, že bude užitečná, ale BEZ JAKÉKOLI ZÁRUKY; bez předpokládané záruky OBCHODOVATELNOSTI nebo VHODNOSTI PRO KONKRÉTNÍ ÚČEL. Tato stránka slouží k informování návštěvníků o mých zásadách shromažďování, používání a zveřejňování osobních údajů, pokud se někdo rozhodne používat Contact Diary. Stručně řečeno, protože se Contact Diary nemůže připojit k internetu, nebudou žádné osobní údaje ukládány ani kopírovány mimo zařízení uživatele. Pokud se rozhodnete používat Contact Diary, souhlasíte se shromažďováním (žádné) a používáním informací v souvislosti s těmito zásadami. Osobní údaje, které Contact Diary shromažďuje, se používají k poskytování jeho služeb. Jak je uvedeno výše, nemůžu a tedy nebudu používat ani sdílet vaše údaje s nikým.</string>
+    <string name="privacy_icu">Používání aplikace Contact Diary vyžaduje, abyste zadali určité osobní identifikační údaje, jmenovitě jména a (volitelně) místa a telefonní čísla. Informace, které aplikace vyžaduje, budou ve vašem zařízení uchovány a já je žádným způsobem neshromažďuji.</string>
+    <string name="privacy_cookies">Cookies jsou soubory s malým množstvím dat, které se běžně používají jako anonymní a jedinečné identifikátory. Ty se do vašeho prohlížeče odesílají z webů, které navštěvujete a ukládají se do interní paměti vašeho zařízení.\n\nContact Diary nepoužívá žádné cookies, ani vlastní, ani třetích stran.\n\nStejně tak není žádná služba delegována třetím stranám. Informace, které zadáte do aplikace Contact Diary, nikdy neopustí vaše zařízení.</string>
+    <string name="privacy_security">Opět platí, že žádné informace, které zadáte do aplikace Contact Diary, vaše zařízení nikdy neopustí. Tuto skutečnost lze vždy vyhodnotit kontrolou zdrojového kódu aplikace, který je k dispozici na adrese <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a>. Jeho bezpečnost a integrita je tedy spojena s fyzickým zabezpečením a integritou vašeho zařízení, za které nepřebírám žádnou odpovědnost.</string>
+    <string name="privacy_changes">Tyto Zásady ochrany osobních údajů můžu čas od času aktualizovat. Doporučujeme proto tuto stránku pravidelně kontrolovat, zda neobsahuje nějaké změny. Na této stránce vás budu informovat o všech změnách zveřejněním nových Zásad ochrany osobních údajů.\n\nTyto Zásady ochrany osobních údajů platí od 08.09.2020</string>
+    <string name="privacy_contact">Máte-li jakékoli dotazy nebo návrhy týkající se těchto Zásad ochrany osobních údajů, neváhejte mě kontaktovat na adrese <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (nejlépe v angličtině).</string>
+    <string name="privacy_changes_title">Změny těchto Zásad ochrany osobních údajů</string>
+    <string name="privacy_icu_title">Shromažďování a používání informací</string>
+    <string name="privacy_cookies_title">Soubory cookie a poskytovatelé služeb</string>
+    <string name="privacy_security_title">Bezpečnost</string>
+    <string name="privacy_contact_title">Kontaktujte mě</string>
+    <string name="empty_table">Stisknutím (+) začněte přidávat kontakty</string>
+    <string name="app_version_title">Verze aplikace</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate">Ohodnotit aplikaci</string>
+    <string name="about_rate_summary">Pokud se vám aplikace líbí, ohodnoťte ji. Napište recenzi, aby oslovila více lidí, pro které může být užitečná</string>
+    <string name="entry_duplicated">Záznam duplikován</string>
+    <string name="entries_duplicated">Záznamy duplikovány</string>
+    <string name="duplicate">Vytvořte kopii ještě dnes</string>
+    <string name="select">Vybrat</string>
+    <string name="notes">Poznámky</string>
+    <string name="acknowledgments">Děkuji</string>
+    <string name="about">O aplikaci</string>
+    <string name="thanks_text">Zatímco Contact Diary začínal jako sólový projekt, těžil z neocenitelných altruistických příspěvků mnoha lidí. Upřímně děkuji všem na této stránce.</string>
+    <string name="thanks_homescreen"><b>Zástupci na ploše - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_chinese"><b>Čínský překlad - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradiční)</string>
+    <string name="thanks_dutch"><b>Holandský překlad - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> a <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Finský překlad - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Francouzký překlad - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> a <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
+    <string name="thanks_german"><b>Německý překlad - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> a <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_hungarian"><b>Maďarský překlad - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_italian"><b>Italský překlad - </b><a href="https://github.com/igor-cali">igor-cali</a> a <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Indonéský překlad - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_japanese"><b>Japonský překlad - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> a <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
+    <string name="thanks_polish"><b>Polský překlad - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Portugalský překlad - </b><a href="https://github.com/riuri">riuri</a> (Brazílie)</string>
+    <string name="thanks_swedish"><b>Švédský překlad - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="thanks_turkish"><b>Turecký překlad - </b><a href="https://crowdin.com/profile/perboran">perboran</a> a <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_ukrainian"><b>Ukrajinský překlad - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="theme">Motiv</string>
+    <string name="theme_light">Světlý</string>
+    <string name="theme_dark">Tmavý</string>
+    <string name="theme_system">Podle systému</string>
+    <string name="backup">Zálohování a obnovení</string>
+    <string name="import_database">Importovat databázi</string>
+    <string name="import_database_summary">Načíst uloženou databázi</string>
+    <string name="export_database">Exportovat databázi</string>
+    <string name="export_database_summary">Uložit databázi do formátu CSV</string>
+    <string name="export_success">Databáze uložena</string>
+    <string name="import_fail">Došlo k problému s databází</string>
+    <string name="import_success">Databáze načtena</string>
+    <string name="import_notfound">Vybraný soubor nebyl nalezen</string>
+    <string name="import_select">Vyberte databázi pro import</string>
+    <string name="mitigation_distance">Vzdálenost byla větší než 2 m/6 stop</string>
+    <string name="mitigation_mask_me">Měl jsem roušku</string>
+    <string name="mitigation_mask_other">Ostatní měli roušku</string>
+    <string name="mitigation_ventilation">Prostředí bylo větráno</string>
+    <string name="mitigation_distance_value">Vzdálenost</string>
+    <string name="mitigation_mask_me_value">Rouška (já)</string>
+    <string name="mitigation_mask_other_value">Rouška (ostatní)</string>
+    <string name="mitigation_ventilation_value">Větrání</string>
+    <string name="click_to_select">Klepnutím vyberte</string>
+    <string name="mitigation_title">Preventivní opatření</string>
+    <string name="none">Žádné</string>
+    <string name="shared_from">Sdílené od</string>
+    <string name="do_not_show_again">Znovu nezobrazovat</string>
+    <string name="checkin_title">Zaregistrujte se na místě konání</string>
+    <string name="checkin_reminder">Toto je pouze váš vlastní registr. Nezapomeňte prosím zaregistrovat své údaje v místě konání, aby vás místní úřad mohl v případě potřeby informovat.</string>
+    <string name="qr_error">Kód nelze přečíst</string>
+    <string name="thanks_russian"><b>Ruský překlad - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_czech"><b>Český překlad - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">novas78@xda</a></string>
+</resources>

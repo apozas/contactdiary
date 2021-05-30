@@ -66,6 +66,7 @@ You can translate the in-app texts of Contact Diary on [Crowdin](https://crwd.in
 | Language | Contributors |
 |----------|--------------|
 | Chinese (Traditional) | [walfrido42](https://crowdin.com/profile/walfrido42) |
+| Czech | [Lukas Novotny](https://forum.xda-developers.com/m/novas78.7100773) |
 | Dutch | [Tonyinspace](https://crowdin.com/profile/Tonyinspace) &bull; [Heimen Stoffels](https://github.com/Vistaus) |
 | Finnish | [Mikko95](https://crowdin.com/profile/Mikko95) |
 | French | [matthus](https://crowdin.com/profile/matthus) &bull; [Marco Loiodice](https://crowdin.com/profile/adaok) |
