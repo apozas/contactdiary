@@ -1,0 +1,3 @@
+This update brings new translations. Now you can enjoy the app in Czech (thanks to Lukas Novotny) and in Russian (thanks to Dmitry Gaich)! Also, other translation updates have been possible thanks to RaiZ and mamarama9904
+
+If you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary

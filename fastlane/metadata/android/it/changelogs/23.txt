@@ -1,0 +1,3 @@
+Questo aggiornamento porta nuove traduzioni. Ora puoi goderti l'app in ceco (grazie a Lukas Novotny) e in russo (grazie a Dmitry Gaich)! Inoltre, altri aggiornamenti di traduzione sono stati possibili grazie a RaiZ e mamarama9904
+
+Se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

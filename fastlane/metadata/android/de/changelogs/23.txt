@@ -1,0 +1,3 @@
+Dieses Update bringt neue Übersetzungen. Jetzt können Sie die App auf Tschechisch (danke an Lukas Novotny) und auf Russisch (danke an Dmitry Gaich) genießen! Dank RaiZ und mamarama9904 waren auch andere Übersetzungsupdates möglich
+
+Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary
