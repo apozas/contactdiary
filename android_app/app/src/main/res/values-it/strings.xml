@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Scorciatoie del launcher - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Traduzione olandese - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> e <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Traduzione finlandese - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Traduzione francese - </b><a href="https://crowdin.com/profile/matthus">matthus</a> e <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
+    <string name="thanks_french"><b>Traduzione francese - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> e <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>Traduzione tedesca - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> e <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Traduzione italiana - </b><a href="https://github.com/igor-cali">igor-cali</a> e <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Traduzione indonesiana - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -108,10 +108,12 @@
     <string name="mitigation_mask_other">Gli altri indossavano mascherina</string>
     <string name="mitigation_ventilation">L\'ambiente era ventilato</string>
     <string name="thanks_ukrainian"><b>Traduzione ucraina - </b><a href="https://github.com/tabaks">tabaks</a></string>
-    <string name="thanks_japanese"><b>Traduzione giapponese - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>Traduzione giapponese - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> e <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="shared_from">Condiviso da</string>
     <string name="do_not_show_again">Non mostrare più</string>
     <string name="checkin_title">Registrati alla sede</string>
     <string name="checkin_reminder">Questo è solo un record per te. Non dimenticare di registrare i tuoi dati presso la sede in modo che le autorità locali possano avvisarti se necessario.</string>
     <string name="qr_error">Impossibile leggere il codice</string>
+    <string name="thanks_czech"><b>Traduzione ceca - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
+    <string name="thanks_russian"><b>Traduzione russa - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
 </resources>

@@ -82,12 +82,12 @@
     <string name="click_to_select">クリックして選択</string>
     <string name="mitigation_title">予防対策</string>
     <string name="none">なし</string>
-    <string name="thanks_japanese"><b>日本語訳 - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>日本語翻訳 - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a>, <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="thanks_homescreen"><b>ホーム画面のショートカット - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_chinese"><b>中国語の翻訳 - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (伝統的)</string>
     <string name="thanks_dutch"><b>オランダ語訳 - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> そして <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>フィンランド語翻訳 - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>フランス語翻訳 - </b><a href="https://crowdin.com/profile/matthus">matthus</a> と <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
+    <string name="thanks_french"><b>フランス語翻訳 - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a>, <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>ドイツ語訳 - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> e <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_hungarian"><b>ハンガリー語の翻訳 - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_italian"><b>イタリア語翻訳 - </b><a href="https://github.com/igor-cali">igor-cali</a> e <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
@@ -103,4 +103,11 @@
     <string name="checkin_title">会場で登録</string>
     <string name="checkin_reminder">これはあなたのための単なる記録です。 必要に応じて地方自治体が通知できるように、会場で詳細を登録することを忘れないでください。</string>
     <string name="qr_error">コードを読み取ることができませんでした</string>
+    <string name="privacy_security_title">セキュリティ</string>
+    <string name="privacy_cookies_title">クッキーとサービスプロバイダー</string>
+    <string name="privacy_icu_title">情報の収集と使用</string>
+    <string name="privacy_changes_title">プライバシーポリシーの変更</string>
+    <string name="privacy_contact_title">連絡先</string>
+    <string name="thanks_russian"><b>ロシア語翻訳 - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_czech"><b>チェコ語翻訳 - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
 </resources>

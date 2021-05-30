@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Kotinäytön pikakuvakkeet - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Hollanninkielinen käännös - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> ja <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Suomenkielinen käännös - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Ranskankielinen käännös - </b><a href="https://crowdin.com/profile/matthus">matthus</a> ja <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
+    <string name="thanks_french"><b>Ranskankielinen käännös - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> ja <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>Saksankielinen käännös - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> ja <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Italiankielinen käännös - </b><a href="https://github.com/igor-cali">igor-cali</a> ja <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesiankielinen käännös - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -97,7 +97,7 @@
     <string name="thanks_hungarian"><b>Unkarinkielinen käännös - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Turkinkielinen käännös - </b><a href="https://crowdin.com/profile/perboran">perboran</a> ja <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukrainankielinen käännös - </b><a href="https://github.com/tabaks">tabaks</a></string>
-    <string name="thanks_japanese"><b>Japaninkielinen käännös - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>Japanilainen käännös - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> ja <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="mitigation_distance">Etäisyys oli yli 2m</string>
     <string name="mitigation_mask_me">Minä käytin maskia</string>
     <string name="mitigation_mask_other">Muut käyttivät maskeja</string>
@@ -114,4 +114,6 @@
     <string name="checkin_title">Rekisteröidy paikan päällä</string>
     <string name="checkin_reminder">Tämä on vain rekisteri itsellesi. Olkaa hyvä ja älkää unohtako rekisteröidä tietojasi paikassa, jotta paikallinen viranomainen voi ilmoittaa niistä sinulle tarvittaessa.</string>
     <string name="qr_error">Koodia ei voitu lukea</string>
+    <string name="thanks_russian"><b>Venäläinen käännös - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_czech"><b>Tšekin käännös - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
 </resources>

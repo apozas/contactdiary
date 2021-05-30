@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>桌面捷徑 - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>荷蘭語翻譯 - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> 和 <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>芬蘭語翻譯 - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>法語翻譯 - </b><a href="https://crowdin.com/profile/matthus">matthus</a> 和 <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
+    <string name="thanks_french"><b>法語翻譯 - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> 和 <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>德文翻譯 - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> 和 <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>義大利文翻譯 - </b><a href="https://github.com/igor-cali">igor-cali</a> 和 <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>印尼語翻譯 - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -108,10 +108,12 @@
     <string name="mitigation_mask_me">我有佩戴口罩</string>
     <string name="mitigation_distance">保持大於2公尺的距離</string>
     <string name="thanks_ukrainian"><b>烏克蘭語翻譯 - </b><a href="https://github.com/tabaks">tabaks</a></string>
-    <string name="thanks_japanese"><b>日語翻譯 - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>日語翻譯 - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> 和 <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="shared_from">分享自</string>
     <string name="do_not_show_again">不再顯示</string>
     <string name="checkin_title">當場報名</string>
     <string name="checkin_reminder">這只是給您的記錄。 請不要忘記在會場註冊您的詳細信息，以便在地有關當局在必要時可以通知您。</string>
     <string name="qr_error">"無法讀取該代碼 "</string>
+    <string name="thanks_czech"><b>捷克語翻翻譯 - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
+    <string name="thanks_russian"><b>俄語翻譯 - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
 </resources>

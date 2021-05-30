@@ -79,14 +79,15 @@
     <string name="thanks_czech"><b>Czech translation - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="thanks_dutch"><b>Dutch translation - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> and <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Finnish translation - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>French translation - </b><a href="https://crowdin.com/profile/matthus">matthus</a> and <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
+    <string name="thanks_french"><b>French translation - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> and <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>German translation - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> and <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_hungarian"><b>Hungarian translation - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_italian"><b>Italian translation - </b><a href="https://github.com/igor-cali">igor-cali</a> and <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesian translation - </b><a href="https://github.com/hexatester">hexatester</a></string>
-    <string name="thanks_japanese"><b>Japanese translation - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>Japanese translation - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> and <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="thanks_polish"><b>Polish translation - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Portuguese translation - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
+    <string name="thanks_russian"><b>Russian translation - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
     <string name="thanks_swedish"><b>Swedish translation - </b><a href="https://github.com/nlssn">nlssn</a></string>
     <string name="thanks_turkish"><b>Turkish translation - </b><a href="https://crowdin.com/profile/perboran">perboran</a> and <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukrainian translation - </b><a href="https://github.com/tabaks">tabaks</a></string>

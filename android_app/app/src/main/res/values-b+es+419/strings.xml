@@ -73,12 +73,12 @@
     <string name="thanks_chinese"><b>Traducción al chino - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Tradicional)</string>
     <string name="thanks_dutch"><b>Traducción al holandés - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> y <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Traducción al finlandés - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Traducción al francés - </b><a href="https://crowdin.com/profile/matthus">matthus</a> y <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
+    <string name="thanks_french"><b>Traducción al francés - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> y <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>Traducción al alemán - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> y <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_hungarian"><b>Traducción al húngaro - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_italian"><b>Traducción al italiano - </b><a href="https://github.com/igor-cali">igor-cali</a> y <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Traducción al indonesio - </b><a href="https://github.com/hexatester">hexatester</a></string>
-    <string name="thanks_japanese"><b>Traducción al japonés - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>Traducción al japonés - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> y <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="thanks_polish"><b>Traducción al polaco - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
     <string name="thanks_portuguese"><b>Traducción al portugués - </b><a href="https://github.com/riuri">riuri</a> (Brasil)</string>
     <string name="thanks_swedish"><b>Traducción al sueco - </b><a href="https://github.com/nlssn">nlssn</a></string>
@@ -114,4 +114,6 @@
     <string name="checkin_title">Regístrese en el lugar</string>
     <string name="checkin_reminder">Esto es sólo un registro para usted. Por favor, no se olvide de registrar sus datos en el lugar para que la autoridad local pueda notificarle si es necesario.</string>
     <string name="qr_error">No se pudo leer el código</string>
+    <string name="thanks_czech"><b>Traducción al checo - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
+    <string name="thanks_russian"><b>Traducción al ruso - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
 </resources>

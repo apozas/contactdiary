@@ -73,7 +73,7 @@
     <string name="thanks_chinese"><b>Переклад Китайською- </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (традиційне письмо)</string>
     <string name="thanks_dutch"><b>Переклад Нідерландською - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> і <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Переклад Фінською - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Французький переклад - </b><a href="https://crowdin.com/profile/matthus">matthus</a> і <a href="https://crowdin.com/profile/adaok">Аdaok</a></string>
+    <string name="thanks_french"><b>Французький переклад - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Аdaok</a> i <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>Переклад Німецькою - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> і <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_hungarian"><b>Переклад Угорською - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_italian"><b>Переклад Італійською - </b><a href="https://github.com/igor-cali">igor-cali</a> і <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
@@ -108,10 +108,12 @@
     <string name="mitigation_title">Заходи профілактики</string>
     <string name="none" comment="none. It should match the gender of &quot;preventive measures&quot;">Ніякий</string>
     <string name="thanks_ukrainian"><b>Переклад Українською - </b><a href="https://github.com/tabaks">tabaks</a></string>
-    <string name="thanks_japanese"><b>Переклад японською - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>Переклад Японською - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> i <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="shared_from">Поширено від</string>
     <string name="do_not_show_again">Не показувати знову</string>
     <string name="checkin_title">Зареєструйтесь у місці проведення заходу</string>
     <string name="checkin_reminder">Це лише запис для вас. Будь ласка, не забудьте зареєструвати свої дані на місці, щоб місцева влада могла повідомити вас, якщо це необхідно.</string>
     <string name="qr_error">Не вдалося прочитати код</string>
+    <string name="thanks_russian"><b>Переклад російською - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_czech"><b>Переклад чеською - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
 </resources>

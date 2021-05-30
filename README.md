@@ -69,12 +69,12 @@ You can translate the in-app texts of Contact Diary on [Crowdin](https://crwd.in
 | Czech | [Lukas Novotny](https://forum.xda-developers.com/m/novas78.7100773) |
 | Dutch | [Tonyinspace](https://crowdin.com/profile/Tonyinspace) &bull; [Heimen Stoffels](https://github.com/Vistaus) |
 | Finnish | [Mikko95](https://crowdin.com/profile/Mikko95) |
-| French | [matthus](https://crowdin.com/profile/matthus) &bull; [Marco Loiodice](https://crowdin.com/profile/adaok) |
+| French | [matthus](https://crowdin.com/profile/matthus) &bull; [Marco Loiodice](https://crowdin.com/profile/adaok) &bull; [RaiZ](https://forum.xda-developers.com/m/raiz.8020437/) |
 | German | [GenosseFlosse](https://github.com/GenosseFlosse) &bull; [Flo Edelmann](https://github.com/FloEdelmann) &bull; [jensMF](https://crowdin.com/profile/jensMF) &bull; [Leso_KN](https://github.com/leso-kn) &bull; [mkamp](https://crowdin.com/profile/mkamp) |
 | Hungarian | [mondstern](https://github.com/mondlicht-und-sterne) |
 | Indonesian | [Habib Roman](https://github.com/hexatester) |
 | Italian | [Igor](https://github.com/igor-cali) &bull; [lrt84](https://crowdin.com/profile/lrt84) |
-| Japanese | [ysakamoto_](https://crowdin.com/profile/ysakamoto_) |
+| Japanese | [ysakamoto_](https://crowdin.com/profile/ysakamoto_) &bull; [mamarama9904](https://crowdin.com/profile/mamarama9904)|
 | Polish | [Robert W](https://crowdin.com/profile/wasikr7) |
 | Portuguese (Brazilian) | [Iuri Rezende Souza](https://github.com/riuri) |
 | Russian | [Dmitry Gaich](https://gaichtranslations.ru) |

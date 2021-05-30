@@ -72,7 +72,7 @@
     <string name="thanks_homescreen"><b>Hemskärmsgenvägar - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
     <string name="thanks_dutch"><b>Nederländsk översättning - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> och <a href="https://github.com/Vistaus">Vistaus</a></string>
     <string name="thanks_finnish"><b>Finsk översättning - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
-    <string name="thanks_french"><b>Fransk översättning - </b><a href="https://crowdin.com/profile/matthus">matthus</a> och <a href="https://crowdin.com/profile/adaok">Adaok</a></string>
+    <string name="thanks_french"><b>Fransk översättning - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> och <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
     <string name="thanks_german"><b>Tysk översättning - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> och <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
     <string name="thanks_italian"><b>Italiensk översättning - </b><a href="https://github.com/igor-cali">igor-cali</a> och <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
     <string name="thanks_indonesian"><b>Indonesisk översättning - </b><a href="https://github.com/hexatester">hexatester</a></string>
@@ -97,7 +97,7 @@
     <string name="thanks_hungarian"><b>Ungersk översättning - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>Turkisk översättning - </b><a href="https://crowdin.com/profile/perboran">perboran</a> och <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
     <string name="thanks_ukrainian"><b>Ukranisk översättning - </b><a href="https://github.com/tabaks">tabaks</a></string>
-    <string name="thanks_japanese"><b>Japansk översättning - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a></string>
+    <string name="thanks_japanese"><b>Japansk översättning - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> och <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
     <string name="mitigation_distance">Avstånd var längre än 2m</string>
     <string name="mitigation_mask_me">Jag bar mask</string>
     <string name="mitigation_mask_other">De andra bar mask</string>
@@ -114,4 +114,6 @@
     <string name="checkin_title">Registrera dig på platsen</string>
     <string name="checkin_reminder">Det här är bara en notering för dig själv. Glöm inte att registrera dina uppgifter på platsen så att den lokala myndigheten kan meddela dig vid behov.</string>
     <string name="qr_error">Koden kunde inte läsas</string>
+    <string name="thanks_russian"><b>Rysk översättning - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_czech"><b>Tjeckisk översättning - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
 </resources>

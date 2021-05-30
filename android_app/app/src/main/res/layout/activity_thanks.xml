@@ -38,6 +38,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/thanks_czech"
+            android:text="@string/thanks_czech"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/thanks_dutch"
             android:text="@string/thanks_dutch"/>
 
@@ -103,6 +110,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/thanks_portuguese"
             android:text="@string/thanks_portuguese"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thanks_russian"
+            android:text="@string/thanks_russian"/>
 
         <TextView
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
