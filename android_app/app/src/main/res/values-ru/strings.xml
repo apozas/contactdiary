@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contact Diary</string>
+    <string name="action_settings">Настройки</string>
+    <string name="new_contact">Новый контакт</string>
+    <string name="new_event">Новое событие</string>
+    <string name="event_name">Название события</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="date">Дата</string>
+    <string name="time">Время</string>
+    <string name="place">Место</string>
+    <string name="companions">Спутники</string>
+    <string name="name">Имя</string>
+    <string name="known_contact">Родственник или близкий друг?</string>
+    <string name="mitigation_question">Какие предупредительные меры были приняты?</string>
+    <string name="phone">Телефон</string>
+    <string name="unsure">Не уверен</string>
+    <string name="encounter_type">Тип встречи</string>
+    <string name="indoors">Внутри</string>
+    <string name="outdoors">На улице</string>
+    <string name="emptydiary">Дневник пуст</string>
+    <string name="contact_saved">Контакт сохранен</string>
+    <string name="event_saved">Событие сохранено</string>
+    <string name="edit_event">Изменить событие</string>
+    <string name="edit_contact">Изменить контакт</string>
+    <string name="options">Опции</string>
+    <string name="entry_deleted">Запись удалена</string>
+    <string name="contact_developer_summary">Расскажите мне, что Вы думаете о приложении, или о возникших проблемах</string>
+    <string name="contact_developer">Связаться с разработчиком</string>
+    <string name="about_donate">Купить чашечку кофе</string>
+    <string name="notification_title">С кем Вы были сегодня?</string>
+    <string name="notification_text">Добавьте контакты в дневник</string>
+    <string name="choose_option">Пожалуйста, выберите опцию</string>
+    <string name="compulsory_field">Обязательное поле</string>
+    <string name="edit">Изменить</string>
+    <string name="delete">Удалить</string>
+    <string name="alarm_modified">Будильник изменён</string>
+    <string name="incorrect_alarm_time">Пожалуйста, введите правильное время</string>
+    <string name="daily_reminder">Ежедневное напоминание</string>
+    <string name="choose_time">Выберите время</string>
+    <string name="show_close_contacts">Показывать только близкие контакты</string>
+    <string name="more">Ещё</string>
+    <string name="settings">Настройки</string>
+    <string name="entries_deleted">Записи удалены</string>
+    <string name="entries_selected">" записей выбрано"</string>
+    <string name="privacy_title">Политика конфиденциальности</string>
+    <string name="privacy_intro">Contact Diary надеется, что приложение будет Вам полезно, но БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; даже при наличии подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или СООТВЕТСТВИЯ ОПРЕДЕЛЁННОЙ ЦЕЛИ. Эта страница используется для информирования посетителей о моей политике сбора, использования, и раскрытия личной информации, если кто-либо решит использовать Contact Diary. Вкратце, поскольку Contact Diary не может подключаться к интернету, никакая персональная информация не будет храниться и не будет копироваться вне устройства пользователя. Если Вы решаете использовать Contact Diary, Вы соглашаетесь со сбором (его отсутствием) и использованием информации согласно этой политике. Персональная информация, которую собирает Contact Diary, используется для предоставления услуг приложения. Как явно было указано выше, я не могу и поэтому не буду использовать или делиться Вашей информацией с кем-либо.</string>
+    <string name="privacy_icu">Использование Contact Diary требует, чтобы Вы ввели определенную личную информацию, а именно имена и (не обязательно) места и номера телефонов. Информация, которую запрашивает Contact Diary, будет сохранена на Вашем устройстве, и не будет собираться мной никоим образом.</string>
+    <string name="privacy_cookies">Cookies - это файлы с небольшим количеством данных, которые обычно используются в качестве анонимных уникальных идентификаторов. Они отправляются в Ваш браузер с сайтов, которые Вы посещаете и хранятся во внутренней памяти Вашего устройства.\n\nContact Diary не использует cookies, ни от первых, ни от третьих сторон.\n\nВ то же время услуги не делегированы третьим лицам. Информация, которую Вы вводите в Contact Diary, никогда не покинет Ваше устройство.</string>
+    <string name="privacy_security">Опять же, информация, которую Вы вводите в Contact Diary, никогда не покинет Ваше устройство. Этот факт всегда можно проверить, прочитав исходный код Contact Diary, который доступен на <a href="https://www.github.com/apozas/contactdiary">www. ithub.com/apozas/contactdiary</a>. Таким образом, его безопасность и целостность связаны с физической безопасностью и целостностью Вашего устройства, за которые я не несу ответственности.</string>
+    <string name="privacy_changes">Я могу время от времени обновлять настоящую Политику конфиденциальности. Поэтому Вам рекомендуется периодически просматривать эту страницу на предмет любых изменений. Я сообщу Вам о любых изменениях, разместив новую Политику конфиденциальности на этой странице.\n\nЭта политика действует с 2020-09-08</string>
+    <string name="privacy_contact">Если у Вас есть вопросы или предложения по данной Политике конфиденциальности, свяжитесь со мной по адресу <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (желательно, на английском языке).</string>
+    <string name="privacy_changes_title">Изменения в политике конфиденциальности</string>
+    <string name="privacy_icu_title">Сбор и использование информации</string>
+    <string name="privacy_cookies_title">Cookies и поставщики услуг</string>
+    <string name="privacy_security_title">Безопасность</string>
+    <string name="privacy_contact_title">Связаться со мной</string>
+    <string name="empty_table">Нажмите (+), чтобы добавить контакты</string>
+    <string name="app_version_title">Версия приложения</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate">Оценить приложение</string>
+    <string name="about_rate_summary">Если Вам понравилось приложение, пожалуйста, оцените и оставьте отзыв, чтобы другие люди, которым оно может оказаться полезным, нашли его</string>
+    <string name="entry_duplicated">Запись дублирована</string>
+    <string name="entries_duplicated">Записи дублированы</string>
+    <string name="duplicate">Сделать копию сегодня</string>
+    <string name="select">Выбрать</string>
+    <string name="notes">Примечания</string>
+    <string name="acknowledgments">Спасибо</string>
+    <string name="about">О нас</string>
+    <string name="thanks_text">Поскольку Contact Diary начинался как одиночный проект, он пользовался бесценными альтруистичными вкладами многих людей. Я искренне благодарю всех на этой странице.</string>
+    <string name="thanks_homescreen"><b>Ярлыки на главном экране - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a></string>
+    <string name="thanks_chinese"><b>Перевод на китайский - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (Traditional)</string>
+    <string name="thanks_dutch"><b>Перевод на голландский - </b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a> и <a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>Перевод на финский - </b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>Перевод на французский - </b><a href="https://crowdin.com/profile/matthus">matthus</a>, <a href="https://crowdin.com/profile/adaok">Adaok</a> и <a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
+    <string name="thanks_german"><b>Перевод на немецкий - </b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> и <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_hungarian"><b>Перевод на венгерский - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_italian"><b>Перевод на итальянский - </b><a href="https://github.com/igor-cali">igor-cali</a> и <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>Перевод на индонезийский - </b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_japanese"><b>Перевод на японский - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> и <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
+    <string name="thanks_polish"><b>Перевод на польский - </b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>Перевод на португальский - </b><a href="https://github.com/riuri">riuri</a> (Brazil)</string>
+    <string name="thanks_swedish"><b>Перевод на шведский - </b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="thanks_turkish"><b>Перевод на турецкий - </b><a href="https://crowdin.com/profile/perboran">perboran</a> и <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_ukrainian"><b>Перевод на украинский - </b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="theme">Тема</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="theme_system">Системная</string>
+    <string name="backup">Резервное копирование и восстановление</string>
+    <string name="import_database">Импорт базы данных</string>
+    <string name="import_database_summary">Загрузить сохраненную базу данных</string>
+    <string name="export_database">Экспорт базы данных</string>
+    <string name="export_database_summary">Сохранить базу данных в формате CSV</string>
+    <string name="export_success">База данных сохранена</string>
+    <string name="import_fail">Проблема с базой данных</string>
+    <string name="import_success">База данных загружена</string>
+    <string name="import_notfound">Указанный файл не найден</string>
+    <string name="import_select">Выберите базу данных для импорта</string>
+    <string name="mitigation_distance">Дистанция была больше 2 м</string>
+    <string name="mitigation_mask_me">Я был в маске</string>
+    <string name="mitigation_mask_other">Другие были в масках</string>
+    <string name="mitigation_ventilation">Имелась вентиляция</string>
+    <string name="mitigation_distance_value">Дистанция</string>
+    <string name="mitigation_mask_me_value">Маска (я)</string>
+    <string name="mitigation_mask_other_value">Маска (другие)</string>
+    <string name="mitigation_ventilation_value">Вентиляция</string>
+    <string name="click_to_select">Нажмите для выбора</string>
+    <string name="mitigation_title">Превентивные меры</string>
+    <string name="none">Нет</string>
+    <string name="shared_from">Совместно с</string>
+    <string name="do_not_show_again">Больше не показывать</string>
+    <string name="checkin_title">Регистрация на месте</string>
+    <string name="checkin_reminder">Это просто регистрация для Вася. Пожалуйста, не забудьте зарегистрировать Ваши данные в месте проведения, чтобы местные органы власти могли в случае необходимости отправить Вам уведомление.</string>
+    <string name="qr_error">Не удалось прочитать код</string>
+    <string name="thanks_russian"><b>Перевод на русский - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_czech"><b>Перевод на чешский - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
+</resources>

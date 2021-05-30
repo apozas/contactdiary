@@ -77,6 +77,7 @@ You can translate the in-app texts of Contact Diary on [Crowdin](https://crwd.in
 | Japanese | [ysakamoto_](https://crowdin.com/profile/ysakamoto_) |
 | Polish | [Robert W](https://crowdin.com/profile/wasikr7) |
 | Portuguese (Brazilian) | [Iuri Rezende Souza](https://github.com/riuri) |
+| Russian | [Dmitry Gaich](https://gaichtranslations.ru) |
 | Swedish | [Johannes Nilsson](https://github.com/nlssn) |
 | Turkish | [Boran Per](https://crowdin.com/profile/perboran) &bull; [Tonyinspace](https://crowdin.com/profile/Tonyinspace) |
 | Ukrainian | [tabaks](https://github.com/tabaks) |
