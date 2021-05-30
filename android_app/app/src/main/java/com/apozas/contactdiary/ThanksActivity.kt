@@ -28,6 +28,9 @@ class ThanksActivity : AppCompatActivity() {
         val homeScreen = findViewById<TextView>(R.id.thanks_homescreen)
         homeScreen.movementMethod = LinkMovementMethod.getInstance()
 
+        val czech = findViewById<TextView>(R.id.thanks_czech)
+        czech.movementMethod = LinkMovementMethod.getInstance()
+
         val chinese = findViewById<TextView>(R.id.thanks_chinese)
         chinese.movementMethod = LinkMovementMethod.getInstance()
 
@@ -60,6 +63,9 @@ class ThanksActivity : AppCompatActivity() {
 
         val portuguese = findViewById<TextView>(R.id.thanks_portuguese)
         portuguese.movementMethod = LinkMovementMethod.getInstance()
+
+        val russian = findViewById<TextView>(R.id.thanks_russian)
+        russian.movementMethod = LinkMovementMethod.getInstance()
 
         val swedish = findViewById<TextView>(R.id.thanks_swedish)
         swedish.movementMethod = LinkMovementMethod.getInstance()
