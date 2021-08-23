@@ -31,6 +31,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.activity_addcontact_inside.*
 import kotlinx.android.synthetic.main.activity_addevent_inside.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -62,6 +63,7 @@ class NewEventActivity : AppCompatActivity() {
 
 //      Set current values
         eventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
+        endeventdate_input.setText(DateFormat.getDateInstance().format(endCal.time))
 
 //      If coming from Open With menu, set place and time if appropriate
         if ((intent.type != null) and (intent.action.equals(Intent.ACTION_SEND))) {
@@ -104,6 +106,7 @@ class NewEventActivity : AppCompatActivity() {
             endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
             eventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
+            endeventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
 
         }
 
@@ -114,6 +117,26 @@ class NewEventActivity : AppCompatActivity() {
                 initCal.get(Calendar.MONTH),
                 initCal.get(Calendar.DAY_OF_MONTH)
             ).show()
+        }
+
+        val endeventdateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+            endCal.set(Calendar.YEAR, year)
+            endCal.set(Calendar.MONTH, monthOfYear)
+            endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            endeventdate_input.setText(DateFormat.getDateInstance().format(endCal.time))
+
+        }
+
+        endeventdate_input.setOnClickListener {
+            val pickDialog = DatePickerDialog(
+                this@NewEventActivity, endeventdateSetListener,
+                initCal.get(Calendar.YEAR),
+                initCal.get(Calendar.MONTH),
+                initCal.get(Calendar.DAY_OF_MONTH)
+            )
+            pickDialog.datePicker.minDate = initCal.time.time
+            pickDialog.show()
         }
 
         val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->

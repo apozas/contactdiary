@@ -59,6 +59,7 @@ class NewContactActivity : AppCompatActivity() {
 
 //      Set current values
         date_input.setText(DateFormat.getDateInstance().format(initCal.time))
+        enddate_input.setText(DateFormat.getDateInstance().format(endCal.time))
 
         val timeFormat = SimpleDateFormat("H:mm")
 
@@ -73,6 +74,8 @@ class NewContactActivity : AppCompatActivity() {
             endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
             date_input.setText(DateFormat.getDateInstance().format(initCal.time))
+            enddate_input.setText(DateFormat.getDateInstance().format(initCal.time))
+
         }
 
         date_input.setOnClickListener {
@@ -82,6 +85,25 @@ class NewContactActivity : AppCompatActivity() {
                 initCal.get(Calendar.MONTH),
                 initCal.get(Calendar.DAY_OF_MONTH)
             ).show()
+        }
+
+        val endDateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+            endCal.set(Calendar.YEAR, year)
+            endCal.set(Calendar.MONTH, monthOfYear)
+            endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            enddate_input.setText(DateFormat.getDateInstance().format(endCal.time))
+        }
+
+        enddate_input.setOnClickListener {
+            val pickDialog = DatePickerDialog(
+                this@NewContactActivity, endDateSetListener,
+                initCal.get(Calendar.YEAR),
+                initCal.get(Calendar.MONTH),
+                initCal.get(Calendar.DAY_OF_MONTH)
+            )
+            pickDialog.datePicker.minDate = initCal.time.time
+            pickDialog.show()
         }
 
         val initTimeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
