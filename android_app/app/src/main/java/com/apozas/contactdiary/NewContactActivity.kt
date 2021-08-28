@@ -75,7 +75,6 @@ class NewContactActivity : AppCompatActivity() {
 
             date_input.setText(DateFormat.getDateInstance().format(initCal.time))
             enddate_input.setText(DateFormat.getDateInstance().format(initCal.time))
-
         }
 
         date_input.setOnClickListener {

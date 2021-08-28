@@ -363,6 +363,25 @@ class NewEventActivity : AppCompatActivity() {
                 }
                 notes = getString(R.string.shared_from) + " NZCOVIDTRACER"
             }
+            qrCode.split("\n")[2].take(6) == ("N:TUR-") -> {
+                val data = qrCode.split("\n")
+                val parts = data.subList(3, data.size-4)
+                run loop@{
+                    parts.forEach {
+                        when {
+                            (it.split(":")[0] == "FN") -> {
+                                name = it.split(":")[1]
+                            }
+                            (it.split(";")[0] == "ADR") -> {
+                                place = it.split(";").drop(3)
+                                    .joinToString(",").split("\\")
+                                    .joinToString("")
+                            }
+                        }
+                    }
+                }
+                notes = getString(R.string.shared_from) + " PassCOVID-GAL"
+            }
             else -> {
                 Toast.makeText(this, getString(R.string.qr_error), Toast.LENGTH_LONG).show()
             }
