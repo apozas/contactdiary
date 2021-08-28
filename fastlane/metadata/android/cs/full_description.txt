@@ -1,0 +1,30 @@
+Contact Diary je jednoduchá aplikace, která vám umožňuje vést záznamy o lidech, které jste potkali a o událostech, kterých jste se v poslední době zúčastnili. V případě pozitivního testu na COVID-19, je Contact Diary místem, kde rychle najdete, koho musíte na tuto okolnost upozornit.
+
+<b>JAK TO FUNGUJE</b>
+Každý den vás Contact Diary vyzve k vložení událostí, kterých jste se zúčastnili a osob, se kterými jste se během dne setkali. Pomocí jednoduchých formulářů budete moci ukládat základní informace, pokud je budete potřebovat. Jen to. Jednoduché, že? ;)
+
+<b>FUNKCE</b>
+<ul>
+<li> Nastavitelný čas upozornění, takže výzva nezasahuje do vašeho každodenního pracovního postupu.</li>
+<li> Možnost zobrazit pouze potenciálně rizikové kontakty.</li>
+<li> Automatické odstranění záznamů starších než 15 dnů.</li>
+<li> Export posledních kontaktů do souboru CSV.</li>
+<li> POUZE JEDNO OPRÁVNĚNÍ, které je nutné, aby vás aplikace mohla po restartu zařízení upozornit. Nic víc.</li>
+<li> Zejména, NENÍ POTŘEBA PŘIPOJENÍ K INTERNETU. Informace, které zadáte, jsou vaše a nikdy neopustí vaše zařízení.</li>
+</ul>
+
+<b>ČASTÉ DOTAZY</b>
+- Počkejte, není to to, co dělají aplikace pro sledování kontaktů vlád?
+Ne. Cíle vládních aplikací pro sledování kontaktů a Kontaktního deníku jsou ve své podstatě odlišné. Vládní aplikace pro sledování kontaktů <em>vás upozorní</em>, když jste byli v ohrožení, a Contact Diary slouží k zapamatování, koho <em>musíte upozornit</em>, pokud testujete pozitivně.
+
+- Je tato aplikace LEPŠÍ než aplikace pro sledování kontaktů vlád?
+Ne. Vládní aplikace pro sledování kontaktů mohou počítat s kontakty, o kterých si možná nejste vědomi, jako je osoba sedící u stolu v sousedním stole nebo jiná osoba, která používá stejný autobus k cestě do práce. Kontaktní deník NENÍ NÁHRADOU KONTAKTOVACÍCH APLIKACÍ VLÁD.
+
+- Je tato aplikace HORŠÍ než aplikace pro sledování kontaktů vlád?
+Ne. Vládní aplikace pro sledování kontaktů zásadně spoléhají na to, že aplikace budou mít všechny interakční osoby, aby mohly dělat správná oznámení. S kontaktním deníkem potřebujete jen sebe, abyste měli přehled, a můžete snadno upozornit lidi (nebo místa), kteří nepoužívají konvenční aplikace pro sledování kontaktů.
+
+- Bude tato aplikace sdílet informace, které zadám?
+NE. Aplikace nemá žádná oprávnění, takže neexistuje způsob, jak se může připojit k internetu. Informace, které vložíte, nikdy neopustí vaše zařízení. Ještě více jsou záznamy v deníku automaticky odstraněny, když jsou starší než 15 dní.
+
+<b>Podpora</b>
+Pokud najdete chybu, máte nápad na vylepšení Kontaktního deníku nebo máte dotaz, navštivte stránku projektu Deník Kontaktu na GitHubu: https://github.com/apozas/contactdiary
