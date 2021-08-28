@@ -8,10 +8,8 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="date">Date</string>
-    <!-- <string name="time">Time</string> -->
     <string name="start">Start</string>
     <string name="end">End</string>
-
     <string name="place">Place</string>
     <string name="companions">Companions</string>
     <string name="name">Name</string>

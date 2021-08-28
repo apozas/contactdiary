@@ -116,4 +116,6 @@
     <string name="privacy_security">繰り返しますが、接触ダイアリーに入力された情報は必ずデバイス外に送信されません。この事実は常に <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a> で閲覧できる接触ダイアリーのソースコードの調査により評価されることが可能です。従って、この安全性と整合性は、私の責任下に無いお使いのデバイスの物理的な整合性や完全性に結びついています。</string>
     <string name="privacy_changes">私は時々プライバシーポリシーを更新することがあります。従って、このページを定期的に変更点について確認することをお勧めします。私はこのページで新しいプライバシーポリシーを掲載することで、あなたに全ての変更をお知らせします。\\n\\nこのポリシーは 2020-09-08 より有効です。</string>
     <string name="privacy_contact">プライバシーポリシーについての質問や提案がある場合は、お気軽に <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> までお問い合わせ下さい。(英語ですと有り難いです)</string>
+    <string name="start">始まり</string>
+    <string name="end">終わり</string>
 </resources>

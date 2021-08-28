@@ -116,4 +116,6 @@
     <string name="qr_error">Kód nelze přečíst</string>
     <string name="thanks_russian"><b>Ruský překlad - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
     <string name="thanks_czech"><b>Český překlad - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">novas78@xda</a></string>
+    <string name="end">Konec</string>
+    <string name="start">Začátek</string>
 </resources>

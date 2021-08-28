@@ -116,4 +116,6 @@
     <string name="qr_error">"無法讀取該代碼 "</string>
     <string name="thanks_czech"><b>捷克語翻翻譯 - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="thanks_russian"><b>俄語翻譯 - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="start">開始</string>
+    <string name="end">結束</string>
 </resources>

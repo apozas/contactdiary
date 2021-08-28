@@ -116,4 +116,6 @@
     <string name="qr_error">A kód nem olvasható el</string>
     <string name="thanks_czech"><b>Cseh fordítás - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="thanks_russian"><b>Orosz fordítás - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="start">Kezdet</string>
+    <string name="end">Vége</string>
 </resources>

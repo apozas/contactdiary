@@ -116,4 +116,6 @@
     <string name="qr_error">Kod okunamadı</string>
     <string name="thanks_czech"><b>Çek çeviri - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="thanks_russian"><b>Rusça çeviri - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="start">Başlangıç</string>
+    <string name="end">Son</string>
 </resources>

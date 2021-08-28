@@ -116,4 +116,6 @@
     <string name="qr_error">De code kon niet worden gelezen</string>
     <string name="thanks_czech"><b>Tsjechische vertaling - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="thanks_russian"><b>Russische vertaling - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="end">Einde</string>
+    <string name="start">Aanvang</string>
 </resources>

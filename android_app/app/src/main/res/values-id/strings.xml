@@ -116,4 +116,6 @@
     <string name="qr_error">Kode tidak dapat dibaca</string>
     <string name="thanks_russian"><b>Terjemahan bahasa Rusia - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
     <string name="thanks_czech"><b>Terjemahan bahasa Ceko - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
+    <string name="start">Awal</string>
+    <string name="end">Akhir</string>
 </resources>
