@@ -1,0 +1,30 @@
+Kontaktdagboken är en enkel app som gör att du kan hålla koll på de personer du har träffat och de evenemang du har deltagit i nyligen. Om du testar positivt på COVID-19, så är Kontaktdagboken ett snabbt sätt att hitta personer du måste informera.
+
+<b>HUR DET FUNGERAR</b>
+Varje dag ber Kontaktdagboken dig att ange de evenemang du deltagit i och de personer du träffat under dagen. Genom att fylla i enkla formulär så kan du spara viktig information om dem, i det fall att du skulle behöva den. Inte mer än så. Enkelt, va? ;)
+
+<b>FUNKTIONER</b>
+<ul>
+<li> Konfigurerbar aviseringstid, så att du inte blir störd i ditt dagliga arbetsflöde.</li>
+<li> Möjlighet att visa endast potentiellt riskabla kontakter.</li>
+<li> Automatiskt borttagning av inlägg som är äldre än 15 dagar.</li>
+<li> Exportera dina senaste kontakter till en CSV-fil.</li>
+<li> ENDAST EN RÄTTIGHET krävs för att appen ska kunna skicka notifikationer efter att din enhet startats om. Inget mer.</li>
+<li> Framför allt, ANVÄNDER INTE INTERNET. Informationen du anger är din och lämnar aldrig din enhet.</li>
+</ul>
+
+<b>VANLIGA FRÅGOR</b>
+- Vänta, är inte detta vad regeringarnas kontaktspårningsappar gör?
+Nej. Målen för regeringarnas applikationer för kontaktspårning och Kontaktdagbok är i sig olika. Myndigheters kontaktspårningsappar <em>meddelar dig</em> när du har varit i fara, och Kontaktdagboken tjänar till att komma ihåg vem <em>du måste meddela</em> om du testar positivt.
+
+- Är den här appen BÄTTRE än regeringarnas kontaktspårningsappar?
+Nej. Regeringars appar för att spåra kontakter kan redogöra för kontakter som du kanske inte är medvetna om, till exempel personen som sitter i ett angränsande bord på en restaurang, eller den andra personen som använder samma buss för att gå till jobbet. Kontaktdagboken ÄR INTE EN ERSÄTTNING TILL REGERINGARnas KONTAKTSPÅRANDE APPAR.
+
+- Är den här appen VÄRRE än regeringarnas kontaktspårningsappar?
+Nej. Regeringens appar för att spåra kontakter är avgörande beroende av att alla personer som interagerar har appen för att kunna göra korrekta meddelanden. Med Kontaktdagboken behöver du bara ha koll på dig själv, och du kan enkelt meddela personer (eller platser) som inte använder konventionella kontaktspårningsappar.
+
+- Kommer den här appen att dela informationen jag matar in?
+NEJ. Appen har inga behörigheter, så det finns inget sätt att ansluta till internet. Informationen du infogar kommer aldrig att lämna din enhet. Ännu mer, poster i dagboken elimineras automatiskt när de blir äldre än 15 dagar.
+
+<b>Support</b>
+Om du hittar en bugg, har en idé om hur du kan förbättra Kontaktdagboken eller har en fråga, besök projektsidan för Kontaktdagboken på GitHub: https://github.com/apozas/contactdiary
