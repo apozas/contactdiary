@@ -168,13 +168,13 @@ class NewEventActivity : AppCompatActivity() {
             endCal.set(Calendar.MINUTE, minute)
             endCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
-            if (endCal.timeInMillis < initCal.timeInMillis) {
-                Toast.makeText(
-                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
-                ).show()
-            } else {
+//            if (endCal.timeInMillis < initCal.timeInMillis) {
+//                Toast.makeText(
+//                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
+//                ).show()
+//            } else {
                 eventendtime_input.setText(timeFormat.format(endCal.time))
-            }
+//            }
         }
 
         eventendtime_input.setOnClickListener {
