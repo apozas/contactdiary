@@ -1,0 +1,3 @@
+Tato aktualizace přináší podporu Galicijský Passcovid QR systému a přidává výběr pro datum konce kontaktů (díky igor-cali!)
+
+Pokud chcete mít QR systém ve vašem regionu implementován, napište problém v https://www.github.com/apozas/contactdiary, a pokud chcete pomoci překlady kontaktního deníku do svého jazyka, navštivte https://www.crowdin.com/project/contactdiary.

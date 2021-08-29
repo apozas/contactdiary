@@ -1,0 +1,3 @@
+Den här uppdateringen ger stöd till det galiciska passcovid QR-systemet och lägger till en chooser för datumet för kontakter (tack vare igor-cali!)
+
+Om du vill ha QR-systemet i din region Implemente, skriv ett issue i https://www.github.com/apozas/contactdiary, och om du vill hjälpa, besök https://www.crowdin.com/project/contactdiary.
