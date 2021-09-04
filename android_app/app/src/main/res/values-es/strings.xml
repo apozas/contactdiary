@@ -7,7 +7,6 @@
     <string name="no">No</string>
     <string name="yes">Sí</string>
     <string name="date">Fecha</string>
-    <string name="time">Hora</string>
     <string name="place">Lugar</string>
     <string name="companions">Acompañantes</string>
     <string name="name">Nombre</string>
@@ -115,6 +114,6 @@
     <string name="qr_error">No se pudo leer el có</string>
     <string name="thanks_czech"><b>Traducción al checo - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="thanks_russian"><b>Traducción al ruso - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
-    <string name="start">Comienzo</string>
+    <string name="start">Inicio</string>
     <string name="end">Final</string>
 </resources>

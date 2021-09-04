@@ -22,10 +22,8 @@
     <string name="event_name">Nome dell\'evento</string>
     <string name="place">Luogo</string>
     <string name="date">Data</string>
-    <!-- <string name="time">Ora</string> -->
     <string name="start">Inizio</string>
     <string name="end">Fine</string>
-
     <string name="companions">Compagni</string>
     <string name="phone">Telefono</string>
     <string name="encounter_type">Tipo di incontro</string>

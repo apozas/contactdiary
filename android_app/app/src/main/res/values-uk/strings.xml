@@ -8,7 +8,6 @@
     <string name="no">Ні</string>
     <string name="yes">Так</string>
     <string name="date">Дата</string>
-    <string name="time">Час</string>
     <string name="place">Розташування</string>
     <string name="companions">Друзі</string>
     <string name="name">Ім\'я</string>
@@ -117,5 +116,5 @@
     <string name="thanks_russian"><b>Переклад російською - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
     <string name="thanks_czech"><b>Переклад чеською - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="start">Початок</string>
-    <string name="end">Остаточний</string>
+    <string name="end">Кінець</string>
 </resources>
