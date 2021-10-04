@@ -62,7 +62,12 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         val listItem = convertView?.findViewById(R.id.list_item) as TextView
         val listDivider = convertView?.findViewById(R.id.list_divider) as View
         val headerDivider = convertView?.findViewById(R.id.header_divider) as View
-        listItem.text = cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
+        val entryType = cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))
+        var entryEmoji = ""
+        entryEmoji = if(entryType == "Event") "\uD83D\uDCC5"
+        else "\uD83D\uDC64"
+        entryEmoji += "   " + cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
+        listItem.text = entryEmoji
 
         if (position - 1 >= 0) {
 //          If there is a previous position see if it has the same date
