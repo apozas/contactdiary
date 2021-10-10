@@ -28,6 +28,9 @@ class ThanksActivity : AppCompatActivity() {
         val homeScreen = findViewById<TextView>(R.id.thanks_homescreen)
         homeScreen.movementMethod = LinkMovementMethod.getInstance()
 
+        val emojis = findViewById<TextView>(R.id.thanks_emojis)
+        emojis.movementMethod = LinkMovementMethod.getInstance()
+
         val czech = findViewById<TextView>(R.id.thanks_czech)
         czech.movementMethod = LinkMovementMethod.getInstance()
 

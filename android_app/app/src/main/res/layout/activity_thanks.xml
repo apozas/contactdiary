@@ -31,6 +31,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/thanks_emojis"
+            android:text="@string/thanks_emojis"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/thanks_chinese"
             android:text="@string/thanks_chinese"/>
 
