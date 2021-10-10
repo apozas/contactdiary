@@ -115,6 +115,6 @@
     <string name="qr_error">Koden kunde inte läsas</string>
     <string name="thanks_russian"><b>Rysk översättning - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
     <string name="thanks_czech"><b>Tjeckisk översättning - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
-    <string name="start">Början</string>
-    <string name="end">Slutlig</string>
+    <string name="start">Start</string>
+    <string name="end">Slut</string>
 </resources>
