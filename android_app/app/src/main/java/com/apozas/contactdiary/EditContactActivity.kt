@@ -45,6 +45,10 @@ class EditContactActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.editcontactlayout))
 
+//      Show top-right shortcuts
+        contact_top_duplicate_btn.visibility = View.VISIBLE
+        contact_top_delete_btn.visibility = View.VISIBLE
+
 //      Get info from MainActivity
         val db = dbHelper.writableDatabase
         val info = intent.extras?.getString("entry")

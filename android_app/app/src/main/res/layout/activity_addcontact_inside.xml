@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/newcontactlayout"
-    tools:context=".NewContactActivity">
+    tools:context=".EditContactActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:background="?attr/colorPrimary"
-                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:background="#00aaaaaa"
+                        android:layout_gravity="end"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/contact_top_duplicate_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+                            android:src="@drawable/ic_duplicate"
+                            android:paddingRight="@dimen/fab_margin_right"
+                            android:onClick="duplicateContact"
+                            android:contentDescription="@string/duplicate"
+                            android:paddingEnd="@dimen/fab_margin_right"
+                            android:visibility="invisible" />
+
+                        <ImageButton
+                            android:id="@+id/contact_top_delete_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+                            android:src="@drawable/ic_delete"
+                            android:paddingRight="@dimen/fab_margin_right"
+                            android:onClick="deleteContact"
+                            android:contentDescription="@string/delete"
+                            android:paddingEnd="@dimen/fab_margin_right"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
             </com.google.android.material.appbar.AppBarLayout>
 
             <LinearLayout

@@ -46,6 +46,10 @@ class EditEventActivity : AppCompatActivity() {
 
         setupUI(findViewById(R.id.editeventlayout))
 
+//      Show top-right shortcuts
+        event_top_duplicate_btn.visibility = View.VISIBLE
+        event_top_delete_btn.visibility = View.VISIBLE
+
 //      Get info from MainActivity
         val info = intent.extras?.getString("entry")
         val db = dbHelper.writableDatabase
