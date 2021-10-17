@@ -1,0 +1,3 @@
+This update adds emojis to distinguish contacts and events in the list (thanks to igor-cali!), and brings back the Duplicate and Delete shortcuts in the Edit menu.
+
+If you want to have the QR system in your region implemented, write an issue in https://www.github.com/apozas/contactdiary, and if you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary

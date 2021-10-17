@@ -1,0 +1,3 @@
+Dieses Update fügt Emojis hinzu, um Kontakte und Gruppenbewegnungen in der Liste zu unterscheiden (dank igor-cali!) und bringt die Verknüpfungen Kopieren und Löschen im Menü Bearbeiten zurück.
+
+Wenn Sie das QR-System in Ihrer Region implementieren möchten, schreiben Sie ein Problem in https://www.github.com/apozas/contactdiary. Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary

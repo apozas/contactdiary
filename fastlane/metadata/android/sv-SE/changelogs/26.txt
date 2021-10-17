@@ -1,0 +1,3 @@
+Den här uppdateringen lägger till emojis för att skilja kontakter och händelser i listan (tack vare igor-cali!), Och återvänder genvägarna Kopia och Ragera i redigeringsmenyn.
+
+Om du vill ha QR-systemet i din region Implemente, skriv ett issue i https://www.github.com/apozas/contactdiary, och om du vill hjälpa, besök https://www.crowdin.com/project/contactdiary.

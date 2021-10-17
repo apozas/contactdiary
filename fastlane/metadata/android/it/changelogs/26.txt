@@ -1,0 +1,3 @@
+Questo aggiornamento aggiunge emoji per distinguere i contatti e gli eventi nell'elenco (grazie a igor-cali!), e riporta le scorciatoie Duplica ed Elimina nel menu Modifica.
+
+Se desideri implementare il sistema QR nella tua regione, scrivi un problema in https://www.github.com/apozas/contactdiary e se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary
