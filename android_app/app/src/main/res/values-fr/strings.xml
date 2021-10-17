@@ -117,4 +117,5 @@
     <string name="thanks_russian"><b>Traduction russe - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
     <string name="start">Début</string>
     <string name="end">Fin</string>
+    <string name="thanks_emojis"><b>Emojis et autres corrections - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
 </resources>

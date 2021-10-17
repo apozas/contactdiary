@@ -117,4 +117,5 @@
     <string name="privacy_contact">プライバシーポリシーについての質問や提案がある場合は、お気軽に <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> までお問い合わせ下さい。(英語ですと有り難いです)</string>
     <string name="start">開始</string>
     <string name="end">終了</string>
+    <string name="thanks_emojis"><b>絵文字とバグ修正 - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
 </resources>

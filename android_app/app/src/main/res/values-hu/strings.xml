@@ -117,4 +117,5 @@
     <string name="thanks_russian"><b>Orosz fordítás - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
     <string name="start">Kezdet</string>
     <string name="end">Vége</string>
+    <string name="thanks_emojis"><b>Emojis és javítások - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
 </resources>

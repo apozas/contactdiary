@@ -117,4 +117,5 @@
     <string name="qr_error">Impossibile leggere il codice</string>
     <string name="thanks_czech"><b>Traduzione ceca - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="thanks_russian"><b>Traduzione russa - </b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_emojis"><b>Emoji e correzioni - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
 </resources>

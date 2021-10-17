@@ -117,4 +117,5 @@
     <string name="thanks_czech"><b>Tšekin käännös - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="start">Alku</string>
     <string name="end">Loppu</string>
+    <string name="thanks_emojis"><b>Emojis ja korjaukset - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
 </resources>
