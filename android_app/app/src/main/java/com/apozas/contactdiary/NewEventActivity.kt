@@ -30,9 +30,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+import com.apozas.contactdiary.databinding.ActivityAddeventInsideBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.activity_addcontact_inside.*
-import kotlinx.android.synthetic.main.activity_addevent_inside.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -40,10 +39,12 @@ import java.util.*
 class NewEventActivity : AppCompatActivity() {
 
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
+    private lateinit var binding: ActivityAddeventInsideBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_addevent)
+        binding = ActivityAddeventInsideBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
         setupUI(findViewById(R.id.neweventlayout))
 
@@ -62,8 +63,8 @@ class NewEventActivity : AppCompatActivity() {
         val timeFormat = SimpleDateFormat("H:mm")
 
 //      Set current values
-        eventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
-        endeventdate_input.setText(DateFormat.getDateInstance().format(endCal.time))
+        binding.eventdateInput.setText(DateFormat.getDateInstance().format(initCal.time))
+        binding.endeventdateInput.setText(DateFormat.getDateInstance().format(endCal.time))
 
 //      If coming from Open With menu, set place and time if appropriate
         if ((intent.type != null) and (intent.action.equals(Intent.ACTION_SEND))) {
@@ -84,14 +85,14 @@ class NewEventActivity : AppCompatActivity() {
             }
             val data = getPlace(intent.getStringExtra(Intent.EXTRA_TEXT) as String)
             if (data.any {it.isNotEmpty()}) {
-                eventname_input.setText(data[0])
-                eventplace_input.setText(data[1])
-                eventnotes_input.setText(data[2])
+                binding.eventnameInput.setText(data[0])
+                binding.eventplaceInput.setText(data[1])
+                binding.eventnotesInput.setText(data[2])
 
                 val initCal = Calendar.getInstance()
                 endCal.timeInMillis = initCal.timeInMillis + 60 * 60 * 1000
-                eventinittime_input.setText(timeFormat.format(initCal.time))
-                eventendtime_input.setText(timeFormat.format(endCal.time))
+                binding.eventinittimeInput.setText(timeFormat.format(initCal.time))
+                binding.eventendtimeInput.setText(timeFormat.format(endCal.time))
             }
         }
 
@@ -105,12 +106,11 @@ class NewEventActivity : AppCompatActivity() {
             endCal.set(Calendar.MONTH, monthOfYear)
             endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            eventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
-            endeventdate_input.setText(DateFormat.getDateInstance().format(initCal.time))
-
+            binding.eventdateInput.setText(DateFormat.getDateInstance().format(initCal.time))
+            binding.endeventdateInput.setText(DateFormat.getDateInstance().format(initCal.time))
         }
 
-        eventdate_input.setOnClickListener {
+        binding.eventdateInput.setOnClickListener {
             DatePickerDialog(
                 this@NewEventActivity, eventdateSetListener,
                 initCal.get(Calendar.YEAR),
@@ -124,11 +124,10 @@ class NewEventActivity : AppCompatActivity() {
             endCal.set(Calendar.MONTH, monthOfYear)
             endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            endeventdate_input.setText(DateFormat.getDateInstance().format(endCal.time))
-
+            binding.endeventdateInput.setText(DateFormat.getDateInstance().format(endCal.time))
         }
 
-        endeventdate_input.setOnClickListener {
+        binding.endeventdateInput.setOnClickListener {
             val pickDialog = DatePickerDialog(
                 this@NewEventActivity, endeventdateSetListener,
                 initCal.get(Calendar.YEAR),
@@ -144,17 +143,17 @@ class NewEventActivity : AppCompatActivity() {
             initCal.set(Calendar.MINUTE, minute)
             initCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
-            eventinittime_input.setText(timeFormat.format(initCal.time))
-            if (eventendtime_input.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
+            binding.eventinittimeInput.setText(timeFormat.format(initCal.time))
+            if (binding.eventendtimeInput.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
                 endCal.timeInMillis = initCal.timeInMillis
                 endCal.add(Calendar.MINUTE, 30)
-                eventendtime_input.setText(timeFormat.format(endCal.time))
+                binding.eventendtimeInput.setText(timeFormat.format(endCal.time))
             }
         }
 
         val is24Hour = android.text.format.DateFormat.is24HourFormat(applicationContext)
 
-        eventinittime_input.setOnClickListener {
+        binding.eventinittimeInput.setOnClickListener {
             TimePickerDialog(
                 this@NewEventActivity, initTimeSetListener,
                 initCal.get(Calendar.HOUR_OF_DAY),
@@ -173,11 +172,11 @@ class NewEventActivity : AppCompatActivity() {
 //                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
 //                ).show()
 //            } else {
-                eventendtime_input.setText(timeFormat.format(endCal.time))
+                binding.eventendtimeInput.setText(timeFormat.format(endCal.time))
 //            }
         }
 
-        eventendtime_input.setOnClickListener {
+        binding.eventendtimeInput.setOnClickListener {
             TimePickerDialog(
                 this@NewEventActivity, endTimeSetListener,
                 endCal.get(Calendar.HOUR_OF_DAY),
@@ -187,7 +186,7 @@ class NewEventActivity : AppCompatActivity() {
         }
 
         val preventionMeasures = ArrayList<String>()
-        event_mitigation.setOnClickListener {
+        binding.eventMitigation.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             val checkedItems = BooleanArray(4) { i -> preventionMeasures.contains(
                 resources.getStringArray(R.array.mitigation_values)[i]
@@ -208,7 +207,7 @@ class NewEventActivity : AppCompatActivity() {
                 if (preventionMeasures.isNotEmpty()) {
                     measuresTaken = preventionMeasures.sorted().joinToString(", ")
                 }
-                event_mitigation.text = measuresTaken
+                binding.eventMitigation.text = measuresTaken
             }
             builder.setNegativeButton(getString(android.R.string.cancel)) { _, _ -> }
             builder.create().show()
@@ -217,26 +216,26 @@ class NewEventActivity : AppCompatActivity() {
 //      Database operation
         val dbHelper = FeedReaderDbHelper(this)
 
-        okButton_AddEvent.setOnClickListener {
+        binding.okButtonAddEvent.setOnClickListener {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
             var errorCount = 0
 
 //          Process RadioButtons
-            val eventIndoorOutdoorId = event_indoor_outdoor.checkedRadioButtonId
+            val eventIndoorOutdoorId = binding.eventIndoorOutdoor.checkedRadioButtonId
             var eventIndoorOutdoorChoice = -1
             if (eventIndoorOutdoorId != -1) {
-                val btn: View = event_indoor_outdoor.findViewById(eventIndoorOutdoorId)
-                eventIndoorOutdoorChoice = event_indoor_outdoor.indexOfChild(btn)
+                val btn: View = binding.eventIndoorOutdoor.findViewById(eventIndoorOutdoorId)
+                eventIndoorOutdoorChoice = binding.eventIndoorOutdoor.indexOfChild(btn)
             }
 
             val maskMe = preventionMeasures.contains(getString(R.string.mitigation_mask_me_value)).compareTo(false)
             val maskOther = preventionMeasures.contains(getString(R.string.mitigation_mask_other_value)).compareTo(false)
 
 //          Compulsory text field
-            val eventName = eventname_input.text.toString()
+            val eventName = binding.eventnameInput.text.toString()
             if (eventName.isEmpty()) {
-                eventname_input.error = getString(R.string.compulsory_field)
+                binding.eventnameInput.error = getString(R.string.compulsory_field)
                 errorCount++
             }
 
@@ -245,30 +244,30 @@ class NewEventActivity : AppCompatActivity() {
                 val values = ContentValues().apply {
                     put(feedEntry.TYPE_COLUMN, "Event")
                     put(feedEntry.NAME_COLUMN, eventName)
-                    put(feedEntry.PLACE_COLUMN, eventplace_input.text.toString())
+                    put(feedEntry.PLACE_COLUMN, binding.eventplaceInput.text.toString())
                     put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
                     put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
-                    put(feedEntry.PHONE_COLUMN, eventphone_input.text.toString())
-                    put(feedEntry.COMPANIONS_COLUMN, eventpeople_input.text.toString())
+                    put(feedEntry.PHONE_COLUMN, binding.eventphoneInput.text.toString())
+                    put(feedEntry.COMPANIONS_COLUMN, binding.eventpeopleInput.text.toString())
                     put(feedEntry.ENCOUNTER_COLUMN, eventIndoorOutdoorChoice)
                     put(
                         feedEntry.CLOSECONTACT_COLUMN,
-                        if (event_mitigation.text != getString(R.string.click_to_select)) {
+                        if (binding.eventMitigation.text != getString(R.string.click_to_select)) {
                             (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(
                                 false
                             )
                         } else { -1 }
                     )
-                    put(feedEntry.NOTES_COLUMN, eventnotes_input.text.toString())
+                    put(feedEntry.NOTES_COLUMN, binding.eventnotesInput.text.toString())
                     put(
                         feedEntry.MASK_COLUMN,
-                        if (event_mitigation.text != getString(R.string.click_to_select)) {
+                        if (binding.eventMitigation.text != getString(R.string.click_to_select)) {
                             2 * maskMe + maskOther
                         } else { -1 }
                     )
                     put(
                         feedEntry.VENTILATION_COLUMN,
-                        if (event_mitigation.text != getString(R.string.click_to_select)) {
+                        if (binding.eventMitigation.text != getString(R.string.click_to_select)) {
                             (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(
                                 false
                             )

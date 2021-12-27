@@ -29,7 +29,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
-import kotlinx.android.synthetic.main.activity_main_inside.*
+import com.apozas.contactdiary.databinding.ActivityMainInsideBinding
 import java.util.*
 
 
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     private var onlyRisky = false
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
     private val dbHelper = FeedReaderDbHelper(this)
+    private lateinit var binding: ActivityMainInsideBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
@@ -50,7 +51,8 @@ class MainActivity : AppCompatActivity() {
             "Light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             "System" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainInsideBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
 
         val notificationHandler = NotificationHandler()
@@ -63,9 +65,9 @@ class MainActivity : AppCompatActivity() {
         registerForContextMenu(findViewById(R.id.diarytable))
 
 //      Edit entry on click
-        diarytable.setOnItemClickListener { _, _, position, _ ->
-            val idx = diarytable.adapter.getItemId(position)
-            val entry = diarytable.adapter.getItem(position) as Cursor
+        binding.diarytable.setOnItemClickListener { _, _, position, _ ->
+            val idx = binding.diarytable.adapter.getItemId(position)
+            val entry = binding.diarytable.adapter.getItem(position) as Cursor
 
             when (entry.getString(entry.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))) {
                 "Contact" -> {
@@ -85,10 +87,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 //      Show message on empty list
-        diarytable.emptyView = findViewById(R.id.emptyList)
+        binding.diarytable.emptyView = findViewById(R.id.emptyList)
 
 //      FAB operation
-        fab.setOnClickListener {
+        binding.fab.setOnClickListener {
             animateFAB()
         }
     }
@@ -121,9 +123,9 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.popup_select -> {
 //              Launch multiChoiceMode
-                diarytable.choiceMode = ListView.CHOICE_MODE_MULTIPLE_MODAL
+                binding.diarytable.choiceMode = ListView.CHOICE_MODE_MULTIPLE_MODAL
                 val itemList: MutableList<Long> = ArrayList()
-                diarytable.setMultiChoiceModeListener(object : AbsListView.MultiChoiceModeListener {
+                binding.diarytable.setMultiChoiceModeListener(object : AbsListView.MultiChoiceModeListener {
                     override fun onCreateActionMode(actionMode: ActionMode, menu: Menu): Boolean {
                         actionMode.menuInflater.inflate(R.menu.context_menu, menu)
                         return true
@@ -180,7 +182,7 @@ class MainActivity : AppCompatActivity() {
 
                     override fun onDestroyActionMode(actionMode: ActionMode) {
                         itemList.clear()
-                        diarytable.choiceMode = ListView.CHOICE_MODE_SINGLE
+                        binding.diarytable.choiceMode = ListView.CHOICE_MODE_SINGLE
                     }
 
                     override fun onItemCheckedStateChanged(
@@ -200,7 +202,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 })
-                diarytable.setItemChecked(info.position, true)
+                binding.diarytable.setItemChecked(info.position, true)
                 true
             }
             R.id.popup_duplicate -> {
@@ -230,13 +232,13 @@ class MainActivity : AppCompatActivity() {
             R.anim.rotate_forward
         )
 
-        fab.startAnimation(rotateForward)
-        fab1.startAnimation(fabOpen)
-        fabText1.startAnimation(fabTextOpen)
-        fab2.startAnimation(fabOpen)
-        fabText2.startAnimation(fabTextOpen)
-        fab1.isClickable = true
-        fab2.isClickable = true
+        binding.fab.startAnimation(rotateForward)
+        binding.fab1.startAnimation(fabOpen)
+        binding.fabText1.startAnimation(fabTextOpen)
+        binding.fab2.startAnimation(fabOpen)
+        binding.fabText2.startAnimation(fabTextOpen)
+        binding.fab1.isClickable = true
+        binding.fab2.isClickable = true
         isFabOpen = true
     }
 
@@ -251,13 +253,13 @@ class MainActivity : AppCompatActivity() {
             R.anim.rotate_backward
         )
 
-        fab.startAnimation(rotateBackward)
-        fab1.startAnimation(fabClose)
-        fabText1.startAnimation(fabTextClose)
-        fab2.startAnimation(fabClose)
-        fabText2.startAnimation(fabTextClose)
-        fab1.isClickable = false
-        fab2.isClickable = false
+        binding.fab.startAnimation(rotateBackward)
+        binding.fab1.startAnimation(fabClose)
+        binding.fabText1.startAnimation(fabTextClose)
+        binding.fab2.startAnimation(fabClose)
+        binding.fabText2.startAnimation(fabTextClose)
+        binding.fab1.isClickable = false
+        binding.fab2.isClickable = false
         isFabOpen = false
     }
 
@@ -287,7 +289,7 @@ class MainActivity : AppCompatActivity() {
         val cursor = dbHelper.viewData(onlyRisky)
         val adapter = DataCursorAdapter(this, cursor)
 
-        diarytable.adapter = adapter
+        binding.diarytable.adapter = adapter
     }
 
     private fun restrict15LastDays() {

@@ -32,15 +32,20 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.*
 import com.apozas.contactdiary.ContactDatabase.Companion.SQL_CREATE_ENTRIES
 import com.apozas.contactdiary.ContactDatabase.Companion.SQL_DELETE_ENTRIES
+import com.apozas.contactdiary.databinding.ActivityPreferencesBinding
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.text.SimpleDateFormat
 
 
 class SettingsActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityPreferencesBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_preferences)
+        binding = ActivityPreferencesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportFragmentManager.beginTransaction().replace(R.id.container, SettingsFragment())
             .commit()
     }
