@@ -3,13 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.apozas.contactdiary"
         minSdkVersion 14
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 26
         versionName "1.4.8"
 
