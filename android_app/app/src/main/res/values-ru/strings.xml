@@ -117,5 +117,5 @@
     <string name="thanks_czech"><b>Перевод на чешский - </b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
     <string name="start">Начало</string>
     <string name="end">Конец</string>
-    <string name="thanks_emojis"><b>Emojis and fixes - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="thanks_emojis"><b>Смайлы и исправления - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
 </resources>
