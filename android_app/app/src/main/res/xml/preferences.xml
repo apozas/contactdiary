@@ -29,6 +29,15 @@
             android:layout_height="wrap_content"
             android:title="@string/show_close_contacts" />
 
+        <SwitchPreference
+            android:key="log15days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="@string/log15days"
+            android:defaultValue="true"
+            android:summaryOff="@string/log15days_off"
+            android:summaryOn="@string/log15days_on"/>
+
         <ListPreference
             android:key="theme"
             android:title="@string/theme"

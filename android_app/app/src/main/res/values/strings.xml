@@ -123,4 +123,7 @@
     <string name="checkin_reminder">This is just a register for yourself. Please, do not forget to register your details at the venue so the local authority can notify you if necessary.</string>
     <string name="qr_error">The code could not be read</string>
     <string name="thanks_emojis"><b>Emojis and fixes - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="log15days">Log recent contacts only</string>
+    <string name="log15days_on">Only contacts in the last two weeks will be stored</string>
+    <string name="log15days_off">All contacts will be stored indefinitely</string>
 </resources>

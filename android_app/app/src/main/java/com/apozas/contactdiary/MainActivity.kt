@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     private var isFabOpen = false
     private var onlyRisky = false
+    private var onlyRecent = true
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
     private val dbHelper = FeedReaderDbHelper(this)
     private lateinit var binding: ActivityMainInsideBinding
@@ -58,8 +59,9 @@ class MainActivity : AppCompatActivity() {
         val notificationHandler = NotificationHandler()
         notificationHandler.scheduleNotification(this)
 
+        onlyRecent = preferences.getBoolean("log15days", true)
+        if (onlyRecent) { restrict15LastDays() }
         onlyRisky = preferences.getBoolean("closecontactonly", false)
-        restrict15LastDays()
         viewData(onlyRisky)
 
         registerForContextMenu(findViewById(R.id.diarytable))
@@ -97,7 +99,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        restrict15LastDays()
+        if (onlyRecent) { restrict15LastDays() }
         viewData(onlyRisky)
     }
 
@@ -154,6 +156,7 @@ class MainActivity : AppCompatActivity() {
                                 ).show()
                                 itemList.clear()
                                 actionMode.finish()
+                                if (onlyRecent) { restrict15LastDays() }
                                 viewData(onlyRisky)
                                 return true
                             }
@@ -171,6 +174,7 @@ class MainActivity : AppCompatActivity() {
                                 ).show()
                                 itemList.clear()
                                 actionMode.finish()
+                                if (onlyRecent) { restrict15LastDays() }
                                 viewData(onlyRisky)
                                 return true
                             }
@@ -207,12 +211,14 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.popup_duplicate -> {
                 duplicateEntry(info.id)
+                if (onlyRecent) { restrict15LastDays() }
                 viewData(onlyRisky)
                 true
             }
             R.id.popup_delete -> {
                 deleteEntry(info.id)
                 Toast.makeText(this, R.string.entry_deleted, Toast.LENGTH_SHORT).show()
+                if (onlyRecent) { restrict15LastDays() }
                 viewData(onlyRisky)
                 true
             }
