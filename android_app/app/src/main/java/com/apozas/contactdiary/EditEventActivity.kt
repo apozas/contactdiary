@@ -186,7 +186,8 @@ class EditEventActivity : AppCompatActivity() {
 
             binding.eventinittimeInput.setText(timeFormat.format(initCal.time))
             if (binding.eventendtimeInput.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
-                endCal.timeInMillis = initCal.timeInMillis
+                endCal.set(Calendar.HOUR_OF_DAY, initCal.get(Calendar.HOUR_OF_DAY))
+                endCal.set(Calendar.MINUTE, initCal.get(Calendar.MINUTE))
                 endCal.add(Calendar.MINUTE, 30)
                 binding.eventendtimeInput.setText(timeFormat.format(endCal.time))
             }
