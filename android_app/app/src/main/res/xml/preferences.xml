@@ -30,13 +30,22 @@
             android:title="@string/show_close_contacts" />
 
         <SwitchPreference
-            android:key="log15days"
+            android:key="logNdays"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:title="@string/log15days"
+            android:title="@string/logNdays"
             android:defaultValue="true"
-            android:summaryOff="@string/log15days_off"
-            android:summaryOn="@string/log15days_on"/>
+            android:summaryOff="@string/logNdays_off"
+            android:summaryOn="@string/logNdays_on"/>
+
+        <EditTextPreference
+            android:dependency="logNdays"
+            android:key="number_of_days"
+            android:title="@string/log_number_days"
+            android:dialogLayout="@layout/preference_edit_text"
+            android:defaultValue="15"
+            android:inputType="number"
+            app:useSimpleSummaryProvider="true"/>
 
         <ListPreference
             android:key="theme"

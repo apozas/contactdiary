@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     private var isFabOpen = false
     private var onlyRisky = false
     private var onlyRecent = true
+    private var numDays = 15
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
     private val dbHelper = FeedReaderDbHelper(this)
     private lateinit var binding: ActivityMainInsideBinding
@@ -59,8 +60,11 @@ class MainActivity : AppCompatActivity() {
         val notificationHandler = NotificationHandler()
         notificationHandler.scheduleNotification(this)
 
-        onlyRecent = preferences.getBoolean("log15days", true)
-        if (onlyRecent) { restrict15LastDays() }
+        onlyRecent = preferences.getBoolean("logNdays", true)
+        numDays = preferences.getString("number_of_days", "15")!!.toInt()
+        if (onlyRecent) {
+            restrictLastDays(numDays)
+        }
         onlyRisky = preferences.getBoolean("closecontactonly", false)
         viewData(onlyRisky)
 
@@ -99,7 +103,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (onlyRecent) { restrict15LastDays() }
+        if (onlyRecent) { restrictLastDays(numDays) }
         viewData(onlyRisky)
     }
 
@@ -156,7 +160,7 @@ class MainActivity : AppCompatActivity() {
                                 ).show()
                                 itemList.clear()
                                 actionMode.finish()
-                                if (onlyRecent) { restrict15LastDays() }
+                                if (onlyRecent) { restrictLastDays(numDays) }
                                 viewData(onlyRisky)
                                 return true
                             }
@@ -174,7 +178,7 @@ class MainActivity : AppCompatActivity() {
                                 ).show()
                                 itemList.clear()
                                 actionMode.finish()
-                                if (onlyRecent) { restrict15LastDays() }
+                                if (onlyRecent) { restrictLastDays(numDays) }
                                 viewData(onlyRisky)
                                 return true
                             }
@@ -211,14 +215,14 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.popup_duplicate -> {
                 duplicateEntry(info.id)
-                if (onlyRecent) { restrict15LastDays() }
+                if (onlyRecent) { restrictLastDays(numDays) }
                 viewData(onlyRisky)
                 true
             }
             R.id.popup_delete -> {
                 deleteEntry(info.id)
                 Toast.makeText(this, R.string.entry_deleted, Toast.LENGTH_SHORT).show()
-                if (onlyRecent) { restrict15LastDays() }
+                if (onlyRecent) { restrictLastDays(numDays) }
                 viewData(onlyRisky)
                 true
             }
@@ -298,18 +302,18 @@ class MainActivity : AppCompatActivity() {
         binding.diarytable.adapter = adapter
     }
 
-    private fun restrict15LastDays() {
+    private fun restrictLastDays(numDays: Int) {
         val db = dbHelper.writableDatabase
-//      Create Calendar set to 15 days ago
+//      Create Calendar set to numDays days ago
         val cal = Calendar.getInstance()
-        cal.add(Calendar.DAY_OF_YEAR, -15)
+        cal.add(Calendar.DAY_OF_YEAR, -numDays)
         cal.set(Calendar.MINUTE, 0)
         cal.set(Calendar.HOUR, 0)
-        val fifteenDaysAgo = cal.timeInMillis
+        val daysAgo = cal.timeInMillis.toString()
 
 //      Define 'where' part of query.
         val selection = "DELETE FROM ${ContactDatabase.ContactDatabase.FeedEntry.TABLE_NAME} " +
-                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN} <= " + fifteenDaysAgo.toString()
+                "WHERE ${ContactDatabase.ContactDatabase.FeedEntry.TIME_BEGIN_COLUMN} <= " + daysAgo
 //      Issue SQL statement.
         db.execSQL(selection)
     }

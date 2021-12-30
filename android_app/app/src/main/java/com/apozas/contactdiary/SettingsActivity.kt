@@ -105,6 +105,33 @@ class SettingsActivity : AppCompatActivity() {
                 true
             }
 
+//          Handle the number of days for logging contacts
+            val numDays = findPreference<EditTextPreference>("number_of_days")
+            numDays?.setOnPreferenceChangeListener { _, newValue ->
+                val newDays = newValue as String
+                try {
+//                  Small attempt to check if the input is an integer
+                    val intDays = newDays.toInt()
+                    if (intDays > 0) {
+                        prefsedit.putString("number_of_days", newDays)
+                        prefsedit.apply()
+                        true
+                    } else {Toast.makeText(
+                        context,
+                        getString(R.string.incorrect_number_of_days),
+                        Toast.LENGTH_LONG
+                    ).show()
+                        false}
+                } catch (e: NumberFormatException) {
+                    Toast.makeText(
+                        context,
+                        getString(R.string.incorrect_number_of_days),
+                        Toast.LENGTH_LONG
+                    ).show()
+                    false
+                }
+            }
+
             val prefTheme = findPreference<ListPreference>("theme")
             prefTheme!!.setOnPreferenceChangeListener { _, newValue ->
                 when (newValue) {
