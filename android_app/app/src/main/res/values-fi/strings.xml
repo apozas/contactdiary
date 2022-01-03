@@ -118,4 +118,9 @@
     <string name="start">Alku</string>
     <string name="end">Loppu</string>
     <string name="thanks_emojis"><b>Emojis ja korjaukset - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Rekisteröi vain viimeisimmät yhteystiedot</string>
+    <string name="logNdays_on">Vain viime päivien yhteystiedot tallennetaan</string>
+    <string name="logNdays_off">Kaikki yhteystiedot säilytetään toistaiseksi</string>
+    <string name="log_number_days">Tallennuspäivien lukumäärä</string>
+    <string name="incorrect_number_of_days">Lisää luonnollinen päivien lukumäärä</string>
 </resources>

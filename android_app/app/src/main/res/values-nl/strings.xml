@@ -118,4 +118,9 @@
     <string name="end">Einde</string>
     <string name="start">Aanvang</string>
     <string name="thanks_emojis"><b>Emojis en oplossingen - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Alleen recente contacten registreren</string>
+    <string name="logNdays_on">Alleen contacten van de afgelopen dagen worden opgenomen</string>
+    <string name="logNdays_off">Alle contacten worden voor onbepaalde tijd bewaard</string>
+    <string name="log_number_days">Aantal dagen om op te nemen</string>
+    <string name="incorrect_number_of_days">Vul a.u.b. een natuurlijk aantal dagen in</string>
 </resources>

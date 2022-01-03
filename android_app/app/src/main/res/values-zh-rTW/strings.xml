@@ -118,4 +118,9 @@
     <string name="start">開始</string>
     <string name="end">結束</string>
     <string name="thanks_emojis"><b>表情符號和修復 - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">僅註冊最近的聯繫人</string>
+    <string name="logNdays_on">只會記錄最近幾天的聯繫方式</string>
+    <string name="logNdays_off">所有聯繫人將無限期存儲</string>
+    <string name="log_number_days">記錄天數</string>
+    <string name="incorrect_number_of_days">請插入一個自然天數</string>
 </resources>

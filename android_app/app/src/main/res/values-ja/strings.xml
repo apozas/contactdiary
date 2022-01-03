@@ -118,4 +118,9 @@
     <string name="start">開始</string>
     <string name="end">終了</string>
     <string name="thanks_emojis"><b>絵文字とバグ修正 - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays_on">直近の日のみの接触を保存します</string>
+    <string name="logNdays_off">全ての接触を無期限に保存します</string>
+    <string name="logNdays">最近の接触のみを記録</string>
+    <string name="log_number_days">記録する日数</string>
+    <string name="incorrect_number_of_days">自然数を挿入してください</string>
 </resources>

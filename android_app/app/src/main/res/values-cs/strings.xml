@@ -118,4 +118,9 @@
     <string name="end">Konec</string>
     <string name="start">Začátek</string>
     <string name="thanks_emojis"><b>Emojis a opravy - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Zaregistrujte pouze nedávné kontakty</string>
+    <string name="logNdays_on">Zaznamenány budou pouze kontakty za poslední dny</string>
+    <string name="logNdays_off">Všechny kontakty budou uloženy na dobu neurčitou</string>
+    <string name="log_number_days">Počet dní pro záznam</string>
+    <string name="incorrect_number_of_days">Zadejte přirozený počet dní</string>
 </resources>

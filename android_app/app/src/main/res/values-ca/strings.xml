@@ -118,4 +118,9 @@
     <string name="start">Inici</string>
     <string name="end">Fi</string>
     <string name="thanks_emojis"><b>Emojis i correccions - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Registrar només contactes recents</string>
+    <string name="logNdays_on">Només es registraran els contactes dels últims dies</string>
+    <string name="logNdays_off">Tots els contactes es registraran indefinidament</string>
+    <string name="log_number_days">Nombre de dies per registrar</string>
+    <string name="incorrect_number_of_days">Si us plau, inseriu només un nombre natural de dies</string>
 </resources>

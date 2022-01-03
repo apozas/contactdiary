@@ -118,4 +118,9 @@
     <string name="start">Początek</string>
     <string name="end">Kończyć się</string>
     <string name="thanks_emojis"><b>Emojis i poprawki - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Zarejestruj tylko ostatnie kontakty</string>
+    <string name="logNdays_on">Rejestrowane będą tylko kontakty z ostatnich dni</string>
+    <string name="logNdays_off">Wszystkie kontakty będą przechowywane przez czas nieokreślony</string>
+    <string name="log_number_days">Liczba dni do nagrania</string>
+    <string name="incorrect_number_of_days">Proszę wpisać naturalną liczbę dni</string>
 </resources>

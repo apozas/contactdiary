@@ -118,4 +118,9 @@
     <string name="start">Début</string>
     <string name="end">Fin</string>
     <string name="thanks_emojis"><b>Emojis et autres corrections - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Enregistrer les contacts récents uniquement</string>
+    <string name="logNdays_on">Seuls les contacts des derniers jours seront enregistrés</string>
+    <string name="logNdays_off">Tous les contacts seront stockés indéfiniment</string>
+    <string name="log_number_days">Nombre de jours pour enregistrer</string>
+    <string name="incorrect_number_of_days">Veuillez insérer un nombre naturel de jours</string>
 </resources>

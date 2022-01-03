@@ -118,4 +118,9 @@
     <string name="start">Başlangıç</string>
     <string name="end">Son</string>
     <string name="thanks_emojis"><b>Emojiler ve düzeltmeler - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Yalnızca son kişileri kaydet</string>
+    <string name="logNdays_on">Yalnızca son günlerdeki kişiler kaydedilecek</string>
+    <string name="logNdays_off">Tüm kişiler süresiz olarak saklanacak</string>
+    <string name="log_number_days">Kaydedilecek gün sayısı</string>
+    <string name="incorrect_number_of_days">Lütfen doğal bir gün sayısı girin</string>
 </resources>

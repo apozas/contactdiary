@@ -118,4 +118,9 @@
     <string name="start">Kezdet</string>
     <string name="end">Vége</string>
     <string name="thanks_emojis"><b>Emojis és javítások - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Csak a legutóbbi kapcsolatok regisztrálása</string>
+    <string name="logNdays_on">Csak az elmúlt napok kapcsolatait rögzítjük</string>
+    <string name="logNdays_off">Minden névjegyet határozatlan ideig tárolunk</string>
+    <string name="log_number_days">A rögzítésre váró napok száma</string>
+    <string name="incorrect_number_of_days">Kérjük, adjon meg egy természetes napszámot</string>
 </resources>

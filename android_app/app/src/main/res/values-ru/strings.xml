@@ -118,4 +118,9 @@
     <string name="start">Начало</string>
     <string name="end">Конец</string>
     <string name="thanks_emojis"><b>Смайлы и исправления - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">Зарегистрируйте только недавние контакты</string>
+    <string name="logNdays_on">Будут записаны только контакты за последние дни</string>
+    <string name="logNdays_off">Все контакты будут храниться бессрочно</string>
+    <string name="log_number_days">Количество дней для записи</string>
+    <string name="incorrect_number_of_days">Пожалуйста, введите натуральное количество дней</string>
 </resources>
