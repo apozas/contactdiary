@@ -1,0 +1,3 @@
+Esta actualización permite al usuario especificar la cantidad de días que se almacenará un contacto. Además, hay muchos cambios internos para soportar Android 12.
+
+Si deseas que implemente el sistema QR de tu región, abre un issue en https://www.github.com/apozas/contactdiary, y si deseas ayudar a traducir Diario de Contactos a tu idioma, visita http://www.crowdin.com/project/contactdiary

@@ -1,0 +1,3 @@
+此更新允許用戶指定聯繫人將被存儲的天數。 此外，為了支持 Android 12，引擎蓋下有許多更改。
+
+如果您希望在您所在地區實現QR系統，請在https://www.github.com/apozas/contactdiary中寫下一個問題，如果要幫助將聯繫人視為您的語言翻譯，請訪問https:// www.crowdin.com/project/contactdiary

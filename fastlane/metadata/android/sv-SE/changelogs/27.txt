@@ -1,0 +1,3 @@
+Denna uppdatering låter användaren ange antalet dagar som en kontakt ska lagras. Det finns också många ändringar under huven för att stödja Android 12.
+
+Om du vill ha QR-systemet i din region Implemente, skriv ett issue i https://www.github.com/apozas/contactdiary, och om du vill hjälpa, besök https://www.crowdin.com/project/contactdiary.

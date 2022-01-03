@@ -9,8 +9,8 @@ android {
         applicationId "com.apozas.contactdiary"
         minSdkVersion 14
         targetSdkVersion 31
-        versionCode 26
-        versionName "1.4.8"
+        versionCode 27
+        versionName "1.4.9"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true

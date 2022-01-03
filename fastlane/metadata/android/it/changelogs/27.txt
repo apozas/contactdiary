@@ -1,0 +1,3 @@
+Questo aggiornamento consente all'utente di specificare il numero di giorni in cui verrà archiviato un contatto. Inoltre, ci sono molte modifiche sotto il cofano per supportare Android 12.
+
+Se desideri implementare il sistema QR nella tua regione, scrivi un problema in https://www.github.com/apozas/contactdiary e se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary
