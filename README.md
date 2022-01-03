@@ -88,19 +88,19 @@ You can translate the in-app texts of Contact Diary on [Crowdin](https://crwd.in
   <tr>
     <th>
         <a href="fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" target="_blank">
-        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg' width='200px' alt='image missing' /> </a>
+        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg' width='200px' alt='Main screen' /> </a>
     </th>
     <th>
         <a href="fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" target="_blank">
-        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg' width='200px' alt='image missing' /> </a>
+        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg' width='200px' alt='New contact' /> </a>
     </th>
     <th>
         <a href="fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" target="_blank">
-        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg' width='200px' alt='image missing' /> </a>
+        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg' width='200px' alt='Edit event' /> </a>
     </th>
     <th>
         <a href="fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" target="_blank">
-        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg' width='200px' alt='image missing' /> </a>
+        <img src='fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg' width='200px' alt='Settings' /> </a>
     </th>
   </tr>
 </table>
