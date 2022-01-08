@@ -48,7 +48,7 @@ class EditContactActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        setupUI(ActivityEditcontactBinding.inflate(layoutInflater).root)
+        setupUI(findViewById(R.id.editcontactlayout))
 
 //      Show top-right shortcuts
         elements.contactTopDuplicateBtn.visibility = View.VISIBLE

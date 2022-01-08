@@ -48,7 +48,7 @@ class EditEventActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        setupUI(ActivityEditeventBinding.inflate(layoutInflater).root)
+        setupUI(findViewById(R.id.editeventlayout))
 
 //      Show top-right shortcuts
         elements.eventTopDuplicateBtn.visibility = View.VISIBLE
