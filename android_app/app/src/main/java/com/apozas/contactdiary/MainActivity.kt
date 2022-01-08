@@ -151,9 +151,7 @@ class MainActivity : AppCompatActivity() {
                         ): Boolean {
                             when (menuItem.itemId) {
                                 R.id.context_delete -> {
-                                    for (item: Long in itemList) {
-                                        deleteEntry(item)
-                                    }
+                                    itemList.forEach { deleteEntry(it) }
                                     Toast.makeText(
                                         applicationContext,
                                         getString(
@@ -171,9 +169,7 @@ class MainActivity : AppCompatActivity() {
                                     return true
                                 }
                                 R.id.context_duplicate -> {
-                                    for (item: Long in itemList) {
-                                        duplicateEntry(item)
-                                    }
+                                    itemList.forEach { duplicateEntry(it) }
                                     Toast.makeText(
                                         applicationContext,
                                         getString(
@@ -289,15 +285,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 //  New button actions
-    fun addContact(v: View): Unit {
+    fun addContact(v: View) {
         startActivity(Intent(this@MainActivity, NewContactActivity::class.java))
     }
 
-    fun addEvent(v: View): Unit {
+    fun addEvent(v: View) {
         startActivity(Intent(this@MainActivity, NewEventActivity::class.java))
     }
 
-    fun openSettings(v: View): Unit {
+    fun openSettings(v: View) {
         startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
     }
 
