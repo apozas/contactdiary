@@ -29,8 +29,8 @@ class MigrationTools {
 
         cursor.use { cursor ->
             while (cursor.moveToNext()) {
-                val id = cursor.getInt(cursor.getColumnIndex("_id"))
-                val time = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("_id"))
+                val time = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIMESTAMP_COLUMN))
                 cal.timeInMillis = time
                 cal.set(Calendar.HOUR, 0)
                 cal.set(Calendar.MINUTE, 0)
@@ -55,9 +55,9 @@ class MigrationTools {
 
         cursor.use { cursor ->
             while (cursor.moveToNext()) {
-                val id = cursor.getInt(cursor.getColumnIndex("_id"))
-                val time = cursor.getLong(cursor.getColumnIndex(feedEntry.TIMESTAMP_COLUMN))
-                val duration = cursor.getLong(cursor.getColumnIndex(feedEntry.DURATION_COLUMN))
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("_id"))
+                val time = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIMESTAMP_COLUMN))
+                val duration = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.DURATION_COLUMN))
                 val hours = duration / 60
                 val minutes = duration % 60
                 cal.timeInMillis = time
@@ -81,8 +81,8 @@ class MigrationTools {
 
         cursor.use { cursor ->
             while (cursor.moveToNext()) {
-                val id = cursor.getInt(cursor.getColumnIndex("_id"))
-                val closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("_id"))
+                val closeContact = cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.CLOSECONTACT_COLUMN))
                 val values = ContentValues().apply {
                     put(feedEntry.CLOSECONTACT_COLUMN,
                         when (closeContact) {

@@ -78,7 +78,9 @@ class MainActivity : AppCompatActivity() {
             val idx = elements.diarytable.adapter.getItemId(position)
             val entry = elements.diarytable.adapter.getItem(position) as Cursor
 
-            when (entry.getString(entry.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))) {
+            when (entry.getString(
+                entry.getColumnIndexOrThrow(
+                    ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))) {
                 "Contact" -> {
                     val intent = Intent(this@MainActivity, EditContactActivity::class.java)
                     intent.putExtra("entry", idx.toString())
@@ -334,7 +336,7 @@ class MainActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val beginTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+        val beginTimestamp = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIME_BEGIN_COLUMN))
         val initCal = Calendar.getInstance()
         val currentDay = initCal.get(Calendar.DAY_OF_YEAR)
         val currentYear = initCal.get(Calendar.YEAR)
@@ -342,7 +344,7 @@ class MainActivity : AppCompatActivity() {
         initCal.set(Calendar.DAY_OF_YEAR, currentDay)
         initCal.set(Calendar.YEAR, currentYear)
 
-        val endTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
+        val endTimestamp = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIME_END_COLUMN))
         val endCal = Calendar.getInstance()
         endCal.timeInMillis = endTimestamp
         endCal.set(Calendar.DAY_OF_YEAR, currentDay)
@@ -351,49 +353,49 @@ class MainActivity : AppCompatActivity() {
         val values = ContentValues().apply {
             put(
                 feedEntry.TYPE_COLUMN,
-                cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN))
+                cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.TYPE_COLUMN))
             )
             put(
                 feedEntry.NAME_COLUMN,
-                cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN))
+                cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.NAME_COLUMN))
             )
             put(
                 feedEntry.PLACE_COLUMN,
-                cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN))
+                cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.PLACE_COLUMN))
             )
             put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
             put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
             put(
                 feedEntry.PHONE_COLUMN,
-                cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN))
+                cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.PHONE_COLUMN))
             )
             put(
                 feedEntry.RELATIVE_COLUMN,
-                cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN))
+                cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.RELATIVE_COLUMN))
             )
             put(
                 feedEntry.COMPANIONS_COLUMN,
-                cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN))
+                cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.COMPANIONS_COLUMN))
             )
             put(
                 feedEntry.CLOSECONTACT_COLUMN,
-                cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
+                cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.CLOSECONTACT_COLUMN))
             )
             put(
                 feedEntry.ENCOUNTER_COLUMN,
-                cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+                cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.ENCOUNTER_COLUMN))
             )
             put(
                 feedEntry.NOTES_COLUMN,
-                cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN))
+                cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.NOTES_COLUMN))
             )
             put(
                 feedEntry.MASK_COLUMN,
-                cursor.getInt(cursor.getColumnIndex(feedEntry.MASK_COLUMN))
+                cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.MASK_COLUMN))
             )
             put(
                 feedEntry.VENTILATION_COLUMN,
-                cursor.getInt(cursor.getColumnIndex(feedEntry.VENTILATION_COLUMN))
+                cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.VENTILATION_COLUMN))
             )
         }
 

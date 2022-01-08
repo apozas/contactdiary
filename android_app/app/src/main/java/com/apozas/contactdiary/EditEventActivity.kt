@@ -64,15 +64,15 @@ class EditEventActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        elements.eventnameInput.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
-        elements.eventplaceInput.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
+        elements.eventnameInput.setText(cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.NAME_COLUMN)))
+        elements.eventplaceInput.setText(cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.PLACE_COLUMN)))
 
         val timeFormat = SimpleDateFormat("H:mm")
         val initCal = Calendar.getInstance()
-        initCal.timeInMillis = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+        initCal.timeInMillis = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIME_BEGIN_COLUMN))
 
         val endCal = Calendar.getInstance()
-        endCal.timeInMillis = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
+        endCal.timeInMillis = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIME_END_COLUMN))
 
         elements.eventdateInput.setText(DateFormat.getDateInstance(DateFormat.MEDIUM).format(initCal.time))
 
@@ -92,23 +92,23 @@ class EditEventActivity : AppCompatActivity() {
             elements.eventendtimeInput.setText(timeFormat.format(endCal.time))
         }
 
-        if (cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)) != ""){
-            elements.eventpeopleInput.setText(cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
+        if (cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.COMPANIONS_COLUMN)) != ""){
+            elements.eventpeopleInput.setText(cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.COMPANIONS_COLUMN)))
         }
-        if (cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)) != ""){
-            elements.eventphoneInput.setText(cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
+        if (cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.PHONE_COLUMN)) != ""){
+            elements.eventphoneInput.setText(cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.PHONE_COLUMN)))
         }
 
-        val encounter = cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN))
+        val encounter = cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.ENCOUNTER_COLUMN))
         if (encounter > 0) {
             val encounterBtn = elements.eventIndoorOutdoor.getChildAt(encounter) as RadioButton
             encounterBtn.isChecked = true
         }
 
         val preventionMeasures = ArrayList<String>()
-        val closeContact = cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN))
-        val mask = cursor.getInt(cursor.getColumnIndex(feedEntry.MASK_COLUMN))
-        val ventilation = cursor.getInt(cursor.getColumnIndex(feedEntry.VENTILATION_COLUMN))
+        val closeContact = cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.CLOSECONTACT_COLUMN))
+        val mask = cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.MASK_COLUMN))
+        val ventilation = cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.VENTILATION_COLUMN))
         if (closeContact == 0) {
             preventionMeasures.add(getString(R.string.mitigation_distance_value))
         }
@@ -132,7 +132,7 @@ class EditEventActivity : AppCompatActivity() {
             }
         }
 
-        elements.eventnotesInput.setText(cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
+        elements.eventnotesInput.setText(cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.NOTES_COLUMN)))
 
 //      Close the cursor after reading it
         cursor.close()
@@ -350,7 +350,7 @@ class EditEventActivity : AppCompatActivity() {
         )
         cursor.moveToFirst()
 
-        val beginTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_BEGIN_COLUMN))
+        val beginTimestamp = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIME_BEGIN_COLUMN))
         val initCal = Calendar.getInstance()
         val currentDay = initCal.get(Calendar.DAY_OF_YEAR)
         val currentYear = initCal.get(Calendar.YEAR)
@@ -358,26 +358,26 @@ class EditEventActivity : AppCompatActivity() {
         initCal.set(Calendar.DAY_OF_YEAR, currentDay)
         initCal.set(Calendar.YEAR, currentYear)
 
-        val endTimestamp = cursor.getLong(cursor.getColumnIndex(feedEntry.TIME_END_COLUMN))
+        val endTimestamp = cursor.getLong(cursor.getColumnIndexOrThrow(feedEntry.TIME_END_COLUMN))
         val endCal = Calendar.getInstance()
         endCal.timeInMillis = endTimestamp
         endCal.set(Calendar.DAY_OF_YEAR, currentDay)
         endCal.set(Calendar.YEAR, currentYear)
 
         val values = ContentValues().apply {
-            put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.TYPE_COLUMN)))
-            put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NAME_COLUMN)))
-            put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PLACE_COLUMN)))
+            put(feedEntry.TYPE_COLUMN, cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.TYPE_COLUMN)))
+            put(feedEntry.NAME_COLUMN, cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.NAME_COLUMN)))
+            put(feedEntry.PLACE_COLUMN, cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.PLACE_COLUMN)))
             put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
             put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
-            put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.PHONE_COLUMN)))
-            put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.RELATIVE_COLUMN)))
-            put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.COMPANIONS_COLUMN)))
-            put(feedEntry.CLOSECONTACT_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.CLOSECONTACT_COLUMN)))
-            put(feedEntry.ENCOUNTER_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.ENCOUNTER_COLUMN)))
-            put(feedEntry.NOTES_COLUMN, cursor.getString(cursor.getColumnIndex(feedEntry.NOTES_COLUMN)))
-            put(feedEntry.MASK_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.MASK_COLUMN)))
-            put(feedEntry.VENTILATION_COLUMN, cursor.getInt(cursor.getColumnIndex(feedEntry.VENTILATION_COLUMN)))
+            put(feedEntry.PHONE_COLUMN, cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.PHONE_COLUMN)))
+            put(feedEntry.RELATIVE_COLUMN, cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.RELATIVE_COLUMN)))
+            put(feedEntry.COMPANIONS_COLUMN, cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.COMPANIONS_COLUMN)))
+            put(feedEntry.CLOSECONTACT_COLUMN, cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.CLOSECONTACT_COLUMN)))
+            put(feedEntry.ENCOUNTER_COLUMN, cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.ENCOUNTER_COLUMN)))
+            put(feedEntry.NOTES_COLUMN, cursor.getString(cursor.getColumnIndexOrThrow(feedEntry.NOTES_COLUMN)))
+            put(feedEntry.MASK_COLUMN, cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.MASK_COLUMN)))
+            put(feedEntry.VENTILATION_COLUMN, cursor.getInt(cursor.getColumnIndexOrThrow(feedEntry.VENTILATION_COLUMN)))
         }
 
         db?.insert(feedEntry.TABLE_NAME, null, values)

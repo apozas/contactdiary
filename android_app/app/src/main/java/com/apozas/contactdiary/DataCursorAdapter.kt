@@ -40,7 +40,7 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         var contact = ""
         if (cursor != null) {
             contact = cursor.getString(
-                cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN)
+                cursor.getColumnIndexOrThrow(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN)
             )
         }
 
@@ -61,12 +61,12 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         val listItemHeader = convertView?.findViewById(R.id.list_item_header) as TextView
         val listItem = convertView?.findViewById(R.id.list_item) as TextView
         val listDivider = convertView?.findViewById(R.id.list_divider) as View
-        val headerDivider = convertView?.findViewById(R.id.header_divider) as View
-        val entryType = cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))
+        val headerDivider = convertView.findViewById(R.id.header_divider) as View
+        val entryType = cursor.getString(cursor.getColumnIndexOrThrow(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))
         var entryEmoji = ""
         entryEmoji = if(entryType == "Event") "\uD83D\uDCC5"
         else "\uD83D\uDC64"
-        entryEmoji += "   " + cursor.getString(cursor.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
+        entryEmoji += "   " + cursor.getString(cursor.getColumnIndexOrThrow(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
         listItem.text = entryEmoji
 
         if (position - 1 >= 0) {
