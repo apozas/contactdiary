@@ -27,6 +27,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.apozas.contactdiary.databinding.ActivityAddcontactBinding
 import com.apozas.contactdiary.databinding.ActivityAddcontactInsideBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.text.DateFormat
@@ -37,11 +38,13 @@ import kotlin.collections.ArrayList
 class NewContactActivity : AppCompatActivity() {
 
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
-    private lateinit var binding: ActivityAddcontactInsideBinding
+    private lateinit var binding: ActivityAddcontactBinding
+    private lateinit var elements: ActivityAddcontactInsideBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAddcontactInsideBinding.inflate(layoutInflater)
+        binding = ActivityAddcontactBinding.inflate(layoutInflater)
+        elements = binding.activityAddcontactInside
         setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
 
@@ -60,8 +63,8 @@ class NewContactActivity : AppCompatActivity() {
         endCal.set(Calendar.MILLISECOND, 0)
 
 //      Set current values
-        binding.dateInput.setText(DateFormat.getDateInstance().format(initCal.time))
-        binding.enddateInput.setText(DateFormat.getDateInstance().format(endCal.time))
+        elements.dateInput.setText(DateFormat.getDateInstance().format(initCal.time))
+        elements.enddateInput.setText(DateFormat.getDateInstance().format(endCal.time))
 
         val timeFormat = SimpleDateFormat("H:mm")
 
@@ -75,11 +78,11 @@ class NewContactActivity : AppCompatActivity() {
             endCal.set(Calendar.MONTH, monthOfYear)
             endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            binding.dateInput.setText(DateFormat.getDateInstance().format(initCal.time))
-            binding.enddateInput.setText(DateFormat.getDateInstance().format(initCal.time))
+            elements.dateInput.setText(DateFormat.getDateInstance().format(initCal.time))
+            elements.enddateInput.setText(DateFormat.getDateInstance().format(initCal.time))
         }
 
-        binding.dateInput.setOnClickListener {
+        elements.dateInput.setOnClickListener {
             DatePickerDialog(
                 this@NewContactActivity, dateSetListener,
                 initCal.get(Calendar.YEAR),
@@ -93,10 +96,10 @@ class NewContactActivity : AppCompatActivity() {
             endCal.set(Calendar.MONTH, monthOfYear)
             endCal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            binding.enddateInput.setText(DateFormat.getDateInstance().format(endCal.time))
+            elements.enddateInput.setText(DateFormat.getDateInstance().format(endCal.time))
         }
 
-        binding.enddateInput.setOnClickListener {
+        elements.enddateInput.setOnClickListener {
             val pickDialog = DatePickerDialog(
                 this@NewContactActivity, endDateSetListener,
                 initCal.get(Calendar.YEAR),
@@ -112,18 +115,18 @@ class NewContactActivity : AppCompatActivity() {
             initCal.set(Calendar.MINUTE, minute)
             initCal.set(Calendar.MILLISECOND, 1)    // To distinguish 0:00 from empty when loading
 
-            binding.inittimeInput.setText(timeFormat.format(initCal.time))
-            if (binding.endtimeInput.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
+            elements.inittimeInput.setText(timeFormat.format(initCal.time))
+            if (elements.endtimeInput.text.isEmpty() or (endCal.timeInMillis < initCal.timeInMillis)) {
                 endCal.set(Calendar.HOUR_OF_DAY, initCal.get(Calendar.HOUR_OF_DAY))
                 endCal.set(Calendar.MINUTE, initCal.get(Calendar.MINUTE))
                 endCal.add(Calendar.MINUTE, 30)
-                binding.endtimeInput.setText(timeFormat.format(endCal.time))
+                elements.endtimeInput.setText(timeFormat.format(endCal.time))
             }
         }
 
         val is24Hour = is24HourFormat(applicationContext)
 
-        binding.inittimeInput.setOnClickListener {
+        elements.inittimeInput.setOnClickListener {
             TimePickerDialog(
                 this@NewContactActivity, initTimeSetListener,
                 initCal.get(Calendar.HOUR_OF_DAY),
@@ -142,11 +145,11 @@ class NewContactActivity : AppCompatActivity() {
 //                    this, R.string.incorrect_alarm_time, Toast.LENGTH_LONG
 //                ).show()
 //            } else {
-                binding.endtimeInput.setText(timeFormat.format(endCal.time))
+                elements.endtimeInput.setText(timeFormat.format(endCal.time))
 //            }
         }
 
-        binding.endtimeInput.setOnClickListener {
+        elements.endtimeInput.setOnClickListener {
             TimePickerDialog(
                 this@NewContactActivity, endTimeSetListener,
                 endCal.get(Calendar.HOUR_OF_DAY),
@@ -156,7 +159,7 @@ class NewContactActivity : AppCompatActivity() {
         }
 
         val preventionMeasures = ArrayList<String>()
-        binding.mitigation.setOnClickListener {
+        elements.mitigation.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             val checkedItems = BooleanArray(4) { i -> preventionMeasures.contains(
                 resources.getStringArray(
@@ -180,7 +183,7 @@ class NewContactActivity : AppCompatActivity() {
                 if (preventionMeasures.isNotEmpty()) {
                     measuresTaken = preventionMeasures.sorted().joinToString(", ")
                 }
-                binding.mitigation.text = measuresTaken
+                elements.mitigation.text = measuresTaken
             }
             builder.setNegativeButton(getString(android.R.string.cancel)) { _, _ -> }
             builder.create().show()
@@ -189,24 +192,24 @@ class NewContactActivity : AppCompatActivity() {
 //      Database operation
         val dbHelper = FeedReaderDbHelper(this)
 
-        binding.okButtonAddContact.setOnClickListener {
+        elements.okButtonAddContact.setOnClickListener {
 //          Gets the data repository in write mode
             val db = dbHelper.writableDatabase
             var errorCount = 0
 
 //          Process RadioButtons
-            val relativeId = binding.knownGroup.checkedRadioButtonId
+            val relativeId = elements.knownGroup.checkedRadioButtonId
             var relativeChoice = -1
             if (relativeId != -1) {
-                val btn: View = binding.knownGroup.findViewById(relativeId)
-                relativeChoice = binding.knownGroup.indexOfChild(btn)
+                val btn: View = elements.knownGroup.findViewById(relativeId)
+                relativeChoice = elements.knownGroup.indexOfChild(btn)
             }
 
-            val contactIndoorOutdoorId = binding.contactIndoorOutdoor.checkedRadioButtonId
+            val contactIndoorOutdoorId = elements.contactIndoorOutdoor.checkedRadioButtonId
             var contactIndoorOutdoorChoice = -1
             if (contactIndoorOutdoorId != -1) {
-                val btn: View = binding.contactIndoorOutdoor.findViewById(contactIndoorOutdoorId)
-                contactIndoorOutdoorChoice = binding.contactIndoorOutdoor.indexOfChild(btn)
+                val btn: View = elements.contactIndoorOutdoor.findViewById(contactIndoorOutdoorId)
+                contactIndoorOutdoorChoice = elements.contactIndoorOutdoor.indexOfChild(btn)
             }
 
             val maskMe = preventionMeasures.contains(getString(R.string.mitigation_mask_me_value)).compareTo(
@@ -217,9 +220,9 @@ class NewContactActivity : AppCompatActivity() {
             )
 
 //          Compulsory text field
-            val contactName = binding.nameInput.text.toString()
+            val contactName = elements.nameInput.text.toString()
             if (contactName.isEmpty()) {
-                binding.nameInput.error = getString(R.string.compulsory_field)
+                elements.nameInput.error = getString(R.string.compulsory_field)
                 errorCount++
             }
 
@@ -228,30 +231,30 @@ class NewContactActivity : AppCompatActivity() {
                 val values = ContentValues().apply {
                     put(feedEntry.TYPE_COLUMN, "Contact")
                     put(feedEntry.NAME_COLUMN, contactName)
-                    put(feedEntry.PLACE_COLUMN, binding.placeInput.text.toString())
+                    put(feedEntry.PLACE_COLUMN, elements.placeInput.text.toString())
                     put(feedEntry.TIME_BEGIN_COLUMN, initCal.timeInMillis)
                     put(feedEntry.TIME_END_COLUMN, endCal.timeInMillis)
-                    put(feedEntry.PHONE_COLUMN, binding.phoneInput.text.toString())
+                    put(feedEntry.PHONE_COLUMN, elements.phoneInput.text.toString())
                     put(feedEntry.RELATIVE_COLUMN, relativeChoice)
                     put(
                         feedEntry.CLOSECONTACT_COLUMN,
-                        if (binding.mitigation.text != getString(R.string.click_to_select)) {
+                        if (elements.mitigation.text != getString(R.string.click_to_select)) {
                                 (!preventionMeasures.contains(getString(R.string.mitigation_distance_value))).compareTo(
                                 false
                             )
                         } else { -1 }
                     )
                     put(feedEntry.ENCOUNTER_COLUMN, contactIndoorOutdoorChoice)
-                    put(feedEntry.NOTES_COLUMN, binding.notesInput.text.toString())
+                    put(feedEntry.NOTES_COLUMN, elements.notesInput.text.toString())
                     put(
                         feedEntry.MASK_COLUMN,
-                        if (binding.mitigation.text != getString(R.string.click_to_select)) {
+                        if (elements.mitigation.text != getString(R.string.click_to_select)) {
                             2 * maskMe + maskOther
                         } else { -1 }
                     )
                     put(
                         feedEntry.VENTILATION_COLUMN,
-                        if (binding.mitigation.text != getString(R.string.click_to_select)) {
+                        if (elements.mitigation.text != getString(R.string.click_to_select)) {
                                 (preventionMeasures.contains(getString(R.string.mitigation_ventilation_value))).compareTo(
                                 false
                             )

@@ -7,5 +7,7 @@
     android:id="@+id/neweventlayout"
     tools:context=".MainActivity">
 
-    <include layout="@layout/activity_addevent_inside" />
+    <include
+        android:id="@+id/activity_addevent_inside"
+        layout="@layout/activity_addevent_inside" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

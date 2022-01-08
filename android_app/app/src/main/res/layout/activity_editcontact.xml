@@ -7,5 +7,7 @@
     android:id="@+id/editcontactlayout"
     tools:context=".EditContactActivity">
 
-    <include layout="@layout/activity_addcontact_inside" />
+    <include
+        android:id="@+id/activity_editcontact_inside"
+        layout="@layout/activity_addcontact_inside" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

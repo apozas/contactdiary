@@ -29,6 +29,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
+import com.apozas.contactdiary.databinding.ActivityMainBinding
 import com.apozas.contactdiary.databinding.ActivityMainInsideBinding
 import java.util.*
 
@@ -41,7 +42,8 @@ class MainActivity : AppCompatActivity() {
     private var numDays = 15
     private val feedEntry = ContactDatabase.ContactDatabase.FeedEntry
     private val dbHelper = FeedReaderDbHelper(this)
-    private lateinit var binding: ActivityMainInsideBinding
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var elements: ActivityMainInsideBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
@@ -53,7 +55,8 @@ class MainActivity : AppCompatActivity() {
             "Light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             "System" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
-        binding = ActivityMainInsideBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        elements = binding.activityMainInside
         setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
 
@@ -71,9 +74,9 @@ class MainActivity : AppCompatActivity() {
         registerForContextMenu(findViewById(R.id.diarytable))
 
 //      Edit entry on click
-        binding.diarytable.setOnItemClickListener { _, _, position, _ ->
-            val idx = binding.diarytable.adapter.getItemId(position)
-            val entry = binding.diarytable.adapter.getItem(position) as Cursor
+        elements.diarytable.setOnItemClickListener { _, _, position, _ ->
+            val idx = elements.diarytable.adapter.getItemId(position)
+            val entry = elements.diarytable.adapter.getItem(position) as Cursor
 
             when (entry.getString(entry.getColumnIndex(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))) {
                 "Contact" -> {
@@ -93,10 +96,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 //      Show message on empty list
-        binding.diarytable.emptyView = findViewById(R.id.emptyList)
+        elements.diarytable.emptyView = findViewById(R.id.emptyList)
 
 //      FAB operation
-        binding.fab.setOnClickListener {
+        elements.fab.setOnClickListener {
             animateFAB()
         }
     }
@@ -129,88 +132,92 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.popup_select -> {
 //              Launch multiChoiceMode
-                binding.diarytable.choiceMode = ListView.CHOICE_MODE_MULTIPLE_MODAL
+                elements.diarytable.choiceMode = ListView.CHOICE_MODE_MULTIPLE_MODAL
                 val itemList: MutableList<Long> = ArrayList()
-                binding.diarytable.setMultiChoiceModeListener(object : AbsListView.MultiChoiceModeListener {
-                    override fun onCreateActionMode(actionMode: ActionMode, menu: Menu): Boolean {
-                        actionMode.menuInflater.inflate(R.menu.context_menu, menu)
-                        return true
-                    }
+                elements.diarytable.setMultiChoiceModeListener(
+                    object : AbsListView.MultiChoiceModeListener {
+                        override fun onCreateActionMode(actionMode: ActionMode, menu: Menu): Boolean {
+                            actionMode.menuInflater.inflate(R.menu.context_menu, menu)
+                            return true
+                        }
 
-                    override fun onPrepareActionMode(p0: ActionMode?, p1: Menu?): Boolean {
-                        return false
-                    }
+                        override fun onPrepareActionMode(p0: ActionMode?, p1: Menu?): Boolean {
+                            return false
+                        }
 
-                    override fun onActionItemClicked(
-                        actionMode: ActionMode,
-                        menuItem: MenuItem
-                    ): Boolean {
-                        when (menuItem.itemId) {
-                            R.id.context_delete -> {
-                                for (item: Long in itemList) {
-                                    deleteEntry(item)
+                        override fun onActionItemClicked(
+                            actionMode: ActionMode,
+                            menuItem: MenuItem
+                        ): Boolean {
+                            when (menuItem.itemId) {
+                                R.id.context_delete -> {
+                                    for (item: Long in itemList) {
+                                        deleteEntry(item)
+                                    }
+                                    Toast.makeText(
+                                        applicationContext,
+                                        getString(
+                                            if (itemList.size > 1) R.string.entries_deleted
+                                            else R.string.entry_deleted
+                                        ),
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                    itemList.clear()
+                                    actionMode.finish()
+                                    if (onlyRecent) {
+                                        restrictLastDays(numDays)
+                                    }
+                                    viewData(onlyRisky)
+                                    return true
                                 }
-                                Toast.makeText(
-                                    applicationContext,
-                                    getString(
-                                        if (itemList.size > 1) R.string.entries_deleted
-                                        else R.string.entry_deleted
-                                    ),
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                itemList.clear()
-                                actionMode.finish()
-                                if (onlyRecent) { restrictLastDays(numDays) }
-                                viewData(onlyRisky)
-                                return true
-                            }
-                            R.id.context_duplicate -> {
-                                for (item: Long in itemList) {
-                                    duplicateEntry(item)
+                                R.id.context_duplicate -> {
+                                    for (item: Long in itemList) {
+                                        duplicateEntry(item)
+                                    }
+                                    Toast.makeText(
+                                        applicationContext,
+                                        getString(
+                                            if (itemList.size > 1) R.string.entries_duplicated
+                                            else R.string.entry_duplicated
+                                        ),
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                    itemList.clear()
+                                    actionMode.finish()
+                                    if (onlyRecent) {
+                                        restrictLastDays(numDays)
+                                    }
+                                    viewData(onlyRisky)
+                                    return true
                                 }
-                                Toast.makeText(
-                                    applicationContext,
-                                    getString(
-                                        if (itemList.size > 1) R.string.entries_duplicated
-                                        else R.string.entry_duplicated
-                                    ),
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                itemList.clear()
-                                actionMode.finish()
-                                if (onlyRecent) { restrictLastDays(numDays) }
-                                viewData(onlyRisky)
-                                return true
-                            }
-                            else -> {
-                                return false
+                                else -> {
+                                    return false
+                                }
                             }
                         }
-                    }
-
-                    override fun onDestroyActionMode(actionMode: ActionMode) {
-                        itemList.clear()
-                        binding.diarytable.choiceMode = ListView.CHOICE_MODE_SINGLE
-                    }
-
-                    override fun onItemCheckedStateChanged(
-                        actionMode: ActionMode,
-                        i: Int,
-                        position: Long,
-                        checked: Boolean
-                    ) {
-                        if (checked) {
-                            itemList.add(position)
-                            actionMode.title =
-                                itemList.size.toString() + getString(R.string.entries_selected)
-                        } else {
-                            itemList.remove(position)
-                            actionMode.title =
-                                itemList.size.toString() + getString(R.string.entries_selected)
+                        override fun onDestroyActionMode(actionMode: ActionMode) {
+                            itemList.clear()
+                            elements.diarytable.choiceMode = ListView.CHOICE_MODE_SINGLE
                         }
-                    }
-                })
-                binding.diarytable.setItemChecked(info.position, true)
+
+                        override fun onItemCheckedStateChanged(
+                            actionMode: ActionMode,
+                            i: Int,
+                            position: Long,
+                            checked: Boolean
+                        ) {
+                            if (checked) {
+                                itemList.add(position)
+                                actionMode.title =
+                                    itemList.size.toString() + getString(R.string.entries_selected)
+                            } else {
+                                itemList.remove(position)
+                                actionMode.title =
+                                    itemList.size.toString() + getString(R.string.entries_selected)
+                            }
+                        }
+                    })
+                elements.diarytable.setItemChecked(info.position, true)
                 true
             }
             R.id.popup_duplicate -> {
@@ -242,13 +249,13 @@ class MainActivity : AppCompatActivity() {
             R.anim.rotate_forward
         )
 
-        binding.fab.startAnimation(rotateForward)
-        binding.fab1.startAnimation(fabOpen)
-        binding.fabText1.startAnimation(fabTextOpen)
-        binding.fab2.startAnimation(fabOpen)
-        binding.fabText2.startAnimation(fabTextOpen)
-        binding.fab1.isClickable = true
-        binding.fab2.isClickable = true
+        elements.fab.startAnimation(rotateForward)
+        elements.fab1.startAnimation(fabOpen)
+        elements.fabText1.startAnimation(fabTextOpen)
+        elements.fab2.startAnimation(fabOpen)
+        elements.fabText2.startAnimation(fabTextOpen)
+        elements.fab1.isClickable = true
+        elements.fab2.isClickable = true
         isFabOpen = true
     }
 
@@ -263,13 +270,13 @@ class MainActivity : AppCompatActivity() {
             R.anim.rotate_backward
         )
 
-        binding.fab.startAnimation(rotateBackward)
-        binding.fab1.startAnimation(fabClose)
-        binding.fabText1.startAnimation(fabTextClose)
-        binding.fab2.startAnimation(fabClose)
-        binding.fabText2.startAnimation(fabTextClose)
-        binding.fab1.isClickable = false
-        binding.fab2.isClickable = false
+        elements.fab.startAnimation(rotateBackward)
+        elements.fab1.startAnimation(fabClose)
+        elements.fabText1.startAnimation(fabTextClose)
+        elements.fab2.startAnimation(fabClose)
+        elements.fabText2.startAnimation(fabTextClose)
+        elements.fab1.isClickable = false
+        elements.fab2.isClickable = false
         isFabOpen = false
     }
 
@@ -299,7 +306,7 @@ class MainActivity : AppCompatActivity() {
         val cursor = dbHelper.viewData(onlyRisky)
         val adapter = DataCursorAdapter(this, cursor)
 
-        binding.diarytable.adapter = adapter
+        elements.diarytable.adapter = adapter
     }
 
     private fun restrictLastDays(numDays: Int) {
