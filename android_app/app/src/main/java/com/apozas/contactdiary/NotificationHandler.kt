@@ -38,7 +38,6 @@ class NotificationHandler {
         val alarmPendingIntent = getPendingNotificationIntent(context)
         val alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
-
         val preferences = PreferenceManager.getDefaultSharedPreferences(context)
         val reminderTime = preferences.getString("reminder_time", "21:00").toString().split(":")
         val cal = Calendar.getInstance()
@@ -47,7 +46,8 @@ class NotificationHandler {
         cal.set(Calendar.SECOND, 0)
         if (cal.time < Date()) cal.add(Calendar.DAY_OF_MONTH, 1)
         alarmMgr.setInexactRepeating(
-            AlarmManager.RTC_WAKEUP, cal.timeInMillis,
+            AlarmManager.RTC_WAKEUP,
+            cal.timeInMillis,
             AlarmManager.INTERVAL_DAY,
             alarmPendingIntent
         )
@@ -56,12 +56,10 @@ class NotificationHandler {
     private fun getPendingNotificationIntent(context: Context): PendingIntent {
         val alarmIntent = Intent(context, NotificationReceiver::class.java)
         alarmIntent.putExtra(INTENT_EXTRA_NOTIFICATION, true)
-        return PendingIntent.getBroadcast(
-            context,
-            0,
-            alarmIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT
-        )
+        val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        } else { PendingIntent.FLAG_UPDATE_CURRENT }
+            return PendingIntent.getBroadcast(context, 0, alarmIntent,flags)
     }
 
     fun disableNotification(context: Context) {
@@ -72,8 +70,11 @@ class NotificationHandler {
 
     fun showNotification(context: Context) {
         val notifyIntent = Intent(context, MainActivity::class.java)
+        val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        } else { PendingIntent.FLAG_UPDATE_CURRENT }
         val notifyPendingIntent =
-            PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+            PendingIntent.getActivity(context, 0, notifyIntent, flags)
         val mBuilder = NotificationCompat.Builder(context, "contactDiary_notify")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val notificationManager =
