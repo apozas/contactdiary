@@ -40,7 +40,9 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         var contact = ""
         if (cursor != null) {
             contact = cursor.getString(
-                cursor.getColumnIndexOrThrow(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN)
+                cursor.getColumnIndexOrThrow(
+                    ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN
+                )
             )
         }
 
@@ -48,7 +50,7 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
         listItem.text = contact
     }
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var convertView = convertView
         if (convertView == null) {
             convertView = inflater.inflate(
@@ -59,14 +61,20 @@ class DataCursorAdapter(context: Context?, c: Cursor?) : CursorAdapter(context, 
 //      Set the data for the row
         cursor.moveToPosition(position)
         val listItemHeader = convertView?.findViewById(R.id.list_item_header) as TextView
-        val listItem = convertView?.findViewById(R.id.list_item) as TextView
-        val listDivider = convertView?.findViewById(R.id.list_divider) as View
+        val listItem = convertView.findViewById(R.id.list_item) as TextView
+        val listDivider = convertView.findViewById(R.id.list_divider) as View
         val headerDivider = convertView.findViewById(R.id.header_divider) as View
-        val entryType = cursor.getString(cursor.getColumnIndexOrThrow(ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN))
-        var entryEmoji = ""
-        entryEmoji = if(entryType == "Event") "\uD83D\uDCC5"
-        else "\uD83D\uDC64"
-        entryEmoji += "   " + cursor.getString(cursor.getColumnIndexOrThrow(ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN))
+        val entryType = cursor.getString(
+            cursor.getColumnIndexOrThrow(
+                ContactDatabase.ContactDatabase.FeedEntry.TYPE_COLUMN
+            )
+        )
+        var entryEmoji = if(entryType == "Event") "\uD83D\uDCC5" else "\uD83D\uDC64"
+        entryEmoji += "   " + cursor.getString(
+            cursor.getColumnIndexOrThrow(
+                ContactDatabase.ContactDatabase.FeedEntry.NAME_COLUMN
+            )
+        )
         listItem.text = entryEmoji
 
         if (position - 1 >= 0) {

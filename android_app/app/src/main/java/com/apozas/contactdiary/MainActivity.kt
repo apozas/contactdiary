@@ -287,11 +287,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 //  New button actions
-    fun addContact(v: View) {
+    fun addContact(view: View) {
         startActivity(Intent(this@MainActivity, NewContactActivity::class.java))
     }
 
-    fun addEvent(v: View) {
+    fun addEvent(view: View) {
         startActivity(Intent(this@MainActivity, NewEventActivity::class.java))
     }
 
