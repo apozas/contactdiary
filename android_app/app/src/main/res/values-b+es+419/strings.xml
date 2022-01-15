@@ -123,4 +123,6 @@
     <string name="logNdays_off">Todos los contactos se almacenarán indefinidamente</string>
     <string name="logNdays_on">Solamente se guardarán los contactos de los últimos días</string>
     <string name="logNdays">Registrar únicamente contactos recientes</string>
+    <string name="alarm_permission_required">En Android 12+ debe permitir a la aplicación establecer recordatorios diarios. Por favor, conceda este permiso en los ajustes.</string>
+    <string name="go_to_settings">Ir a Ajustes</string>
 </resources>

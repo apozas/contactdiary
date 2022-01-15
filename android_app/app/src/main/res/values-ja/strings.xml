@@ -123,4 +123,6 @@
     <string name="logNdays">最近の接触のみを記録</string>
     <string name="log_number_days">記録する日数</string>
     <string name="incorrect_number_of_days">自然数を挿入してください</string>
+    <string name="alarm_permission_required">Android 12+では、アプリケーションが毎日のリマインダーを確立するための許可を与えなければなりません。 この設定にこの許可を入力してください。</string>
+    <string name="go_to_settings">設定に移動</string>
 </resources>

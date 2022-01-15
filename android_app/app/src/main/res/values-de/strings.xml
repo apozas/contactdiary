@@ -123,4 +123,6 @@
     <string name="logNdays_off">Alle Kontakte werden auf unbestimmte Zeit gespeichert</string>
     <string name="log_number_days">Anzahl der Tage zum Aufzeichnen</string>
     <string name="incorrect_number_of_days">Bitte geben Sie eine natürliche Anzahl von Tagen ein</string>
+    <string name="alarm_permission_required">Auf Android 12+ müssen Sie die Erlaubnis für den Antrag erteilen, tägliche Erinnerungen herzustellen. Bitte geben Sie diese Erlaubnis der Konfiguration an.</string>
+    <string name="go_to_settings">Gehe zu den Einstellungen</string>
 </resources>

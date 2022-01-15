@@ -123,4 +123,6 @@
     <string name="logNdays_off">Усі контакти зберігатимуться на невизначений термін</string>
     <string name="log_number_days">Кількість днів для запису</string>
     <string name="incorrect_number_of_days">Введіть натуральну кількість днів</string>
+    <string name="alarm_permission_required">На Android 12+ ви повинні надати дозвіл на додаток до встановлення щоденних нагадувань. Будь ласка, надайте це дозволу на конфігурацію.</string>
+    <string name="go_to_settings">Перейдіть до Налаштувань</string>
 </resources>

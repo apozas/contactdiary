@@ -123,4 +123,6 @@
     <string name="logNdays_off">Alle contacten worden voor onbepaalde tijd bewaard</string>
     <string name="log_number_days">Aantal dagen om op te nemen</string>
     <string name="incorrect_number_of_days">Vul a.u.b. een natuurlijk aantal dagen in</string>
+    <string name="alarm_permission_required">Op Android 12+ moet u toestemming verlenen voor de aanvraag om dagelijkse herinneringen vast te stellen. Geef deze toestemming op aan de configuratie.</string>
+    <string name="go_to_settings">Ga naar Instellingen</string>
 </resources>

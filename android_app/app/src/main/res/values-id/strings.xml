@@ -123,4 +123,6 @@
     <string name="logNdays_off">Semua kontak akan disimpan tanpa batas waktu</string>
     <string name="log_number_days">Jumlah hari untuk merekam</string>
     <string name="incorrect_number_of_days">Harap masukkan jumlah hari alami</string>
+    <string name="alarm_permission_required">Di Android 12+ Anda harus memberikan izin untuk aplikasi untuk menetapkan pengingat harian. Harap berikan izin ini ke konfigurasi.</string>
+    <string name="go_to_settings">Pergi ke Pengaturan</string>
 </resources>

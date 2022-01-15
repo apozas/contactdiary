@@ -123,4 +123,6 @@
     <string name="logNdays_off">Kaikki yhteystiedot säilytetään toistaiseksi</string>
     <string name="log_number_days">Tallennuspäivien lukumäärä</string>
     <string name="incorrect_number_of_days">Lisää luonnollinen päivien lukumäärä</string>
+    <string name="alarm_permission_required">Android 12+: ssa sinun on annettava lupa hakemuksen luomiseksi päivittäisten muistutusten luomiseksi. Anna tämä lupa kokoonpanoon.</string>
+    <string name="go_to_settings">Mene Asetuksiin</string>
 </resources>

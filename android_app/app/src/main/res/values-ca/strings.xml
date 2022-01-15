@@ -123,4 +123,6 @@
     <string name="logNdays_off">Tots els contactes es registraran indefinidament</string>
     <string name="log_number_days">Nombre de dies per registrar</string>
     <string name="incorrect_number_of_days">Si us plau, inseriu només un nombre natural de dies</string>
+    <string name="alarm_permission_required">A Android 12+ has de concedir permís per a l\'aplicació per establir recordatoris diaris. Si us plau, proporciona aquest permís a la configuració.</string>
+    <string name="go_to_settings">Anar a Configuració</string>
 </resources>

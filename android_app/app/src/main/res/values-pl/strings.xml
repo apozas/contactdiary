@@ -123,4 +123,6 @@
     <string name="logNdays_off">Wszystkie kontakty będą przechowywane przez czas nieokreślony</string>
     <string name="log_number_days">Liczba dni do nagrania</string>
     <string name="incorrect_number_of_days">Proszę wpisać naturalną liczbę dni</string>
+    <string name="alarm_permission_required">W Androida 12+ musisz przyznać pozwolenie na wniosek o ustalenie dziennych przypomnień. Podaj tę zgodę na konfigurację.</string>
+    <string name="go_to_settings">Przejdź do Ustawień</string>
 </resources>

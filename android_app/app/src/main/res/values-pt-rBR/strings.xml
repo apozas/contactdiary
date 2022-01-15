@@ -123,4 +123,6 @@
     <string name="logNdays_off">Todos os contatos serão armazenados indefinidamente</string>
     <string name="log_number_days">Número de dias para gravar</string>
     <string name="incorrect_number_of_days">Por favor, insira um número natural de dias</string>
+    <string name="alarm_permission_required">No Android 12+ você tem que conceder permissão para o aplicativo estabelecer lembretes diários. Por favor, forneça esta permissão para a configuração.</string>
+    <string name="go_to_settings">Vá para as Configurações</string>
 </resources>

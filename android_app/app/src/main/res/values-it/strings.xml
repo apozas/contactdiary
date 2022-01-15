@@ -123,4 +123,6 @@
     <string name="logNdays_off">Tutti i contatti verranno archiviati a tempo indeterminato</string>
     <string name="log_number_days">Numero di giorni da registrare</string>
     <string name="incorrect_number_of_days">Inserisci un numero naturale di giorni</string>
+    <string name="alarm_permission_required">Su Android 12+ è necessario concedere il permesso per l\'applicazione di stabilire promemoria quotidiani. Si prega di fornire questa autorizzazione alla configurazione.</string>
+    <string name="go_to_settings">Vai alle Impostazioni</string>
 </resources>

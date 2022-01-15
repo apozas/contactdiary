@@ -123,4 +123,6 @@
     <string name="logNdays_off">所有聯繫人將無限期存儲</string>
     <string name="log_number_days">記錄天數</string>
     <string name="incorrect_number_of_days">請插入一個自然天數</string>
+    <string name="alarm_permission_required">在Android 12+上，您必須授予應用程序的許可，以建立日常提醒。 請提供此配置的配置。</string>
+    <string name="go_to_settings">前往設置</string>
 </resources>

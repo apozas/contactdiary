@@ -123,4 +123,6 @@
     <string name="logNdays_off">Alla kontakter kommer att lagras på obestämd tid</string>
     <string name="log_number_days">Antal dagar att spela in</string>
     <string name="incorrect_number_of_days">Vänligen ange ett naturligt antal dagar</string>
+    <string name="alarm_permission_required">På Android 12+ måste du bevilja tillstånd för ansökan om att upprätta dagliga påminnelser. Vänligen ange det här tillståndet till konfigurationen.</string>
+    <string name="go_to_settings">Gå till Inställningar</string>
 </resources>
