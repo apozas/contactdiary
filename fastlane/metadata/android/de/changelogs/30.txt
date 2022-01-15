@@ -1,0 +1,3 @@
+Dieses Update behebt die Unterstützung für Android 12+.
+
+Wenn Sie das QR-System in Ihrer Region implementieren möchten, schreiben Sie ein Problem in https://www.github.com/apozas/contactdiary. Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary
