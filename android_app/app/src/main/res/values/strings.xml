@@ -128,4 +128,6 @@
     <string name="logNdays_off">All contacts will be stored indefinitely</string>
     <string name="log_number_days">Number of days to log</string>
     <string name="incorrect_number_of_days">Please, insert just a natural number of days</string>
+    <string name="alarm_permission_required">In Android 12+ you need to grant permission for the app to set daily reminders. Please grant this permission in the settings.</string>
+    <string name="go_to_settings">Go to Settings</string>
 </resources>

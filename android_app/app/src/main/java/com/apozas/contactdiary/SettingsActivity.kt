@@ -16,6 +16,7 @@ package com.apozas.contactdiary
 */
 
 import android.app.Activity
+import android.app.AlarmManager
 import android.content.*
 import android.content.pm.PackageManager
 import android.database.Cursor
@@ -24,6 +25,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -67,11 +69,35 @@ class SettingsActivity : AppCompatActivity() {
                 findPreference<SwitchPreference>("reminder_toggle") as SwitchPreference
 
             reminderTime?.setOnPreferenceChangeListener { _, newValue ->
-                var isTimeGood = true
-                val newTime = newValue as String
-                if (newTime.split(":").size == 2) {
-                    val timeparts = newValue.split(":")
-                    if ((timeparts[0].toInt() > 23) || (timeparts[1].toInt() > 59)) {
+                val alarmMgr = context?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                val canSetAlarm = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    alarmMgr.canScheduleExactAlarms()
+                } else { true }
+                if ( !canSetAlarm ) {
+//                  Create screen asking to grant the permission
+                    val permissionAsker: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+                    permissionAsker.setMessage(getString(R.string.alarm_permission_required))
+                    permissionAsker.setCancelable(true)
+                    permissionAsker.setPositiveButton(getString(R.string.go_to_settings)) { _, _ ->
+                        startActivity(Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM))
+                    }
+                    permissionAsker.setNegativeButton(android.R.string.cancel) { _, _ -> }
+                    permissionAsker.create().show()
+                    false
+                } else {
+                    var isTimeGood = true
+                    val newTime = newValue as String
+                    if (newTime.split(":").size == 2) {
+                        val timeparts = newValue.split(":")
+                        if ((timeparts[0].toInt() > 23) || (timeparts[1].toInt() > 59)) {
+                            Toast.makeText(
+                                context,
+                                getString(R.string.incorrect_alarm_time),
+                                Toast.LENGTH_LONG
+                            ).show()
+                            isTimeGood = false
+                        }
+                    } else {
                         Toast.makeText(
                             context,
                             getString(R.string.incorrect_alarm_time),
@@ -79,25 +105,18 @@ class SettingsActivity : AppCompatActivity() {
                         ).show()
                         isTimeGood = false
                     }
-                } else {
-                    Toast.makeText(
-                        context,
-                        getString(R.string.incorrect_alarm_time),
-                        Toast.LENGTH_LONG
-                    ).show()
-                    isTimeGood = false
-                }
-                if ((newValue.toString() != oldTime) && isTimeGood) {
-                    prefsedit.putString("reminder_time", newValue)
-                    prefsedit.apply()
-                    Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_SHORT)
-                        .show()
-                    updateNotificationPreferences(reminderToggle.isEnabled)
-                    true
-                } else {
-                    prefsedit.putString("reminder_time", oldTime)
-                    prefsedit.apply()
-                    false
+                    if ((newValue.toString() != oldTime) && isTimeGood) {
+                        prefsedit.putString("reminder_time", newValue)
+                        prefsedit.apply()
+                        Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_SHORT)
+                            .show()
+                        updateNotificationPreferences(reminderToggle.isEnabled)
+                        true
+                    } else {
+                        prefsedit.putString("reminder_time", oldTime)
+                        prefsedit.apply()
+                        false
+                    }
                 }
             }
             reminderToggle.setOnPreferenceChangeListener { _, newValue ->
