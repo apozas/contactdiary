@@ -398,7 +398,6 @@ class EditEventActivity : AppCompatActivity() {
             view.setOnTouchListener { v, _ ->
                 v.clearFocus()
                 hideSoftKeyboard()
-                v.performClick()
                 false
             }
         }
