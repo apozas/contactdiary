@@ -25,7 +25,7 @@
     <string name="edit_contact">編輯接觸者</string>
     <string name="options">選項</string>
     <string name="entry_deleted">項目已刪除</string>
-    <string name="contact_developer_summary">表達您對此應用程式的看法，或您遭遇的問題</string>
+    <string name="contact_developer_summary">表達您對此應用程式的看法，或遭遇的問題</string>
     <string name="contact_developer">與開發人員聯絡</string>
     <string name="about_donate">贊助開發者</string>
     <string name="notification_title">您今天和誰在一起？</string>
@@ -56,7 +56,7 @@
     <string name="privacy_security_title">安全性</string>
     <string name="privacy_contact_title">與我聯繫</string>
     <string name="empty_table">輕觸 (+) 符號新增接觸者</string>
-    <string name="app_version_title">程式版本</string>
+    <string name="app_version_title">App 版本</string>
     <string name="about_donate_summary"></string>
     <string name="about_rate">為此程式評分</string>
     <string name="about_rate_summary">如果您喜歡此應用程式，請留下評分和評論，讓它能觸及到更多覺得這個程式很實用的人。</string>
@@ -95,7 +95,7 @@
     <string name="thanks_chinese"><b>中文翻譯 - </b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a> (繁體中文)</string>
     <string name="thanks_hungarian"><b>匈牙利語翻譯 - </b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
     <string name="thanks_turkish"><b>土耳其語翻譯 - </b><a href="https://crowdin.com/profile/perboran">perboran</a> 和 <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
-    <string name="mitigation_ventilation_value">空氣流通</string>
+    <string name="mitigation_ventilation_value">通風</string>
     <string name="mitigation_distance_value">距離</string>
     <string name="mitigation_title">預防措施</string>
     <string name="mitigation_mask_me_value">口罩 (我)</string>
@@ -118,11 +118,11 @@
     <string name="start">開始</string>
     <string name="end">結束</string>
     <string name="thanks_emojis"><b>表情符號和修復 - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
-    <string name="logNdays">僅註冊最近的聯繫人</string>
-    <string name="logNdays_on">只會記錄最近幾天的聯繫方式</string>
-    <string name="logNdays_off">所有聯繫人將無限期存儲</string>
+    <string name="logNdays">僅記錄近期接觸者</string>
+    <string name="logNdays_on">只會儲存最近幾天的接觸者</string>
+    <string name="logNdays_off">永久保存所有接觸者資料</string>
     <string name="log_number_days">記錄天數</string>
     <string name="incorrect_number_of_days">請插入一個自然天數</string>
-    <string name="alarm_permission_required">在Android 12+上，您必須授予應用程序的許可，以建立日常提醒。 請提供此配置的配置。</string>
-    <string name="go_to_settings">前往設置</string>
+    <string name="alarm_permission_required">若裝置運行Android 12以上的系統，您必須授予應用程式權限，以建立日常提醒。 請與設定中允許此權限。</string>
+    <string name="go_to_settings">前往設定</string>
 </resources>
