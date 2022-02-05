@@ -199,7 +199,7 @@
                         android:id="@+id/eventpeople_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textCapWords"
+                        android:inputType="textShortMessage|textMultiLine|textCapWords"
                         android:imeOptions="actionNext" />
                 </com.google.android.material.textfield.TextInputLayout>
 
