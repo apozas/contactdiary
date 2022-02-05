@@ -295,7 +295,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, NewEventActivity::class.java))
     }
 
-    fun openSettings(v: View) {
+    fun openSettings(view: View) {
         startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
     }
 
