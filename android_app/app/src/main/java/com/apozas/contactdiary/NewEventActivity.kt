@@ -92,7 +92,7 @@ class NewEventActivity : AppCompatActivity() {
                 elements.eventplaceInput.setText(data[1])
                 elements.eventnotesInput.setText(data[2])
 
-                val initCal = Calendar.getInstance()
+                initCal.timeInMillis = Calendar.getInstance().timeInMillis
                 endCal.timeInMillis = initCal.timeInMillis + 60 * 60 * 1000
                 elements.eventinittimeInput.setText(timeFormat.format(initCal.time))
                 elements.eventendtimeInput.setText(timeFormat.format(endCal.time))
