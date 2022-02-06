@@ -61,9 +61,9 @@ class SettingsActivity : AppCompatActivity() {
             setPreferencesFromResource(R.xml.preferences, rootKey)
 
             val preferences = preferenceManager.sharedPreferences
-            val prefsedit = preferences.edit()
+            val prefsedit = preferences?.edit()
 
-            val oldTime = preferences.getString("reminder_time", "21:00").toString()
+            val oldTime = preferences?.getString("reminder_time", "21:00").toString()
             val reminderTime = findPreference<EditTextPreference>("reminder_time")
             val reminderToggle =
                 findPreference<SwitchPreference>("reminder_toggle") as SwitchPreference
@@ -106,15 +106,15 @@ class SettingsActivity : AppCompatActivity() {
                         isTimeGood = false
                     }
                     if ((newValue.toString() != oldTime) && isTimeGood) {
-                        prefsedit.putString("reminder_time", newValue)
-                        prefsedit.apply()
+                        prefsedit?.putString("reminder_time", newValue)
+                        prefsedit?.apply()
                         Toast.makeText(context, getString(R.string.alarm_modified), Toast.LENGTH_SHORT)
                             .show()
                         updateNotificationPreferences(reminderToggle.isEnabled)
                         true
                     } else {
-                        prefsedit.putString("reminder_time", oldTime)
-                        prefsedit.apply()
+                        prefsedit?.putString("reminder_time", oldTime)
+                        prefsedit?.apply()
                         false
                     }
                 }
@@ -132,8 +132,8 @@ class SettingsActivity : AppCompatActivity() {
 //                  Small attempt to check if the input is an integer
                     val intDays = newDays.toInt()
                     if (intDays > 0) {
-                        prefsedit.putString("number_of_days", newDays)
-                        prefsedit.apply()
+                        prefsedit?.putString("number_of_days", newDays)
+                        prefsedit?.apply()
                         true
                     } else {Toast.makeText(
                         context,
