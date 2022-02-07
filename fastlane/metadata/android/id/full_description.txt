@@ -1,0 +1,30 @@
+Catatan Kontak adalah aplikasi sederhana yang membantu Anda menjaga catatan dari orang yang Anda temui dan acara yang Anda hadiri dalam waktu dekat. Dalam kejadian yang tidak diinginkan bahwa kondisi medis Anda berubah, Catatan Kontak adalah tempat untuk menemukan orang yang harus Anda ingatkan tentang situasi tersebut.
+
+<b>Cara kerjanya</b>
+Setiap hari Catatan Kontak akan menanyakan Anada untuk memasukan acara yang Anda hadiri dan orang yang bersama Anda dalam sehari. Dengan beberapa isian sederhana Anda akan dapat menyimpan informasi penting tentang mereka, dalam hal Anda butuh untuk mengambilnya. Hanya seperti itu. Sederhana, bukan? ;)
+
+<b>Fitur</b>
+<ul>
+<li> Atur waktu notifikasi, sehingga pertanyaan tidak mengganggu keseharian Anda.</li>
+<li> Pilihan untuk hanya menampilkan kontak yang mungkin beresiko.</li>
+<li> Dengan otomatis menghapus catatan lebih lama dari 15 hari.</li>
+<li> Ekspor kontak waktu dekat terakhir ke dalam file CSV.</li>
+<li> HANYA SATU PERIZINAN, yang dibutuhkan aplikasi agar dapat memberikan notifikasi setelah restart perangkat. Tidak ada yang lain.</li>
+<li> Khusunya, TIDAK ADA IZIN INTERNET. Informasi yang Anda masukan itu milik Anda, dan tidak pernah meninggalkan perangkat Anda.</li>
+</ul>
+
+<b>FAQ</b>
+- Tunggu, bukankah ini yang dilakukan aplikasi pelacakan kontak Pemerintah?
+Tidak. Tujuan aplikasi pelacakan kontak Pemerintah dan Buku Harian Kontak pada dasarnya berbeda. Aplikasi pelacak kontak pemerintah <em>memberi tahu Anda</em> saat Anda berisiko, dan Buku Harian Kontak berfungsi untuk mengingat siapa <em>yang harus Anda beri tahu</em> jika Anda dinyatakan positif.
+
+- Apakah aplikasi ini LEBIH BAIK daripada aplikasi pelacakan kontak Pemerintah?
+Tidak. Aplikasi pelacakan kontak pemerintah dapat menjelaskan kontak yang mungkin tidak Anda sadari, seperti orang yang duduk di meja tetangga di restoran, atau orang lain yang menggunakan bus yang sama untuk pergi bekerja. Contact Diary BUKAN PENGGANTI APLIKASI PELACAKAN KONTAK PEMERINTAH.
+
+- Apakah aplikasi ini LEBIH BURUK daripada aplikasi pelacakan kontak Pemerintah?
+Tidak. Aplikasi pelacakan kontak pemerintah sangat bergantung pada semua orang yang berinteraksi untuk memiliki aplikasi untuk melakukan notifikasi yang tepat. Dengan Buku Harian Kontak, Anda hanya perlu melacak, dan Anda dapat dengan mudah memberi tahu orang (atau tempat) yang tidak menggunakan aplikasi pelacakan kontak konvensional.
+
+- Akankah aplikasi ini membagikan informasi yang Saya masukan?
+TIDAK. Aplikasi tidak memiliki izin mengakses internet, sehingga tidak memungkinkan untuk informasi apapun yang Anda masukan meninggalkan perangkat Anda. Bahkan, daftar dalam catatan akan dengan otomatis dihapus ketika sudah ada lebih dari 15 hari.
+
+<b>Dukungan</b>
+Jika Anda menemukan bug, memiliki ide tentang cara meningkatkan Catatan Kontak atau memiliki pertanyaan, silakan kunjungi halaman proyek Catatan Kontak di GitHub: https://github.com/apozas/contactdiary
