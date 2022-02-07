@@ -1,0 +1,9 @@
+Tato aktualizace obsahuje několik malých oprav.
+
+<ul>
+<li>Když napíšete dlouhé seznamy doprovodných prvků, všechny se nyní zobrazí na více řádcích</li>
+<li>Čas zahájení je nyní správně uložen při importu události z QR kódu</li>
+<li>Indonéský překlad byl aktualizován</li>
+</ul>
+
+Pokud chcete mít QR systém ve vašem regionu implementován, napište problém v https://www.github.com/apozas/contactdiary, a pokud chcete pomoci překlady kontaktního deníku do svého jazyka, navštivte https://www.crowdin.com/project/contactdiary.

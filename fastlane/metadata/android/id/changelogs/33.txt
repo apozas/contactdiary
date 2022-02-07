@@ -1,0 +1,9 @@
+Pembaruan ini mencakup beberapa perbaikan kecil.
+
+<ul>
+<li>Saat Anda menulis daftar panjang teman, semua sekarang akan muncul dalam beberapa baris</li>
+<li>Waktu mulai sekarang disimpan dengan benar saat mengimpor acara dari kode QR</li>
+<li>Terjemahan bahasa Indonesia telah diperbarui</li>
+</ul>
+
+Jika Anda ingin menerapkan sistem QR di wilayah Anda, tulis masalah di https://www.github.com/apozas/contactdiary, dan jika Anda ingin membantu menerjemahkan Buku Harian Kontak ke bahasa Anda, silakan kunjungi http://www.crowdin.com/project/contactdiary

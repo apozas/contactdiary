@@ -1,0 +1,9 @@
+Questo aggiornamento include alcune piccole correzioni.
+
+<ul>
+<li>Quando scrivi lunghi elenchi di compagni, il tutto apparirà ora su più righe</li>
+<li>L'ora di inizio ora viene salvata correttamente durante l'importazione di un evento da un codice QR</li>
+<li>La traduzione in indonesiano è stata aggiornata</li>
+</ul>
+
+Se desideri implementare il sistema QR nella tua regione, scrivi un problema in https://www.github.com/apozas/contactdiary e se vuoi aiutare a tradurre Diario dei Contatti nella tua lingua, visita http://www.crowdin.com/project/contactdiary

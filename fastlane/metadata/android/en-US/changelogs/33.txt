@@ -1,0 +1,9 @@
+This update includes some small fixes.
+
+<ul>
+<li>When you write long lists of companions, the all will now appear in multiple lines</li>
+<li>The begin time is now correctly saved when importing an event from a QR code</li>
+<li>The Indonesian translation has been updated</li>
+</ul>
+
+If you want to have the QR system in your region implemented, write an issue in https://www.github.com/apozas/contactdiary, and if you want to help translating Contact Diary to your language, please visit http://www.crowdin.com/project/contactdiary

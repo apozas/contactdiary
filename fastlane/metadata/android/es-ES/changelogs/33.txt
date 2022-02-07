@@ -1,0 +1,9 @@
+Esta actualización incluye algunas pequeñas correcciones.
+
+<ul>
+<li>Cuando escriba largas listas de acompañantes, ahora aparecerán todos en varias líneas</li>
+<li>La hora de inicio ahora se guarda correctamente al importar un evento desde un código QR</li>
+<li>La traducción al indonesio ha sido actualizada</li>
+</ul>
+
+Si deseas que implemente el sistema QR de tu región, abre un issue en https://www.github.com/apozas/contactdiary, y si deseas ayudar a traducir Diario de Contactos a tu idioma, visita http://www.crowdin.com/project/contactdiary

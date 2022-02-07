@@ -8,8 +8,8 @@ android {
         applicationId "com.apozas.contactdiary"
         minSdkVersion 14
         targetSdkVersion 31
-        versionCode 31
-        versionName "1.4.11"
+        versionCode 33
+        versionName "1.4.12"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true

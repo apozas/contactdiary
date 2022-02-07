@@ -1,0 +1,9 @@
+Dieses Update enthält einige kleine Korrekturen.
+
+<ul>
+<li>Wenn Sie lange Listen mit Gefährten schreiben, werden jetzt alle in mehreren Zeilen angezeigt</li>
+<li>Die Startzeit wird jetzt korrekt gespeichert, wenn ein Ereignis von einem QR-Code importiert wird</li>
+<li>Die indonesische Übersetzung wurde aktualisiert</li>
+</ul>
+
+Wenn Sie das QR-System in Ihrer Region implementieren möchten, schreiben Sie ein Problem in https://www.github.com/apozas/contactdiary. Wenn Sie bei der Übersetzung von Kontakttagebuch in Ihre Sprache helfen möchten, besuchen Sie bitte http://www.crowdin.com/project/contactdiary

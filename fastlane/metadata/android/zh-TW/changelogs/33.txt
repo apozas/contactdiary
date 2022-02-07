@@ -1,0 +1,9 @@
+此更新包括一些小修復。
+
+<ul>
+<li>當您編寫長長的同伴列表時，所有同伴現在將出現在多行中</li>
+<li>現在在從 QR 碼導入事件時可以正確保存開始時間</li>
+<li>印度尼西亞語翻譯已更新</li>
+</ul>
+
+如果您希望在您所在地區實現QR系統，請在https://www.github.com/apozas/contactdiary中寫下一個問題，如果要幫助將聯繫人視為您的語言翻譯，請訪問https:// www.crowdin.com/project/contactdiary

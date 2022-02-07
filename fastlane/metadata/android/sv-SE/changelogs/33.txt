@@ -1,0 +1,9 @@
+Den här uppdateringen innehåller några små korrigeringar.
+
+<ul>
+<li>När du skriver långa listor med följeslagare visas nu allt på flera rader</li>
+<li>Starttiden sparas nu korrekt när en händelse importeras från en QR-kod</li>
+<li>Den indonesiska översättningen har uppdaterats</li>
+</ul>
+
+Om du vill ha QR-systemet i din region Implemente, skriv ett issue i https://www.github.com/apozas/contactdiary, och om du vill hjälpa, besök https://www.crowdin.com/project/contactdiary.
