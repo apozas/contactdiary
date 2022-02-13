@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">संपर्क डायरी</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="new_contact">नया संपर्क</string>
+    <string name="new_event">नया कार्यक्रम</string>
+    <string name="event_name">इवेंट का नाम</string>
+    <string name="no">नहीं</string>
+    <string name="yes">हां</string>
+    <string name="date">दिनांक</string>
+    <string name="start">शुरु</string>
+    <string name="end">समाप्त</string>
+    <string name="place">जगह</string>
+    <string name="companions">साथी</string>
+    <string name="name">नाम</string>
+    <string name="known_contact">रिश्तेदार या करीबी दोस्त</string>
+    <string name="mitigation_question">कौन से निवारक उपाय किए गए?</string>
+    <string name="phone">फ़ोन</string>
+    <string name="unsure">पक्का नहीं पता</string>
+    <string name="encounter_type">मुठभेड़ प्रकार</string>
+    <string name="indoors">घर के अंदर</string>
+    <string name="outdoors">घर के बाहर</string>
+    <string name="emptydiary">डायरी खाली है</string>
+    <string name="contact_saved">संपर्क सहेजा गया</string>
+    <string name="event_saved">इवेंट सेव हो गया</string>
+    <string name="edit_event">ईवेंट संपादित करें</string>
+    <string name="edit_contact">संपर्क जानकारी संपादित करें</string>
+    <string name="options">विकल्प</string>
+    <string name="entry_deleted">प्रविष्टि हटाई गई</string>
+    <string name="contact_developer_summary">मुझे बताएं कि आप ऐप के बारे में क्या सोचते हैं, या आपके सामने आने वाली समस्याएं</string>
+    <string name="contact_developer">डेवलपर से संपर्क करें</string>
+    <string name="about_donate">डेवलपर को दान करें</string>
+    <string name="notification_title">आज आप किसके साथ थे?</string>
+    <string name="notification_text">अपने संपर्कों को डायरी में जोड़ें</string>
+    <string name="choose_option">एक विकल्प का चयन करें</string>
+    <string name="compulsory_field">अनिवार्य क्षेत्र</string>
+    <string name="edit">एडिट</string>
+    <string name="delete">डिलीट</string>
+    <string name="alarm_modified">अलार्म संशोधित किया गया</string>
+    <string name="incorrect_alarm_time">कृपया, सही समय डालें</string>
+    <string name="daily_reminder">दैनिक अनुस्मारक</string>
+    <string name="choose_time">समय चुनें</string>
+    <string name="show_close_contacts">केवल करीबी संपर्क दिखाएं</string>
+    <string name="more">अधिक</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="entries_deleted">एंट्री हटाई गईं</string>
+    <string name="entries_selected">" एंट्री चयनित"</string>
+    <string name="privacy_title">गोपनीयता नीति</string>
+    <string name="privacy_intro">संपर्क डायरी इस उम्मीद में वितरित की जाती है कि यह उपयोगी होगी, लेकिन बिना किसी वारंटी के; किसी विशेष उद्देश्य के लिए व्यापारिकता या उपयुक्तता की निहित वारंटी के बिना भी। यदि किसी ने संपर्क डायरी का उपयोग करने का निर्णय लिया है, तो व्यक्तिगत जानकारी के संग्रह, उपयोग और प्रकटीकरण के साथ मेरी नीतियों के बारे में आगंतुकों को सूचित करने के लिए इस पृष्ठ का उपयोग किया जाता है। संक्षेप में, और चूंकि संपर्क डायरी इंटरनेट से कनेक्ट नहीं हो सकती है, इसलिए उपयोगकर्ता के डिवाइस के बाहर कोई व्यक्तिगत जानकारी संग्रहीत या कॉपी नहीं की जाएगी। यदि आप संपर्क डायरी का उपयोग करना चुनते हैं, तो आप इस नीति के संबंध में जानकारी के संग्रह (कोई नहीं) और उपयोग के लिए सहमत हैं। संपर्क डायरी जो व्यक्तिगत जानकारी एकत्र करती है उसका उपयोग उसकी सेवा प्रदान करने के लिए किया जाता है। जैसा कि ऊपर स्पष्ट किया गया है, मैं आपकी जानकारी का उपयोग नहीं कर सकता और न ही किसी के साथ साझा कर सकता हूं।</string>
+    <string name="privacy_icu">संपर्क डायरी के उपयोग के लिए आवश्यक है कि आप कुछ व्यक्तिगत रूप से पहचान योग्य जानकारी, नाम और (वैकल्पिक रूप से) स्थान और फोन नंबर इनपुट करें। संपर्क डायरी के अनुरोधों की जानकारी आपके डिवाइस पर रखी जाएगी और मेरे द्वारा किसी भी तरह से एकत्र नहीं की जाएगी।</string>
+    <string name="privacy_cookies">कुकीज़ छोटी मात्रा में डेटा वाली फाइलें होती हैं जिनका उपयोग आमतौर पर अनाम विशिष्ट पहचानकर्ताओं के रूप में किया जाता है। ये आपके ब्राउज़र पर आपके द्वारा देखी जाने वाली वेबसाइटों से भेजे जाते हैं और आपके डिवाइस की आंतरिक मेमोरी में संग्रहीत होते हैं।\n\n संपर्क डायरी किसी भी कुकीज़ का उपयोग नहीं करती है, न ही प्रथम-पक्ष और न ही तृतीय-पक्ष। \n\nउसी तरह, तीसरे पक्ष को कोई सेवा नहीं दी जाती है।. आपके द्वारा संपर्क डायरी में दर्ज की गई जानकारी आपके डिवाइस को कभी नहीं छोड़ती है।</string>
+    <string name="privacy_security">दोबारा, संपर्क डायरी में आपके द्वारा इनपुट की गई कोई भी जानकारी आपके डिवाइस को कभी नहीं छोड़ती है। इस तथ्य का मूल्यांकन हमेशा संपर्क डायरी के स्रोत कोड का निरीक्षण करके किया जा सकता है, जो <a href="https://www.github.com/apozas/contactdiary">www.github.com/apozas/contactdiary</a> पर उपलब्ध है।. इस प्रकार, इसकी सुरक्षा और अखंडता आपके डिवाइस की भौतिक सुरक्षा और अखंडता से जुड़ी हुई है, जिसकी मैं कोई जिम्मेदारी नहीं लेता।</string>
+    <string name="privacy_changes">मैं समय-समय पर इस गोपनीयता नीति को अपडेट कर सकता हूं। इस प्रकार, आपको किसी भी परिवर्तन के लिए समय-समय पर इस पृष्ठ की समीक्षा करने की सलाह दी जाती है। मैं इस पृष्ठ पर नई गोपनीयता नीति पोस्ट करके आपको किसी भी बदलाव के बारे में सूचित करूंगा।\n\nयह नीति 2020-09-08 से प्रभावी है</string>
+    <string name="privacy_contact">यदि इस गोपनीयता नीति के बारे में आपके कोई प्रश्न या सुझाव हैं, तो मुझसे <a href="mailto:contactdiary@alexpozas.com">contactdiary@alexpozas.com</a> (अधिमानतः अंग्रेजी में) पर संपर्क करने में संकोच न करें।</string>
+    <string name="privacy_changes_title">इस गोपनीयता नीति में परिवर्तन</string>
+    <string name="privacy_icu_title">सूचना संग्रह और उपयोग</string>
+    <string name="privacy_cookies_title">कुकीज़ और सेवा प्रदाता</string>
+    <string name="privacy_security_title">सुरक्षा</string>
+    <string name="privacy_contact_title">मुझसे संपर्क करें</string>
+    <string name="empty_table">संपर्क जोड़ना शुरू करने के लिए (+) दबाएं</string>
+    <string name="app_version_title">एप्लिकेशन वर्जन</string>
+    <string name="about_donate_summary"></string>
+    <string name="about_rate">इस एप्प का मूल्यांकन करें</string>
+    <string name="about_rate_summary">यदि आप ऐप को पसंद करते हैं, तो कृपया इसे रेट करें और इसकी समीक्षा करें ताकि यह अधिक लोगों तक पहुंच सके जो इसे उपयोगी पा सकते हैं</string>
+    <string name="entry_duplicated">एंट्री दोहराई गई</string>
+    <string name="entries_duplicated">एंट्रीज दोहराई गई</string>
+    <string name="duplicate">आज ही कॉपी करें</string>
+    <string name="select">चुनते हैं</string>
+    <string name="notes">टिप्पणियाँ</string>
+    <string name="acknowledgments">धन्यवाद</string>
+    <string name="about">अबाउट</string>
+    <string name="thanks_text">जबकि संपर्क डायरी एक एकल परियोजना के रूप में शुरू हुई, इसे कई लोगों के अमूल्य परोपकारी योगदान से लाभ हुआ है। इस पृष्ठ में सभी को मेरा ईमानदार धन्यवाद।</string>
+    <string name="thanks_homescreen"><b>होमस्क्रीन शॉर्टकट-</b><a href="https://github.com/GenosseFlosse">GenosseFlosse
+</a></string>
+    <string name="thanks_chinese"><b>चीनी अनुवाद -</b><a href="https://crowdin.com/profile/walfrido42">walfrido42</a></string>
+    <string name="thanks_czech"><b>चेक अनुवाद -</b><a href="https://forum.xda-developers.com/m/novas78.7100773">Lukas Novotny</a></string>
+    <string name="thanks_dutch"><b>डच अनुवाद -</b><a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace </a>तथा<a href="https://github.com/Vistaus">Vistaus</a></string>
+    <string name="thanks_finnish"><b>फिनिश अनुवाद -</b><a href="https://crowdin.com/profile/Mikko95">Mikko95</a></string>
+    <string name="thanks_french"><b>फ़्रेंच अनुवाद -</b><a href="https://crowdin.com/profile/matthus">matthus</a>,<a href="https://crowdin.com/profile/adaok">Adaok</a>तथा<a href="https://forum.xda-developers.com/m/raiz.8020437/">RaiZ</a></string>
+    <string name="thanks_german"><b>जर्मन अनुवाद -</b><a href="https://github.com/GenosseFlosse">GenosseFlosse</a>, <a href="https://github.com/FloEdelmann">FloEdelmann</a>, <a href="https://crowdin.com/profile/jensMF">jensMF</a>, <a href="https://github.com/leso-kn">leso-kn</a> तथा <a href="https://crowdin.com/profile/mkamp">mkamp</a></string>
+    <string name="thanks_hungarian"><b>हंगेरियन अनुवाद -</b><a href="https://github.com/mondlicht-und-sterne">mondlicht-und-sterne</a></string>
+    <string name="thanks_italian"><b>इतालियन अनुवाद - </b><a href="https://github.com/igor-cali">igor-cali</a> तथा <a href="https://crowdin.com/profile/lrt84">lrt84</a></string>
+    <string name="thanks_indonesian"><b>इन्डोनेशियाई अनुवाद -</b><a href="https://github.com/hexatester">hexatester</a></string>
+    <string name="thanks_japanese"><b>जापानी अनुवाद - </b><a href="https://crowdin.com/profile/ysakamoto_">ysakamoto_</a> तथा <a href="https://crowdin.com/profile/mamarama9904">mamarama9904</a></string>
+    <string name="thanks_polish"><b>पोलिश अनुवाद -</b><a href="https://crowdin.com/profile/wasikr7">wasikr7</a></string>
+    <string name="thanks_portuguese"><b>पुर्तगाली अनुवाद -</b><a href="https://github.com/riuri">riuri</a>(ब्राजील)</string>
+    <string name="thanks_russian"><b>रूसी अनुवाद -</b><a href="https://gaichtranslations.ru">Dmitry Gaich</a></string>
+    <string name="thanks_swedish"><b>स्वीडिश अनुवाद -</b><a href="https://github.com/nlssn">nlssn</a></string>
+    <string name="thanks_turkish"><b>तुर्की अनुवाद -</b><a href="https://crowdin.com/profile/perboran">perboran</a> तथा <a href="https://crowdin.com/profile/Tonyinspace">Tonyinspace</a></string>
+    <string name="thanks_ukrainian"><b>यूक्रेनी अनुवाद -</b><a href="https://github.com/tabaks">tabaks</a></string>
+    <string name="theme">थीम</string>
+    <string name="theme_light">लाइट</string>
+    <string name="theme_dark">डार्क</string>
+    <string name="theme_system">सिस्टम का पालन करें</string>
+    <string name="backup">बैकअप / रिस्टोर</string>
+    <string name="import_database">डेटाबेस को आयात करें</string>
+    <string name="import_database_summary">सेव किये गए डेटाबेस को लोड करें</string>
+    <string name="export_database">डेटाबेस को निर्यात करें</string>
+    <string name="export_database_summary">डेटाबेस को CSV फॉर्मेट में सेव करे</string>
+    <string name="export_success">डेटाबेस सेव होगया</string>
+    <string name="import_fail">डेटाबेस में कोई समस्या है</string>
+    <string name="import_success">डेटाबेस लोड होगया</string>
+    <string name="import_notfound">निर्दिष्ट फ़ाइल नहीं मिली</string>
+    <string name="import_select">आयात करने के लिए डेटाबेस का चयन करें</string>
+    <string name="mitigation_distance">दूरी 2m या 6ft से अधिक थी</string>
+    <string name="mitigation_mask_me">मैंने नकाब पहना था</string>
+    <string name="mitigation_mask_other">अन्य लोगो ने नकाब पहना था</string>
+    <string name="mitigation_ventilation">वातावरण हवादार था</string>
+    <string name="mitigation_distance_value">दूरी</string>
+    <string name="mitigation_mask_me_value">मास्क (मैं)</string>
+    <string name="mitigation_mask_other_value">मास्क (अन्य)</string>
+    <string name="mitigation_ventilation_value">वेंटिलेशन</string>
+    <string name="click_to_select">चुनने के लिए क्लिक करें</string>
+    <string name="mitigation_title">रोकथाम के उपाय</string>
+    <string name="none">कुछ भी नहीं</string>
+    <string name="shared_from">%s से साझा किया गया</string>
+    <string name="do_not_show_again">दोबारा न दिखाएं</string>
+    <string name="checkin_title">स्थल पर रजिस्टर करें</string>
+    <string name="checkin_reminder">यह सिर्फ एक रजिस्टर है आपके लिए। कृपया, कार्यक्रम स्थल पर अपना विवरण दर्ज करना न भूलें ताकि यदि आवश्यक हो तो स्थानीय प्राधिकरण आपको सूचित कर सके।</string>
+    <string name="qr_error">कोड पढ़ा नहीं जा सका</string>
+    <string name="thanks_emojis"><b>इमोजी और फिक्स -</b><a href="https://github.com/igor-cali">igor-cali</a></string>
+    <string name="logNdays">केवल हाल के संपर्कों को लॉग करें</string>
+    <string name="logNdays_on">केवल अंतिम दिनों के संपर्क संग्रहीत किए जाएंगे</string>
+    <string name="logNdays_off">सभी संपर्क अनिश्चित काल तक संग्रहीत किए जाएंगे</string>
+    <string name="log_number_days">लॉग रखने के लिए दिनों की संख्या</string>
+    <string name="incorrect_number_of_days">कृपया, केवल दिनों की स्वाभाविक संख्या डालें</string>
+    <string name="alarm_permission_required">एंड्राइड 12+ में आपको ऐप को दैनिक रिमाइंडर सेट करने की अनुमति देनी होगी। कृपया सेटिंग में यह अनुमति दें।</string>
+    <string name="go_to_settings">सेटिंग्स में जाएं</string>
+</resources>
