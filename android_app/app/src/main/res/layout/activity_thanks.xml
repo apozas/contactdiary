@@ -80,6 +80,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/thanks_hindi"
+            android:text="@string/thanks_hindi"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/thanks_hungarian"
             android:text="@string/thanks_hungarian"/>
 
