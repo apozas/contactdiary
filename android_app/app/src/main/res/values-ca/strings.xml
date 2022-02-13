@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Si us plau, inseriu només un nombre natural de dies</string>
     <string name="alarm_permission_required">A Android 12+ has de concedir permís per a l\'aplicació per establir recordatoris diaris. Si us plau, proporciona aquest permís a la configuració.</string>
     <string name="go_to_settings">Anar a Configuració</string>
+    <string name="thanks_hindi"><b>Traducció a l\'hindi - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

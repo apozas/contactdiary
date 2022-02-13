@@ -126,4 +126,5 @@
     <string name="incorrect_number_of_days">कृपया, केवल दिनों की स्वाभाविक संख्या डालें</string>
     <string name="alarm_permission_required">एंड्राइड 12+ में आपको ऐप को दैनिक रिमाइंडर सेट करने की अनुमति देनी होगी। कृपया सेटिंग में यह अनुमति दें।</string>
     <string name="go_to_settings">सेटिंग्स में जाएं</string>
+    <string name="thanks_hindi"><b>हिंदी अनुवाद - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

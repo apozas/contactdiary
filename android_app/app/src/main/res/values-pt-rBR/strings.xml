@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Por favor, insira um número natural de dias</string>
     <string name="alarm_permission_required">No Android 12+ você tem que conceder permissão para o aplicativo estabelecer lembretes diários. Por favor, forneça esta permissão para a configuração.</string>
     <string name="go_to_settings">Vá para as Configurações</string>
+    <string name="thanks_hindi"><b>Tradução para Hindi - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

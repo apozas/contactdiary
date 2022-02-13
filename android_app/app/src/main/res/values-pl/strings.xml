@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Proszę wpisać naturalną liczbę dni</string>
     <string name="alarm_permission_required">W Androida 12+ musisz przyznać pozwolenie na wniosek o ustalenie dziennych przypomnień. Podaj tę zgodę na konfigurację.</string>
     <string name="go_to_settings">Przejdź do Ustawień</string>
+    <string name="thanks_hindi"><b>Hindi tłumaczenie - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

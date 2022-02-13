@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Harap masukkan jumlah hari yang benar</string>
     <string name="alarm_permission_required">Di Android 12+ Anda harus memberikan izin untuk aplikasi untuk menetapkan pengingat harian. Harap berikan izin ini di pengaturan.</string>
     <string name="go_to_settings">Buka Pengaturan</string>
+    <string name="thanks_hindi"><b>Terjemahan Hindi - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

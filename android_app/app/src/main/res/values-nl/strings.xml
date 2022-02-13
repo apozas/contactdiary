@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Vul a.u.b. een natuurlijk aantal dagen in</string>
     <string name="alarm_permission_required">Op Android 12+ moet u toestemming verlenen voor de aanvraag om dagelijkse herinneringen vast te stellen. Geef deze toestemming op aan de configuratie.</string>
     <string name="go_to_settings">Ga naar Instellingen</string>
+    <string name="thanks_hindi"><b>Hindi vertaling - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

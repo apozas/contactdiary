@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Kérjük, adjon meg egy természetes napszámot</string>
     <string name="alarm_permission_required">Az Android 12 + -on engedélyeznie kell az alkalmazás engedélyét a napi emlékeztetők létrehozására. Kérjük, adja meg ezt az engedélyt a konfigurációhoz.</string>
     <string name="go_to_settings">Menj a Beállításokhoz</string>
+    <string name="thanks_hindi"><b>Hindi fordítás - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

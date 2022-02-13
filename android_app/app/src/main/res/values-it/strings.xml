@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Inserisci un numero naturale di giorni</string>
     <string name="alarm_permission_required">Su Android 12+ è necessario concedere il permesso per l\'applicazione di stabilire promemoria quotidiani. Si prega di fornire questa autorizzazione alla configurazione.</string>
     <string name="go_to_settings">Vai alle Impostazioni</string>
+    <string name="thanks_hindi"><b>Traduzione hindi - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

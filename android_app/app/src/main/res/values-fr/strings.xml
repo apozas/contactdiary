@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Veuillez insérer un nombre naturel de jours</string>
     <string name="alarm_permission_required">Sur Android 12+ vous devez accorder une autorisation pour la demande d\'établir des rappels quotidiens. Veuillez fournir cette autorisation à la configuration.</string>
     <string name="go_to_settings">Aller aux Paramètres</string>
+    <string name="thanks_hindi"><b>Traduction en hindi - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

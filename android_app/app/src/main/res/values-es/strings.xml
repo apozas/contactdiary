@@ -124,4 +124,5 @@
     <string name="logNdays">Registrar únicamente contactos recientes</string>
     <string name="alarm_permission_required">En Android 12+ debes permitir a la aplicación establecer recordatorios diarios. Por favor, concede este permiso en los ajustes.</string>
     <string name="go_to_settings">Ir a Ajustes</string>
+    <string name="thanks_hindi"><b>Traducción al hindi - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

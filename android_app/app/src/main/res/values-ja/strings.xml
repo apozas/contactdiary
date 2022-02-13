@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">自然数を挿入してください</string>
     <string name="alarm_permission_required">Android 12+では、アプリケーションが毎日のリマインダーを確立するための許可を与えなければなりません。 この設定にこの許可を入力してください。</string>
     <string name="go_to_settings">設定に移動</string>
+    <string name="thanks_hindi"><b>ヒンディー語翻訳 - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>

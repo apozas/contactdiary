@@ -125,4 +125,5 @@
     <string name="incorrect_number_of_days">Lütfen doğal bir gün sayısı girin</string>
     <string name="alarm_permission_required">Android 12+\'de, uygulamanın günlük hatırlatıcı oluşturmak için izin vermeniz gerekir. Lütfen bu izni yapılandırmaya sağlayın.</string>
     <string name="go_to_settings">Ayarlara git</string>
+    <string name="thanks_hindi"><b>Hintçe çeviri - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>
