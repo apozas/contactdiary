@@ -71,6 +71,7 @@ You can translate the in-app texts of Contact Diary on [Crowdin](https://crwd.in
 | Finnish | [Mikko95](https://crowdin.com/profile/Mikko95) |
 | French | [matthus](https://crowdin.com/profile/matthus) &bull; [Marco Loiodice](https://crowdin.com/profile/adaok) &bull; [RaiZ](https://forum.xda-developers.com/m/raiz.8020437/) |
 | German | [GenosseFlosse](https://github.com/GenosseFlosse) &bull; [Flo Edelmann](https://github.com/FloEdelmann) &bull; [jensMF](https://crowdin.com/profile/jensMF) &bull; [Leso_KN](https://github.com/leso-kn) &bull; [mkamp](https://crowdin.com/profile/mkamp) |
+| Hindi | [PrathameshJadav33](https://github.com/PrathameshJadhav33) |
 | Hungarian | [mondstern](https://github.com/mondlicht-und-sterne) |
 | Indonesian | [Habib Roman](https://github.com/hexatester) |
 | Italian | [Igor](https://github.com/igor-cali) &bull; [lrt84](https://crowdin.com/profile/lrt84) |
