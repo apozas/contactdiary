@@ -1,0 +1,3 @@
+このアップデートはヒンディー語への翻訳をもたらします（PrathameshJadhav33！）
+
+お住まいの地域でQRシステムを実装する場合は、https://www.github.com/apozas/contactdiaryに問題を書き込んでください。連絡先日記を自分の言語に翻訳するのを手伝いたい場合は、https://www.crowdin.com/project/contactdiaryにアクセスしてください。

@@ -1,0 +1,3 @@
+Den här uppdateringen ger översättningen till hindi (tack vare PratameshJadhav33!)
+
+Om du vill ha QR-systemet i din region Implemente, skriv ett issue i https://www.github.com/apozas/contactdiary, och om du vill hjälpa, besök https://www.crowdin.com/project/contactdiary.

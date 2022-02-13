@@ -1,0 +1,3 @@
+Pembaruan ini membawa terjemahan ke Hindi (terima kasih kepada PrathameshJadhav33!)
+
+Jika Anda ingin menerapkan sistem QR di wilayah Anda, tulis masalah di https://www.github.com/apozas/contactdiary, dan jika Anda ingin membantu menerjemahkan Buku Harian Kontak ke bahasa Anda, silakan kunjungi http://www.crowdin.com/project/contactdiary
