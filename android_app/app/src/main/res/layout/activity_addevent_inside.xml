@@ -79,7 +79,7 @@
                         android:id="@+id/eventname_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textCapSentences"
+                        android:inputType="textShortMessage|textMultiLine|textCapSentences"
                         android:imeOptions="actionNext" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +92,7 @@
                         android:id="@+id/eventplace_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textCapSentences"
+                        android:inputType="textShortMessage|textMultiLine|textCapSentences"
                         android:imeOptions="actionNext" />
                 </com.google.android.material.textfield.TextInputLayout>
 
