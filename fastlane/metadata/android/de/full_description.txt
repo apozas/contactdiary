@@ -1,14 +1,16 @@
-Kontakttagebuch ist eine einfache App in der du eintragen kannst, mit welchen Personen du dich getroffen hast oder an welchen Gruppenbegegnungen du kürzlich teilgenommen hast. Im unerwünschten Fall eines positiven COVID-19-Tests kannst du durch einen Blick in deine Einträge in Kontakttagebuch schnell herausfinden welche Personen du warnen musst.
+Kontakttagebuch ist eine einfache App, mit der du kürzlich getroffene Personen und besuchte Gruppenereignisse aufzeichnen kannst. Im unerwünschten Fall eines positiven COVID-19-Tests kannst du durch einen Blick in deine Einträge in Kontakttagebuch schnell herausfinden welche Personen du warnen musst.
+
 <b>Funktionsweise</b>
-Kontakttagebuch wird dich einmal am Tag auffordern, die Gruppenbegegnungen und Kontakte des Tages einzutragen. Durch einfache Formulare werden die wesentlichen Informationen über Begegnungen gespeichert, für den Fall dass du diese Informationen benötigst. Nur das. Einfach, nicht wahr?
+Jeden Tag wirst du aufgefordert, während des Tages besuchte Veranstaltungen und getroffene Personen ins Kontakttagebuch einzutragen. Über einige einfache Formulare kannst du die wesentlichen Informationen darüber speichern, um sie später abrufen zu können. Das war's. Einfach, oder? ;)
+
 <b>Funktionen</b>
 <ul>
-<li> Einstellbare Benachrichtigungszeit, damit die Erinnerung dich nicht im Tagesablauf stört.</li>
-<li> Option um nur potenziell risikoreiche Begegnungen anzuzeigen.</li>
-<li> Automatisches Löschen von Einträgen die älter als 15 Tage sind.</li>
-<li> Exportieren Sie Ihre neuesten Kontakte in eine CSV-Datei, die Sie für die Behörden freigeben können.</li>
-<li> NUR EINE BERECHTIGUNG, die benötigt wird um die Erinnerung nach einem Neustart zu ermöglichen. Sonst nichts.</li>
-<li> Insbesondere, KEINE INTERNETZUGRIFF-Berechtigung. Die Informationen die du einträgst sind allein deine und sie verlassen niemals dein Gerät.</li>
+<li> Konfigurierbare Benachrichtigungszeit, damit die Eingabeaufforderung deinen täglichen Ablauf nicht stört.</li>
+<li> Option, nur potenziell riskante Kontakte anzuzeigen.</li>
+<li> Automatische Entfernung von Einträgen, die älter als 15 Tage sind.</li>
+<li> Exportiere deine letzten Kontakte in eine CSV-Datei.</li>
+<li> NUR EINE BERECHTIGUNG, die benötigt wird, damit die App dich nach dem Neustart des Geräts benachrichtigen kann. Nicht mehr.</li>
+<li> Insbesondere KEIN INTERNET-ZUGANG. Die Informationen, die du eingibst, gehören dir und verlassen niemals dein Gerät.</li>
 </ul>
 
 <b>FAQ</b>
@@ -18,11 +20,11 @@ Nein. Die Ziele der staatlichen Corona-Warn-Apps und von Kontakttagebuch sind un
 - Ist diese App BESSER als staatliche Tracing-Apps?
 Nein. Staatliche Tracing-Apps können bei Begegnungen wirken, die du selbst nicht als solche wahrnimmst, wie eine Person, die im Restaurant am Nachbartisch sitzt oder eine Person die mit dir im Bus sitzt. Kontakttagebuch ist KEINE ALTERNATIVE ZU STAATLICHEN TRACING-APPS.
 
--Ist diese App SCHLECHTER als staatliche Tracing-Apps?
+- Ist diese App SCHLECHTER als staatliche Tracing-Apps?
 Nein. Staatliche Tracing-Apps sind zwingend darauf angewiesen, dass alle Personen dieselbe App benutzen um Benachrichtigungen zu empfangen. In Kontakttagebuch brauchst du nur dich selbst um den Überblick zu behalten, und du kannst problemlos diejenigen Personen (oder Orte) benachrichtigen, die keine staatlichen Tracing-Apps benutzen.
 
-- Wird diese App meine Daten weitergeben?
-NEIN. Diese App hat keine Berechtigungen für den Internetzugriff, also kann die App keine Verbindung zum Internet aufnehmen. Die Informationen die du eingibst verlassen niemals dein Gerät. Darüber hinaus werden Eintraäge die älter sind als 15 Tage automatisch gelöscht.
+- Wird diese App die eingegebenen Informationen weitergeben?
+NEIN. Die App hat keine Internetzugriffsberechtigungen, daher gibt es keine Möglichkeit, dass irgendwelche Informationen, die du eingibst, jemals dein Gerät verlassen. Darüber hinaus werden Einträge im Tagebuch automatisch gelöscht, wenn sie älter als 15 Tage sind.
 
 <b>Support</b>
 Wenn du einen Fehler findest, eine Idee zur Verbesserung von Kontakttagebuch oder eine Frage hast, bitte besuche die Konttakttagebuch-Pojektseite auf GitHub: https://github.com/apozas/contactdiary
