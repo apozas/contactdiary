@@ -118,12 +118,12 @@
     <string name="start">Start</string>
     <string name="end">Slut</string>
     <string name="thanks_emojis"><b>Emojis och korrigeringar - </b><a href="https://github.com/igor-cali">igor-cali</a></string>
-    <string name="logNdays">Registrera endast senaste kontakter</string>
-    <string name="logNdays_on">Endast kontakter under de senaste dagarna kommer att registreras</string>
+    <string name="logNdays">Logga endast nyligen skapade kontakter</string>
+    <string name="logNdays_on">Endast kontakter under de senaste dagarna kommer att lagras</string>
     <string name="logNdays_off">Alla kontakter kommer att lagras på obestämd tid</string>
-    <string name="log_number_days">Antal dagar att spela in</string>
+    <string name="log_number_days">Antal dagar att logga</string>
     <string name="incorrect_number_of_days">Vänligen ange ett naturligt antal dagar</string>
-    <string name="alarm_permission_required">På Android 12+ måste du bevilja tillstånd för ansökan om att upprätta dagliga påminnelser. Vänligen ange det här tillståndet till konfigurationen.</string>
+    <string name="alarm_permission_required">I Android 12+ måste du bevilja behörighet för appen att ställa in dagliga påminnelser. Vänligen ge denna behörighet i inställningarna.</string>
     <string name="go_to_settings">Gå till Inställningar</string>
     <string name="thanks_hindi"><b>Hindi översättning - </b><a href="https://github.com/PrathameshJadhav33">PrathameshJadhav33</a></string>
 </resources>
