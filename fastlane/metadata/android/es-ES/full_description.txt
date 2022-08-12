@@ -21,7 +21,7 @@ No. Los objetivos de las aplicaciones de rastreo de contactos gubernamentales y 
 No. Las aplicaciones de rastreo de contactos gubernamentales pueden detectar contactos de los cuales no seas consciente, como la persona que se sienta en la mesa de al lado en el restaurante, o aquella que toma tu mismo bus para ir al trabajo. Diario de Contactos NO ES UN SUSTITUTO DE LAS APLICACIONES DE RASTREO DE CONTACTO GUBERNAMENTALES.
 
 - ¿Esta app es PEOR que las aplicaciones de rastreo de contactos gubernamentales?
-No. Las aplicaciones de rastreo de contactos gubernamentales requieren obligatoriamente que todas las personas interactuando tengan la app activa para poder hacer las notificaciones necesarias. Con Diario de Contactos, solamente tú necesitas la app para llevar el registro, de tal manera que puedes notificar a personas (o luagares) que no utilicen las aplicaciones de rastreo de contacto convencionales.
+No. Las aplicaciones de rastreo de contactos gubernamentales requieren obligatoriamente que todas las personas interactuando tengan la app activa para poder hacer las notificaciones necesarias. Con Diario de Contactos, solamente tú necesitas la app para llevar el registro, de tal manera que puedes notificar a personas (o lugares) que no utilicen las aplicaciones de rastreo de contacto convencionales.
 
 - ¿Esta aplicación comparte la información que introduzco?
 NO. La app no tiene permisos, de modo que no hay manera que conecte con internet. La información que introduzcas jamás abandonará tu dispositivo. Y más aún, las entradas en el diario son eliminadas automáticamente a los 15 días del contacto.
