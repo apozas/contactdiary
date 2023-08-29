@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.apozas.contactdiary"
         minSdkVersion 14
-        targetSdkVersion 32
-        versionCode 34
-        versionName "1.4.13"
+        targetSdkVersion 34
+        versionCode 35
+        versionName "1.4.14"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
